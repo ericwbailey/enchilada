@@ -1,0 +1,37 @@
+{
+  "name": "title",
+  "description": "description",
+  "homepage": "http://homepage.com/",
+  "version": "0.0.1",
+  "license": "license",
+  "author": {
+    "name": "author",
+    "email": "name@example.com",
+    "url": "http://example.com/"
+  },
+  "contributors": [
+    { "name": "", "email": "" },
+    { "name": "", "email": "" }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/username/repository.git"
+  },
+  "bugs": {
+    "url": "https://github.com/username/repository/issues",
+    "email": "name@example.com"
+  },
+  "keywords": [
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dependencies": {
+
+  },
+  "devDependencies": {
+
+  }
+}
