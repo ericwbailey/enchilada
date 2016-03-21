@@ -1,5 +1,7 @@
+![Project Logo](http://i.imgur.com/wVzSm2U.png)
+
 # Title
-At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
+Short introduction and/or overview that explains **what** the project is. This description should match descriptions added for package managers (package.json, etc.).
 
 
 ## Table of Contents
