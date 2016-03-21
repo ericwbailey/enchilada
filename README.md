@@ -1,4 +1,4 @@
-![Project Logo](http://i.imgur.com/wVzSm2U.png)
+![Project Logo](https://dl.dropboxusercontent.com/u/4265900/boilerplate.png)
 
 # Title
 Short introduction and/or overview that explains **what** the project is. This description should match descriptions added for package managers (package.json, etc.).
