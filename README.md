@@ -7,7 +7,8 @@ Short introduction and/or overview that explains **what** the project is. This d
 ## Table of Contents
 1. [Motivation](#motivation)
 - [Installation](#installation)
-- [Contributors](#contributors)
+- [Contributing](#contributing)
+    1. [List of Contributors](#list-of-contributors) 
 - [License](#license)
 
 
@@ -19,9 +20,12 @@ A short description of the motivation behind the creation and maintenance of the
 Provide code examples and explanations of how to get the project.
 
 
-## Contributors
+## Contributing
 Let people know how they can dive into the project, include important links to things like issue trackers, IRC, Twitter accounts, etc. if applicable.
+
+### List of Contributors
+- Name, Contact Information
 
 
 ## License
-A short snippet describing the license (MIT, Apache, etc.).
+[A short snippet describing the license (MIT, Apache, etc.)](https://raw.githubusercontent.com/ericwbailey/boilerplate/master/LICENSE).
