@@ -17,10 +17,6 @@
     "type": "git",
     "url": "git://github.com/username/repository.git"
   },
-  "bugs": {
-    "url": "https://github.com/username/repository/issues",
-    "email": "name@example.com"
-  },
   "keywords": [
     "",
     "",
@@ -28,6 +24,10 @@
     "",
     ""
   ],
+  "bugs": {
+    "url": "https://github.com/username/repository/issues",
+    "email": "name@example.com"
+  },
   "dependencies": {
 
   },
