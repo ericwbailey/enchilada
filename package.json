@@ -28,6 +28,9 @@
     "url": "https://github.com/username/repository/issues",
     "email": "name@example.com"
   },
+  "scripts": {
+
+  },
   "dependencies": {
 
   },
