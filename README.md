@@ -8,7 +8,6 @@ Short introduction and/or overview that explains **what** the project is. This d
 1. [Motivation](#motivation)
 - [Installation](#installation)
 - [Contributing](#contributing)
-    1. [List of Contributors](#list-of-contributors) 
 - [License](#license)
 
 
@@ -21,10 +20,9 @@ Provide code examples and explanations of how to get the project.
 
 
 ## Contributing
-Let people know how they can dive into the project, include important links to things like issue trackers, IRC, Twitter accounts, etc. if applicable.
+Let people know how they can dive into the project, include important links to things like issue trackers, IRC, Twitter accounts, etc. if applicable. 
 
-### List of Contributors
-- Name, Contact Information
+Link to [`AUTHORS`](https://github.com/ericwbailey/boilerplate/blob/master/AUTHORS) and update the contributors section in [`package.json`](https://github.com/ericwbailey/boilerplate/blob/master/package.json).
 
 
 ## License
