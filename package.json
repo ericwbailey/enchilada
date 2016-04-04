@@ -1,13 +1,13 @@
 {
-  "name": "title",
-  "description": "description",
-  "homepage": "http://homepage.com/",
+  "name": "$$projectFullTitle",
+  "description": "$$projectFullDescription",
+  "homepage": "$$projectURL",
   "version": "0.0.1",
   "license": "license",
   "author": {
-    "name": "author",
-    "email": "name@example.com",
-    "url": "http://example.com/"
+    "name": "$$projectAuthorEmail",
+    "email": "$$projectEmail",
+    "url": "$$projectAuthorURL"
   },
   "contributors": [
     { "name": "", "email": "" },
@@ -15,7 +15,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/username/repository.git"
+    "url": "git://github.com/$$projectGithubPath/repository.git"
   },
   "keywords": [
     "",
@@ -25,8 +25,8 @@
     ""
   ],
   "bugs": {
-    "url": "https://github.com/username/repository/issues",
-    "email": "name@example.com"
+    "url": "https://github.com/$$projectGithubPath/repository/issues",
+    "email": "$$projectAuthorEmail"
   },
   "scripts": {
 
