@@ -1,40 +1,29 @@
 {
-  "name": "$$projectFullTitle",
-  "description": "$$projectFullDescription",
-  "homepage": "$$projectURL",
-  "version": "0.0.1",
-  "license": "$$projectLicense",
-  "author": {
-    "name": "$$projectAuthorEmail",
-    "email": "$$projectEmail",
-    "url": "$$projectAuthorURL"
-  },
-  "contributors": [
-    { "name": "", "email": "" },
-    { "name": "", "email": "" }
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/$$githubAuthor/$$githubTitle.git"
-  },
-  "keywords": [
-    "",
-    "",
-    "",
-    "",
-    ""
-  ],
-  "bugs": {
-    "url": "https://github.com/$$githubAuthor/$$githubTitle/issues",
-    "email": "$$projectAuthorEmail"
-  },
-  "scripts": {
+    "name": "Boilerplate",
+    "description": "A collection of code and files used for quickly setting up projects.",
+    "homepage": "https://github.com/ericwbailey/boilerplate/",
+    "version": "0.0.1",
+    "license": "MIT",
+    "author": {
+        "name": "Eric Bailey",
+        "email": "eric.w.bailey@gmail.com",
+        "url": "http://ericwbailey.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/ericwbailey/boilerplate.git"
+    },
+    "bugs": {
+        "url": "https://github.com/ericwbailey/boilerplate/issues",
+        "email": "eric.w.bailey@gmail.com"
+    },
+    "dependencies": {
 
-  },
-  "dependencies": {
+    },
+    "devDependencies": {
 
-  },
-  "devDependencies": {
-
-  }
+    },
+    "scripts": {
+        "clean": "rm -r dist/*"
+    }
 }
