@@ -23,8 +23,8 @@ Provide code examples and explanations of how to get the project.
 
 Let people know how they can dive into the project, include important links to things like issue trackers, IRC, Twitter accounts, etc. if applicable.
 
-Link to [`AUTHORS`](https://github.com/ericwbailey/boilerplate/blob/master/AUTHORS) and update the contributors section in [`package.json`](https://github.com/ericwbailey/boilerplate/blob/master/package.json).
+Link to [`AUTHORS`](https://github.com/$$githubAuthor/$$githubTitle/blob/master/AUTHORS) and update the contributors section in [`package.json`](https://github.com/$$githubAuthor/$$githubTitle/blob/master/package.json).
 
 ## License
 
-[A short snippet describing the license (MIT, Apache, etc.)](https://raw.githubusercontent.com/ericwbailey/boilerplate/master/LICENSE).
+[$$projectLicense](https://raw.githubusercontent.com/$$githubAuthor/$$githubTitle/master/LICENSE).

@@ -3,7 +3,7 @@
   "description": "$$projectFullDescription",
   "homepage": "$$projectURL",
   "version": "0.0.1",
-  "license": "license",
+  "license": "$$projectLicense",
   "author": {
     "name": "$$projectAuthorEmail",
     "email": "$$projectEmail",
@@ -15,7 +15,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/$$projectGithubPath/repository.git"
+    "url": "git://github.com/$$githubAuthor/$$githubTitle.git"
   },
   "keywords": [
     "",
@@ -25,7 +25,7 @@
     ""
   ],
   "bugs": {
-    "url": "https://github.com/$$projectGithubPath/repository/issues",
+    "url": "https://github.com/$$githubAuthor/$$githubTitle/issues",
     "email": "$$projectAuthorEmail"
   },
   "scripts": {
