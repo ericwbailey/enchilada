@@ -17,11 +17,13 @@
     "url": "https://github.com/ericwbailey/boilerplate/issues",
     "email": "eric.w.bailey@gmail.com"
   },
-  "scripts": {
-    "clean": "rm -r dist/*"
-  },
   "dependencies": {
 
   },
-  "devDependencies": {}
+  "devDependencies": {
+
+  },
+  "scripts": {
+    "clean": "rm -r dist/*"
+  }
 }
