@@ -1,40 +1,27 @@
 {
-  "name": "$$projectFullTitle",
-  "description": "$$projectFullDescription",
-  "homepage": "$$projectURL",
+  "name": "Boilerplate",
+  "description": "A collection of code and files used for quickly setting up projects.",
+  "homepage": "https://github.com/ericwbailey/boilerplate/",
   "version": "0.0.1",
-  "license": "$$projectLicense",
+  "license": "MIT",
   "author": {
-    "name": "$$projectAuthorEmail",
-    "email": "$$projectEmail",
-    "url": "$$projectAuthorURL"
+    "name": "Eric Bailey",
+    "email": "eric.w.bailey@gmail.com",
+    "url": "http://ericwbailey.com"
   },
-  "contributors": [
-    { "name": "", "email": "" },
-    { "name": "", "email": "" }
-  ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/$$githubAuthor/$$githubTitle.git"
+    "url": "git://github.com/ericwbailey/boilerplate.git"
   },
-  "keywords": [
-    "",
-    "",
-    "",
-    "",
-    ""
-  ],
   "bugs": {
-    "url": "https://github.com/$$githubAuthor/$$githubTitle/issues",
-    "email": "$$projectAuthorEmail"
+    "url": "https://github.com/ericwbailey/boilerplate/issues",
+    "email": "eric.w.bailey@gmail.com"
   },
   "scripts": {
-
+    "clean": "rm -r dist/*"
   },
   "dependencies": {
 
   },
-  "devDependencies": {
-
-  }
+  "devDependencies": {}
 }
