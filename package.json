@@ -1,29 +1,29 @@
 {
-  "name": "Boilerplate",
-  "description": "A collection of code and files used for quickly setting up projects.",
-  "homepage": "https://github.com/ericwbailey/boilerplate/",
-  "version": "0.0.1",
-  "license": "MIT",
-  "author": {
-    "name": "Eric Bailey",
-    "email": "eric.w.bailey@gmail.com",
-    "url": "http://ericwbailey.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/ericwbailey/boilerplate.git"
-  },
-  "bugs": {
-    "url": "https://github.com/ericwbailey/boilerplate/issues",
-    "email": "eric.w.bailey@gmail.com"
-  },
-  "dependencies": {
+    "name": "Boilerplate",
+    "description": "A collection of code and files used for quickly setting up projects.",
+    "homepage": "https://github.com/ericwbailey/boilerplate/",
+    "version": "0.0.1",
+    "license": "MIT",
+    "author": {
+        "name": "Eric Bailey",
+        "email": "eric.w.bailey@gmail.com",
+        "url": "http://ericwbailey.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/ericwbailey/boilerplate.git"
+    },
+    "bugs": {
+        "url": "https://github.com/ericwbailey/boilerplate/issues",
+        "email": "eric.w.bailey@gmail.com"
+    },
+    "dependencies": {
 
-  },
-  "devDependencies": {
+    },
+    "devDependencies": {
 
-  },
-  "scripts": {
-    "clean": "rm -r dist/*"
-  }
+    },
+    "scripts": {
+        "clean": "rm -r dist/*"
+    }
 }
