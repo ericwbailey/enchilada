@@ -24,6 +24,7 @@
 
     },
     "scripts": {
-        "clean": "rm -r dist/*"
+        "clean": "rm -r dist/*",
+        "prebuild": "npm run clean -s"
     }
 }
