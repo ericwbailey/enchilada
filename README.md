@@ -1,8 +1,8 @@
-![Project Logo](https://dl.dropboxusercontent.com/u/4265900/boilerplate.png)
+![$$projectFullTitle](https://raw.githubusercontent.com/ericwbailey/boilerplate/master/src/static/favicons/logotype.png)
 
 # Title
 
-Short introduction and/or overview that explains **what** the project is. This description should match descriptions added for package managers (`package.json`, etc.).
+$$projectFullDescription
 
 ## Table of Contents
 
@@ -23,7 +23,7 @@ Provide code examples and explanations of how to get the project.
 
 Let people know how they can dive into the project, include important links to things like issue trackers, IRC, Twitter accounts, etc. if applicable.
 
-Link to [`AUTHORS`](https://github.com/$$githubAuthor/$$githubTitle/blob/master/AUTHORS) and update the contributors section in [`package.json`](https://github.com/$$githubAuthor/$$githubTitle/blob/master/package.json).
+Link to [`CONTRIBUTING.md`](https://github.com/ericwbailey/boilerplate/blob/master/CONTRIBUTING.md), [`AUTHORS`](https://github.com/$$githubAuthor/$$githubTitle/blob/master/AUTHORS), and update the contributors section in [`package.json`](https://github.com/$$githubAuthor/$$githubTitle/blob/master/package.json).
 
 ## License
 
