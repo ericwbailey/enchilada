@@ -1,30 +1,30 @@
 {
-    "name": "Boilerplate",
-    "description": "A collection of code and files used for quickly setting up projects.",
-    "homepage": "https://github.com/ericwbailey/boilerplate/",
-    "version": "0.0.1",
-    "license": "MIT",
-    "author": {
-        "name": "Eric Bailey",
-        "email": "eric.w.bailey@gmail.com",
-        "url": "http://ericwbailey.com"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/ericwbailey/boilerplate.git"
-    },
-    "bugs": {
-        "url": "https://github.com/ericwbailey/boilerplate/issues",
-        "email": "eric.w.bailey@gmail.com"
-    },
-    "dependencies": {
-
-    },
-    "devDependencies": {
-
-    },
-    "scripts": {
-        "clean": "rm -r dist/*",
-        "prebuild": "npm run clean -s"
-    }
+  "name": "Boilerplate",
+  "description": "A collection of code and files used for quickly setting up projects.",
+  "homepage": "https://github.com/ericwbailey/boilerplate/",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": {
+    "name": "Eric Bailey",
+    "email": "eric.w.bailey@gmail.com",
+    "url": "http://ericwbailey.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ericwbailey/boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ericwbailey/boilerplate/issues",
+    "email": "eric.w.bailey@gmail.com"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "require-dir": "^0.3.0"
+  },
+  "scripts": {
+    "clean": "rm -r dist/*",
+    "prebuild": "npm run clean -s"
+  }
 }
