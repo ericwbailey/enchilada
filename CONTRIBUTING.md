@@ -24,7 +24,7 @@ Labels will be updated throughout the submission process to reflect the submissi
 ## Submitting Bug Reports
 *A Bug Report is a demonstrable problem that is caused by the code in the repository.*
 
-First, use the [GitHub Issue search](https://github.com/$$githubAuthor/$$githubTitle/issues) to check if the issue has already been reported—then, check if the issue has been fixed. Try to reproduce it using the latest [master branch](https://github.com/$$githubAuthor/boilerplate) in the repository. Next, isolate the problem—ideally [create a reduced test case](https://css-tricks.com/reduced-test-cases/) and a live example.
+First, use the [GitHub Issue search](https://github.com/$$githubAuthor/$$githubTitle/issues) to check if the issue has already been reported—then, check if the issue has been fixed. Try to reproduce it using the latest [master branch](https://github.com/$$githubAuthor/$$githubTitle) in the repository. Next, isolate the problem—ideally [create a reduced test case](https://css-tricks.com/reduced-test-cases/) and a live example.
 
 A good Bug Report shouldn't leave others needing to chase you up for more information. Please try to be as detailed as possible in your report. What is your environment? What steps will reproduce the issue? What browser(s) and OS versions experience the problem? What would you expect to be the outcome? Any guesses to a possible solution? All these details will help people to fix any potential bugs.
 
