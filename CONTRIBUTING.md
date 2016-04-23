@@ -8,7 +8,7 @@ Following these guidelines helps to communicate that you respect the time of the
 ## Before you get started
 
 ### Code of Conduct
-This project adheres to the [Contributor Covenant code of conduct](http://contributor-covenant.org/version/1/4/). By participating, you are expected to uphold this code. Please report unacceptable behavior to <$$projectAuthorEmail>.
+This project adheres to the [Contributor Covenant code of conduct](http://contributor-covenant.org/version/1/4/). By participating, you are expected to uphold this code. Please report unacceptable behavior to [the project authors](https://github.com/$$githubAuthor/$$githubTitle/blob/master/AUTHORS).
 
 ### Terms of Use
 By submitting code or a feature request, you agree to allow the project owners to license your work under the terms of the [project license](https://github.com/$$githubAuthor/$$githubTitle/blob/master/LICENSE).
