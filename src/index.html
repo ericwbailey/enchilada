@@ -1,25 +1,29 @@
 <!doctype html>
 <html class="no-js" lang="$$projectLanguage">
 <head>
-<!-- Start of head info -->
 <meta charset="utf-8" />
 <meta http-equiv="x-ua-compatible" content="ie=edge" />
-@@include('meta/title-and-description.html')
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-@@include('meta/styles.html')
-@@include('meta/modernizr.html')
-@@include('meta/favicons.html')
-@@include('meta/social-media.html')
-<!-- End of head info -->
+
+@@include('meta/description/title.html')
+@@include('meta/description/description.html')
+@@include('meta/description/author.html')
+
+@@include('meta/styles/main.html')
+@@include('vendor/modernizr/modernizr.html')
+@@include('meta/icons-and-theming/icons-and-theming.html')
+
+@@include('meta/social-media/facebook.html')
+@@include('meta/social-media/twitter.html')
+@@include('meta/social-media/google-plus.html')
 </head>
 <body>
 @@include('objects/browserupgrade/o-browserupgrade.html')
 <main>
 
-<!-- add your site or application content here -->
-
 </main>
-@@include('meta/scripts.html')
-@@include('meta/analytics.html')
+@@include('meta/scripts/main.html')
+@@include('meta/scripts/plugins.html')
+@@include('meta/analytics/google-analytics.html')
 </body>
 </html>
