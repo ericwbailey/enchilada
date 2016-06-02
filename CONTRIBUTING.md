@@ -20,16 +20,20 @@ When submitting a Bug Report, Pull Request, or Feature Request, please select an
 
 Labels will be updated throughout the submission process to reflect the submission's overall status. For more information, please refer to [this article](https://medium.com/@dave_lunny/sane-github-labels-c5d2e6004b63#.fh462xzfj).
 
+### Templates
+This project uses templates for Issue and Pull Requests. Following the provided template helps the project maintainers have all the right details up front, which makes addressing feedback easier. 
 
-## Submitting Bug Reports
-*A Bug Report is a demonstrable problem that is caused by the code in the repository.*
+## Submitting Issues
+*An Issue is a demonstrable problem that is caused by the code in the repository.*
 
 First, use the [GitHub Issue search](https://github.com/$$githubAuthor/$$githubTitle/issues) to check if the issue has already been reported—then, check if the issue has been fixed. Try to reproduce it using the latest [master branch](https://github.com/$$githubAuthor/$$githubTitle) in the repository. Next, isolate the problem—ideally [create a reduced test case](https://css-tricks.com/reduced-test-cases/) and a live example.
 
-A good Bug Report shouldn't leave others needing to chase you up for more information. Please try to be as detailed as possible in your report. What is your environment? What steps will reproduce the issue? What browser(s) and OS versions experience the problem? What would you expect to be the outcome? Any guesses to a possible solution? All these details will help people to fix any potential bugs.
+A good Issue report shouldn't leave others needing to chase you up for more information. Please try to be as detailed as possible in your report. What is your environment? What steps will reproduce the issue? What browser(s) and OS versions experience the problem? What would you expect to be the outcome? Any guesses to a possible solution? All these details will help people to fix any potential bugs.
 
 
-## Submitting Pull Requests
+## Pull and Feature Requests
+
+### Submitting Pull Requests
 *A Pull Request is a collection of changes submitted with the intention of being incorporated into the project.*
 
 Good Pull Requests, patches, improvements, new features, etc. are a fantastic help. They should remain focused in scope and avoid containing unrelated commits.
@@ -41,7 +45,7 @@ If it hasn't, please ask first before embarking on any significant Pull Request 
 Please adhere to the coding conventions used throughout a project (indentation, accurate comments, etc.) and any other requirements (such as test coverage).
 
 
-## Submitting Feature Requests
+### Submitting Feature Requests
 *A Feature Request is a new component or an enhancement to existing functionality.*
 
 Feature Requests are welcome. It's up to you to make a strong case to convince the project team of the merits of this feature. Remember that your request will be prioritized accordingly and not all requests can always be implemented in a timely fashion.
