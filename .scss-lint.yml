@@ -169,7 +169,6 @@ linters:
       - align-items
       - align-self
       - block-size
-      - bottom
       - box-decoration-break
       - box-sizing
       - break-after
@@ -197,7 +196,6 @@ linters:
       - inline-size
       - isolate
       - justify-content
-      - left
       - margin
       - margin-block-end
       - margin-block-start
@@ -236,7 +234,6 @@ linters:
       - perspective
       - perspective-origin
       - resize
-      - right
       - ruby-align
       - ruby-merge
       - ruby-position
@@ -244,7 +241,6 @@ linters:
       - scroll-snap-coordinate
       - scroll-snap-destination
       - scroll-snap-type
-      - top
       - touch-action
       - user-zoom
       - vertical-align
@@ -364,6 +360,10 @@ linters:
       - overflow-y
       - pointer-events
       - position
+      - bottom
+      - left
+      - right
+      - top
       - # Type
       - color
       - direction
