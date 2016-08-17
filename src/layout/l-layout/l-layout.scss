@@ -1,0 +1,35 @@
+// Layout Logic ===============================================================
+
+
+
+// Layout Styling =============================================================
+.l-layout {
+    // 1. Logic (no media queries, see 6)
+    // 1.1. Mixins and Functions
+    // 1.2. Functions
+    // 1.3. Extends (use sparringly, gzip compresses more efficiently TODO: Link to article)
+
+    // 2. Layout properties grouped by intent
+    // 2.1. Box
+    // 2.2. Border
+    // 2.3. Background
+    // 2.4. Text
+    // 2.5. Other (ex: cursors, transitions, etc.)
+
+    // 3. Pseudo
+    // 3.1. Classes
+    // 3.1. Elements
+
+    // 4. States
+    // 4.1. Visited
+    // 4.2. Hover
+    // 4.3. Focus
+    // 4.4. Active
+    // 4.5. Aria states (ex: `[aria-busy="true"]`, etc.)
+
+    // 5. Contexts (ex: `.context &`)
+
+    // 6. Media queries (repeat 1-5, develop mobile first)
+
+    // 7. Nested selectors (repeat 2-8, leverage suffix selectors, try to avoid nesting more than 3 deep)
+}
