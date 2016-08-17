@@ -1,0 +1,39 @@
+// Weights ====================================================================
+$font-weight-thin: 100;
+$font-weight-extra-light: 200;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 800;
+$font-weight-black: 900;
+
+
+// Sizes ======================================================================
+$font-size-giga: 1;
+$font-size-mega: 2;
+$font-size-alpha: 3;
+$font-size-beta: 4;
+$font-size-gamma: 5;
+$font-size-delta: 6;
+$font-size-epsilon: 7;
+$font-size-zeta: 8;
+$font-size-eta: 9;
+
+
+// Tracking ===================================================================
+$font-tracking-tightest: -7px;
+$font-tracking-tighter: -5px;
+$font-tracking-tight: -3px;
+$font-tracking-slight: 1px;
+$font-tracking-loose: 3px;
+$font-tracking-looser: 5px;
+$font-tracking-loosest: 7px;
+
+
+// Global =====================================================================
+$global-type-family: 'Poppins', sans-serif;
+$global-type-size: 16px !default;
+$global-type-weight: $font-weight-medium;
+$global-type-line-height: 1.4;
