@@ -1,6 +1,5 @@
 // Order is important
 
-
 // Utilities ==================================================================
 @import
     // Variables
@@ -29,7 +28,21 @@
 
 
 // Base =======================================================================
-//@import 'base/global';
+@import
+    'base/root',
+    'base/html',
+    'base/body',
+    'base/links',
+    'base/headings',
+    'base/paragraphs',
+    'base/lists',
+    'base/images',
+    'base/tables',
+    'base/media',
+    'base/embeds',
+    'base/forms',
+    'base/code',
+    'base/text-level';
 
 
 // Layout =====================================================================
