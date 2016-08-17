@@ -1,6 +1,8 @@
 {
     "rules": {
-        "at-rule-no-unknown": true,
+        "at-rule-no-unknown": [true, {
+            "ignoreAtRules": ["at-root", "debug", "error", "extend", "for", "import", "include", "warn"]
+        }],
         "at-rule-no-vendor-prefix": [true, {
             "message": "Vendor prefixes are automatically generated (at-rule-no-vendor-prefix)"
         }],
@@ -99,8 +101,13 @@
         "property-no-vendor-prefix": [true, {
             "message": "Vendor prefixes are automatically generated (property-no-vendor-prefix)"
         }],
-        "rule-nested-empty-line-before": "always-multi-line",
-        "rule-non-nested-empty-line-before": "always",
+        "rule-nested-empty-line-before": ["always-multi-line", {
+            "except": ["first-nested"],
+            "ignore": "after-comment"
+        }],
+        "rule-non-nested-empty-line-before": ["always", {
+            "ignore": ["after-comment"]
+        }],
         "selector-combinator-space-after": "always",
         "selector-combinator-space-before": "always",
         "selector-no-id": true,

@@ -197,14 +197,14 @@ linters:
       - isolate
       - justify-content
       - margin
+      - margin-top
+      - margin-right
+      - margin-bottom
+      - margin-left
       - margin-block-end
       - margin-block-start
-      - margin-bottom
       - margin-inline-end
       - margin-inline-start
-      - margin-left
-      - margin-right
-      - margin-top
       - max-block-size
       - max-height
       - max-inline-size
@@ -223,14 +223,14 @@ linters:
       - order
       - orientation
       - padding
+      - padding-top
+      - padding-right
+      - padding-bottom
+      - padding-left
       - padding-block-end
       - padding-block-start
-      - padding-bottom
       - padding-inline-end
       - padding-inline-start
-      - padding-left
-      - padding-right
-      - padding-top
       - perspective
       - perspective-origin
       - resize
@@ -271,6 +271,10 @@ linters:
       - image-resolution
       - # Border
       - border
+      - border-top
+      - border-right
+      - border-bottom
+      - border-left
       - border-block-end
       - border-block-end-color
       - border-block-end-style
@@ -279,7 +283,6 @@ linters:
       - border-block-start-color
       - border-block-start-style
       - border-block-start-width
-      - border-bottom
       - border-bottom-color
       - border-bottom-left-radius
       - border-bottom-right-radius
@@ -301,18 +304,15 @@ linters:
       - border-inline-start-color
       - border-inline-start-style
       - border-inline-start-width
-      - border-left
       - border-left-color
       - border-left-style
       - border-left-width
       - border-radius
-      - border-right
       - border-right-color
       - border-right-style
       - border-right-width
       - border-spacing
       - border-style
-      - border-top
       - border-top-color
       - border-top-left-radius
       - border-top-right-radius
@@ -360,10 +360,10 @@ linters:
       - overflow-y
       - pointer-events
       - position
+      - top
+      - right
       - bottom
       - left
-      - right
-      - top
       - # Type
       - color
       - direction
