@@ -1,3 +1,4 @@
+// Loads and manages Sass partials
 // Order is important
 
 // Utilities ==================================================================
@@ -62,10 +63,10 @@
     'meta/media/print';
 
 
-// Trumps =====================================================================
-
-
-
 // Shame ======================================================================
+// These are styles that override other styles, and should be used very
+// sparingly. This is the only place where `!important` should be used. Strive
+// to refactor when time permits.
+// http://csswizardry.com/2013/04/shame-css/
 @import
     'shame';
