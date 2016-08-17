@@ -1,0 +1,83 @@
+@mixin clearfix() {
+    & {
+        *zoom: 1;
+    }
+
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+// Removes the selection highlight from an element
+@mixin noselect() { user-select: none; }
+
+// Hides content
+@mixin hidden() { display: none !important; }
+
+// Hide visually and from screen readers, but maintain layout
+@mixin invisible() { visibility: hidden; }
+
+// Hide only visually, but have it available for screen readers:
+// http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+@mixin visuallyhidden() {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+// Extends the .visuallyhidden class to allow the element to be focusable when
+// navigated to via the keyboard:
+// https://www.drupal.org/node/897638
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus,
+%visuallyhidden.focusable:active,
+%visuallyhidden.focusable:focus, {
+    //TODO: UPDATE ME
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+// Reverts `visuallyhidden()`. Can be expanded within a Media Query
+@mixin visuallyrevealed() {
+    border: initial;
+    rect: initial;
+    height: initial;
+    margin: initial;
+    overflow: initial;
+    padding: initial;
+    position: initial;
+    width: initial;
+
+    &:focus {
+        clip: initial;
+        height: initial;
+        margin: initial;
+        overflow: initial;
+        position: initial;
+        width: initial;
+    }
+}
+
+// Text Truncate
+// Written as a mixin so it can be declared within a media query. Requires the
+// element to be block or inline-block
+@mixin text-truncate() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
