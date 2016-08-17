@@ -1,0 +1,26 @@
+// Color Map ==================================================================
+$colors: (
+    // Basics
+    color: value,
+
+    // Component
+    component: (
+        subcomponent: value,
+        subcomponent: value
+    )
+);
+
+
+// Color Function ==================================================================
+// Retrieves color values from $colors map
+@function c($color-name, $color-variant:null) {
+    // Color variant is optional
+    @if ($color-variant != null) {
+        // Return `map-get` for cleaner declaration
+        @return map-get(map-get($colors, $color-name), $color-variant);
+    }
+    // Color with color variant
+    @else if ($color-variant == null) {
+        @return map-get($colors, $color-name);
+    }
+}

@@ -1,0 +1,26 @@
+// Z-Index Map ================================================================
+$z-index: (
+    // Banish things out of sight
+    basement: -999999,
+
+    // Layout
+    layout: 1000,
+
+    // Component
+    component: 1000,
+        subcomponent: 1010,
+
+    // Pop up/over UI elements
+    modal: 2000,
+        submodal: 2010,
+
+    // Ensure things are displayed
+    ceiling: 999999
+);
+
+
+// Z-Index Function ==================================================================
+// Retrieve z-index vales from $z-index map
+@function z($key) {
+    @return map-get($z-index, $key);
+}
