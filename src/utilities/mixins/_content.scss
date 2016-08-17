@@ -76,8 +76,19 @@
 // Text Truncate
 // Written as a mixin so it can be declared within a media query. Requires the
 // element to be block or inline-block
-@mixin text-truncate() {
+@mixin text-truncate($max-width) {
+    max-width: $truncation-boundary;
     overflow: hidden;
+
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+
+// Shift Click
+// Shift body text links to make them feel more button-like:
+// http://css-tricks.com/one-pixel-shift-buttons/
+@mixin shiftclick() {
+    position: relative;
+      top: 1px;
 }
