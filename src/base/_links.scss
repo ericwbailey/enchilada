@@ -1,0 +1,28 @@
+// TODO: External links, other link types
+
+
+// Links
+a {
+    color: c(link, base);
+
+    // States
+    &:visited {
+        color: c(link, visited);
+    }
+
+    &:hover {
+        color: c(link, hover);
+    }
+
+    &:focus {
+        color: c(link, focus);
+    }
+
+    &:active {
+        color: c(link, active);
+    }
+
+    &[aria-busy="true"] {
+        color: c(link, busy);
+    }
+}

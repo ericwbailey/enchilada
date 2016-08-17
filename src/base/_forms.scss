@@ -1,0 +1,203 @@
+// Form Containers ============================================================
+form {
+
+}
+
+
+fieldset {
+
+}
+
+
+legend {
+
+}
+
+
+// Form Labels ================================================================
+label {
+
+}
+
+
+// Inputs =====================================================================
+input {
+
+    &[type="color"] {
+
+    }
+
+    [type="date"] {
+
+    }
+
+    &[type="email"] {
+
+    }
+
+    [list] {
+
+    }
+
+    &[type="month"] {
+
+    }
+
+    [type="number"] {
+
+    }
+
+    &[type="password"] {
+
+    }
+
+    &[type="range"] {
+
+    }
+
+    &[type="search"] {
+
+    }
+
+    &[type="tel"] {
+
+    }
+
+    &[type="text"] {
+
+    }
+
+    &[type="time"] {
+
+    }
+
+    &[type="url"] {
+
+    }
+
+    &[type="week"] {
+
+    }
+}
+
+textarea {
+    overflow: auto;
+}
+
+
+// Text-based Inputs ----------------------------------------------------------
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+input[type="search"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input datalist {
+
+}
+
+
+// Non-text-based Inputs ------------------------------------------------------
+input[type="color"],
+input[type="file"],
+input[type="range"] {
+
+}
+
+
+// Select Inputs --------------------------------------------------------------
+select {
+
+}
+
+
+select optgroup {
+
+}
+
+
+select option {
+
+}
+
+
+// Checkboxes and Radios ======================================================
+input {
+    &[type="checkbox"],
+    &[type="radio"] {
+
+    }
+}
+
+input[type="checkbox"] {
+
+}
+
+input[type="radio"] {
+
+}
+
+
+// Buttons ====================================================================
+button,
+input[type="button"] {
+
+}
+
+
+// Output =====================================================================
+progress,
+meter {
+
+}
+
+
+progress {
+
+}
+
+
+meter {
+
+}
+
+
+// Validation =================================================================
+[name="required"] {
+
+}
+
+
+[readonly] {
+
+}
+
+
+input[disabled] {
+
+}
+
+
+[aria-invalid="false"] {
+
+}
+
+
+[aria-invalid="true"] {
+
+}
+
+
+[autosave] {
+
+}
+
+
+// TODO Contains pattern
+
+// TODO minlength, maxlength
