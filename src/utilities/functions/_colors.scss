@@ -3,6 +3,29 @@ $colors: (
     // Basics
     color: value,
 
+    // Base
+    base: (
+        type: #000000,
+        background: #ffffff
+    ),
+
+    // Links
+    link: (
+        base: #00bfff,
+        visited: #ae00ff,
+        hover: #0099cc,
+        focus: #f5a623,
+        active: #c9f1ff,
+        busy: #bfbfbf
+    ),
+
+    // Links
+    heading: (
+        base: #000000,
+        odd: #000000,
+        even: #000000
+    ),
+
     // Component
     component: (
         subcomponent: value,
