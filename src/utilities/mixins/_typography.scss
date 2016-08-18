@@ -3,12 +3,26 @@
 @mixin font-set-component-size() { font-size: 1em; }
 
 
-// Ligatures and OpenType =====================================================
+// Symbols ====================================================================
+@mixin unicode-symbol($symbol: null) {
+    font-family: Arial, sans-serif; // Uses Arial's comprehensive charset
+
+    // Optionally pass the symbol as content, see `utilities/variables/_symbols.scss`
+    @if $symbol != null {
+        content: "#{$symbol}";
+    }
+}
+
+
+// OpenType Features ==========================================================
+// https://www.typotheque.com/articles/opentype_features_in_web_browsers_-_tests
 // http://practice.typekit.com/lesson/caring-about-opentype-features/
 // http://utility-opentype.kennethormandy.com
 
+
 // Disable OpenType
 @mixin font-disable-opentype() { font-feature-settings: normal; } // Disables ligatures on tracked type to prevent this: https://twitter.com/leaverou/status/485885496305127424
+
 
 // Tracking
 @mixin font-tracking-tightest() { @include font-disable-opentype(); letter-spacing: $font-tracking-tightest; }
@@ -18,6 +32,7 @@
 @mixin font-tracking-loose() { @include font-disable-opentype(); letter-spacing: $font-tracking-loose; }
 @mixin font-tracking-looser() { @include font-disable-opentype(); letter-spacing: $font-tracking-looser; }
 @mixin font-tracking-loosest() { @include font-disable-opentype(); letter-spacing: $font-tracking-loosest; }
+
 
 // Alternate characters for display text
 @mixin font-alternates-titling() {
@@ -29,6 +44,7 @@
         font-feature-settings: "titl", "titl";
     }
 }
+
 
 // Text that intends to mimic hand lettering
 @mixin font-alternates-contextual() {
@@ -42,6 +58,7 @@
     }
 }
 
+
 // Text that references past methods of presentation
 @mixin font-alternates-historical() {
     -ms-font-feature-settings: "hist";
@@ -53,6 +70,7 @@
     }
 }
 
+
 // Alternate glyphs that are specifically designed to work alongside all caps
 // settings, or alongside text
 @mixin font-case-sensitive-forms() {
@@ -60,11 +78,13 @@
     font-feature-settings: "case";
 }
 
+
 // Use `&shy;` to  insert a hyphenation hint
 @mixin font-hyphenation() {
     word-break: break-word;
     hyphens: auto;
 }
+
 
 @mixin font-kerning() {
     font-kerning: normal;
@@ -73,6 +93,7 @@
     -webkit-font-feature-settings: "kern";
     font-feature-settings: "kern";
 }
+
 
 // Mitigate spacing issues between specific combinations of letters within a
 // typeface
@@ -87,6 +108,7 @@
     }
 }
 
+
 // Additional ligatures that might be considered too "attention-grabbing" or
 // unconventional to be enabled in many situations
 @mixin font-ligatures-discretionary() {
@@ -100,6 +122,7 @@
     }
 }
 
+
 // Good for when placed in long form, serifed text
 @mixin font-numbers-proportional() {
     font-variant-numeric: proportional-nums;
@@ -109,6 +132,7 @@
         font-feature-settings: "pnum", "tnum" 0, "pnum";
     }
 }
+
 
 // Tends to have descenders that sit below the baseline. Typically default
 @mixin font-numbers-oldstyle() {
@@ -120,6 +144,7 @@
     }
 }
 
+
 // Sets figures to align with the baseline and cap height
 @mixin font-numbers-lining() {
     font-variant-numeric: lining-nums;
@@ -130,6 +155,7 @@
     }
 }
 
+
 // Good for easily comparing when stacked into columns
 @mixin font-numbers-tabular() {
     font-variant-numeric: tabular-nums;
@@ -139,6 +165,7 @@
         font-feature-settings: "pnum" 0, "tnum", "tnum";
     }
 }
+
 
 @mixin font-numbers-proportional-oldstyle() {
     @include font-numbers-proportional();
@@ -152,6 +179,7 @@
     }
 }
 
+
 @mixin font-numbers-proportional-lining() {
     @include font-numbers-proportional();
     @include font-numbers-lining();
@@ -163,6 +191,7 @@
         font-feature-settings: "lnum", "onum" 0, "pnum", "tnum" 0;
     }
 }
+
 
 @mixin font-numbers-tabular-lining() {
     @include font-numbers-tabular();
@@ -176,6 +205,7 @@
     }
 }
 
+
 @mixin font-numbers-tabular-oldstyle() {
     @include font-numbers-tabular();
     @include font-numbers-oldstyle();
@@ -187,6 +217,7 @@
         font-feature-settings: "lnum" 0, "onum", "pnum" 0, "tnum";
     }
 }
+
 
 // Turns common plaintext number lockups into properly spaced fractions (i.e.
 // 1/4 to ¼)
@@ -200,6 +231,7 @@
     }
 }
 
+
 // Support for a less-common stacked presentation
 @mixin font-numbers-stacked-fractions() {
     -ms-font-feature-settings: "frac", "afrc";
@@ -210,6 +242,7 @@
         font-feature-settings: "frac", "afrc", "afrc";
     }
 }
+
 
 // Glpyhs that commonly follow a number (ex: 1st, 2nd). Also sometimes used with
 // foreign languages
@@ -222,6 +255,7 @@
         font-feature-settings: "ordn", "ordn";
     }
 }
+
 
 // Chemical and mathematical notation
 @mixin font-scientific-inferiors() {
@@ -257,6 +291,7 @@
     }
 }
 
+
 // Less distracting than all capitals for longer form text settings. Renders
 // all applicable glyphs as small caps, regardless of initial case
 @mixin font-small-caps() {
@@ -274,11 +309,35 @@
    }
 }
 
-@mixin font-smoothing() {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
+
+// If at all possible, don't alter the subpixel rendering:
+// http://usabilitypost.com/2012/11/05/stop-fixing-font-smoothing/
+// Options are included just in case. Currently only works on Mac OS:
+// http://files.christophzillgens.com/webkit-font-smoothing.html
+@mixin font-smoothing($aliasing) {
     text-rendering: optimizeLegibility;
+
+    // Best for typefaces with very small size considerations (Verdana, etc.) and bitmap/pixel fonts
+    @if $aliasing == "none" {
+        -webkit-font-smoothing: none;
+        font-smoothing: none;
+    }
+    // Best for light text on dark backgrounds and italic text
+    @else if $aliasing == "light-on-dark" {
+        -webkit-font-smoothing: subpixel-antialiased;
+        font-smoothing: subpixel-antialiased;
+    }
+    // Best for light text on dark backgrounds and icon fonts
+    @else if $aliasing == "dark-on-light" {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        font-smoothing: antialiased;
+    }
+    @else {
+        @error "`#{$aliasing}` is not a valid argument. Please select `none`, `light-on-dark`, or `dark-on-light`";
+    }
 }
+
 
 @mixin font-subscript() {
     text-transform: lowercase;
@@ -301,6 +360,7 @@
     }
 }
 
+
 @mixin font-superscript() {
     text-transform: lowercase;
     font-variant-position: super;
@@ -320,32 +380,33 @@
     }
 }
 
+
 // Adds additional flare, best applied conservatively
-@for $swsh from 1 through 3 {
-    @mixin font-swash-0#{$swsh} {
-        -webkit-font-feature-settings: "swsh" $swsh;
-        font-feature-settings: "swsh" $swsh;
-    }
-}
-
-@for $salt from 1 through 3 {
-    @mixin font-salt-0#{$salt} {
-        -webkit-font-feature-settings: "salt" $salt;
-        font-feature-settings: "salt" $salt;
-    }
-}
-
-@for $ss from 1 through 20 {
-    @if $ss < 10 {
-        @mixin font-ss-0#{$ss} {
-            -webkit-font-feature-settings: ss0 + $ss;
-            font-feature-settings: ss0 + $ss;
-        }
-    }
-    @else {
-        @mixin font-ss-#{$ss} {
-            -webkit-font-feature-settings: ss + $ss;
-            font-feature-settings: ss + $ss;
-        }
-    }
-}
+// @for $swsh from 1 through 3 {
+//     @mixin font-swash-0#{$swsh} {
+//         -webkit-font-feature-settings: "swsh" $swsh;
+//         font-feature-settings: "swsh" $swsh;
+//     }
+// }
+//
+// @for $salt from 1 through 3 {
+//     @mixin font-salt-0#{$salt} {
+//         -webkit-font-feature-settings: "salt" $salt;
+//         font-feature-settings: "salt" $salt;
+//     }
+// }
+//
+// @for $ss from 1 through 20 {
+//     @if $ss < 10 {
+//         @mixin font-ss-0#{$ss} {
+//             -webkit-font-feature-settings: ss0 + $ss;
+//             font-feature-settings: ss0 + $ss;
+//         }
+//     }
+//     @else {
+//         @mixin font-ss-#{$ss} {
+//             -webkit-font-feature-settings: ss + $ss;
+//             font-feature-settings: ss + $ss;
+//         }
+//     }
+// }
