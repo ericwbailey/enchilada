@@ -4,46 +4,47 @@
 // Utilities ==================================================================
 @import
     // Variables
-    'utilities/variables/paths',
-    'utilities/variables/typography',
-    'utilities/variables/animation',
+    "utilities/variables/paths",
+    "utilities/variables/typography",
+    "utilities/variables/symbols",
+    "utilities/variables/animation",
 
     // Imports
-    'utilities/imports/fonts',
+    "utilities/imports/fonts",
 
     // Functions
-    'utilities/functions/colors',
-    'utilities/functions/z-index',
+    "utilities/functions/colors",
+    "utilities/functions/z-index",
 
     // Mixins
-    'utilities/mixins/content',
-    'utilities/mixins/typography',
-    'utilities/mixins/units';
+    "utilities/mixins/content",
+    "utilities/mixins/typography",
+    "utilities/mixins/units";
 
 
 // Vendor =====================================================================
-// TODO: Pull imports straight from node_modules
-//@import
-//    '_vendor/normalize',
-//    '_vendor-tweaks/normalize';
+@import
+    "../node_modules/normalize.css/normalize";
 
 
 // Base =======================================================================
 @import
-    'base/root',
-    'base/html',
-    'base/body',
-    'base/links',
-    'base/headings',
-    'base/paragraphs',
-    'base/lists',
-    'base/images',
-    'base/tables',
-    'base/media',
-    'base/embeds',
-    'base/forms',
-    'base/code',
-    'base/text-level';
+    "base/reset",
+    "base/root",
+    "base/html",
+    "base/body",
+    "base/links",
+    "base/headings",
+    "base/paragraphs",
+    "base/lists",
+    "base/images",
+    "base/tables",
+    "base/media",
+    "base/embeds",
+    "base/forms",
+    "base/code",
+    "base/quotes",
+    "base/text-level";
 
 
 // Layout =====================================================================
@@ -60,7 +61,7 @@
 
 // Media ======================================================================
 @import
-    'meta/media/print';
+    "meta/media/print";
 
 
 // Shame ======================================================================
@@ -69,4 +70,4 @@
 // to refactor when time permits.
 // http://csswizardry.com/2013/04/shame-css/
 @import
-    'shame';
+    "shame";
