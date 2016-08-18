@@ -1,0 +1,122 @@
+// Variables for describing commonly-used unicode symbols. Note that some
+// codepoints will render as emoji on certain systems (commented examples below
+// should demonstrate). Use the `unicode-symbol()` mixin for better font support
+// if using a custom font.
+
+//Also remember to check Unify for browser support:
+// http://unicode.johnholtripley.co.uk/
+
+
+// Bullets --------------------------------------------------------------------
+$symbol-bullet-small: "\00B7"; // ·
+$symbol-bullet-medium: "\2022"; // •
+$symbol-bullet-large: "\25CF"; // ●
+
+
+// Currency --------------------------------------------------------------------
+$symbol-currency-cent: "\00A2"; // ¢
+$symbol-currency-dollar: "\0024"; // $
+$symbol-currency-euro: "\20AC"; // €
+$symbol-currency-generic: "\00A4"; // ¤
+$symbol-currency-pound: "\00A3"; // £
+$symbol-currency-yen: "\00A5"; // ¥
+
+
+// Games ----------------------------------------------------------------------
+// Cards
+$symbol-cards-spade: "\2660"; // ♠
+$symbol-cards-heart: "\2665"; // ♥
+$symbol-cards-diamond: "\2666"; // ♦
+$symbol-cards-club: "\2663"; // ♣
+
+// Chess
+$symbol-chess-black-bishop: "\265D"; // ♝
+$symbol-chess-black-king: "\265A"; // ♚
+$symbol-chess-black-knight: "\265E"; // ♞
+$symbol-chess-black-pawn: "\265F"; // ♟
+$symbol-chess-black-queen: "\265B"; // ♛
+$symbol-chess-black-rook: "\265C"; // ♜
+$symbol-chess-white-bishop: "\2657"; // ♗
+$symbol-chess-white-king: "\2654"; // ♔
+$symbol-chess-white-knight: "\2658"; // ♘
+$symbol-chess-white-pawn: "\2659"; // ♙
+$symbol-chess-white-queen: "\2655"; // ♕
+$symbol-chess-white-rook: "\2656"; // ♖
+
+
+// Quotes ---------------------------------------------------------------------
+// Also see `base/_quotes.scss`
+$symbol-quote-single-opening: "\2018"; // ‘
+$symbol-quote-single-closing: "\2019"; // ’
+$symbol-quote-double-opening: "\201C"; // “
+$symbol-quote-double-closing: "\201D"; // ”
+
+
+// Typography -----------------------------------------------------------------
+$symbol-asterism: "\2042"; // ⁂
+$symbol-dagger-single: "\2020"; // †
+$symbol-dagger-double: "\2021"; // ‡
+$symbol-ditto: "\3003"; // 〃
+$symbol-ellipsis: "\2026"; // …
+$symbol-fleur-de-lys: "\269C"; // ⚜
+$symbol-interrobang: "\203D"; // ‽
+$symbol-manicule-full: "\261B"; // ☛
+$symbol-manicule-hollow: "\261E"; // ☞
+$symbol-numero: "\2116"; // №
+$symbol-paragraph: "\00B6"; // ¶
+$symbol-section: "\00A7"; // §
+$symbol-star-full: "\2605"; // ★
+$symbol-star-hollow: "\2606"; // ☆
+
+
+// Dashes ---------------------------------------------------------------------
+$symbol-dash-en: "\2013"; // –
+$symbol-dash-em: "\2014"; // —
+$symbol-dash-figure: "\2012"; // ‒
+$symbol-dash-swung: "\2053"; // ⁓
+$symbol-dash-quotation: "\2015"; // ―
+
+
+// Fractions ------------------------------------------------------------------
+$symbol-fraction-one-half: "\00BD"; // ½
+$symbol-fraction-one-quarter: "\00BC"; // ¼
+$symbol-fraction-three-quarters: "\00BE"; // ¾
+$symbol-fraction-one-seventh: "\2150"; // ⅐
+$symbol-fraction-one-ninth: "\2151"; // ⅑
+$symbol-fraction-one-tenth: "\2152"; // ⅒
+$symbol-fraction-one-third: "\2153"; // ⅓
+$symbol-fraction-two-thirds: "\2154"; // ⅔
+$symbol-fraction-one-fifth: "\2155"; // ⅕
+$symbol-fraction-two-fifths: "\2156"; // ⅖
+$symbol-fraction-three-fifths: "\2157"; // ⅗
+$symbol-fraction-four-fifths: "\2158"; // ⅘
+$symbol-fraction-one-sixth: "\2159"; // ⅙
+$symbol-fraction-five-sixths: "\215A"; // ⅚
+$symbol-fraction-one-eighth: "\215B"; // ⅛
+$symbol-fraction-three-eighths: "\215C"; // ⅜
+$symbol-fraction-five-eighths: "\215D"; // ⅝
+$symbol-fraction-seven-eighths: "\215E"; // ⅞
+
+
+// Forms ----------------------------------------------------------------------
+$symbol-form-check-light: "\2713"; // ✓
+$symbol-form-check-heavy: "\2714"; // ✔
+$symbol-form-cross-light: "\2717"; // ✗
+$symbol-form-cross-heavy: "\2718"; // ✘
+
+// Checkboxes
+$symbol-form-checkbox-unchecked: "\2610"; // ☐
+$symbol-form-checkbox-checked: "\2611"; // ☑
+$symbol-form-checkbox-crossed: "\2612"; // ☒
+
+// Radios
+$symbol-form-radio-checked: "\25C9"; // ◉
+$symbol-form-radio-unchecked: "\25CE"; // ◎
+
+
+// Music ----------------------------------------------------------------------
+$symbol-music-quarter-note: "\2669"; // ♩
+$symbol-music-two-eighths-note: "\266B"; // ♫
+$symbol-music-sharp-note: "\266F"; // ♯
+$symbol-music-eighth-note: "\266A"; // ♪
+$symbol-music-two-sixteenths-note: "\266C"; // ♬
