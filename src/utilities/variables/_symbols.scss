@@ -3,8 +3,31 @@
 // should demonstrate). Use the `unicode-symbol()` mixin for better font support
 // if using a custom font.
 
-//Also remember to check Unify for browser support:
+// Also remember to check Unify for browser support:
 // http://unicode.johnholtripley.co.uk/
+
+
+// Arrows ----------------------------------------------------------------------
+$symbol-arrow-thin-left: "\2190"; // ←
+$symbol-arrow-thin-right: "\2192"; // →
+$symbol-arrow-thin-up: "\2191"; // ↑
+$symbol-arrow-thin-down: "\2193"; // ↓
+$symbol-arrow-thin-up-left: "\2196"; // ↖
+$symbol-arrow-thin-up-right: "\2197"; // ↗
+$symbol-arrow-thin-down-left: "\2199"; // ↙
+$symbol-arrow-thin-down-right: "\2198"; // ↘
+$symbol-arrow-thick-left: "\2B05"; // ⬅
+$symbol-arrow-thick-right: "\27A1"; // ➡
+$symbol-arrow-thick-up: "\2B06"; // ⬆
+$symbol-arrow-thick-down: "\2B07"; // ⬇
+$symbol-arrow-thick-up-left: "\2B09"; // ⬉
+$symbol-arrow-thick-up-right: "\2B08"; // ⬈
+$symbol-arrow-thick-down-left: "\2B0B"; // ⬋
+$symbol-arrow-thick-down-right: "\2B0A"; // ⬊
+$symbol-arrow-point-left: "\25C4"; // ◄
+$symbol-arrow-point-right: "\25BA"; // ►
+$symbol-arrow-point-up: "\25B2"; // ▲
+$symbol-arrow-point-down: "\25BC"; // ▼
 
 
 // Bullets --------------------------------------------------------------------
@@ -53,18 +76,30 @@ $symbol-quote-double-closing: "\201D"; // ”
 
 
 // Typography -----------------------------------------------------------------
+$symbol-asterisk-heavy: "\2731"; // ✱
+$symbol-asterisk-teardrop: "\273B"; // ✻
 $symbol-asterism: "\2042"; // ⁂
-$symbol-dagger-single: "\2020"; // †
+$symbol-caduceus: "\2624"; // ☤
+$symbol-celcius: "\2103"; // ℃
+$symbol-cut-down: "\2703"; // ✃
+$symbol-cut-up: "\2701"; // ✁
 $symbol-dagger-double: "\2021"; // ‡
+$symbol-dagger-single: "\2020"; // †
+$symbol-diamonds: "\2756"; // ❖
 $symbol-ditto: "\3003"; // 〃
 $symbol-ellipsis: "\2026"; // …
+$symbol-fahrenheit: "\2109"; // ℉
 $symbol-fleur-de-lys: "\269C"; // ⚜
 $symbol-interrobang: "\203D"; // ‽
 $symbol-manicule-full: "\261B"; // ☛
 $symbol-manicule-hollow: "\261E"; // ☞
 $symbol-numero: "\2116"; // №
 $symbol-paragraph: "\00B6"; // ¶
+$symbol-pencil: "\270E"; // ✎
+$symbol-perscription: "\211E"; // ℞
 $symbol-section: "\00A7"; // §
+$symbol-skull-and-crossbones: "\2620"; // ☠
+$symbol-star-circle: "\272A"; // ✪
 $symbol-star-full: "\2605"; // ★
 $symbol-star-hollow: "\2606"; // ☆
 
@@ -105,18 +140,88 @@ $symbol-form-cross-light: "\2717"; // ✗
 $symbol-form-cross-heavy: "\2718"; // ✘
 
 // Checkboxes
-$symbol-form-checkbox-unchecked: "\2610"; // ☐
 $symbol-form-checkbox-checked: "\2611"; // ☑
 $symbol-form-checkbox-crossed: "\2612"; // ☒
+$symbol-form-checkbox-unchecked: "\2610"; // ☐
 
 // Radios
 $symbol-form-radio-checked: "\25C9"; // ◉
 $symbol-form-radio-unchecked: "\25CE"; // ◎
 
 
+// Intellectual Property ------------------------------------------------------
+$symbol-ip-copyright: "\00A9"; // ©
+$symbol-ip-registered-trademark: "\00AE"; // ®
+$symbol-ip-service-mark: "\2120"; // ℠
+$symbol-ip-trademark: "\2122"; // ™
+$symbol-ip-sound-recording: "\2117"; // ℗
+
+
+// Keyboard -------------------------------------------------------------------
+$symbol-keyboard-break: "\238A"; // ⎊
+$symbol-keyboard-caps-lock: "\21EA"; // ⇪
+$symbol-keyboard-clear: "\2327"; // ⌧
+$symbol-keyboard-command: "\2318"; // ⌘
+$symbol-keyboard-control: "\2303"; // ⌃
+$symbol-keyboard-cut: "\2702"; // ✂
+$symbol-keyboard-delete-backward: "\232B"; // ⌫
+$symbol-keyboard-delete-forward: "\2326"; // ⌦
+$symbol-keyboard-eject: "\23CF"; // ⏏
+$symbol-keyboard-end: "\2198"; // ↘
+$symbol-keyboard-enter: "\2324"; // ⌤
+$symbol-keyboard-escape: "\238B"; // ⎋
+$symbol-keyboard-help: "\2370"; // ⍰
+$symbol-keyboard-home: "\2196"; // ↖
+$symbol-keyboard-option: "\2325"; // ⌥
+$symbol-keyboard-page-down: "\21DF"; // ⇟
+$symbol-keyboard-page-up: "\21DE"; // ⇞
+$symbol-keyboard-pause: "\2389"; // ⎉
+$symbol-keyboard-print-screen: "\2399"; // ⎙
+$symbol-keyboard-redo: "\21B7"; // ↷
+$symbol-keyboard-refresh: "\27F3"; // ⟳
+$symbol-keyboard-reload: "\27F2"; // ⟲
+$symbol-keyboard-return: "\23CE"; // ⏎
+$symbol-keyboard-shift: "\21E7"; // ⇧
+$symbol-keyboard-sleep: "\263E"; // ☾
+$symbol-keyboard-space: "\2423"; // ␣
+$symbol-keyboard-tab-backward: "\21E4"; // ⇤
+$symbol-keyboard-tabforward: "\21E5"; // ⇥
+$symbol-keyboard-undo: "\21B6"; // ↶
+
+
+// Math -----------------------------------------------------------------------
+$symbol-math-addition: "\002B"; // +
+$symbol-math-approximately-equals: "\2248"; // ≈
+$symbol-math-divide: "\00F7"; // ÷
+$symbol-math-does-not-equal: "\2260"; // ≠
+$symbol-math-equals: "\003D"; // =
+$symbol-math-fraction-slash: "\2215"; // ∕
+$symbol-math-greater-than-or-equal-to: "\2265"; // ≥
+$symbol-math-greater-than: "\003E"; // >
+$symbol-math-infinity: "\221E"; // ∞
+$symbol-math-integral: "\222B"; // ∫
+$symbol-math-less-than-or-equal-to: "\2264"; // ≤
+$symbol-math-less-than: "\003C"; // <
+$symbol-math-minus: "\2212"; // −
+$symbol-math-multiply: "\00D7"; // ×
+$symbol-math-plus-or-minus: "\00B1"; // ±
+$symbol-math-square-root: "\221A"; // √
+
+
 // Music ----------------------------------------------------------------------
-$symbol-music-quarter-note: "\2669"; // ♩
-$symbol-music-two-eighths-note: "\266B"; // ♫
-$symbol-music-sharp-note: "\266F"; // ♯
 $symbol-music-eighth-note: "\266A"; // ♪
+$symbol-music-quarter-note: "\2669"; // ♩
+$symbol-music-sharp-note: "\266F"; // ♯
+$symbol-music-two-eighths-note: "\266B"; // ♫
 $symbol-music-two-sixteenths-note: "\266C"; // ♬
+
+
+// Shapes ---------------------------------------------------------------------
+$symbol-shape-circle-solid: "\25CF"; // ●
+$symbol-shape-circle-hollow: "\25CB"; // ○
+$symbol-shape-diamond-solid: "\25C6"; // ◆
+$symbol-shape-diamond-hollow: "\25C7"; // ◇
+$symbol-shape-square-solid: "\25A0"; // ■
+$symbol-shape-square-hollow: "\25A1"; // □
+$symbol-shape-triangle-solid: "\25B2"; // ▲
+$symbol-shape-triangle-hollow: "\25B3"; // △
