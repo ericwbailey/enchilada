@@ -1,6 +1,24 @@
+// Table Logic ================================================================
+
+
+
+// [1] Basic responsive images
+// [2] Differentiate `alt` text from surrounding copy
+// [3] Removes the whitespace that appears under `img` elements
 img,
 picture,
 figure {
+    max-width: 100%; // [1]
+    vertical-align: middle; // [3]
+
+    font-style: italic; // [2]
+
+    // Fixed-size, non-fluid images if `height` and/or `width` attributes are
+    // declared
+    &[height],
+    &[width] {
+        max-width: none;
+    }
 }
 
 
@@ -13,7 +31,7 @@ picture {
 figure {
 
     img {
-
+        display: block;
     }
 
     figcaption {
