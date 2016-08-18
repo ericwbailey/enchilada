@@ -1,46 +1,22 @@
+:root {
+
+}
+
 // TODO: root stuff
 
-@include font-ligatures-common();
-@include font-kerning();
-@include font-smoothing();
-
-background-color: c(base, background);
-
-color: c(base, type);
-font-family: $global-type-family;
-font-weight: $global-type-weight;
-font-size: $global-type-size;
-line-height: $global-type-line-height;
-
-
+// @include font-ligatures-common();
+// @include font-kerning();
+// @include font-smoothing();
+//
+// background-color: c(base, background);
+//
+// color: c(base, type);
+// font-family: $global-type-family;
+// font-weight: $global-type-weight;
+// font-size: $global-type-size;
+// line-height: $global-type-line-height;
 
 
-
-
-// [1] Triggers browser hyphenation based off of declared language:
-// http://thenewcode.com/429/Classic-Typography-Effects-Hyphenation
-html {
-    margin: 0;
-    overflow-y: scroll;
-
-    &:lang(en-US) {
-        @include font-hyphenation(); // [1]
-    }
-}
-
-// [1] Applies `border-box` to all HTML elements:
-// https://github.com/AllThingsSmitty/css-protips#inherit-box-sizing
-*,
-*::before,
-*::after {
-    box-sizing: border-box; // [1]
-}
 
 // Remove text-shadow in selection highlight
 ::selection { text-shadow: none; }
-
-body {
-    margin: 0;
-
-    font-size: 1em;
-}
