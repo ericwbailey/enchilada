@@ -1,7 +1,23 @@
 // Color Map ==================================================================
 $colors: (
     // Basics
-    color: value,
+    // http://clrs.cc/
+    aqua: #7fdbff,
+    black: #111111,
+    blue: #0074d9,
+    fuchsia: #f012be,
+    gray: #aaaaaa,
+    green: #2ecc40,
+    lime: #01ff70,
+    maroon: #85144b,
+    navy: #001f3f,
+    olive: #3d9970,
+    orange: #ff851b,
+    purple: #b10dc9,
+    red: #ff4136,
+    silver: #dddddd,
+    teal: #39cccc,
+    yellow: #ffdc00,
 
     // Base
     base: (
@@ -11,26 +27,26 @@ $colors: (
 
     // Links
     link: (
-        base: #00bfff,
+        base: #0074d9,
         visited: #ae00ff,
-        hover: #0099cc,
-        focus: #f5a623,
-        active: #c9f1ff,
-        busy: #bfbfbf
+        hover: #7fdbff,
+        focus: #ff851b,
+        active: #7fdbff,
+        busy: #dddddd
     ),
 
     // Links
     heading: (
-        base: #000000,
-        odd: #000000,
-        even: #000000
-    ),
+        base: #111111,
+        odd: #9B9B9B,
+        even: #4A4A4A
+    )
 
     // Component
-    component: (
-        subcomponent: value,
-        subcomponent: value
-    )
+//    component: (
+//        subcomponent: value,
+//        subcomponent: value
+//    )
 );
 
 
