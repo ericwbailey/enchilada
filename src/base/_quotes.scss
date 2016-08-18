@@ -1,0 +1,212 @@
+// Quotation Marks ============================================================
+// Let the `lang` attribute determine the generated quote. Top languages
+// are represented, as per this list:
+// http://en.wikipedia.org/wiki/List_of_languages_by_total_number_of_speakers
+
+// Four levels of quote pairs to ensure deeply nested quotations display
+// properly. If deeper than four levels, consider rewriting your sentence to
+// improve clarity:
+// http://en.wikipedia.org/wiki/International_variation_in_quotation_marks
+// http://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references
+
+
+// English -------------------------------------------------------------------
+// Quote pairs: “…” ‘…’ “…” ‘…’
+
+// General
+:lang(en) blockquote,
+:lang(en) q,
+
+// United States
+:lang(en-US) blockquote,
+:lang(en-US) q,
+
+// Great Britan
+:lang(en-GB) blockquote,
+:lang(en-GB) q {
+    quotes: "'\u201C' '\u201D' '\u2018' '\u2019' '\u201C' '\u201D' '\u2018' '\u2019'";
+}
+
+
+// French ---------------------------------------------------------------------
+// Quote pairs: «» “” «» “”
+
+:lang(fr) blockquote,
+:lang(fr) q {
+    quotes: "'\u00AB' '\u00BB' '\u201C' '\u201D' '\u00AB' '\u00BB' '\u201C' '\u201D'";
+}
+
+
+// German -----------------------------------------------------------------
+// Quote pairs: „…“ ‚…‘ „…“ ‚…‘
+
+:lang(de) blockquote,
+:lang(de) q {
+    quotes: "'\u201E' '\u201C' '\u201A' '\u2018' '\u201E' '\u201C' '\u201A' '\u2018'";
+}
+
+
+// Italian --------------------------------------------------------------------
+// Quote pairs: «…» “…” «…» “…”
+
+:lang(it) blockquote,
+:lang(it) q {
+    quotes: "'\u00AB' '\u00BB' '\u201C' '\u201D' '\u00AB' '\u00BB' '\u201C' '\u201D'";
+}
+
+
+// Indonesian -----------------------------------------------------------------
+// Quote pairs: “…” ‘…’ “…” ‘…’
+
+:lang(id) blockquote,
+:lang(id) q,
+:lang(in) blockquote,
+:lang(in) q {
+    quotes: "'\u201C' '\u201D' '\u2018' '\u2019' '\u201C' '\u201D' '\u2018' '\u2019'";
+}
+
+
+// Japanese -------------------------------------------------------------------
+// Quote pairs: 「…」 『…』 「…」 『…』
+
+:lang(ja) blockquote,
+:lang(ja) q {
+    quotes: "'\u300C' '\u300D' '\u300E' '\u300F' '\u300C' '\u300D' '\u300E' '\u300F'";
+}
+
+
+// Korean ---------------------------------------------------------------------
+// Quote pairs: 「…」 『…』 「…」 『…』
+
+:lang(ko) blockquote,
+:lang(ko) q {
+    quotes: "'\u300C' '\u300D' '\u300E' '\u300F' '\u300C' '\u300D' '\u300E' '\u300F'";
+}
+
+
+// Mandarin -------------------------------------------------------------------
+// Quote pairs: 「…」 『…』 「…」 『…』
+
+// Chinese, General
+:lang(zh) blockquote,
+:lang(zh) q,
+
+// Chinese, Simplified
+:lang(zh-Hans) blockquote,
+:lang(zh-Hans) q,
+
+// Chinese, Traditional
+:lang(zh-Hant) blockquote,
+:lang(zh-Hant) q {
+    quotes: "'\u300C' '\u300D' '\u300E' '\u300F' '\u300C' '\u300D' '\u300E' '\u300F'";
+}
+
+
+// Portuguese -----------------------------------------------------------------
+// Quote pairs: “…” ‘…’ “…” ‘…’
+
+:lang(pt) blockquote,
+:lang(pt) q {
+    quotes: "'\u201C' '\u201D' '\u2018' '\u2019' '\u201C' '\u201D' '\u2018' '\u2019'";
+}
+
+
+// Russian --------------------------------------------------------------------
+// Quote pairs: «…» „…“ «…» „…“
+
+:lang(ru) blockquote,
+:lang(ru) q {
+    quotes: "'\u00AB' '\u00BB' '\u201E' '\u201C' '\u00AB' '\u00BB' '\u201E' '\u201C'";
+}
+
+
+// Spanish --------------------------------------------------------------------
+// Quote pairs: «…» “…” «…» “…”
+
+:lang(es) blockquote,
+:lang(es) q {
+    quotes: "'\u00AB' '\u00BB' '\u201C' '\u201D' '\u00AB' '\u00BB' '\u201C' '\u201D'";
+}
+
+
+// Turkish --------------------------------------------------------------------
+// Quote pairs: “…” ‘…’ “…” ‘…’
+
+:lang(tr) blockquote,
+:lang(tr) q {
+    quotes: "'\u201C' '\u201D' '\u2018' '\u2019' '\u201C' '\u201D' '\u2018' '\u2019'";
+}
+
+
+// Vietnamese -----------------------------------------------------------------
+// Quote pairs: “…” “…” “…” “…”
+
+:lang(vi) blockquote,
+:lang(vi) q {
+    quotes: "'\u201C' '\u201D' '\u201C' '\u201D' '\u201C' '\u201D' '\u201C' '\u201D'";
+}
+
+
+// Quotation ==================================================================
+q {
+    &::before {
+        content: open-quote;
+    }
+
+    &::after {
+        content: close-quote;
+    }
+}
+
+
+blockquote {
+
+    p::before {
+        content: open-quote;
+    }
+
+    // Removes closing quote from every paragraph
+    p::after {
+        content: no-close-quote;
+    }
+
+    // Adds closing quote to last paragraph of the blockquote
+    p:last-of-type::after {
+        content: close-quote;
+    }
+
+    q::before {
+        content: open-quote;
+    }
+
+    q::after {
+        content: close-quote;
+    }
+
+    // http://html5doctor.com/cite-and-blockquote-reloaded/
+    cite {
+        display: block;
+
+        text-indent: 0;
+
+        &::before {
+            content: $symbol-dash-quotation;
+        }
+    }
+}
+
+
+// Quoted emphasis
+q em,
+q i,
+cite em,
+cite i ,
+
+// Quoted strong
+q strong,
+q b,
+cite strong,
+cite b {
+    font-style: normal;
+    font-weight: normal;
+}
