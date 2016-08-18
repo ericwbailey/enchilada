@@ -7,29 +7,33 @@
     // 1. Logic (no media queries, see 6)
     // 1.1. Mixins and Functions
     // 1.2. Functions
-    // 1.3. Extends (use sparringly, gzip compresses more efficiently TODO: Link to article)
+    // 1.3. Extends (use sparringly, gzip compresses more efficiently:
+    // http://csswizardry.com/2016/02/mixins-better-for-performance/
 
-    // 2. Object properties grouped by intent
+    // 2. Properties, grouped by intent
     // 2.1. Box
     // 2.2. Border
     // 2.3. Background
     // 2.4. Text
     // 2.5. Other (ex: cursors, transitions, etc.)
 
-    // 3. Pseudo
-    // 3.1. Classes
-    // 3.1. Elements
+    // 3. Supports (if needed)
 
-    // 4. States
-    // 4.1. Visited
-    // 4.2. Hover
-    // 4.3. Focus
-    // 4.4. Active
-    // 4.5. Aria states (ex: `[aria-busy="true"]`, etc.)
+    // 4. Pseudo
+    // 4.1. Classes
+    // 4.1. Elements
 
-    // 5. Contexts (ex: `.context &`)
+    // 5. States
+    // 5.1. Visited
+    // 5.2. Hover
+    // 5.3. Focus
+    // 5.4. Active
+    // 5.5. Aria states (ex: `[aria-busy="true"]`, etc.)
 
-    // 6. Media queries (repeat 1-5, develop mobile first)
+    // 6. Contexts (ex: `.context &`)
 
-    // 7. Nested selectors (repeat 2-8, leverage suffix selectors, try to avoid nesting more than 3 deep)
+    // 7. Media queries (repeat 1-5, develop mobile first)
+
+    // 8. Nested selectors (repeat 2-7, leverage suffix selectors, try to avoid
+    // nesting more than 3 deep)
 }
