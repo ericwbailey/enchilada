@@ -1,34 +1,109 @@
+// Table Logic ================================================================
+// Impose specific column widths on tables, if desired. Always leave one column
+// free, to absorb rounding errors/accidental breakage.
+@mixin table-col-width-05() { width: 5%; }
+@mixin table-col-width-10() { width: 10%; }
+@mixin table-col-width-12() { width: 12.5%; } // 1/8
+@mixin table-col-width-15() { width: 15%; }
+@mixin table-col-width-20() { width: 20%; }
+@mixin table-col-width-25() { width: 25%; } // 1/4
+@mixin table-col-width-30() { width: 30%; }
+@mixin table-col-width-33() { width: 33.333%; } // 1/3
+@mixin table-col-width-35() { width: 35%; }
+@mixin table-col-width-37() { width: 37.5%; } // 3/8
+@mixin table-col-width-40() { width: 40%; }
+@mixin table-col-width-45() { width: 45%; }
+@mixin table-col-width-50() { width: 50%; } // 1/2
+@mixin table-col-width-55() { width: 55%; }
+@mixin table-col-width-60() { width: 60%; }
+@mixin table-col-width-62() { width: 62.5%; } // 5/8
+@mixin table-col-width-65() { width: 65%; }
+@mixin table-col-width-66() { width: 66.666%; } // 2/3
+@mixin table-col-width-70() { width: 70%; }
+@mixin table-col-width-75() { width: 75%; } // 3/4
+@mixin table-col-width-80() { width: 80%; }
+@mixin table-col-width-85() { width: 85%; }
+@mixin table-col-width-87() { width: 87.5%; } // 7/8
+@mixin table-col-width-90() { width: 90%; }
+@mixin table-col-width-95() { width: 95%; }
+
+
+// Column alignments
+@mixin table-col-align-text { text-align: left; }
+@mixin table-col-align-image { text-align: center; }
+@mixin table-col-align-number { text-align: right; }
+
+
+// Table Styling ==============================================================
 table {
+    width: 100%;
 
     caption {
 
     }
 
-    colgroup {
-
-    }
-
-    col {
-
-    }
-
-    thead {
-
-    }
-
-    th {
-
-    }
-
+    // Styles all table rows
     tr {
 
     }
 
+    // Styles all table cells
+    col,
+    th,
     td {
+        @include table-col-align-text;
+    }
 
+    [colspan] {
+        text-align: center;
+    }
+
+    [colspan="1"] {
+        @include table-col-align-text;
+    }
+
+    [rowspan]
+    {
+        vertical-align: middle;
+    }
+
+    [rowspan="1"] {
+        vertical-align: top;
+    }
+
+    colgroup {
+
+        col {
+
+        }
+    }
+
+    thead {
+
+        tr {
+
+            th {
+
+            }
+        }
+    }
+
+    tbody {
+        tr {
+
+            td {
+
+            }
+        }
     }
 
     tfoot {
 
+        tr {
+
+            td {
+
+            }
+        }
     }
 }
