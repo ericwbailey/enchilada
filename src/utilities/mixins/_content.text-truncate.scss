@@ -1,3 +1,8 @@
+// ============================================================================
+// Text Truncate
+// ============================================================================
+
+
 // Written as a mixin so it can be declared within a media query. Requires the
 // element to be block or inline-block
 @mixin text-truncate($max-width) {

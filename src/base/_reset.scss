@@ -1,6 +1,11 @@
+// ============================================================================
+// Reset
+// ============================================================================
+
+
 // Tweaks that sit on top of `normalize.css`
 
-// Zeroing ====================================================================
+// Zeroing --------------------------------------------------------------------
 // Zeroes out all HTML elements to allow uniform component-level styling. Tag
 // ordering via HTML5 Doctor's Element Index:
 // http://html5doctor.com/
@@ -42,12 +47,13 @@ time, code, kbd, samp, var, mark, bdi, bdo, ruby, rt, rp, span, br, wbr {
 }
 
 
-// Element Tweaks =============================================================
-// Remove default table spacing
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+// Element Tweaks -------------------------------------------------------------
+
+// Removes borders from linked images
+a img {
+    border: none;
 }
+
 
 // Give a help cursor to elements that give extra info on `:hover`.
 abbr[title],
@@ -55,7 +61,9 @@ dfn[title] {
     cursor: help;
 }
 
-// Removes borders from linked images
-a img {
-    border: none;
+
+// Remove default table spacing
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }

@@ -1,4 +1,8 @@
-// Quotation Marks ============================================================
+// ============================================================================
+// Quotes
+// ============================================================================
+
+
 // Let the `lang` attribute determine the generated quote. Top languages
 // are represented, as per this list:
 // http://en.wikipedia.org/wiki/List_of_languages_by_total_number_of_speakers
@@ -147,7 +151,7 @@
 }
 
 
-// Quotation ==================================================================
+// Quotation ------------------------------------------------------------------
 q {
     &::before {
         content: open-quote;

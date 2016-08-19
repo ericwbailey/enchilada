@@ -1,3 +1,8 @@
+// ============================================================================
+// Tabular Lining Numbers
+// ============================================================================
+
+
 @mixin typography-numbers-tabular-lining() {
     @include typography-numbers-tabular();
     @include typography-numbers-lining();

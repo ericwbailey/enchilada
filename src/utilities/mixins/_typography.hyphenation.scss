@@ -1,3 +1,8 @@
+// ============================================================================
+// Hyphenation
+// ============================================================================
+
+
 // Use `&shy;` to  insert a hyphenation hint
 @mixin typography-hyphenation() {
     word-break: break-word;

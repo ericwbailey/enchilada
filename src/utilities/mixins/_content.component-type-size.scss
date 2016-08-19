@@ -1,7 +1,7 @@
 // ============================================================================
-// No Select
+// Component Type Size
 // ============================================================================
 
 
-// Removes the selection highlight from an element
-@mixin no-select() { user-select: none; }
+// https://css-tricks.com/rems-ems/
+@mixin component-type-size() { font-size: 1em; }
