@@ -5,21 +5,63 @@
 @import
     // Variables
     "utilities/variables/paths",
-    "utilities/variables/typography",
+    "utilities/variables/font.weights",
+    "utilities/variables/font.sizes",
+    "utilities/variables/font.tracking",
+    "utilities/variables/font.global",
     "utilities/variables/symbols",
-    "utilities/variables/animation",
+    "utilities/variables/animation.ease",
+    "utilities/variables/animation.duration",
 
     // Imports
-    "utilities/imports/fonts",
+    "utilities/imports/typefaces",
 
     // Functions
-    "utilities/functions/colors",
-    "utilities/functions/z-index",
+    "utilities/functions/units.em",
+    "utilities/functions/units.rem",
+    "utilities/functions/units.strip-unit",
+
+    // Maps
+    "utilities/maps/colors",
+    "utilities/maps/z-index",
 
     // Mixins
-    "utilities/mixins/content",
+    "utilities/mixins/content.clearfix",
+    "utilities/mixins/content.hide-content",
+    "utilities/mixins/content.no-select",
+    "utilities/mixins/content.shift-click",
+    "utilities/mixins/content.show-content",
+    "utilities/mixins/content.text-truncate",
     "utilities/mixins/typography",
-    "utilities/mixins/units";
+    "utilities/mixins/typography.disable-opentype",
+    "utilities/mixins/typography.alternate-contextual",
+    "utilities/mixins/typography.alternate-historcial",
+    "utilities/mixins/typography.alternate-titling",
+    "utilities/mixins/typography.case-sensitive-forms",
+    "utilities/mixins/typography.component-type-size",
+    "utilities/mixins/typography.component-type-size.scss",
+    "utilities/mixins/typography.disable-opentype.scss",
+    "utilities/mixins/typography.hyphenation.scss",
+    "utilities/mixins/typography.kerning.scss",
+    "utilities/mixins/typography.ligatures-common.scss",
+    "utilities/mixins/typography.ligatures-discretionary.scss",
+    "utilities/mixins/typography.numbers-diagonal-fractions.scss",
+    "utilities/mixins/typography.numbers-lining.scss",
+    "utilities/mixins/typography.numbers-oldstyle.scss",
+    "utilities/mixins/typography.numbers-proportional-lining.scss",
+    "utilities/mixins/typography.numbers-proportional-oldstyle.scss",
+    "utilities/mixins/typography.numbers-proportional.scss",
+    "utilities/mixins/typography.numbers-stacked-fractions.scss",
+    "utilities/mixins/typography.numbers-tabular-lining.scss",
+    "utilities/mixins/typography.numbers-tabular-oldstyle.scss",
+    "utilities/mixins/typography.numbers-tabular.scss",
+    "utilities/mixins/typography.ordinals.scss",
+    "utilities/mixins/typography.scientific-inferiors.scss",
+    "utilities/mixins/typography.scss",
+    "utilities/mixins/typography.small-caps.scss",
+    "utilities/mixins/typography.smoothing.scss",
+    "utilities/mixins/typography.tracking.scss",
+    "utilities/mixins/typography.unicode-symbol.scss";
 
 
 // Vendor =====================================================================

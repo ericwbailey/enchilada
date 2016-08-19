@@ -1,0 +1,9 @@
+// Written as a mixin so it can be declared within a media query. Requires the
+// element to be block or inline-block
+@mixin text-truncate($max-width) {
+    max-width: $truncation-boundary;
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

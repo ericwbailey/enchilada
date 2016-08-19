@@ -1,0 +1,27 @@
+// If at all possible, don't alter the subpixel rendering:
+// http://usabilitypost.com/2012/11/05/stop-fixing-font-smoothing/
+// Options are included just in case. Currently only works on Mac OS:
+// http://files.christophzillgens.com/webkit-font-smoothing.html
+@mixin typography-smoothing($aliasing-intent) {
+    text-rendering: optimizeLegibility;
+
+    // Best for typefaces with very small size considerations (Verdana, etc.) and bitmap/pixel fonts
+    @if $aliasing-intent == "none" {
+        -webkit-font-smoothing: none;
+        font-smoothing: none;
+    }
+    // Best for light text on dark backgrounds and italic text
+    @else if $aliasing-intent == "light-on-dark" {
+        -webkit-font-smoothing: subpixel-antialiased;
+        font-smoothing: subpixel-antialiased;
+    }
+    // Best for light text on dark backgrounds and icon fonts
+    @else if $aliasing-intent == "dark-on-light" {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        font-smoothing: antialiased;
+    }
+    @else {
+        @error "`#{$aliasing-intent}` is not a valid argument. Please select `none`, `light-on-dark`, or `dark-on-light`";
+    }
+}

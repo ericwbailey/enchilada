@@ -1,0 +1,7 @@
+@mixin typography-tracking-tightest() { @include typography-disable-opentype(); letter-spacing: $font-tracking-tightest; }
+@mixin typography-tracking-tighter() { @include typography-disable-opentype(); letter-spacing: $font-tracking-tighter; }
+@mixin typography-tracking-tight() { @include typography-disable-opentype(); letter-spacing: $font-tracking-tight; }
+@mixin typography-tracking-slight() { @include typography-disable-opentype(); letter-spacing: $font-tracking-slight; }
+@mixin typography-tracking-loose() { @include typography-disable-opentype(); letter-spacing: $font-tracking-loose; }
+@mixin typography-tracking-looser() { @include typography-disable-opentype(); letter-spacing: $font-tracking-looser; }
+@mixin typography-tracking-loosest() { @include typography-disable-opentype(); letter-spacing: $font-tracking-loosest; }

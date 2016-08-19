@@ -1,0 +1,12 @@
+// Additional ligatures that might be considered too "attention-grabbing" or
+// unconventional to be enabled in many situations
+@mixin typography-ligatures-discretionary() {
+    -ms-font-feature-settings: "dlig";
+    -webkit-font-variant-ligatures: discretionary-ligatures;
+    font-variant-ligatures: discretionary-ligatures;
+
+    @supports not ((-webkit-font-variant-ligatures: discretionary-ligatures) or (font-variant-ligatures: discretionary-ligatures)) {
+        -webkit-font-feature-settings: "dlig", "dlig";
+        font-feature-settings: "dlig", "dlig";
+    }
+}

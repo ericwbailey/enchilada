@@ -1,0 +1,10 @@
+// Alternate characters for display text
+@mixin typography-alternates-titling() {
+    -ms-font-feature-settings: "titl";
+    font-variant-caps: titling-caps;
+
+    @supports not (font-variant-caps: titling-caps) {
+        -webkit-font-feature-settings: "titl", "titl";
+        font-feature-settings: "titl", "titl";
+    }
+}

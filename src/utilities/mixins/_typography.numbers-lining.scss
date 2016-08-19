@@ -1,0 +1,9 @@
+// Sets figures to align with the baseline and cap height
+@mixin typography-numbers-lining() {
+    font-variant-numeric: lining-nums;
+
+    @supports not (font-variant-numeric: lining-nums) {
+        -webkit-font-feature-settings: "lnum", "onum" 0, "lnum";
+        font-feature-settings: "lnum", "onum" 0, "lnum";
+    }
+}

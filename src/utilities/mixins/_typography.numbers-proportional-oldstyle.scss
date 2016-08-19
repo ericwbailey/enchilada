@@ -1,0 +1,11 @@
+@mixin typography-numbers-proportional-oldstyle() {
+    @include typography-numbers-proportional();
+    @include typography-numbers-oldstyle();
+
+    -ms-font-feature-settings: "lnum" 0, "onum", "pnum", "tnum" 0;
+
+    @supports not ((-webkit-font-feature-settings: "onum" inherit) or (font-feature-settings: "onum" inherit)) {
+        -webkit-font-feature-settings: "lnum" 0, "onum", "pnum", "tnum" 0;
+        font-feature-settings: "lnum" 0, "onum", "pnum", "tnum" 0;
+    }
+}

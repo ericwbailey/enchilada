@@ -1,0 +1,2 @@
+// Removes the selection highlight from an element
+@mixin no-select() { user-select: none; }

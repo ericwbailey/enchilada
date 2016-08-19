@@ -1,0 +1,11 @@
+@mixin typography-numbers-proportional-lining() {
+    @include typography-numbers-proportional();
+    @include typography-numbers-lining();
+
+    -ms-font-feature-settings: "lnum", "onum" 0, "pnum", "tnum" 0;
+
+    @supports not ((-webkit-font-feature-settings: "lnum" inherit) or (font-feature-settings: "lnum" inherit)) {
+        -webkit-font-feature-settings: "lnum", "onum" 0, "pnum", "tnum" 0;
+        font-feature-settings: "lnum", "onum" 0, "pnum", "tnum" 0;
+    }
+}

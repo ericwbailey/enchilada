@@ -52,23 +52,23 @@ table {
     th,
     td {
         @include table-col-align-text;
-    }
 
-    [colspan] {
-        text-align: center;
-    }
+        &[colspan] {
+            text-align: center;
+        }
 
-    [colspan="1"] {
-        @include table-col-align-text;
-    }
+        &[colspan="1"] {
+            @include table-col-align-text;
+        }
 
-    [rowspan]
-    {
-        vertical-align: middle;
-    }
+        &[rowspan]
+        {
+            vertical-align: middle;
+        }
 
-    [rowspan="1"] {
-        vertical-align: top;
+        &[rowspan="1"] {
+            vertical-align: top;
+        }
     }
 
     colgroup {

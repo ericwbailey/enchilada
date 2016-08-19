@@ -1,0 +1,10 @@
+// Text that references past methods of presentation
+@mixin typography-alternates-historical() {
+    -ms-font-feature-settings: "hist";
+    font-variant-alternates: historical-forms;
+
+    @supports not (font-variant-alternates: historical-forms) {
+        -webkit-font-feature-settings: "hist";
+        font-feature-settings: "hist";
+    }
+}

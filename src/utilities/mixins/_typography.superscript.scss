@@ -1,0 +1,18 @@
+@mixin typography-superscript() {
+    text-transform: lowercase;
+    font-variant-position: super;
+
+    @supports not (font-variant-position: sup) {
+        -webkit-font-feature-settings: "sups", "sups";
+        font-feature-settings: "sups", "sups";
+
+        @supports ((-webkit-font-feature-settings: "sups") or (font-feature-settings: "sups")) {
+            font-size: 1em;
+            vertical-align: baseline;
+        }
+
+        @supports (overflow: -webkit-marquee) and (justify-content:inherit) {
+            vertical-align: super;
+        }
+    }
+}

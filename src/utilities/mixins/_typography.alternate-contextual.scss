@@ -1,0 +1,11 @@
+// Text that intends to mimic hand lettering
+@mixin typography-alternates-contextual() {
+    -ms-font-feature-settings: "calt";
+    -webkit-font-variant-ligatures: contextual;
+    font-variant-ligatures: contextual;
+
+    @supports not ((-webkit-font-variant-ligatures: contextual) or (font-variant-ligatures: contextual)) {
+        -webkit-font-feature-settings: "calt", "calt";
+        font-feature-settings: "calt", "calt";
+    }
+}

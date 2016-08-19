@@ -1,0 +1,10 @@
+// Support for a less-common stacked presentation
+@mixin typography-numbers-stacked-fractions() {
+    -ms-font-feature-settings: "frac", "afrc";
+    font-variant-numeric: stacked-fractions;
+
+    @supports not (font-variant-numeric: stacked-fractions) {
+        -webkit-font-feature-settings: "frac", "afrc", "afrc";
+        font-feature-settings: "frac", "afrc", "afrc";
+    }
+}

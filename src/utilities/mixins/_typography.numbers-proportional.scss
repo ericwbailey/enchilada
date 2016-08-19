@@ -1,0 +1,9 @@
+// Good for when placed in long form, serifed text
+@mixin typography-numbers-proportional() {
+    font-variant-numeric: proportional-nums;
+
+    @supports not (font-variant-numeric: proportional-nums) {
+        -webkit-font-feature-settings: "pnum", "tnum" 0, "pnum";
+        font-feature-settings: "pnum", "tnum" 0, "pnum";
+    }
+}

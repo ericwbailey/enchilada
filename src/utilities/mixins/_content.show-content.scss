@@ -1,0 +1,33 @@
+@mixin show-content($how: visually) {
+    // Reverts `hide(visually)`
+    @if $how == "visually" {
+        border: initial;
+        rect: initial;
+        height: initial;
+        margin: initial;
+        overflow: initial;
+        padding: initial;
+        position: initial;
+        width: initial;
+
+        &:focus {
+            clip: initial;
+            height: initial;
+            margin: initial;
+            overflow: initial;
+            position: initial;
+            width: initial;
+        }
+    }
+    // Reverts `hide(invisible)`
+    @else if $how == "visible" {
+        visibility: visible;
+    }
+    // Reverts `hide(remove)`
+    @else if $how == "add" {
+        display: initial !important;
+    }
+    @else {
+        @error "`#{$how}` is not a valid argument. Please select `visually`, `visible`, or `add`";
+    }
+}

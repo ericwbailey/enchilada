@@ -13,7 +13,7 @@ html {
     text-size-adjust: 100%; // [3]
 
     &:lang(en-US) {
-         @include font-hyphenation(); // [4]
+         @include typography-hyphenation(); // [4]
     }
 }
 

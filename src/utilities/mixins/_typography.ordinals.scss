@@ -1,0 +1,11 @@
+// Glpyhs that commonly follow a number (ex: 1st, 2nd). Also sometimes used with
+// foreign languages
+@mixin typography-ordinals() {
+    -ms-font-feature-settings: "ordn";
+    font-variant-numeric: ordinal;
+
+    @supports not (font-variant-numeric: ordinal) {
+        -webkit-font-feature-settings: "ordn", "ordn";
+        font-feature-settings: "ordn", "ordn";
+    }
+}

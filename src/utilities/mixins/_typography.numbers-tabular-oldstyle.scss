@@ -1,0 +1,11 @@
+@mixin typography-numbers-tabular-oldstyle() {
+    @include typography-numbers-tabular();
+    @include typography-numbers-oldstyle();
+
+    -ms-font-feature-settings: "lnum" 0, "onum", "pnum" 0, "tnum";
+
+    @supports not ((-webkit-font-feature-settings: "onum" inherit) or (font-feature-settings: "onum" inherit)) {
+        -webkit-font-feature-settings: "lnum" 0, "onum", "pnum" 0, "tnum";
+        font-feature-settings: "lnum" 0, "onum", "pnum" 0, "tnum";
+    }
+}

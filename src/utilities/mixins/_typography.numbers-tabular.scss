@@ -1,0 +1,9 @@
+// Good for easily comparing when stacked into columns
+@mixin typography-numbers-tabular() {
+    font-variant-numeric: tabular-nums;
+
+    @supports not (font-variant-numeric: tabular-nums) {
+        -webkit-font-feature-settings: "pnum" 0, "tnum", "tnum";
+        font-feature-settings: "pnum" 0, "tnum", "tnum";
+    }
+}

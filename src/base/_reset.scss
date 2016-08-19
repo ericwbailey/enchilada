@@ -54,3 +54,8 @@ abbr[title],
 dfn[title] {
     cursor: help;
 }
+
+// Removes borders from linked images
+a img {
+    border: none;
+}
