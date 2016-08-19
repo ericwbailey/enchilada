@@ -1,7 +1,7 @@
 {
     "rules": {
         "at-rule-no-unknown": [true, {
-            "ignoreAtRules": ["at-root", "debug", "error", "extend", "for", "import", "include", "warn"]
+            "ignoreAtRules": ["at-root", "debug", "each", "else", "error", "extend", "for", "import", "if", "include", "media", "warn", "while"]
         }],
         "at-rule-no-vendor-prefix": [true, {
             "message": "Vendor prefixes are automatically generated (at-rule-no-vendor-prefix)"
@@ -35,7 +35,6 @@
         }],
         "color-no-invalid-hex": true,
         "comment-no-empty": true,
-        "comment-no-empty": "always",
         "custom-property-empty-line-before": ["always", {
             "except": "after-custom-property",
             "ignore": "after-comment"
