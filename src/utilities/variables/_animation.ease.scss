@@ -3,6 +3,6 @@
 // ============================================================================
 
 
-$animation-ease-character: ease-in-out;
-$animation-ease-dialogue: ease-out;
-$animation-ease-background: linear;
+$animation-ease-character: ease-in-out !default;
+$animation-ease-dialogue: ease-out !default;
+$animation-ease-background: linear !default;
