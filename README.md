@@ -1,5 +1,3 @@
-![$$projectFullTitle](https://raw.githubusercontent.com/ericwbailey/boilerplate/master/src/static/favicons/logotype.png)
-
 # Title
 
 $$projectFullDescription
