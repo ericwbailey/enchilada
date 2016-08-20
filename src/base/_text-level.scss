@@ -40,7 +40,7 @@ mark {
 
 
 s {
-// TODO: Add fancy gradient striketrhough
+
 }
 
 
@@ -70,5 +70,5 @@ time {
 
 
 u {
-// TODO: Add fancy gradient underline
+    @include content-underline();
 }

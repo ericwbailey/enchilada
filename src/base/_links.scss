@@ -8,6 +8,8 @@
 
 // Links
 a {
+    @include content-underline();
+
     color: c(link, base);
 
     // States
