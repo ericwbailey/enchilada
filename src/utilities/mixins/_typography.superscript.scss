@@ -3,6 +3,8 @@
 // ============================================================================
 
 
+// http://utility-opentype.kennethormandy.com/#sups
+
 @mixin typography-superscript() {
     text-transform: lowercase;
     font-variant-position: super;

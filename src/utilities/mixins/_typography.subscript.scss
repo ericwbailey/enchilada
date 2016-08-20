@@ -3,6 +3,8 @@
 // ============================================================================
 
 
+// http://utility-opentype.kennethormandy.com/#subs
+
 @mixin typography-subscript() {
     text-transform: lowercase;
     font-size: inherit;

@@ -3,6 +3,8 @@
 // ============================================================================
 
 
+// http://utility-opentype.kennethormandy.com/#smcp
+
 // Less distracting than all capitals for longer form text settings. Renders
 // all applicable glyphs as small caps, regardless of initial case
 @mixin typography-small-caps() {

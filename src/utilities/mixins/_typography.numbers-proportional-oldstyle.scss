@@ -3,6 +3,11 @@
 // ============================================================================
 
 
+// http://utility-opentype.kennethormandy.com/#pnum-onum
+
+// Proportional numbers are designed to take up whatever width they need. Old
+// style numbers are designed to sit alongside the lowercase letters, so they
+// are less distracting within text.
 @mixin typography-numbers-proportional-oldstyle() {
     @include typography-numbers-proportional();
     @include typography-numbers-oldstyle();

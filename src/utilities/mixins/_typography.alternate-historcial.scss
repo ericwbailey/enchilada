@@ -3,6 +3,8 @@
 // ============================================================================
 
 
+// http://utility-opentype.kennethormandy.com/#hist
+
 // Text that references past methods of presentation
 @mixin typography-alternates-historical() {
     -ms-font-feature-settings: "hist";

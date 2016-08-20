@@ -2,7 +2,7 @@
 // Tracking
 // ============================================================================
 
-
+// http://practicaltypography.com/letterspacing.html
 @mixin typography-tracking-tightest() { @include typography-disable-opentype(); letter-spacing: $font-tracking-tightest; }
 @mixin typography-tracking-tighter() { @include typography-disable-opentype(); letter-spacing: $font-tracking-tighter; }
 @mixin typography-tracking-tight() { @include typography-disable-opentype(); letter-spacing: $font-tracking-tight; }

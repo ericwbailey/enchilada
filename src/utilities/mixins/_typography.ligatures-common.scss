@@ -3,6 +3,9 @@
 // ============================================================================
 
 
+// http://practicaltypography.com/ligatures.html
+// http://utility-opentype.kennethormandy.com/#liga
+
 // Mitigate spacing issues between specific combinations of letters within a
 // typeface
 @mixin typography-ligatures-common() {

@@ -3,6 +3,9 @@
 // ============================================================================
 
 
+// http://utility-opentype.kennethormandy.com/#tnum-lnum
+
+
 @mixin typography-numbers-tabular-lining() {
     @include typography-numbers-tabular();
     @include typography-numbers-lining();
