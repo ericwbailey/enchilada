@@ -3,14 +3,19 @@
 // ============================================================================
 
 
+// Typography -----------------------------------------------------------------
+// Set the base properties and modular scale.
+$global-type-direction: ltr;
 $global-type-family: $font-family-primary;
+$global-type-line-height: 1.4;
 $global-type-size: 16px !default;
 $global-type-weight: $font-weight-medium;
-$global-type-line-height: 1.4;
 
 
 // Toggles --------------------------------------------------------------------
-// Set variables to `true` to generate functional classes as needed
+// Set variables to `true` to generate functional classes as needed. Unlike
+// their source @mixins, generated classes will be added to `main.css`
+// regardless of whether or not they're declared in the HTML.
 
 // Component
 $toggle-component-set-type-size: false;
@@ -26,8 +31,43 @@ $toggle-content-shift-click: false;
 $toggle-content-show-visually: false;
 $toggle-content-show-visually: false;
 $toggle-content-show-invisible: false;
-$toggle-content-show-remove: false;
+$toggle-content-show-removed: false;
 $toggle-content-text-truncate: false;
 
 // Typography
+$toggle-typography-align-ltr: false;
+$toggle-typography-align-rtl: false;
+$toggle-typography-alternates-contextual: false;
+$toggle-typography-alternates-historical: false;
+$toggle-typography-alternates-titling: false;
+$toggle-typography-caps-to-small-caps: false;
+$toggle-typography-case-sensitive-forms: false;
+$toggle-typography-disable-opentype: false;
+$toggle-typography-hyphenation: false;
+$toggle-typography-kerning: false;
+$toggle-typography-ligatures-common: false;
+$toggle-typography-ligatures-discretionary: false;
+$toggle-typography-numbers-fractions-diagonal: false;
+$toggle-typography-numbers-fractions-stacked: false;
+$toggle-typography-numbers-lining: false;
+$toggle-typography-numbers-oldstyle: false;
+$toggle-typography-numbers-proportional: false;
+$toggle-typography-numbers-proportional-lining: false;
 $toggle-typography-numbers-proportional-oldstyle: false;
+$toggle-typography-numbers-tabular-lining: false;
+$toggle-typography-numbers-tabular-oldstyle: false;
+$toggle-typography-numbers-tabular: false;
+$toggle-typography-ordinals: false;
+$toggle-typography-scientific-inferiors: false;
+$toggle-typography-small-caps: false;
+$toggle-typography-smoothing-none: false;
+$toggle-typography-smoothing-light-on-dark: false;
+$toggle-typography-smoothing-dark-on-light: false;
+$toggle-typography-subscript: false;
+$toggle-typography-superscript: false;
+$toggle-typography-tracking-tightest: false;
+$toggle-typography-tracking-tighter: false;
+$toggle-typography-tracking-tight: false;
+$toggle-typography-tracking-slight: false;
+$toggle-typography-tracking-loose: false;
+$toggle-typography-tracking-looser: false;

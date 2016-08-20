@@ -6,7 +6,7 @@
 @mixin content-hide($how: visually) {
     // Hide only visually, but have it available for screen readers:
     // http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
-    @if $how == "visually" {
+    @if ($how == "visually") {
         border: 0;
         clip: rect(0 0 0 0);
         height: 1px;
@@ -27,11 +27,11 @@
         }
     }
     // Hide visually and from screen readers, but maintain layout
-    @else if $how == "invisible" {
+    @else if ($how == "invisible") {
         visibility: hidden;
     }
     // Completely remove content
-    @else if $how == "remove" {
+    @else if ($how == "remove") {
         display: none !important;
     }
     @else {
@@ -40,6 +40,8 @@
 }
 
 
+// Toggles ====================================================================
+// Enables functional class toggles. See `_config.scss`
 @if $toggle-content-hide-visually == true {
     .content-hide-visually {
         @include content-hide(visually);

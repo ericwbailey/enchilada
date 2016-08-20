@@ -5,7 +5,7 @@
 
 @mixin content-show($how: visually) {
     // Reverts `hide(visually)`
-    @if $how == "visually" {
+    @if ($how == "visually") {
         border: initial;
         rect: initial;
         height: initial;
@@ -25,11 +25,11 @@
         }
     }
     // Reverts `hide(invisible)`
-    @else if $how == "visible" {
+    @else if ($how == "visible") {
         visibility: visible;
     }
     // Reverts `hide(remove)`
-    @else if $how == "add" {
+    @else if ($how == "add") {
         display: initial !important;
     }
     @else {
@@ -38,6 +38,8 @@
 }
 
 
+// Toggles ====================================================================
+// Enables functional class toggles. See `_config.scss`
 @if $toggle-content-show-visually == true {
     .content-show-visually {
         @include content-show(visually);
@@ -50,8 +52,8 @@
     }
 }
 
-@if $toggle-content-show-remove == true {
-    .content-show-remove {
+@if $toggle-content-show-removed == true {
+    .content-show-removed {
         @include content-show(add);
     }
 }

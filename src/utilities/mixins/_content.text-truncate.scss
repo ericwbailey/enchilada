@@ -14,6 +14,8 @@
 }
 
 
+// Toggles ====================================================================
+// Enables functional class toggles. See `_config.scss`
 @if $toggle-content-text-truncate == true {
     .content-text-truncate {
         @include content-text-truncate();

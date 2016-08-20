@@ -18,3 +18,12 @@
         font-feature-settings: "liga", "liga", "clig";
     }
 }
+
+
+// Toggles ====================================================================
+// Enables functional class toggles. See `_config.scss`
+@if $toggle-typography-ligatures-common == true {
+    .typography-ligatures-common {
+        @include typography-ligatures-common();
+    }
+}

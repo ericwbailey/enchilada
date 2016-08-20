@@ -12,3 +12,12 @@
         font-feature-settings: "lnum" 0, "onum", "onum";
     }
 }
+
+
+// Toggles ====================================================================
+// Enables functional class toggles. See `_config.scss`
+@if $toggle-typography-numbers-oldstyle == true {
+    .typography-numbers-oldstyle {
+        @include typography-numbers-oldstyle();
+    }
+}

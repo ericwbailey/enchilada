@@ -1,0 +1,63 @@
+// ============================================================================
+// Align
+// ============================================================================
+
+
+// Aligns text to the start or end of document, according to the language
+// settings. Provides a LRT-based fallback, change if working with a RTL
+// language:
+// https://davidwalsh.name/text-align-start
+@mixin typography-align($start-or-end) {
+    @if ($global-text-direction == "ltr")
+    and ($start-or-end == "start") {
+        text-align: left;
+        text-align: start;
+    }
+    @else if ($global-text-direction == "rtl")
+    and ($start-or-end == "start") {
+        text-align: right;
+        text-align: start;
+    }
+    @else if ($global-text-direction == "ltr")
+    and ($start-or-end == "end") {
+        text-align: right;
+        text-align: end;
+    }
+
+    @else if ($global-text-direction == "rtl")
+    and ($start-or-end == "end") {
+        text-align: left;
+        text-align: end;
+    }
+
+    @else {
+        @error "`#{$start-or-end}` is not a valid argument. Please select either `start` or `end`";
+    }
+}
+
+
+// Toggles ====================================================================
+// Enables functional class toggles. See `_config.scss`
+@if $toggle-typography-align-ltr == true {
+    .typography-align-ltr-start {
+        text-align: left;
+        text-align: start;
+    }
+
+    .typography-align-ltr-end {
+        text-align: right;
+        text-align: end;
+    }
+}
+
+@if $toggle-typography-align-rtl == true {
+    .typography-align-rtl-start {
+        text-align: right;
+        text-align: start;
+    }
+
+    .typography-align-rtl-end {
+        text-align: left;
+        text-align: end;
+    }
+}

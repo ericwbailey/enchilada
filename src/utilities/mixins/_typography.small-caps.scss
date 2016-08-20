@@ -21,3 +21,12 @@
        font-feature-settings: "smcp" 0, "c2sc", "smcp", "c2sc";
    }
 }
+
+
+// Toggles ====================================================================
+// Enables functional class toggles. See `_config.scss`
+@if $toggle-typography-small-caps == true {
+    .typography-small-caps {
+        @include typography-small-caps();
+    }
+}

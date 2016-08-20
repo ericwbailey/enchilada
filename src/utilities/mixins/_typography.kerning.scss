@@ -10,3 +10,12 @@
     -webkit-font-feature-settings: "kern";
     font-feature-settings: "kern";
 }
+
+
+// Toggles ====================================================================
+// Enables functional class toggles. See `_config.scss`
+@if $toggle-typography-kerning == true {
+    .typography-kerning {
+        @include typography-kerning();
+    }
+}

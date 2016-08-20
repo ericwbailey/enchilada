@@ -38,3 +38,12 @@
         font-size: smaller;
     }
 }
+
+
+// Toggles ====================================================================
+// Enables functional class toggles. See `_config.scss`
+@if $toggle-typography-scientific-inferiors == true {
+    .typography-scientific-inferiors {
+        @include typography-scientific-inferiors();
+    }
+}

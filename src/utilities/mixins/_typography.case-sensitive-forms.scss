@@ -11,3 +11,12 @@
     -webkit-font-feature-settings: "case";
     font-feature-settings: "case";
 }
+
+
+// Toggles ====================================================================
+// Enables functional class toggles. See `_config.scss`
+@if $toggle-typography-case-sensitive-forms == true {
+    .typography-case-sensitive-forms {
+        @include typography-case-sensitive-forms();
+    }
+}

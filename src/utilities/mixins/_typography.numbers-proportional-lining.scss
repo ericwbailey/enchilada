@@ -18,3 +18,12 @@
         font-feature-settings: "lnum", "onum" 0, "pnum", "tnum" 0;
     }
 }
+
+
+// Toggles ====================================================================
+// Enables functional class toggles. See `_config.scss`
+@if $toggle-typography-numbers-proportional-lining == true {
+    .typography-numbers-proportional-lining {
+        @include typography-numbers-proportional-lining();
+    }
+}

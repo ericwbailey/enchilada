@@ -7,7 +7,7 @@
     font-family: Arial, sans-serif; // Uses Arial's comprehensive charset
 
     // Optionally pass the symbol as content, see `utilities/variables/_symbols.scss`
-    @if $symbol != null {
+    @if ($symbol != null) {
         content: "#{$symbol}";
     }
 }

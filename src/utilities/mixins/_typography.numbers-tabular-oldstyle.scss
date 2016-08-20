@@ -16,3 +16,12 @@
         font-feature-settings: "lnum" 0, "onum", "pnum" 0, "tnum";
     }
 }
+
+
+// Toggles ====================================================================
+// Enables functional class toggles. See `_config.scss`
+@if $toggle-typography-numbers-tabular-oldstyle == true {
+    .typography-numbers-tabular-oldstyle {
+        @include typography-numbers-tabular-oldstyle();
+    }
+}

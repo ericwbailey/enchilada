@@ -17,3 +17,12 @@
         font-feature-settings: "dlig", "dlig";
     }
 }
+
+
+// Toggles ====================================================================
+// Enables functional class toggles. See `_config.scss`
+@if $toggle-typography-ligatures-discretionary == true {
+    .typography-ligatures-discretionary {
+        @include typography-ligatures-discretionary();
+    }
+}

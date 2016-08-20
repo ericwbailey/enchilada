@@ -16,3 +16,12 @@
         font-feature-settings: "calt", "calt";
     }
 }
+
+
+// Toggles ====================================================================
+// Enables functional class toggles. See `_config.scss`
+@if $toggle-typography-alternates-contextual == true {
+    .typography-alternates-contextual {
+        @include typography-alternates-contextual();
+    }
+}

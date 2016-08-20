@@ -18,3 +18,12 @@
         font-feature-settings: "onum", "smcp" 0, "c2sc", "smcp", "c2sc";
     }
 }
+
+
+// Toggles ====================================================================
+// Enables functional class toggles. See `_config.scss`
+@if $toggle-typography-caps-to-small-caps == true {
+    .typography-caps-to-small-caps {
+        @include typography-caps-to-small-caps();
+    }
+}

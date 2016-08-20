@@ -9,4 +9,13 @@
 // http://utility-opentype.kennethormandy.com
 
 // Disable OpenType
-@mixin typography-disable-opentype() { font-feature-settings: normal; } // Disables ligatures on tracked type to prevent this: https://twitter.com/leaverou/status/485885496305127424
+@mixin typography-disable-opentype() { font-feature-settings: normal; }
+
+
+// Toggles ====================================================================
+// Enables functional class toggles. See `_config.scss`
+@if $toggle-typography-disable-opentype == true {
+    .typography-disable-opentype {
+        @include typography-disable-opentype();
+    }
+}

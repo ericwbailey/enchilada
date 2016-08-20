@@ -1,0 +1,30 @@
+// ============================================================================
+// Theme Color
+// ============================================================================
+
+
+// Take advantage of the cascade with the `currentColor` attribute:
+// http://simurai.com/blog/2015/09/09/back-to-the-roots
+@mixin component-theme-color($property: color) {
+    @if ($property == "background-color") {
+        background-color: currentColor;
+    }
+    @else if ($property == "color") {
+        color: currentColor;
+    }
+    @else if ($property == "column-rule-color") {
+        column-rule-color: currentColor;
+    }
+    @else if ($property == "outline-color") {
+        outline-color: currentColor;
+    }
+    @else if ($property == "text-decoration-color") {
+        text-decoration-color: currentColor;
+    }
+    @else if ($property == "text-emphasis-color") {
+        text-emphasis-color: currentColor;
+    }
+    @else {
+        @error "`#{$property}` is not a valid argument. Please select `background-color`, `color`, `column-rule-color`, `outline-color`, `text-decoration-color`, or `text-emphasis-color`";
+    }
+}

@@ -20,6 +20,8 @@
 }
 
 
+// Toggles ====================================================================
+// Enables functional class toggles. See `_config.scss`
 @if $toggle-content-clearfix == true {
     .content-clearfix {
         @include content-clearfix();

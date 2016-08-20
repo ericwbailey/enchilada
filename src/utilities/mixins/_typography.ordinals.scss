@@ -16,3 +16,12 @@
         font-feature-settings: "ordn", "ordn";
     }
 }
+
+
+// Toggles ====================================================================
+// Enables functional class toggles. See `_config.scss`
+@if $toggle-typography-ordinals == true {
+    .typography-ordinals {
+        @include typography-ordinals();
+    }
+}

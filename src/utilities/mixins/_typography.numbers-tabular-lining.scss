@@ -17,3 +17,12 @@
         font-feature-settings: "lnum", "onum" 0, "pnum" 0, "tnum";
     }
 }
+
+
+// Toggles ====================================================================
+// Enables functional class toggles. See `_config.scss`
+@if $toggle-typography-numbers-tabular-lining == true {
+    .typography-numbers-tabular-lining {
+        @include typography-numbers-tabular-lining();
+    }
+}
