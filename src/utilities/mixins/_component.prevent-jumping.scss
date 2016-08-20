@@ -1,0 +1,12 @@
+// ============================================================================
+// Prevent Content Jumping
+// ============================================================================
+
+
+// Prevents page layout shifting from ajax-loaded content by specifying a
+// minimum component height.
+// https://css-tricks.com/content-jumping-avoid/
+
+@mixin component-prevent-jumping($component-height) {
+    min-height: calc(#{$component-height} - 1px);
+}

@@ -1,0 +1,37 @@
+// ============================================================================
+// Underline
+// ============================================================================
+
+
+// Creates a thin underline with outlines for the font's descenders. Settings
+// provide a decent default, tweak as needed. Set state effects (hover, active,
+// etc.) on a case-by-case basis (see `base/_links.scss`).
+
+// Mixin Variables
+$content-underline-color: currentColor !default;
+$content-underline-background-color: c(base, background) !default;
+$content-underline-gap: 0.05em !default;
+$content-underline-gap-minimum: 1.5px !default;
+$content-underline-opacity: 1 !default;
+$content-underline-position: -0.14em !default;
+$content-underline-size: 0.02em !default;
+
+// Mixin Logic
+@mixin content-underline(
+    $color: $content-underline-color,
+    $background-color: $content-underline-background-color,
+    $gap: $content-underline-gap,
+    $opacity: $content-underline-opacity,
+    $position: $content-underline-position,
+    $size: $content-underline-size) {
+        box-shadow:
+          inset 0 ($position + $size) 0 0 $background-color,
+          inset 0 $position 0 0 transparentize($background-color, $opacity),
+          inset 0 $position 0 0 $color;
+        text-decoration: none;
+        text-shadow:
+          -$gap 0 $background-color,
+          $gap 0 $background-color,
+          $content-underline-gap-minimum 0 $background-color,
+          $content-underline-gap-minimum 0 $background-color;
+}
