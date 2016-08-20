@@ -21,7 +21,8 @@ $global-type-weight: $font-weight-medium !default;
 $toggle-component-set-type-size: false;
 
 // Content
-$toggle-content-clearfix: false;
+$toggle-content-clearfix-add: false;
+$toggle-content-clearfix-remove: false;
 $toggle-content-hide-visually: false;
 $toggle-content-hide-invisible: false;
 $toggle-content-hide-remove: false;
