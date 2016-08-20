@@ -35,6 +35,14 @@ $symbol-arrow-point-up: "\25B2"; // ▲
 $symbol-arrow-point-down: "\25BC"; // ▼
 
 
+// Asterisks ---------------------------------------------------------------------
+$symbol-asterisk-heavy: "\2731"; // ✱
+$symbol-asterisk-teardrop: "\273B"; // ✻
+$symbol-asterisk-balloon-light: "\2722"; // ✢
+$symbol-asterisk-balloon-medium: "\2723"; // ✣
+$symbol-asterisk-balloon-heavy: "\2724"; // ✤
+
+
 // Bullets --------------------------------------------------------------------
 $symbol-bullet-small: "\00B7"; // ·
 $symbol-bullet-medium: "\2022"; // •
@@ -80,9 +88,7 @@ $symbol-quote-double-opening: "\201C"; // “
 $symbol-quote-double-closing: "\201D"; // ”
 
 
-// Typography -----------------------------------------------------------------
-$symbol-asterisk-heavy: "\2731"; // ✱
-$symbol-asterisk-teardrop: "\273B"; // ✻
+// Typography and Dingbats ----------------------------------------------------
 $symbol-asterism: "\2042"; // ⁂
 $symbol-caduceus: "\2624"; // ☤
 $symbol-celcius: "\2103"; // ℃
@@ -95,6 +101,10 @@ $symbol-ditto: "\3003"; // 〃
 $symbol-ellipsis: "\2026"; // …
 $symbol-fahrenheit: "\2109"; // ℉
 $symbol-fleur-de-lys: "\269C"; // ⚜
+$symbol-guillemet-double-left: "\00AB"; // «
+$symbol-guillemet-double-right: "\00BB"; // »
+$symbol-guillemet-single-left: "\2039"; // ‹
+$symbol-guillemet-single-right: "\203A"; // ›
 $symbol-interrobang: "\203D"; // ‽
 $symbol-manicule-full: "\261B"; // ☛
 $symbol-manicule-hollow: "\261E"; // ☞
@@ -105,6 +115,7 @@ $symbol-perscription: "\211E"; // ℞
 $symbol-section: "\00A7"; // §
 $symbol-skull-and-crossbones: "\2620"; // ☠
 $symbol-star-circle: "\272A"; // ✪
+$symbol-star-four: "\2726"; // ✦
 $symbol-star-full: "\2605"; // ★
 $symbol-star-hollow: "\2606"; // ☆
 
@@ -152,6 +163,13 @@ $symbol-form-checkbox-unchecked: "\2610"; // ☐
 // Radios
 $symbol-form-radio-checked: "\25C9"; // ◉
 $symbol-form-radio-unchecked: "\25CE"; // ◎
+
+
+// Heart ----------------------------------------------------------------------
+$symbol-heart-floral: "\2766"; // ❦
+$symbol-heart-exclamation: "\2762"; // ❢
+$symbol-heart-rotated: "\2765"; // ❥
+$symbol-heart-floral-rotated: "\2767"; // ❧
 
 
 // Intellectual Property ------------------------------------------------------
