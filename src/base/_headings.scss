@@ -3,74 +3,94 @@
 // ============================================================================
 
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: c(heading, base);
-}
-
-
-// Odd Headings
-h1,
-h3,
-h5 {
-    color: c(heading, odd);
-}
-
-
-// Even Headings
-h2,
-h4,
-h6 {
-    color: c(heading, even);
-}
-
-
 // Visual heading styling. Allows author to use ordered headings to retain an
-// accessible heading order, but match the design.
-.heading-giga {
+// accessible document, but match the needs of the design.
+
+// Giga
+@mixin heading-giga() {
 
 }
 
+.heading-giga {
+    @include heading-giga();
+}
+
+
+// Mega
+@mixin heading-mega() {
+
+}
 
 .heading-mega {
-
+    @include heading-mega();
 }
 
+
+// Alpha
+@mixin heading-alpha() {
+
+}
 
 .heading-alpha {
-
+    @include heading-alpha();
 }
 
+
+// Beta
+@mixin heading-beta() {
+
+}
 
 .heading-beta {
-
+    @include heading-beta();
 }
 
+
+// Gamma
+@mixin heading-gamma() {
+
+}
 
 .heading-gamma {
-
+    @include heading-gamma();
 }
 
+
+// Delta
+@mixin heading-delta() {
+
+}
 
 .heading-delta {
-
+    @include heading-delta();
 }
 
+
+// Epsilon
+@mixin heading-epsilon() {
+
+}
 
 .heading-epsilon {
-
+    @include heading-epsilon();
 }
 
+
+// Zeta
+@mixin heading-zeta() {
+
+}
 
 .heading-zeta {
-
+    @include heading-zeta();
 }
 
 
-.heading-eta {
+// Eta
+@mixin heading-eta() {
 
+}
+
+.heading-eta {
+    @include heading-eta();
 }
