@@ -7,6 +7,8 @@
     @if type-of($number) == 'number' and not unitless($number) {
         @return $number / ($number * 0 + 1);
     }
-
+    @else {
+        @error "`#{$number}` is not a valid argument. Please use a number with a unit suffix (ex. `12px`)";
+    }
     @return $number;
 }
