@@ -1,0 +1,14 @@
+// ============================================================================
+// Remove Interaction
+// ============================================================================
+
+
+// Removes cursor interaction
+@mixin content-remove-interaction() { pointer-events: none; }
+
+
+@if $toggle-content-remove-interaction == true {
+    .content-remove-interaction {
+        @include content-remove-interaction();
+    }
+}
