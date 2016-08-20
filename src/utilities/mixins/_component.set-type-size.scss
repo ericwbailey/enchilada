@@ -4,4 +4,11 @@
 
 
 // https://css-tricks.com/rems-ems/
-@mixin component-type-size() { font-size: 1em; }
+@mixin component-set-type-size() { font-size: 1em; }
+
+
+@if $toggle-component-set-type-size == true {
+    .component-set-type-size {
+        @include component-set-type-size();
+    }
+}
