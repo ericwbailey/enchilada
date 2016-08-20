@@ -7,7 +7,7 @@ body {
     overflow-x: hidden;
 
     color: c(base, type);
-    font-size: 1em;
+    font-size: component-set-type-size();
 }
 
 // Lobotomized Owl selector provides default vertical spacing:
