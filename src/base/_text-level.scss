@@ -4,7 +4,8 @@
 
 
 abbr {
-
+    @include typography-caps-to-small-caps()
+    @include typography-tracking-slight();
 }
 
 
@@ -19,7 +20,7 @@ cite {
 
 
 dfn {
-
+    @include typography-tracking-slight();
 }
 
 
@@ -34,17 +35,17 @@ i {
 
 
 mark {
-
+    @include typography-tracking-slight();
 }
 
 
 s {
-
+// TODO: Add fancy gradient striketrhough
 }
 
 
 small {
-
+// TODO: Make smaller w/modular scale
 }
 
 
@@ -64,10 +65,10 @@ sup {
 
 
 time {
-
+    @include typography-numbers-tabular-oldstyle();
 }
 
 
 u {
-
+// TODO: Add fancy gradient underline
 }
