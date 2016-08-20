@@ -1,0 +1,20 @@
+// ============================================================================
+// Caps to Small Caps
+// ============================================================================
+
+// http://utility-opentype.kennethormandy.com/#c2sc
+
+@mixin typography-caps-to-small-caps() {
+    text-transform: uppercase;
+    font-variant-caps: all-small-caps;
+    -ms-font-feature-settings: "smcp" 0, "c2sc";
+
+    @supports (font-variant-caps: all-small-caps) or (font-feature-settings: "c2sc") {
+        text-transform: lowercase;
+    }
+
+    @supports not (font-variant-caps: all-small-caps) {
+        -webkit-font-feature-settings: "onum", "smcp" 0, "c2sc", "smcp", "c2sc";
+        font-feature-settings: "onum", "smcp" 0, "c2sc", "smcp", "c2sc";
+    }
+}
