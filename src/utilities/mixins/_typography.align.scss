@@ -7,31 +7,32 @@
 // settings. Provides a LRT-based fallback, change if working with a RTL
 // language:
 // https://davidwalsh.name/text-align-start
-@mixin typography-align($start-or-end) {
+@mixin typography-align($start-end-or-center) {
     @if ($global-text-direction == "ltr")
-    and ($start-or-end == "start") {
+    and ($start-end-or-center == "start") {
         text-align: left;
         text-align: start;
     }
     @else if ($global-text-direction == "rtl")
-    and ($start-or-end == "start") {
+    and ($start-end-or-center == "start") {
         text-align: right;
         text-align: start;
     }
     @else if ($global-text-direction == "ltr")
-    and ($start-or-end == "end") {
+    and ($start-end-or-center == "end") {
         text-align: right;
         text-align: end;
     }
-
     @else if ($global-text-direction == "rtl")
-    and ($start-or-end == "end") {
+    and ($start-end-or-center == "end") {
         text-align: left;
         text-align: end;
     }
-
+    @else if ($start-end-or-center == "center") {
+        text-align: center;
+    }
     @else {
-        @error "`#{$start-or-end}` is not a valid argument. Please select either `start` or `end`";
+        @error "`#{$start-end-or-center}` is not a valid argument. Please select either `start` or `end`";
     }
 }
 
