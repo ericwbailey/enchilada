@@ -5,7 +5,14 @@
 
 // Shift body text links to make them feel more button-like:
 // http://css-tricks.com/one-pixel-shift-buttons/
-@mixin shift-click() {
+@mixin content-shift-click() {
     position: relative;
       top: 1px;
+}
+
+
+@if $toggle-content-shift-click == true {
+    .content-shift-click {
+        @include content-shift-click();
+    }
 }

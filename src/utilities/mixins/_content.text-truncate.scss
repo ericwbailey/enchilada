@@ -4,11 +4,18 @@
 
 
 // Requires the element to be block or inline-block
-@mixin text-truncate() {
+@mixin content-text-truncate() {
     overflow: hidden;
 
     display: inline-block;
 	text-overflow: ellipsis;
     -ms-text-overflow: ellipsis;
 	white-space: nowrap;
+}
+
+
+@if $toggle-content-text-truncate == true {
+    .content-text-truncate {
+        @include content-text-truncate();
+    }
 }

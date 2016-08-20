@@ -165,6 +165,11 @@ q {
 
 blockquote {
 
+// Re­duce the point size and line spac­ing slightly.
+// In­dent the text block be­neonate half an inch and a full inch on the left side, and op­tion­ally the same on the right. Or on the web, about 2–5 ems.
+// As with first-line in­dents, make the side in­dents large enough to be no­ticed, but not so large that the line length is too short.
+// Don’t put quo­ta­tion marks at the ends—they’re redundant.
+
     p::before {
         content: open-quote;
     }
@@ -214,3 +219,6 @@ cite b {
     font-style: normal;
     font-weight: normal;
 }
+
+
+// TODO: Quoted quote

@@ -3,7 +3,7 @@
 // ============================================================================
 
 
-@mixin hide-content($how: visually) {
+@mixin content-hide($how: visually) {
     // Hide only visually, but have it available for screen readers:
     // http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
     @if $how == "visually" {
@@ -36,5 +36,24 @@
     }
     @else {
         @error "`#{$how}` is not a valid argument. Please select `visually`, `invisible`, or `remove`";
+    }
+}
+
+
+@if $toggle-content-hide-visually == true {
+    .content-hide-visually {
+        @include content-hide(visually);
+    }
+}
+
+@if $toggle-content-hide-invisible == true {
+    .content-hide-invisible {
+        @include content-hide(invisible);
+    }
+}
+
+@if $toggle-content-hide-remove == true {
+    .content-hide-remove {
+        @include content-hide(remove);
     }
 }

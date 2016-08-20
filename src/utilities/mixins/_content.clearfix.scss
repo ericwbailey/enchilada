@@ -3,7 +3,7 @@
 // ============================================================================
 
 
-@mixin clearfix() {
+@mixin content-clearfix() {
     & {
         *zoom: 1;
     }
@@ -16,5 +16,12 @@
 
     &:after {
         clear: both;
+    }
+}
+
+
+@if $toggle-content-clearfix == true {
+    .content-clearfix {
+        @include content-clearfix();
     }
 }

@@ -19,3 +19,10 @@
         font-feature-settings: "lnum" 0, "onum", "pnum", "tnum" 0;
     }
 }
+
+
+@if $toggle-typography-numbers-proportional-oldstyle == true {
+    .typography-numbers-proportional-oldstyle {
+        @include typography-numbers-proportional-oldstyle();
+    }
+}

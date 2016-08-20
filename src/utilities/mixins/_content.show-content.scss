@@ -3,7 +3,7 @@
 // ============================================================================
 
 
-@mixin show-content($how: visually) {
+@mixin content-show($how: visually) {
     // Reverts `hide(visually)`
     @if $how == "visually" {
         border: initial;
@@ -34,5 +34,24 @@
     }
     @else {
         @error "`#{$how}` is not a valid argument. Please select `visually`, `visible`, or `add`";
+    }
+}
+
+
+@if $toggle-content-show-visually == true {
+    .content-show-visually {
+        @include content-show(visually);
+    }
+}
+
+@if $toggle-content-show-invisible == true {
+    .content-show-invisible {
+        @include content-show(visible);
+    }
+}
+
+@if $toggle-content-show-remove == true {
+    .content-show-remove {
+        @include content-show(add);
     }
 }
