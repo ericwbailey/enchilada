@@ -1,0 +1,25 @@
+// ============================================================================
+// Preload Adjustments
+// ============================================================================
+
+
+// Size and stretch the preloaded font to help mitigate FOUT
+// https://css-tricks.com/almanac/properties/f/font-size-adjust/
+@mixin typography-preload-adjustments($size-adjust: 0, $stretch: null) {
+    @if (type-of($size-adjust) == number)
+    and (unitless($size-adjust)) {
+        font-size-adjust: $size-adjust;
+    }
+    @else {
+        @error "Please provide a unitless value for `font-size-adjust`";
+    }
+
+    @if $stretch != ""
+    and (type-of($stretch) == number)
+    and (unitless($stretch)) {
+        font-stretch: $stretch;
+    }
+    @else {
+        @error "Please provide a unitless value for `stretch`";
+    }
+}
