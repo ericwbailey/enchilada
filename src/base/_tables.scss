@@ -34,7 +34,7 @@
 
 
 // Column alignments
-@mixin table-col-align-text { text-align: left; }
+@mixin table-col-align-text() { text-align: left; }
 @mixin table-col-align-image { text-align: center; }
 @mixin table-col-align-number { text-align: right; }
 
@@ -56,14 +56,14 @@ table {
     col,
     th,
     td {
-        @include table-col-align-text;
+        @include table-col-align-text();
 
         &[colspan] {
-            text-align: center;
+            @mixin typography-align(center);
         }
 
         &[colspan="1"] {
-            @include table-col-align-text;
+            @include table-col-align-text();
         }
 
         &[rowspan]
