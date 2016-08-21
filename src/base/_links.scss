@@ -3,9 +3,6 @@
 // ============================================================================
 
 
-// TODO: External links, other link types
-
-
 a {
     @include content-underline();
 
@@ -31,4 +28,152 @@ a {
     &[aria-busy="true"] {
         color: c(link, busy);
     }
+
+    &[rel~="external"],
+    &[rel~="noopener"],
+    &[href^="http"] {
+
+    }
+
+    &[download] {
+
+    }
+}
+
+
+// Communication --------------------------------------------------------------
+// Email
+a[href^="mailto"] {
+
+}
+
+// Phone numbers
+a[href^="tel"] {
+
+}
+
+// FTP
+a[href^="ftp"] {
+
+}
+
+
+// Archives -------------------------------------------------------------------
+a[href$=".7z"],
+a[href$=".cab"],
+a[href$=".gz"],
+a[href$=".lzh"],
+a[href$=".rar"],
+a[href$=".tar"],
+a[href$=".zip"] {
+
+}
+
+
+// Design ---------------------------------------------------------------------
+a[href$=".ai"],
+a[href$=".indd"],
+a[href$=".indt"],
+a[href$=".sketch"],
+a[href$=".psb"],
+a[href$=".psd"],
+a[href$=".xcf"] {
+
+}
+
+
+// Documents ------------------------------------------------------------------
+a[href$=".csv"],
+a[href$=".doc"],
+a[href$=".docx"],
+a[href$=".html"],
+a[href$=".key"],
+a[href$=".numbers"],
+a[href$=".odt"],
+a[href$=".pages"],
+a[href$=".pdf"],
+a[href$=".pps"],
+a[href$=".ppsx"],
+a[href$=".ppt"],
+a[href$=".pptx"],
+a[href$=".ps"],
+a[href$=".pub"],
+a[href$=".rtf"],
+a[href$=".txt"],
+a[href$=".xls"],
+a[href$=".xlr"],
+a[href$=".xml"] {
+
+}
+
+
+// Ebooks ---------------------------------------------------------------------
+a[href$=".azw"],
+a[href$=".azw3"],
+a[href$=".cbr"],
+a[href$=".cbz"],
+a[href$=".epub"],
+a[href$=".mobi"] {
+
+}
+
+
+// Fonts ----------------------------------------------------------------------
+a[href$=".eot"],
+a[href$=".otf"],
+a[href$=".ttf"],
+a[href$=".woff"],
+a[href$=".woff2"] {
+
+}
+
+
+// Images ---------------------------------------------------------------------
+a[href$=".bmp"],
+a[href$=".gif"],
+a[href$=".gifv"],
+a[href$=".ico"],
+a[href$=".jpg"],
+a[href$=".jpeg"],
+a[href$=".png"],
+a[href$=".svg"],
+a[href$=".svz"],
+a[href$=".tiff"],
+a[href$=".tif"],
+a[href$=".webp"] {
+
+}
+
+
+// Movies ---------------------------------------------------------------------
+a[href$=".avi"],
+a[href$=".flv"],
+a[href$=".mkv"],
+a[href$=".mov"],
+a[href$=".mp4"],
+a[href$=".mpg"],
+a[href$=".mpeg"],
+a[href$=".wmv"] {
+
+}
+
+
+// Music ----------------------------------------------------------------------
+a[href$=".aac"],
+a[href$=".aif"],
+a[href$=".aiff"],
+a[href$=".flac"],
+a[href$=".m4a"],
+a[href$=".mid"],
+a[href$=".midi"],
+a[href$=".mp3"],
+a[href$=".ogg"],
+a[href$=".vob"] {
+
+}
+
+
+// Version Control ------------------------------------------------------------
+a[href$=".git"] {
+
 }
