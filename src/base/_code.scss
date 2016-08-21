@@ -10,6 +10,8 @@ kbd,
 pre,
 samp,
 var {
+    @mixin typography-disable-opentype();
+
     overflow: auto; // [1]
 
     font-family: monospace;
