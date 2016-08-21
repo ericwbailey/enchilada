@@ -82,11 +82,40 @@ a[href$=".xcf"] {
 }
 
 
-// Documents ------------------------------------------------------------------
+// Development ----------------------------------------------------------------
+a[href$=".atom"],
+a[href$=".cgi"],
+a[href$=".coffee"],
+a[href$=".css"],
 a[href$=".csv"],
+a[href$=".erb"],
+a[href$=".htm"],
+a[href$=".html"],
+a[href$=".js"],
+a[href$=".less"],
+a[href$=".markdown"],
+a[href$=".md"],
+a[href$=".php"],
+a[href$=".php"],
+a[href$=".pl"],
+a[href$=".py"],
+a[href$=".rb"],
+a[href$=".rb"],
+a[href$=".rss"],
+a[href$=".sass"],
+a[href$=".scss"],
+a[href$=".styl"],
+a[href$=".swf"],
+a[href$=".xhtml"],
+a[href$=".xml"],
+a[href$=".yml"] {
+
+}
+
+
+// Documents ------------------------------------------------------------------
 a[href$=".doc"],
 a[href$=".docx"],
-a[href$=".html"],
 a[href$=".key"],
 a[href$=".numbers"],
 a[href$=".odt"],
@@ -101,8 +130,7 @@ a[href$=".pub"],
 a[href$=".rtf"],
 a[href$=".txt"],
 a[href$=".xls"],
-a[href$=".xlr"],
-a[href$=".xml"] {
+a[href$=".xlr"] {
 
 }
 
