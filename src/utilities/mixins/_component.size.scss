@@ -1,0 +1,23 @@
+// ============================================================================
+// Size
+// ============================================================================
+
+
+@mixin component-size($width, $height: null) {
+    @if (type-of($width) == number)
+    and not (unitless($width)) {
+        width: $width;
+    }
+    @else {
+        @error "Please provide a unit for `$width`";
+    }
+
+    @if ($width != "") and ($height != "")
+    and (type-of($height) == number)
+    and not (unitless($height)) {
+        height: $height;
+    }
+    @else {
+        @error "Please provide a unit for `$height`";
+    }
+}
