@@ -30,8 +30,10 @@
     "utilities/maps/z-index",
 
     // Mixins
+    "utilities/mixins/component.aspect-ratio",
     "utilities/mixins/component.prevent-jumping",
     "utilities/mixins/component.set-type-size",
+    "utilities/mixins/component.size",
     "utilities/mixins/component.theme-color",
     "utilities/mixins/content.clearfix",
     "utilities/mixins/content.hide-content",
@@ -49,6 +51,7 @@
     "utilities/mixins/typography.caps-to-small-caps",
     "utilities/mixins/typography.case-sensitive-forms",
     "utilities/mixins/typography.component-type-size.scss",
+    "utilities/mixins/typography.direction",
     "utilities/mixins/typography.disable-opentype.scss",
     "utilities/mixins/typography.hyphenation.scss",
     "utilities/mixins/typography.kerning.scss",
@@ -109,15 +112,18 @@
 
 
 // Layout =====================================================================
-
+// @import
+//     "layout/l-layout/l-layout";
 
 
 // Objects ====================================================================
-
+// @import
+//     "objects/o-object/o-object";
 
 
 // Components =================================================================
-
+// @import
+//     "components/c-component/c-component";
 
 
 // Media ======================================================================

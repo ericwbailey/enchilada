@@ -18,7 +18,11 @@ $global-type-weight: $font-weight-medium !default;
 // regardless of whether or not they're declared in the HTML.
 
 // Component
+$toggle-component-aspect-ratio-16-9: false;
+$toggle-component-aspect-ratio-21-9: false;
+$toggle-component-aspect-ratio-4-3: false;
 $toggle-component-set-type-size: false;
+$toggle-component-style-reset: false;
 
 // Content
 $toggle-content-clearfix-add: false;
@@ -43,6 +47,8 @@ $toggle-typography-alternates-historical: false;
 $toggle-typography-alternates-titling: false;
 $toggle-typography-caps-to-small-caps: false;
 $toggle-typography-case-sensitive-forms: false;
+$toggle-typography-direction-ltr: false;
+$toggle-typography-direction-rtl: false;
 $toggle-typography-disable-opentype: false;
 $toggle-typography-hyphenation: false;
 $toggle-typography-kerning: false;
