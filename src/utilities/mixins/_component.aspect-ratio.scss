@@ -1,0 +1,42 @@
+// ============================================================================
+// Aspect Ratio
+// ============================================================================
+
+// Makes embedded content such as videos responsive. Apply to parent container.
+// Add `padding-top` to provide additional spacing for player controls if cut
+// off.
+@mixin component-aspect-ratio($aspect: 16/9, $target: "> *") {
+    $aspect-percentage: percentage(1 / ($aspect));
+    height: 0;
+    position: relative;
+    padding-bottom: $aspect-percentage;
+
+    #{$target} {
+        position: absolute;
+          top: 0;
+          left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+// Toggles ====================================================================
+// Enables functional class toggles. See `_config.scss`
+@if $toggle-component-aspect-ratio-16-9 == true {
+    .component-aspect-ratio-16-9 {
+        @include component-aspect-ratio(16/9);
+    }
+}
+
+@if $toggle-component-aspect-ratio-21-9 == true {
+    .component-aspect-ratio-21-9 {
+        @include component-aspect-ratio(21/9);
+    }
+}
+
+@if $toggle-component-aspect-ratio-4-3 == true {
+    .component-aspect-ratio-4-3 {
+        @include component-aspect-ratio(4/3);
+    }
+}
