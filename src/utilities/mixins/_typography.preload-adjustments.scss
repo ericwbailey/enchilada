@@ -5,21 +5,34 @@
 
 // Size and stretch the preloaded font to help mitigate FOUT
 // https://css-tricks.com/almanac/properties/f/font-size-adjust/
-@mixin typography-preload-adjustments($size-adjust: 0, $stretch: null) {
-    @if (type-of($size-adjust) == number)
-    and (unitless($size-adjust)) {
-        font-size-adjust: $size-adjust;
-    }
-    @else {
-        @error "Please provide a unitless value for `font-size-adjust`";
-    }
+@mixin typography-preload-adjustments(
+    $size-adjust: 0,
+    $stretch: 0,
+    $tracking: 0) {
 
-    @if $stretch != ""
-    and (type-of($stretch) == number)
-    and (unitless($stretch)) {
-        font-stretch: $stretch;
-    }
-    @else {
-        @error "Please provide a unitless value for `stretch`";
-    }
+        @if (type-of($size-adjust) == number)
+        and (unitless($size-adjust)) {
+            font-size-adjust: $size-adjust;
+        }
+        @else {
+            @error "Please provide a unitless value for `$font-size-adjust`";
+        }
+
+        @if ($stretch != "")
+        and (type-of($stretch) == number)
+        and (unitless($stretch)) {
+            font-stretch: $stretch;
+        }
+        @else {
+            @error "Please provide a unitless value for `$stretch`";
+        }
+
+        @if ($stretch != "") and ($tracking != "")
+        and (type-of($tracking) == number)
+        and not (unitless($tracking)) {
+            letter-spacing: $tracking;
+        }
+        @else {
+            @error "Please provide a unit for `$tracking`";
+        }
 }
