@@ -7,6 +7,30 @@
 button,
 input[type="button"] {
 
+    // Primary actions
+    &[data-button-priority="primary"] {
+
+    }
+
+    // Secondary actions
+    &[data-button-priority="secondary"] {
+
+    }
+
+    // Tertiary actions
+    &[data-button-priority="tertiary"] {
+
+    }
+
+    // Busy
+    &[aria-busy="true"] {
+
+    }
+
+    // Disabled
+    &[disabled] {
+
+    }
 }
 
 
