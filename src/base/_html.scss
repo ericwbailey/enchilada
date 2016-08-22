@@ -34,3 +34,19 @@ html {
 *::after {
     box-sizing: border-box;
 }
+
+
+
+
+
+// @include font-ligatures-common();
+// @include font-kerning();
+// @include font-smoothing();
+//
+// background-color: c(base, background);
+//
+// color: c(base, type);
+// font-family: $global-type-family;
+// font-weight: $global-type-weight;
+// font-size: $global-type-size;
+// line-height: $global-type-line-height;

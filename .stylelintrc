@@ -100,6 +100,7 @@
         "property-no-vendor-prefix": [true, {
             "message": "Vendor prefixes are automatically generated (property-no-vendor-prefix)"
         }],
+        "root-no-standard-properties": true,
         "rule-nested-empty-line-before": ["always-multi-line", {
             "except": ["first-nested"],
             "ignore": "after-comment"
