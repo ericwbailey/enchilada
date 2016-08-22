@@ -3,6 +3,7 @@
 // ============================================================================
 
 
+
 // Typography -----------------------------------------------------------------
 // Set the base properties and modular scale.
 $global-type-direction: ltr !default;
@@ -10,6 +11,12 @@ $global-type-family: $font-family-primary !default;
 $global-type-line-height: 1.4 !default;
 $global-type-size: 16px !default;
 $global-type-weight: $font-weight-medium !default;
+
+
+// Modes ----------------------------------------------------------------------
+// Visually detect any potentially invalid or inaccessible HTML markup:
+// http://diagnosticss.github.io/
+$mode-diagnose-css: false;
 
 
 // Toggles --------------------------------------------------------------------

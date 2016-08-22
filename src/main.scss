@@ -90,6 +90,14 @@
     "config";
 
 
+// Modes ======================================================================
+// Modes are toggled via `_config.scss` and used to audit different aspects of
+// your styling.
+@if $mode-diagnose-css == true {
+    @import "vendor/diagnosticss/diagnosticss";
+}
+
+
 // Base =======================================================================
 @import
     "base/reset",
