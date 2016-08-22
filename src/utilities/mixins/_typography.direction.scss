@@ -1,0 +1,33 @@
+// ============================================================================
+// Direction
+// ============================================================================
+
+
+// https://css-tricks.com/almanac/properties/d/direction/
+
+@mixin typography-direction($ltr-or-rtl: rtl) {
+    @if ($ltr-or-rtl == "ltr") {
+        direction: ltr;
+    }
+    @else if ($ltr-or-rtl == "rtl") {
+        direction: rtl;
+    }
+    @else {
+        @error "`#{$ltr-or-rtl}` is not a valid argument. Please select either `ltr` or `rtl`";
+    }
+}
+
+
+// Toggles ====================================================================
+// Enables functional class toggles. See `_config.scss`
+@if $toggle-typography-direction-ltr == true {
+    .typography-direction-ltr {
+        @include typography-direction(ltr);
+    }
+}
+
+@if $toggle-typography-direction-rtl == true {
+    .typography-direction-rtl {
+        @include typography-direction(rtl);
+    }
+}
