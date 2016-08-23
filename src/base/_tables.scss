@@ -65,15 +65,14 @@ table {
         @include table-col-align-text();
 
         &[colspan] {
-            @mixin typography-align(center);
+            @include typography-align(center);
         }
 
         &[colspan="1"] {
             @include table-col-align-text();
         }
 
-        &[rowspan]
-        {
+        &[rowspan] {
             vertical-align: middle;
         }
 
@@ -128,6 +127,7 @@ table {
     .table-col-width-05 {
         @include table-col-width-05() { width: 5%; }
     }
+}
 
 @if $toggle-table-col-width-10 == true {
     .table-col-width-10 {

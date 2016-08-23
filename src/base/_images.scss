@@ -10,7 +10,7 @@
 img,
 figure,
 picture {
-    @mixin typography-align(center); // [2]
+    @include typography-align(center); // [2]
 
     max-width: 100%; // [1]
     vertical-align: middle; // [3]

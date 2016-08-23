@@ -10,7 +10,7 @@ kbd,
 pre,
 samp,
 var {
-    @mixin typography-disable-opentype();
+    @include typography-disable-opentype();
 
     overflow: auto; // [1]
 
