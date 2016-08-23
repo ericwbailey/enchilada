@@ -1,0 +1,40 @@
+{
+  "name": "$$projectFullTitle",
+  "description": "$$projectFullDescription",
+  "homepage": "$$projectURL",
+  "version": "0.0.1",
+  "license": "$$projectLicense",
+  "author": {
+    "name": "$$projectAuthor",
+    "email": "$$projectAuthorEmail",
+    "url": "$$projectAuthorURL"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/$$githubAuthor/$$githubTitle.git"
+  },
+  "bugs": {
+    "url": "https://github.com/$$githubAuthor/$$githubTitle/issues",
+    "email": "$$projectAuthorEmail"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.12.3",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-file-include": "^0.13.7",
+    "gulp-help": "^1.6.1",
+    "gulp-jshint": "^2.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-task-listing": "^1.0.1",
+    "gulp-uglify": "^1.5.3",
+    "htmlmin": "0.0.6",
+    "jshint": "^2.9.2",
+    "jshint-stylish": "^2.1.0",
+    "require-dir": "^0.3.0"
+  },
+  "scripts": {}
+}

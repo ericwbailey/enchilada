@@ -1,22 +1,4 @@
 {
-  "name": "$$projectFullTitle",
-  "description": "$$projectFullDescription",
-  "homepage": "$$projectURL",
-  "version": "0.0.1",
-  "license": "$$projectLicense",
-  "author": {
-    "name": "$$projectAuthor",
-    "email": "$$projectAuthorEmail",
-    "url": "$$projectAuthorURL"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/$$githubAuthor/$$githubTitle.git"
-  },
-  "bugs": {
-    "url": "https://github.com/$$githubAuthor/$$githubTitle/issues",
-    "email": "$$projectAuthorEmail"
-  },
   "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.12.3",
@@ -35,6 +17,5 @@
     "jshint": "^2.9.2",
     "jshint-stylish": "^2.1.0",
     "require-dir": "^0.3.0"
-  },
-  "scripts": {}
+  }
 }
