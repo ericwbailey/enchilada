@@ -108,10 +108,9 @@
 
 // Modes ----------------------------------------------------------------------
 // Modes are toggled via `_config.scss` and used to audit different aspects of
-// your styling.
-// @if $mode-diagnose-css == true {
-//     @import "vendor/diagnosticss/diagnosticss.css";
-// }
+// your styling. Uncomment to enable them, comment to disable them.
+// @import
+//     "vendor/diagnosticss/diagnosticss.css";
 
 
 // Base -----------------------------------------------------------------------
