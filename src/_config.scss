@@ -13,12 +13,6 @@ $global-type-size: 16px !default;
 $global-type-weight: $font-weight-medium !default;
 
 
-// Modes ----------------------------------------------------------------------
-// Visually detect any potentially invalid or inaccessible HTML markup:
-// http://diagnosticss.github.io/
-$mode-diagnose-css: false;
-
-
 // Toggles --------------------------------------------------------------------
 // Set variables to `true` to generate functional classes as needed. Unlike
 // their source @mixins, generated classes will be added to `main.css`
@@ -105,6 +99,20 @@ $toggle-typography-tracking-tight: false;
 $toggle-typography-tracking-slight: false;
 $toggle-typography-tracking-loose: false;
 $toggle-typography-tracking-looser: false;
+
+// Quotes
+$toggle-quotes-french: false;
+$toggle-quotes-german: false;
+$toggle-quotes-italian: false;
+$toggle-quotes-indonesian: false;
+$toggle-quotes-japanese: false;
+$toggle-quotes-korean: false;
+$toggle-quotes-chinese: false;
+$toggle-quotes-portuguese: false;
+$toggle-quotes-russian: false;
+$toggle-quotes-spanish: false;
+$toggle-quotes-turkish: false;
+$toggle-quotes-vietnamese: false;
 
 // Tables
 $toggle-table-col-width-05: false;
