@@ -1,0 +1,29 @@
+# Pre-deploy Checklist
+
+- [ ] No spelling errors
+- [ ] Content has been placed in a consistent and predictable way
+- [ ] Page and content formatting has been tested
+- [ ] Print stylesheet exists and tested
+- [ ] Metadata has been included and is appropriate
+- [ ] Page titles are descriptive and SEO friendly
+- [ ] Images have appropriate alt text
+- [ ] Favicon has been created and displays correctly
+- [ ] Footer includes copyright and link to site creator
+- [ ] HTML validates
+- [ ] CSS validates
+- [ ] JavaScript validates
+- [ ] No broken links?
+- [ ] Works on Firefox (all platforms)
+- [ ] Works on Chrome (all platforms)
+- [ ] Works on Safari (all platforms)
+- [ ] Works on Opera (all platforms)
+- [ ] Looks good on small screens
+- [ ] Looks good on medium screens
+- [ ] Looks good at large screens
+- [ ] Forms have been tested and process data correctly
+- [ ] Required fields have been denoted
+- [ ] Forms send to correct recipient
+- [ ] Web analytics are added
+- [ ] 404 page exists and informative
+- [ ] Website backed up
+- [ ] Website monitored? 
