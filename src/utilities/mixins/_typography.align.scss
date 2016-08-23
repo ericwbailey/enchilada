@@ -8,22 +8,22 @@
 // language:
 // https://davidwalsh.name/text-align-start
 @mixin typography-align($start-end-or-center) {
-    @if ($global-text-direction == "ltr")
+    @if ($global-type-direction == "ltr")
     and ($start-end-or-center == "start") {
         text-align: left;
         text-align: start;
     }
-    @else if ($global-text-direction == "rtl")
+    @else if ($global-type-direction == "rtl")
     and ($start-end-or-center == "start") {
         text-align: right;
         text-align: start;
     }
-    @else if ($global-text-direction == "ltr")
+    @else if ($global-type-direction == "ltr")
     and ($start-end-or-center == "end") {
         text-align: right;
         text-align: end;
     }
-    @else if ($global-text-direction == "rtl")
+    @else if ($global-type-direction == "rtl")
     and ($start-end-or-center == "end") {
         text-align: left;
         text-align: end;
