@@ -20,24 +20,3 @@
         height: 100%;
     }
 }
-
-
-// Toggles --------------------------------------------------------------------
-// Enables functional class toggles. See `_config.scss`
-@if $toggle-component-aspect-ratio-16-9 == true {
-    .component-aspect-ratio-16-9 {
-        @include component-aspect-ratio(16/9);
-    }
-}
-
-@if $toggle-component-aspect-ratio-21-9 == true {
-    .component-aspect-ratio-21-9 {
-        @include component-aspect-ratio(21/9);
-    }
-}
-
-@if $toggle-component-aspect-ratio-4-3 == true {
-    .component-aspect-ratio-4-3 {
-        @include component-aspect-ratio(4/3);
-    }
-}
