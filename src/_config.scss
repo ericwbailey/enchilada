@@ -8,7 +8,7 @@
 $global-type-direction: ltr !default;
 $global-type-family: $font-family-primary !default;
 $global-type-line-height: 1.4 !default;
-$global-type-ratio: $ratio-fourth;
+//$global-type-ratio: $ratio-fourth;
 $global-type-size: 16px !default;
 $global-type-weight: $font-weight-medium !default;
 
@@ -25,9 +25,6 @@ $mode-diagnose-css: false;
 // regardless of whether or not they're declared in the HTML.
 
 // Component
-$toggle-component-aspect-ratio-16-9: false;
-$toggle-component-aspect-ratio-21-9: false;
-$toggle-component-aspect-ratio-4-3: false;
 $toggle-component-set-type-size: false;
 $toggle-component-style-reset: false;
 
