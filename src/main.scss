@@ -4,36 +4,49 @@
 // ============================================================================
 
 
-// Loads and manages Sass partials
-// Be sure to use `_config.scss` to set up the project basics
-// Order is important
+// Loads and manages Sass partials. Be sure to use `_config.scss` to set up
+// toggle-typography-hyphenation project basics.
+// Order is important!
 
-// Utilities ------------------------------------------------------------------
+// Variables ------------------------------------------------------------------
 @import
-    // Variables
     "utilities/variables/paths",
     "utilities/variables/font.families",
     "utilities/variables/font.weights",
     "utilities/variables/font.sizes",
     "utilities/variables/font.tracking",
-    "utilities/variables/font.global",
     "utilities/variables/symbols",
     "utilities/variables/animation.ease",
-    "utilities/variables/animation.duration",
+    "utilities/variables/animation.duration";
 
-    // Imports
-    "utilities/imports/typefaces",
 
-    // Functions
+// Config ---------------------------------------------------------------------
+// Use this partial to set global font sizes, styles, etc. and toggle functional
+// classes
+@import
+    "config";
+
+
+// Imports --------------------------------------------------------------------
+@import
+    "utilities/imports/typefaces";
+
+
+// Functions ------------------------------------------------------------------
+@import
     "utilities/functions/units.em",
     "utilities/functions/units.rem",
-    "utilities/functions/units.strip-unit",
+    "utilities/functions/units.strip-unit";
 
-    // Maps
+
+// Maps -----------------------------------------------------------------------
+@import
     "utilities/maps/colors",
-    "utilities/maps/z-index",
+    "utilities/maps/z-index";
 
-    // Mixins
+
+// Mixins ---------------------------------------------------------------------
+@import
     "utilities/mixins/component.aspect-ratio",
     "utilities/mixins/component.prevent-jumping",
     "utilities/mixins/component.set-type-size",
@@ -90,22 +103,15 @@
 
 // Vendor ---------------------------------------------------------------------
 @import
-    "../node_modules/normalize.css/normalize";
-
-
-// Config ---------------------------------------------------------------------
-// Use this partial to set global font sizes, styles, etc. and toggle functional
-// classes
-@import
-    "config";
+    "../node_modules/normalize.css/normalize.css";
 
 
 // Modes ----------------------------------------------------------------------
 // Modes are toggled via `_config.scss` and used to audit different aspects of
 // your styling.
-@if $mode-diagnose-css == true {
-    @import "vendor/diagnosticss/diagnosticss";
-}
+// @if $mode-diagnose-css == true {
+//     @import "vendor/diagnosticss/diagnosticss.css";
+// }
 
 
 // Base -----------------------------------------------------------------------
