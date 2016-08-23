@@ -14,7 +14,7 @@
 @mixin typography-tracking-loosest() { @include typography-disable-opentype(); letter-spacing: $font-tracking-loosest; }
 
 
-// Toggles ====================================================================
+// Toggles --------------------------------------------------------------------
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-typography-tracking-tightest == true {
     .typography-tracking-tightest {

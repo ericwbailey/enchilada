@@ -12,7 +12,7 @@
 @mixin typography-disable-opentype() { font-feature-settings: normal; }
 
 
-// Toggles ====================================================================
+// Toggles --------------------------------------------------------------------
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-typography-disable-opentype == true {
     .typography-disable-opentype {

@@ -3,7 +3,7 @@
 // ============================================================================
 
 
-// Table Logic ================================================================
+// Table Logic ----------------------------------------------------------------
 // Impose specific column widths on tables, if desired. Always leave one column
 // free, to absorb rounding errors/accidental breakage.
 @mixin table-col-width-05() { width: 5%; }
@@ -45,7 +45,7 @@
 @mixin table-row-align-bottom { vertical-align: bottom; }
 
 
-// Table Styling ==============================================================
+// Table Styling --------------------------------------------------------------
 table {
     width: 100%;
 
@@ -120,7 +120,7 @@ table {
 }
 
 
-// Toggles ====================================================================
+// Toggles --------------------------------------------------------------------
 // Enables functional class toggles. See `_config.scss`
 
 // Column widths

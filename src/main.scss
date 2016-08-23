@@ -1,10 +1,14 @@
 @charset "UTF-8";
+// ============================================================================
+// Main
+// ============================================================================
+
 
 // Loads and manages Sass partials
 // Be sure to use `_config.scss` to set up the project basics
 // Order is important
 
-// Utilities ==================================================================
+// Utilities ------------------------------------------------------------------
 @import
     // Variables
     "utilities/variables/paths",
@@ -78,19 +82,19 @@
     "utilities/mixins/typography.unicode-symbol.scss";
 
 
-// Vendor =====================================================================
+// Vendor ---------------------------------------------------------------------
 @import
     "../node_modules/normalize.css/normalize";
 
 
-// Config =====================================================================
+// Config ---------------------------------------------------------------------
 // Use this partial to set global font sizes, styles, etc. and toggle functional
 // classes
 @import
     "config";
 
 
-// Modes ======================================================================
+// Modes ----------------------------------------------------------------------
 // Modes are toggled via `_config.scss` and used to audit different aspects of
 // your styling.
 @if $mode-diagnose-css == true {
@@ -98,7 +102,7 @@
 }
 
 
-// Base =======================================================================
+// Base -----------------------------------------------------------------------
 @import
     "base/reset",
     "base/root",
@@ -119,27 +123,27 @@
     "base/text-level";
 
 
-// Layout =====================================================================
+// Layout ---------------------------------------------------------------------
 // @import
 //     "layout/l-layout/l-layout";
 
 
-// Objects ====================================================================
+// Objects --------------------------------------------------------------------
 // @import
 //     "objects/o-object/o-object";
 
 
-// Components =================================================================
+// Components -----------------------------------------------------------------
 // @import
 //     "components/c-component/c-component";
 
 
-// Media ======================================================================
+// Media ----------------------------------------------------------------------
 @import
     "meta/media/print";
 
 
-// Shame ======================================================================
+// Shame ----------------------------------------------------------------------
 // These are styles that override other styles, and should be used very
 // sparingly. This is the only place where `!important` should be used. Strive
 // to refactor when time permits.

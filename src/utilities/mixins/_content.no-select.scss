@@ -7,7 +7,7 @@
 @mixin content-no-select() { user-select: none; }
 
 
-// Toggles ====================================================================
+// Toggles --------------------------------------------------------------------
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-content-no-select == true {
     .content-no-select {

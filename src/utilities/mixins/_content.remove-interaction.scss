@@ -7,7 +7,7 @@
 @mixin content-remove-interaction() { pointer-events: none; }
 
 
-// Toggles ====================================================================
+// Toggles --------------------------------------------------------------------
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-content-remove-interaction == true {
     .content-remove-interaction {

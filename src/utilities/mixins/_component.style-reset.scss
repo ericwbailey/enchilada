@@ -9,7 +9,7 @@
 @mixin component-style-reset() { all: initial; }
 
 
-// Toggles ====================================================================
+// Toggles --------------------------------------------------------------------
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-component-style-reset == true {
     .component-style-reset {

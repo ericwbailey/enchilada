@@ -7,7 +7,7 @@
 @mixin component-set-type-size() { font-size: 1em; }
 
 
-// Toggles ====================================================================
+// Toggles --------------------------------------------------------------------
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-component-set-type-size == true {
     .component-set-type-size {
