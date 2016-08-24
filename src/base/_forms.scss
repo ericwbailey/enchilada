@@ -3,6 +3,17 @@
 // ============================================================================
 
 
+// Form Logic -----------------------------------------------------------------
+@mixin form-border() {
+    border: 1px solid c(base, type);
+}
+
+@mixin form-width() {
+    display: block;
+    width: 100%;
+}
+
+
 // Form Containers ------------------------------------------------------------
 form {
 
@@ -21,18 +32,20 @@ legend {
 
 // Form Labels ----------------------------------------------------------------
 label {
-    cursor: pointer; 
+    @include content-show-interaction();
 }
 
 
 // Inputs ---------------------------------------------------------------------
 input {
-    display: block;
-
-    border: 1px solid c(base, type);
+    @include form-border();
+    @include form-width();
 
     &[type="color"] {
 
+        &::-webkit-color-swatch-wrapper {
+            background-color: c(base, background);
+        }
     }
 
     &[type="date"] {
@@ -89,9 +102,10 @@ input {
 }
 
 textarea {
-    overflow: auto;
+    @include form-border();
+    @include form-width();
 
-    border: 1px solid c(base, type);
+    overflow: auto;
 }
 
 
@@ -122,7 +136,10 @@ input[type="range"] {
 
 // Select Inputs --------------------------------------------------------------
 select {
-    border: 1px solid c(base, type);
+    @include form-border();
+    @include form-width();
+
+    -webkit-border-radius: 0px;
 }
 
 
@@ -132,7 +149,7 @@ select optgroup {
 
 
 select option {
-
+    margin-top: 0; // Undoes lobotomoized owl selector
 }
 
 
@@ -156,7 +173,17 @@ input[type="radio"] {
 // Output ---------------------------------------------------------------------
 progress,
 meter {
+    @include form-width();
 
+    &::-webkit-progress-value,
+    &::-webkit-meter-optimum-value {
+        background: c(blue);
+    }
+
+    &::-webkit-progress-bar,
+    &::-webkit-meter-bar {
+        background: c(silver);
+    }
 }
 
 

@@ -3,9 +3,24 @@
 // ============================================================================
 
 
+// Form Logic -----------------------------------------------------------------
+@mixin button-border() {
+    border: 1px solid c(base, type);
+}
+
+@mixin button-width() {
+    display: block;
+    width: 100%;
+}
+
+
 // Grouped Styles -------------------------------------------------------------
 button,
 input[type="button"] {
+
+    background-color: c(link, base);
+
+    color: c(base, background);
 
     // Primary actions
     &[data-button-priority="primary"] {
@@ -22,6 +37,12 @@ input[type="button"] {
 
     }
 
+    // Busy and Disabled
+    &[aria-busy="true"],
+    &[disabled] {
+        opacity: 0.5;
+    }
+
     // Busy
     &[aria-busy="true"] {
 
@@ -36,10 +57,28 @@ input[type="button"] {
 
 // Individual Styles ----------------------------------------------------------
 button {
-
+    @include button-border();
+    @include button-width();
 }
 
 
 input[type="button"] {
 
+}
+
+// File input upload button
+::-webkit-file-upload-button {
+    @include button-border();
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+// Text buttons
+[role="button"][tabindex="0"] {
+    @include button-width();
+
+    text-align: center;
+
+    cursor: default;
 }
