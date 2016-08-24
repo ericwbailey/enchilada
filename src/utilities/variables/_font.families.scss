@@ -5,14 +5,14 @@
 
 // Remember to include fallbacks:
 // http://cssfontstack.com/
-$font-family-primary: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
-$font-family-primary-preload: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+$font-family-primary: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-primary-preload: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-$font-family-secondary: Arial, "Helvetica Neue", Helvetica,sans-serif;
-$font-family-secondary-preload: Arial, "Helvetica Neue", Helvetica,sans-serif;
+$font-family-secondary: "Lucida Bright", Georgia, serif;
+$font-family-secondary-preload: "Lucida Bright", Georgia, serif;
 
-$font-family-tertiary: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+$font-family-tertiary: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
 $font-family-tertiary-preload: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
 
-$font-family-code: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
-$font-family-code-preload: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+$font-family-code: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+$font-family-code-preload: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
