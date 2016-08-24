@@ -28,7 +28,7 @@
 // Great Britan
 :lang(en-GB) blockquote,
 :lang(en-GB) q {
-    quotes: "'\u201C' '\u201D' '\u2018' '\u2019' '\u201C' '\u201D' '\u2018' '\u2019'";
+    quotes: "\201C" "\201D" "\2018" "\2019" "\201C" "\201D" "\2018" "\2019";
 }
 
 
@@ -37,7 +37,7 @@
 @if $toggle-quotes-french == true {
     :lang(fr) blockquote,
     :lang(fr) q {
-        quotes: "'\u00AB' '\u00BB' '\u201C' '\u201D' '\u00AB' '\u00BB' '\u201C' '\u201D'";
+        quotes: "\00AB" "\00BB" "\201C" "\201D" "\00AB" "\00BB" "\201C" "\201D";
     }
 }
 
@@ -47,7 +47,7 @@
 @if $toggle-quotes-german == true {
 :lang(de) blockquote,
     :lang(de) q {
-        quotes: "'\u201E' '\u201C' '\u201A' '\u2018' '\u201E' '\u201C' '\u201A' '\u2018'";
+        quotes: "\201E" "\201C" "\201A" "\2018" "\201E" "\201C" "\201A" "\2018";
     }
 }
 
@@ -57,7 +57,7 @@
 @if $toggle-quotes-italian == true {
     :lang(it) blockquote,
     :lang(it) q {
-        quotes: "'\u00AB' '\u00BB' '\u201C' '\u201D' '\u00AB' '\u00BB' '\u201C' '\u201D'";
+        quotes: "\00AB" "\00BB" "\201C" "\201D" "\00AB" "\00BB" "\201C" "\201D";
     }
 }
 
@@ -69,7 +69,7 @@
     :lang(id) q,
     :lang(in) blockquote,
     :lang(in) q {
-        quotes: "'\u201C' '\u201D' '\u2018' '\u2019' '\u201C' '\u201D' '\u2018' '\u2019'";
+        quotes: "\201C" "\201D" "\2018" "\2019" "\201C" "\201D" "\2018" "\2019";
     }
 }
 
@@ -79,7 +79,7 @@
 @if $toggle-quotes-japanese == true {
     :lang(ja) blockquote,
     :lang(ja) q {
-        quotes: "'\u300C' '\u300D' '\u300E' '\u300F' '\u300C' '\u300D' '\u300E' '\u300F'";
+        quotes: "\300C" "\300D" "\300E" "\300F" "\300C" "\300D" "\300E" "\300F";
     }
 }
 
@@ -89,7 +89,7 @@
 @if $toggle-quotes-korean == true {
     :lang(ko) blockquote,
     :lang(ko) q {
-        quotes: "'\u300C' '\u300D' '\u300E' '\u300F' '\u300C' '\u300D' '\u300E' '\u300F'";
+        quotes: "\300C" "\300D" "\300E" "\300F" "\300C" "\300D" "\300E" "\300F";
     }
 }
 
@@ -108,7 +108,7 @@
     // Traditional
     :lang(zh-Hant) blockquote,
     :lang(zh-Hant) q {
-        quotes: "'\u300C' '\u300D' '\u300E' '\u300F' '\u300C' '\u300D' '\u300E' '\u300F'";
+        quotes: "\300C" "\300D" "\300E" "\300F" "\300C" "\300D" "\300E" "\300F";
     }
 }
 
@@ -118,7 +118,7 @@
 @if $toggle-quotes-portuguese == true {
     :lang(pt) blockquote,
     :lang(pt) q {
-        quotes: "'\u201C' '\u201D' '\u2018' '\u2019' '\u201C' '\u201D' '\u2018' '\u2019'";
+        quotes: "\201C" "\201D" "\2018" "\2019" "\201C" "\201D" "\2018" "\2019";
     }
 }
 
@@ -128,7 +128,7 @@
 @if $toggle-quotes-russian == true {
     :lang(ru) blockquote,
     :lang(ru) q {
-        quotes: "'\u00AB' '\u00BB' '\u201E' '\u201C' '\u00AB' '\u00BB' '\u201E' '\u201C'";
+        quotes: "\00AB" "\00BB" "\201E" "\201C" "\00AB" "\00BB" "\201E" "\201C";
     }
 }
 
@@ -138,7 +138,7 @@
 @if $toggle-quotes-spanish == true {
     :lang(es) blockquote,
     :lang(es) q {
-        quotes: "'\u00AB' '\u00BB' '\u201C' '\u201D' '\u00AB' '\u00BB' '\u201C' '\u201D'";
+        quotes: "\00AB" "\00BB" "\201C" "\201D" "\00AB" "\00BB" "\201C" "\201D";
     }
 }
 
@@ -148,7 +148,7 @@
 @if $toggle-quotes-turkish == true {
     :lang(tr) blockquote,
     :lang(tr) q {
-        quotes: "'\u201C' '\u201D' '\u2018' '\u2019' '\u201C' '\u201D' '\u2018' '\u2019'";
+        quotes: "\201C" "\201D" "\2018" "\2019" "\201C" "\201D" "\2018" "\2019";
     }
 }
 
@@ -158,7 +158,7 @@
 @if $toggle-quotes-vietnamese == true {
     :lang(vi) blockquote,
     :lang(vi) q {
-        quotes: "'\u201C' '\u201D' '\u201C' '\u201D' '\u201C' '\u201D' '\u201C' '\u201D'";
+        quotes: "\201C" "\201D" "\201C" "\201D" "\201C" "\201D" "\201C" "\201D";
     }
 }
 
