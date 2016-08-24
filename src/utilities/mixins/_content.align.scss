@@ -3,6 +3,7 @@
 // Align Content
 // ============================================================================
 
+// TODO: Vertical alignment and centering
 
 @mixin content-align($method, $direction) {
     @if ($method == "float")
