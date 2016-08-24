@@ -104,14 +104,14 @@
 
 // Vendor ---------------------------------------------------------------------
 @import
-    "../node_modules/normalize.css/normalize.css";
+    "../node_modules/normalize.css/normalize";
 
 
 // Modes ----------------------------------------------------------------------
 // Modes are toggled via `_config.scss` and used to audit different aspects of
 // your styling. Uncomment to enable them, comment to disable them.
-// @import
-//     "vendor/diagnosticss/diagnosticss.css";
+//@import
+//    "vendor/diagnosticss/diagnosticss.css";
 
 
 // Base -----------------------------------------------------------------------
@@ -136,18 +136,18 @@
 
 
 // Layout ---------------------------------------------------------------------
-// @import
-//     "layout/l-layout/l-layout";
+@import
+    "layout/l-layout/l-layout";
 
 
 // Objects --------------------------------------------------------------------
-// @import
-//     "objects/o-object/o-object";
+@import
+    "objects/o-object/o-object";
 
 
 // Components -----------------------------------------------------------------
-// @import
-//     "components/c-component/c-component";
+@import
+    "components/c-component/c-component";
 
 
 // Media ----------------------------------------------------------------------
