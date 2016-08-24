@@ -9,10 +9,6 @@ a {
     color: c(link, base);
 
     // States
-    &:visited {
-        color: c(link, visited);
-    }
-
     &:hover {
         color: c(link, hover);
     }
@@ -23,6 +19,22 @@ a {
 
     &:active {
         color: c(link, active);
+    }
+
+    &:visited {
+        color: c(link, visited);
+
+        &:hover {
+            color: c(link, hover);
+        }
+
+        &:focus {
+            color: c(link, focus);
+        }
+
+        &:active {
+            color: c(link, active);
+        }
     }
 
     &[aria-busy="true"] {
