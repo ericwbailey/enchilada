@@ -8,6 +8,11 @@
     border: 1px solid c(base, type);
 }
 
+@mixin button-color() {
+    background-color: c(link, base);
+    color: c(base, background);
+}
+
 @mixin button-width() {
     display: block;
     width: 100%;
@@ -18,9 +23,7 @@
 button,
 input[type="button"] {
 
-    background-color: c(link, base);
-
-    color: c(base, background);
+    @include button-color();
 
     // Primary actions
     &[data-button-priority="primary"] {
@@ -69,6 +72,8 @@ input[type="button"] {
 // File input upload button
 ::-webkit-file-upload-button {
     @include button-border();
+    @include button-color();
+
     margin: 0;
     padding: 0;
     vertical-align: baseline;
