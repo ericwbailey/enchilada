@@ -74,6 +74,19 @@ table {
     cursor: not-allowed;
 }
 
+
+// Selects all content in a read-only input field
+input:not([type="button"]):not([type="checkbox"]):not([type="radio"]),
+textarea {
+    &:read-only {
+        -webkit-user-select: all;
+        -moz-user-select: all;
+        -ms-user-select: all;
+        user-select: all;
+    }
+}
+
+
 // Better control over ordered lists
 ol {
     counter-reset: default-ordered-list;
