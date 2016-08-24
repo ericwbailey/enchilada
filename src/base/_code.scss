@@ -10,7 +10,7 @@ kbd,
 pre,
 samp,
 var {
-    @include typography-disable-opentype();
+    @include typography-tracking-slight();
 
     overflow: auto; // [1]
 
