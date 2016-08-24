@@ -4,6 +4,17 @@
 // ============================================================================
 
 
+/// This function converts a pixel value into an rem, based on the document's
+/// root font size.
+/// @group units
+/// @require variable $global-type-size
+/// @example scss - rem function
+///   rem(25)
+/// @return 1.5625rem
+/// @see em
+/// @see strip-init
+
+
 @function rem($pixels, $context: $global-type-size) {
     @if (unitless($pixels)) {
         $pixels: $pixels * 1px;
