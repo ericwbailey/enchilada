@@ -1,10 +1,13 @@
 // ============================================================================
+// Content
 // Remove Interaction
 // ============================================================================
 
 
 // Removes cursor interaction
-@mixin content-remove-interaction() { pointer-events: none; }
+@mixin content-remove-interaction() {
+    pointer-events: none;
+}
 
 
 // Toggles --------------------------------------------------------------------

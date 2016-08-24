@@ -1,4 +1,5 @@
 // ============================================================================
+// Component
 // Style Reset
 // ============================================================================
 
@@ -6,7 +7,9 @@
 // Prevents a component from inheriting host page's styling:
 // http://www.brucelawson.co.uk/2014/css-all-initial-to-prevent-widgets-inheriting-css-from-a-host-page/
 
-@mixin component-style-reset() { all: initial; }
+@mixin component-style-reset() {
+    all: initial;
+}
 
 
 // Toggles --------------------------------------------------------------------

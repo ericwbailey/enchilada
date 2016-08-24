@@ -1,10 +1,13 @@
 // ============================================================================
+// Component
 // Component Type Size
 // ============================================================================
 
 
 // https://css-tricks.com/rems-ems/
-@mixin component-set-type-size() { font-size: 1em; }
+@mixin component-set-type-size() {
+    font-size: 1em;
+}
 
 
 // Toggles --------------------------------------------------------------------

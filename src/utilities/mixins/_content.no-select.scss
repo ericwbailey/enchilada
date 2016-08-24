@@ -1,10 +1,13 @@
 // ============================================================================
+// Content
 // No Select
 // ============================================================================
 
 
 // Removes the selection highlight from an element
-@mixin content-no-select() { user-select: none; }
+@mixin content-no-select() {
+    user-select: none;
+}
 
 
 // Toggles --------------------------------------------------------------------
