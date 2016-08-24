@@ -10,7 +10,7 @@ form {
 
 
 fieldset {
-
+background-color: #F4F4F4;
 }
 
 
@@ -21,12 +21,15 @@ legend {
 
 // Form Labels ----------------------------------------------------------------
 label {
-
+    cursor: pointer; 
 }
 
 
 // Inputs ---------------------------------------------------------------------
 input {
+    display: block;
+
+    border: 1px solid c(base, type);
 
     &[type="color"] {
 
@@ -87,6 +90,8 @@ input {
 
 textarea {
     overflow: auto;
+
+    border: 1px solid c(base, type);
 }
 
 
@@ -117,7 +122,7 @@ input[type="range"] {
 
 // Select Inputs --------------------------------------------------------------
 select {
-
+    border: 1px solid c(base, type);
 }
 
 

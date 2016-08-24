@@ -1,0 +1,19 @@
+// ============================================================================
+// Content
+// Show Interaction
+// ============================================================================
+
+
+// Demonstrates affordance for interfaces that use mice
+@mixin content-show-interaction() {
+    cursor: pointer;
+}
+
+
+// Toggles --------------------------------------------------------------------
+// Enables functional class toggles. See `_config.scss`
+@if $toggle-content-show-interaction == true {
+    .content-show-interaction {
+        @include content-show-interaction();
+    }
+}
