@@ -7,6 +7,8 @@
 @mixin generate-unicode-symbol($symbol: null) {
     font-family: Arial, sans-serif; // Uses Arial's comprehensive charset
 
+    speak: none;
+
     // Optionally pass the symbol as content, see `utilities/variables/_symbols.scss`
     @if ($symbol != null) {
         content: "#{$symbol}";
