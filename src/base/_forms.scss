@@ -4,9 +4,67 @@
 
 
 // Form Logic -----------------------------------------------------------------
+// Variables
+$forms-custom-select-dropdown-icon: $symbol-arrow-point-down;
+$forms-custom-select-dropdown-distance: -22px;
+$forms-custom-select-dropdown-inset: 1em;
+
+
+// Toggles
+// Gives labels the same hover/active/focus states as their child inputs
+$toggle-forms-label-states: true;
+
+// Apply the `data-custom-select` attribute to a `<select>`'s label to remove
+// browser-generated select styling and replace it with your own styling
+// instructions
+$toggle-forms-custom-select: true;
+
+
+// Mixins
 @mixin form-border() {
-    border: 1px solid c(base, type);
+    border: 1px solid c(form, base);
 }
+
+
+@mixin form-placeholder() {
+    color: transparentize(c(base, type), 0.3);
+}
+
+
+@mixin form-states($input-or-label) {
+    @if ($input-or-label == "input") {
+        &:hover {
+            border-color: c(form, hover);
+        }
+
+        &:active {
+            border-color: c(form, active);
+        }
+
+        &:focus {
+            border-color: c(form, focus);
+        }
+    }
+    @else if ($input-or-label == "label") {
+        color: c(form, base);
+
+        &:hover {
+            color: c(form, hover);
+        }
+
+        &:active {
+            color: c(form, active);
+        }
+
+        &:focus {
+            color: c(form, focus);
+        }
+    }
+    @else {
+        @error "`#{$input-or-label}` is not a valid argument. Please select either `input` or `label`";
+    }
+}
+
 
 @mixin form-width() {
     display: block;
@@ -26,21 +84,58 @@ background-color: #F4F4F4;
 
 
 legend {
-
+    //TODO: MS padding offset
 }
 
 
 // Form Labels ----------------------------------------------------------------
 label {
-    @include content-show-interaction();
+    @include form-width();
+    @include content-show-interaction(input);
+
+    @if $toggle-forms-custom-select == true {
+        @include form-states(label);
+    }
+
+    @if $toggle-forms-custom-select == true {
+        // `<select>` does not support CSS generated content
+        &[data-custom-select] {
+            &::after {
+                @include generate-unicode-symbol($forms-custom-select-dropdown-icon);
+                @include content-align(float, end);
+
+                margin-top: $forms-custom-select-dropdown-distance;
+                margin-right: $forms-custom-select-dropdown-inset;
+            }
+        }
+    }
+}
+
+// Inputs ---------------------------------------------------------------------
+input:not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([type="range"]) {
+    @include form-states(input);
+    @include form-border();
 }
 
 
-// Inputs ---------------------------------------------------------------------
-input {
-    @include form-border();
+input:not([type="button"]):not([type="checkbox"]):not([type="radio"]) {
     @include form-width();
+}
 
+
+input {
+    line-height: 1;
+
+    // Placeholder text
+    &::-webkit-input-placeholder {
+        @include form-placeholder();
+    }
+
+    &::-moz-placeholder {
+        @include form-placeholder();
+    }
+
+    // Input types
     &[type="color"] {
 
         &::-webkit-color-swatch-wrapper {
@@ -99,13 +194,18 @@ input {
     &[type="week"] {
 
     }
+
+
 }
 
 textarea {
     @include form-border();
+    @include form-states(input);
     @include form-width();
 
     overflow: auto;
+
+    resize: vertical;
 }
 
 
@@ -134,30 +234,58 @@ input[type="range"] {
 }
 
 
+input[type="color"] {
+
+}
+
+
+input[type="file"] {
+    background-color: c(base, background);
+}
+
+
+input[type="range"] {
+    //border: 1px solid transparentize(c(form, base), 1);
+}
+
+
 // Select Inputs --------------------------------------------------------------
 select {
     @include form-border();
+    @include form-states(input);
     @include form-width();
 
+    background-color: c(base, background);
+
     -webkit-border-radius: 0px;
+
+    @if $toggle-forms-custom-select == true {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
 }
 
 
 select optgroup {
+    margin-top: 0;  // Undoes lobotomoized owl selector
 
+    font-weight: bold; // Creates distinction between optgroup and option
 }
 
 
 select option {
     margin-top: 0; // Undoes lobotomoized owl selector
+
+    font-weight: normal; // Creates distinction between optgroup and option
 }
 
 
 // Checkboxes and Radios ------------------------------------------------------
 input {
+
     &[type="checkbox"],
     &[type="radio"] {
-
+        line-height: 1;
     }
 }
 
@@ -171,20 +299,40 @@ input[type="radio"] {
 
 
 // Output ---------------------------------------------------------------------
+// https://css-tricks.com/html5-meter-element/
 progress,
 meter {
     @include form-width();
 
-    &::-webkit-progress-value,
-    &::-webkit-meter-optimum-value {
-        background: c(blue);
-    }
+    background: c(form, busy);
 
+    //-moz-appearance: none;
+
+    // Bar
+    &::-webkit-progress-value { background: c(form, active); }
+    &::-webkit-meter-optimum-value { background: c(form, active); }
+    &::-webkit-meter-suboptimum-value { background: c(form, active); }
+    &::-webkit-meter-even-less-good-value { background: c(form, active); }
+
+    &::-moz-meter-bar { background: c(form, active); }
+    &::-moz-meter-optimum { background: c(form, active); }
+    &::-moz-meter-sub-optimum { background: c(form, active); }
+    &::-moz-meter-sub-sub-optimum { background: c(form, active); }
+
+    // Background
     &::-webkit-progress-bar,
     &::-webkit-meter-bar {
-        background: c(silver);
+        background: c(form, busy);
     }
+
 }
+
+// Overrides Firefox's progress bar styling
+*::-moz-progress-bar { background: c(form, active); }
+*::-moz-meter-optimum::-moz-meter-bar { background: c(form, active); }
+*::-moz-meter-sub-optimum::-moz-meter-bar { background: c(form, active); }
+*::-moz-meter-sub-sub-optimum::-moz-meter-bar { background: c(form, active); }
+
 
 
 progress {
@@ -196,36 +344,62 @@ meter {
 
 }
 
+output {
+    @include typography-tracking-slight();
+
+    font-family: $font-family-code;
+    line-height: $global-type-line-height;
+    // TODO: Add a little padding to the left and right
+}
+
 
 // Validation -----------------------------------------------------------------
-[name="required"] {
+input[aria-invalid="false"] {
 
 }
 
 
-[readonly] {
+input[aria-invalid="true"] {
 
 }
 
 
+input[autosave] {
+
+}
+
+
+// Disabled input should be immutable. `!important` overrides the `input:not()`
+// selector above
 input[disabled] {
+    border-color: transparentize(c(form, base), 0.5) !important;
+
+    background-color: transparentize(c(base, background), 0.5) !important;
+
+    color: transparentize(c(base, type), 0.5) !important;
+
+    &:hover,
+    &:active,
+    &focus {
+        border-color: transparentize(c(form, base), 0.5) !important;
+
+        background-color: transparentize(c(base, background), 0.5) !important;
+
+        color: transparentize(c(base, type), 0.5) !important;
+    }
+}
+
+
+input[readonly] {
 
 }
 
 
-[aria-invalid="false"] {
+input[required] {
 
 }
 
 
-[aria-invalid="true"] {
-
-}
-
-
-[autosave] {
-
-}
 
 
 // TODO Contains pattern

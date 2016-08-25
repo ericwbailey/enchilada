@@ -6,7 +6,7 @@
 // Map ------------------------------------------------------------------------
 $colors: (
 
-    // Basics
+    // Basics -----------------------------------------------------------------
     // http://clrs.cc/
     aqua: #7fdbff,
     black: #111111,
@@ -34,10 +34,10 @@ $colors: (
     // Links
     link: (
         base: #0074d9,
-        visited: #ae00ff,
         hover: #7fdbff,
         focus: #ff851b,
         active: #ff4136,
+        visited: #ae00ff,
         busy: #dddddd
     ),
 
@@ -46,9 +46,28 @@ $colors: (
         base: #111111,
         odd: #9B9B9B,
         even: #4A4A4A
+    ),
+
+    // Buttons
+    button: (
+        type: #ffffff,
+        base: #0074d9,
+        hover: #7fdbff,
+        focus: #ff851b,
+        active: #ff4136,
+        busy: #dddddd
+    ),
+
+    // Forms
+    form: (
+        base: #0074d9,
+        hover: #7fdbff,
+        focus: #ff851b,
+        active: #ff4136,
+        busy: #dddddd
     )
 
-    // Component
+    // Component --------------------------------------------------------------
 //    component: (
 //        subcomponent: value,
 //        subcomponent: value

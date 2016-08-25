@@ -4,16 +4,34 @@
 
 
 // Form Logic -----------------------------------------------------------------
-@mixin button-border() {
-    border: 1px solid c(base, type);
+@mixin buttons-border() {
+    border: 0;
+    border-radius: rem(4);
 }
 
-@mixin button-color() {
-    background-color: c(link, base);
-    color: c(base, background);
+
+@mixin buttons-color() {
+    background-color: c(button, base);
+    color: c(button, type);
 }
 
-@mixin button-width() {
+
+@mixin button-states() {
+    &:hover {
+        background-color: c(button, hover);
+    }
+
+    &:active {
+        background-color: c(button, active);
+    }
+
+    &:focus {
+        background-color: c(button, focus);
+    }
+}
+
+
+@mixin buttons-width() {
     display: block;
     width: 100%;
 }
@@ -22,8 +40,11 @@
 // Grouped Styles -------------------------------------------------------------
 button,
 input[type="button"] {
+    @include buttons-color();
+    @include button-states();
+    @include buttons-width();
 
-    @include button-color();
+    line-height: 1;
 
     // Primary actions
     &[data-button-priority="primary"] {
@@ -44,6 +65,12 @@ input[type="button"] {
     &[aria-busy="true"],
     &[disabled] {
         opacity: 0.5;
+
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: c(button, base);
+        }
     }
 
     // Busy
@@ -60,8 +87,7 @@ input[type="button"] {
 
 // Individual Styles ----------------------------------------------------------
 button {
-    @include button-border();
-    @include button-width();
+    @include buttons-border();
 }
 
 
@@ -69,21 +95,24 @@ input[type="button"] {
 
 }
 
-// File input upload button
-::-webkit-file-upload-button {
-    @include button-border();
-    @include button-color();
-
-    margin: 0;
-    padding: 0;
-    vertical-align: baseline;
-}
 
 // Text buttons
 [role="button"][tabindex="0"] {
-    @include button-width();
+    @include buttons-width();
+    @include content-show-interaction(input);
+    @include typography-align(center);
 
-    text-align: center;
+    color: c(button, base);
 
-    cursor: default;
+    &:hover {
+        color: c(button, hover);
+    }
+
+    &:focus {
+        color: c(button, focus);
+    }
+
+    &:active {
+        color: c(button, active);
+    }
 }
