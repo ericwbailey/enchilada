@@ -4,16 +4,29 @@
 // ============================================================================
 
 
-// Demonstrates affordance for interfaces that use mice
-@mixin content-show-interaction() {
-    cursor: pointer;
+@mixin content-show-interaction($cursor) {
+    @if ($cursor == "link") {
+        cursor: pointer;
+    }
+    @else if ($cursor == "input") {
+        cursor: default;
+    }
+    @else {
+        @error "`#{$cursor}` is not a valid argument. Please select either `link` or `input`";
+    }
 }
 
 
 // Toggles --------------------------------------------------------------------
 // Enables functional class toggles. See `_config.scss`
-@if $toggle-content-show-interaction == true {
+@if $toggle-content-show-interaction-link == true {
     .content-show-interaction {
-        @include content-show-interaction();
+        @include content-show-interaction(link);
+    }
+}
+
+@if $toggle-content-show-interaction-input == true {
+    .content-show-interaction {
+        @include content-show-interaction(input);
     }
 }
