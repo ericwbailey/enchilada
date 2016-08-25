@@ -23,10 +23,10 @@ $toggle-component-set-type-size: false;
 $toggle-component-style-reset: false;
 
 // Content
-$toggle-content-align-float-left: false;
-$toggle-content-align-float-right: false;
-$toggle-content-align-flex-left: false;
-$toggle-content-align-flex-right: false;
+$toggle-content-align-float-start: false;
+$toggle-content-align-float-end: false;
+$toggle-content-align-flex-start: false;
+$toggle-content-align-flex-end: false;
 $toggle-content-clearfix-add: false;
 $toggle-content-clearfix-remove: false;
 $toggle-content-hide-visually: false;
@@ -37,7 +37,8 @@ $toggle-content-remove-interaction: false;
 $toggle-content-shift-click: false;
 $toggle-content-show-visually: false;
 $toggle-content-show-visually: false;
-$toggle-content-show-interaction: false;
+$toggle-content-show-interaction-link: false;
+$toggle-content-show-interaction-input: false;
 $toggle-content-show-invisible: false;
 $toggle-content-show-removed: false;
 $toggle-content-text-truncate: false;
