@@ -4,22 +4,31 @@
 // ============================================================================
 
 
-@function ms($multiplier) {
-    @if (type-of($multiplier) == number)
-    and (unitless($multiplier))
-    and ($multiplier == 0) {
-        $multiplier: 1;
+$units:
+em,
+ex,
+ch,
+rem,
+vh,
+vw,
+vmin,
+vmax,
+px;
+
+
+@function ms($scale-by, $unit: null) {
+
+    // Check to see if scale is a number
+    @if (type-of($scale-by) != number) {
+        @error "`#{$scale-by}` is not a valid argument. Please provide a number.";
     }
 
-    @else if (type-of($multiplier) == number)
-    and (unitless($multiplier))
-    and ($multiplier != 0) {
-        $multiplier: $multiplier * $global-type-ratio;
+    // Check to see if unit is a valid unit
+    @if ($unit == null)
+    or (type-of($unit) == number)
+    or not ($units) {
+        @error "`#{$unit}` is not a valid argument. Please provide a valid CSS unit.";
     }
 
-    @else {
-        @error "Please provide a unitless value for `$multiplier`";
-    }
-
-    @return $multiplier + em;
+    @return #{$scale-by * $global-type-ratio}#{$unit};
 }
