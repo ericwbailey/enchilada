@@ -4,6 +4,8 @@
 // ============================================================================
 
 
+// Use `$global-type-ratio` when you want to use a unitless ratio
+
 $units:
 em,
 ex,
@@ -16,7 +18,7 @@ vmax,
 px;
 
 
-@function ms($scale-by, $unit: null) {
+@function ms($scale-by, $unit: em) {
 
     // Check to see if scale is a number
     @if (type-of($scale-by) != number) {
