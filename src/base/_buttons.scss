@@ -44,6 +44,8 @@ input[type="button"] {
     @include button-states();
     @include buttons-width();
 
+    height: ms(1.5, em);
+
     line-height: 1;
 
     // Primary actions
