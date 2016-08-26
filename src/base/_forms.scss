@@ -3,16 +3,9 @@
 // ============================================================================
 
 
-// Form Logic -----------------------------------------------------------------
-// Variables
-$forms-custom-select-dropdown-icon: $symbol-arrow-point-down;
-$forms-custom-select-dropdown-distance: -22px;
-$forms-custom-select-dropdown-inset: 1em;
-
-
 // Toggles
 // Gives labels the same hover/active/focus states as their child inputs
-$toggle-forms-label-states: true;
+$toggle-forms-label-states: false;
 
 // Apply the `data-custom-select` attribute to a `<select>`'s label to remove
 // browser-generated select styling and replace it with your own styling
@@ -20,9 +13,24 @@ $toggle-forms-label-states: true;
 $toggle-forms-custom-select: true;
 
 
+// Form Logic -----------------------------------------------------------------
+// Variables
+$forms-custom-select-dropdown-icon: $symbol-arrow-point-down;
+$forms-custom-select-dropdown-distance: ms(-1.2, em);
+$forms-custom-select-dropdown-inset: ms(0.5, em);
+$form-input-padding: ms(0.5, em);
+$form-label-distance: em(6);
+$form-single-line-input-height: ms(2, em);
+
+
 // Mixins
 @mixin form-border() {
     border: 1px solid c(form, base);
+}
+
+
+@mixin form-multi-line-input {
+    min-height: ms(7, em);
 }
 
 
@@ -90,8 +98,8 @@ legend {
 
 // Form Labels ----------------------------------------------------------------
 label {
-    @include form-width();
     @include content-show-interaction(input);
+    @include form-width();
 
     @if $toggle-forms-custom-select == true {
         @include form-states(label);
@@ -101,11 +109,14 @@ label {
         // `<select>` does not support CSS generated content
         &[data-custom-select] {
             &::after {
-                @include generate-unicode-symbol($forms-custom-select-dropdown-icon);
                 @include content-align(float, end);
+                @include content-remove-interaction();
+                @include generate-unicode-symbol($forms-custom-select-dropdown-icon);
 
                 margin-top: $forms-custom-select-dropdown-distance;
                 margin-right: $forms-custom-select-dropdown-inset;
+
+                font-size: ms(1, em);
             }
         }
     }
@@ -113,13 +124,20 @@ label {
 
 // Inputs ---------------------------------------------------------------------
 input:not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([type="range"]) {
-    @include form-states(input);
     @include form-border();
+    @include form-states(input);
 }
 
 
 input:not([type="button"]):not([type="checkbox"]):not([type="radio"]) {
     @include form-width();
+}
+
+
+// Separation between labe and input
+input:not([type="button"]):not([type="range"]) {
+    margin-top: $form-label-distance;
+    padding: $form-input-padding;
 }
 
 
@@ -137,8 +155,18 @@ input {
 
     // Input types
     &[type="color"] {
+        height: $form-single-line-input-height;
 
+        // NOTE: Double-check these values if adjusting input heights
         &::-webkit-color-swatch-wrapper {
+            @include component-remove-margin-padding();
+
+            height: em(25);
+            position: relative;
+              top: em(-3);
+
+            border: none;
+
             background-color: c(base, background);
         }
     }
@@ -164,11 +192,12 @@ input {
     }
 
     &[type="password"] {
-
+        letter-spacing: $font-tracking-loose + em;
     }
 
     &[type="range"] {
-
+        margin-top: ms(0.75, em); // NOTE: Set to three quarters of `$form-label-distance`
+        margin-bottom: ms(0.5, em); // Gives range input a little breathing room
     }
 
     &[type="search"] {
@@ -200,10 +229,13 @@ input {
 
 textarea {
     @include form-border();
+    @include form-multi-line-input;
     @include form-states(input);
     @include form-width();
 
+    margin-top: $form-label-distance;
     overflow: auto;
+    padding: $form-input-padding;
 
     resize: vertical;
 }
@@ -245,7 +277,7 @@ input[type="file"] {
 
 
 input[type="range"] {
-    //border: 1px solid transparentize(c(form, base), 1);
+
 }
 
 
@@ -255,11 +287,25 @@ select {
     @include form-states(input);
     @include form-width();
 
+    height: $form-single-line-input-height;
+    margin-top: $form-label-distance;
+    padding: $form-input-padding;
+
     background-color: c(base, background);
 
-    -webkit-border-radius: 0px;
+    &[multiple] {
+        @include form-multi-line-input;
+
+        padding: 0; // Undoes `$form-input-padding` so <option>s extend full-width
+
+        option {
+            padding: ms(0.4, em); // Highlights entire <option> row when selected
+        }
+    }
 
     @if $toggle-forms-custom-select == true {
+        border-radius: 0;
+
         -webkit-appearance: none;
         -moz-appearance: none;
     }
