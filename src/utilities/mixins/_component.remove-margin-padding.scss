@@ -1,0 +1,19 @@
+// ============================================================================
+// Component
+// Remove Margin and Padding
+// ============================================================================
+
+
+@mixin component-remove-margin-padding() {
+    margin: 0;
+    padding: 0;
+}
+
+
+// Toggles --------------------------------------------------------------------
+// Enables functional class toggles. See `_config.scss`
+@if $toggle-component-remove-margin-padding == true {
+    .component-remove-margin-padding {
+        @include component-remove-margin-padding();
+    }
+}

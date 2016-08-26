@@ -19,6 +19,7 @@ $global-type-weight: $font-weight-normal !default;
 // regardless of whether or not they're declared in the HTML.
 
 // Component
+$toggle-component-remove-margin-padding: false;
 $toggle-component-set-type-size: false;
 $toggle-component-style-reset: false;
 
