@@ -5,7 +5,7 @@
 
 // Toggles
 // Gives labels the same hover/active/focus states as their child inputs
-$toggle-forms-label-states: false;
+$toggle-forms-label-states: true;
 
 // Apply the `data-custom-select` attribute to a `<select>`'s label to remove
 // browser-generated select styling and replace it with your own styling
