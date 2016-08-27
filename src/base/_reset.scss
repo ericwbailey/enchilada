@@ -37,8 +37,8 @@ area,
 // Text-level
 a, em, strong, i, b, u, s, small, abbr, q, cite, dfn, sub, sup,
 time, code, kbd, samp, var, mark, bdi, bdo, ruby, rt, rp, span, br, wbr {
-    margin: 0;
-    padding: 0;
+    @include component-remove-margin-padding();
+
     vertical-align: baseline;
 
     border: 0;
@@ -79,10 +79,20 @@ table {
 input:not([type="button"]):not([type="checkbox"]):not([type="radio"]),
 textarea {
     &:read-only {
-        -webkit-user-select: all;
-        -moz-user-select: all;
-        -ms-user-select: all;
         user-select: all;
+    }
+}
+
+
+ol,
+ul {
+    li {
+        list-style: none;
+    }
+
+    ol,
+    ul {
+        margin-top: ms(1, em);
     }
 }
 
@@ -93,6 +103,12 @@ ol {
 
     li {
         &::before {
+            @include typography-align(end);
+
+            display: inline-block;
+            margin-right: ms(0.5, em);
+            width: 1em;
+
             content: counter(default-ordered-list);
 	        counter-increment: default-ordered-list;
         }
