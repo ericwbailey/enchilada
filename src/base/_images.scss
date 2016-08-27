@@ -4,16 +4,16 @@
 
 
 // Grouped Styles -------------------------------------------------------------
-// [1] Basic responsive images
-// [2] Differentiate `alt` text from surrounding copy
-// [3] Removes the whitespace that appears under `img` elements
+// [1] Differentiate `alt` text from surrounding copy
+// [2] Removes the whitespace that appears under `img` elements
 img,
 figure,
 picture {
-    @include typography-align(center); // [2]
+    @include component-responsify();
+    @include typography-align(center); // [1]
 
     width: 100%; // [1]
-    vertical-align: middle; // [3]
+    vertical-align: middle; // [2]
 
     // Fixed-size, non-fluid images if `height` and/or `width` attributes are
     // declared

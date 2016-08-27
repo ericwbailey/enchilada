@@ -447,6 +447,16 @@ input[disabled] {
 }
 
 
+input[minlength] {
+
+}
+
+
+input[maxlength] {
+
+}
+
+
 input[readonly] {
 
 }
@@ -455,10 +465,3 @@ input[readonly] {
 input[required] {
 
 }
-
-
-
-
-// TODO Contains pattern
-
-// TODO minlength, maxlength

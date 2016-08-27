@@ -7,7 +7,7 @@
 audio,
 video,
 canvas {
-
+    @include component-responsify();
 }
 
 
@@ -19,7 +19,7 @@ canvas {
 
 // Individual Styles ----------------------------------------------------------
 audio {
-
+    margin-top: ms(2, em);
 }
 
 

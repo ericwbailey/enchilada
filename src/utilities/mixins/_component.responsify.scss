@@ -1,0 +1,19 @@
+// ============================================================================
+// Component
+// Responsify
+// ============================================================================
+
+
+@mixin component-responsify() {
+    height: auto;
+    width: 100%;
+}
+
+
+// Toggles --------------------------------------------------------------------
+// Enables functional class toggles. See `_config.scss`
+@if $toggle-component-responsify == true {
+    .component-responsify {
+        @include component-responsify();
+    }
+}

@@ -180,7 +180,7 @@ q {
 // side, and op­tion­ally the same on the right. Or on the web, about 2–5 ems.
 blockquote {
 
-    margin: ms(1, em); // [1]
+    margin: ms(1.5, em) ms(1, em); // [1]
 
     font-size: ms(1, em); // [1]
 
@@ -226,6 +226,3 @@ cite b {
     font-style: normal;
     font-weight: normal;
 }
-
-
-// TODO: Quoted quote
