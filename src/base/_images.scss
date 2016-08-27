@@ -12,10 +12,8 @@ figure,
 picture {
     @include typography-align(center); // [2]
 
-    max-width: 100%; // [1]
+    width: 100%; // [1]
     vertical-align: middle; // [3]
-
-    font-style: italic; // [2]
 
     // Fixed-size, non-fluid images if `height` and/or `width` attributes are
     // declared
@@ -28,7 +26,7 @@ picture {
 
 img,
 picture {
-
+    background-color: c(silver);
 }
 
 
