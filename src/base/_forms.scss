@@ -334,6 +334,7 @@ input {
     &[type="checkbox"],
     &[type="radio"] {
         line-height: 1;
+        margin-right: ms(0.3, em);
     }
 }
 
