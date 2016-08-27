@@ -4,4 +4,8 @@
 
 // Used in other Sass logic
 
-$meta-invalid-argument: " is not a valid argument. Please select from one of the following: ";
+$meta-invalid-argument: " is not a valid argument. ";
+
+$meta-invalid-argument-select-multiple: "Please select one of the following: ";
+
+$meta-invalid-argument-select-either: "Please select either: ";

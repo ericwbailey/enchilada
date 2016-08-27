@@ -10,22 +10,30 @@
     @if ($property == "background-color") {
         background-color: currentColor;
     }
+
     @else if ($property == "color") {
         color: currentColor;
     }
+
     @else if ($property == "column-rule-color") {
         column-rule-color: currentColor;
     }
+
     @else if ($property == "outline-color") {
         outline-color: currentColor;
     }
+
     @else if ($property == "text-decoration-color") {
         text-decoration-color: currentColor;
     }
+
     @else if ($property == "text-emphasis-color") {
         text-emphasis-color: currentColor;
     }
+
     @else {
-        @error "`#{$property}` is not a valid argument. Please select `background-color`, `color`, `column-rule-color`, `outline-color`, `text-decoration-color`, or `text-emphasis-color`";
+        @error "`#{$property}`" + $meta-invalid-argument
+        + "Please select: background-color, color, column-rule-color, "
+        + "outline-color, text-decoration-color, text-emphasis-color";
     }
 }

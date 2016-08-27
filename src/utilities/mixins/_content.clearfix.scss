@@ -12,14 +12,17 @@
             clear: both;
         }
     }
+
     @else if (type-of($add-or-remove) == "remove") {
         &:after {
             display: initial;
             clear: none;
         }
     }
+
     @else {
-        @error "`#{$add-or-remove}` is not a valid argument. Please select either `add` or `remove`";
+        @error "`#{$add-or-remove}`" + $meta-invalid-argument + $meta-invalid-argument-select-either
+        + "`add` or `remove`";
     }
 }
 

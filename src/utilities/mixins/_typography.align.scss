@@ -14,26 +14,32 @@
         text-align: left;
         text-align: start;
     }
+
     @else if ($global-type-direction == "rtl")
     and ($start-end-or-center == "start") {
         text-align: right;
         text-align: start;
     }
+
     @else if ($global-type-direction == "ltr")
     and ($start-end-or-center == "end") {
         text-align: right;
         text-align: end;
     }
+
     @else if ($global-type-direction == "rtl")
     and ($start-end-or-center == "end") {
         text-align: left;
         text-align: end;
     }
+
     @else if ($start-end-or-center == "center") {
         text-align: center;
     }
+
     @else {
-        @error "`#{$start-end-or-center}` is not a valid argument. Please select either `start` or `end`";
+        @error "`#{$start-end-or-center}`" + $meta-invalid-argument + $meta-invalid-argument-select-either
+        + "`start` or `end`";
     }
 }
 

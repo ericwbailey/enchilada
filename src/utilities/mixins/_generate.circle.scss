@@ -7,14 +7,14 @@
 // Makes an element square and sets the border radius to a value that makes it
 // appear round. Define background color and/or border in the component styles.
 
-@mixin generate-circle($size) {
-    @if (type-of($size) == number)
-    and not (unitless($size)) {
-        height: $size;
-        width: $size;
-        border-radius: ($size / 2);
+@mixin generate-circle($diameter) {
+    @if (type-of($diameter) == number)
+    and not (unitless($diameter)) {
+        height: $diameter;
+        width: $diameter;
+        border-radius: ($diameter / 2);
     }
     @else {
-        @error "Please provide a unit for `$size`";
+        @error "Please provide a unit for `$diameter`";
     }
 }

@@ -28,9 +28,10 @@ $tracking: (
     @if (map-has-key($tracking, $amount)) {
         letter-spacing: map-get($tracking, $amount);
     }
+
     @else {
         @error "`#{$amount}`" + $meta-invalid-argument
-               + map-keys($tracking);
+        + map-keys($tracking);
     }
 }
 

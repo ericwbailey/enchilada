@@ -22,14 +22,16 @@ px;
 
     // Check to see if scale is a number
     @if (type-of($scale-by) != number) {
-        @error "`#{$scale-by}` is not a valid argument. Please provide a number.";
+        @error "`#{$scale-by}`" + $meta-invalid-argument
+        + "Please provide a number.";
     }
 
     // Check to see if unit is a valid unit
     @if ($unit == null)
     or (type-of($unit) == number)
     or not ($units) {
-        @error "`#{$unit}` is not a valid argument. Please provide a valid CSS unit.";
+        @error "`#{$unit}`" + $meta-invalid-argument
+        + "Please provide a valid CSS unit.";
     }
 
     @return #{$scale-by * $global-type-ratio}#{$unit};

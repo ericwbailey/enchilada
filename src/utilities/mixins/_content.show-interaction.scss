@@ -8,11 +8,14 @@
     @if ($cursor == "link") {
         cursor: pointer;
     }
+
     @else if ($cursor == "input") {
         cursor: default;
     }
+
     @else {
-        @error "`#{$cursor}` is not a valid argument. Please select either `link` or `input`";
+        @error "`#{$cursor}`" + $meta-invalid-argument + $meta-invalid-argument-select-either
+        + "`link` or `input`";
     }
 }
 

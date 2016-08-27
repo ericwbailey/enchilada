@@ -25,16 +25,20 @@
             width: initial;
         }
     }
+
     // Reverts `hide(invisible)`
     @else if ($how == "visible") {
         visibility: visible;
     }
+
     // Reverts `hide(remove)`
     @else if ($how == "add") {
         display: initial !important;
     }
+
     @else {
-        @error "`#{$how}` is not a valid argument. Please select `visually`, `visible`, or `add`";
+        @error "`#{$how}`" + $meta-invalid-argument + $meta-invalid-argument-select-multiple
+        + "`visually`, `visible`, or `add`";
     }
 }
 

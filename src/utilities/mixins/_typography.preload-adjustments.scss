@@ -15,6 +15,7 @@
         and (unitless($size-adjust)) {
             font-size-adjust: $size-adjust;
         }
+
         @else {
             @error "Please provide a unitless value for `$font-size-adjust`";
         }
@@ -24,6 +25,7 @@
         and (unitless($stretch)) {
             font-stretch: $stretch;
         }
+
         @else {
             @error "Please provide a unitless value for `$stretch`";
         }
@@ -33,6 +35,7 @@
         and not (unitless($tracking)) {
             letter-spacing: $tracking;
         }
+
         @else {
             @error "Please provide a unit for `$tracking`";
         }

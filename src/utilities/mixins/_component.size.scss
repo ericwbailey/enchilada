@@ -9,6 +9,7 @@
     and not (unitless($width)) {
         width: $width;
     }
+
     @else {
         @error "Please provide a unit for `$width`";
     }
@@ -18,6 +19,7 @@
     and not (unitless($height)) {
         height: $height;
     }
+
     @else {
         @error "Please provide a unit for `$height`";
     }

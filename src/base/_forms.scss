@@ -54,6 +54,7 @@ $form-single-line-input-height: ms(2, em);
             border-color: c(form, focus);
         }
     }
+
     @else if ($input-or-label == "label") {
         color: c(form, base);
 
@@ -69,8 +70,10 @@ $form-single-line-input-height: ms(2, em);
             color: c(form, focus);
         }
     }
+
     @else {
-        @error "`#{$input-or-label}` is not a valid argument. Please select either `input` or `label`";
+        @error "`#{$input-or-label}`" + $meta-invalid-argument + $meta-invalid-argument-select-either
+        + "`input` or `label`";
     }
 }
 
