@@ -6,7 +6,7 @@
 // Form Logic -----------------------------------------------------------------
 @mixin buttons-border() {
     border: 0;
-    border-radius: rem(4);
+    border-radius: $global-border-radius;
 }
 
 
