@@ -16,6 +16,8 @@
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-content-shift-click == true {
     .content-shift-click {
-        @include content-shift-click();
+        &:active {
+            @include content-shift-click();
+        }
     }
 }
