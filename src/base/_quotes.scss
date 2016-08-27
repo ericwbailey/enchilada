@@ -174,40 +174,35 @@ q {
     }
 }
 
-
+// http://practicaltypography.com/block-quotations.html
+// [1] Re­duce the point size and line spac­ing slightly.
+// [2] In­dent the text block be­neonate half an inch and a full inch on the left
+// side, and op­tion­ally the same on the right. Or on the web, about 2–5 ems.
 blockquote {
 
-// TODO: Re­duce the point size and line spac­ing slightly.
-// In­dent the text block be­neonate half an inch and a full inch on the left side, and op­tion­ally the same on the right. Or on the web, about 2–5 ems.
-// As with first-line in­dents, make the side in­dents large enough to be no­ticed, but not so large that the line length is too short.
-// Don’t put quo­ta­tion marks at the ends—they’re redundant.
+    margin: ms(1, em); // [1]
 
-    p::before {
+    font-size: ms(1, em); // [1]
+
+    &::before {
+        display: inline;
+        position: absolute;
+          left: em(10);
         content: open-quote;
     }
 
-    // Removes closing quote from every paragraph
-    p::after {
-        content: no-close-quote;
-    }
-
-    // Adds closing quote to last paragraph of the blockquote
-    p:last-of-type::after {
-        content: close-quote;
-    }
-
-    q::before {
-        content: open-quote;
-    }
-
-    q::after {
-        content: close-quote;
+    p:last-of-type,
+    q:last-of-type {
+        &::after {
+            content: close-quote;
+        }
     }
 
     // http://html5doctor.com/cite-and-blockquote-reloaded/
     cite {
         display: block;
 
+        font-size: ms(0.6, em);
         text-indent: 0;
 
         &::before {
