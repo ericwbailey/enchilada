@@ -194,7 +194,8 @@ input {
     }
 
     &[type="password"] {
-        letter-spacing: $font-tracking-loose + em;
+        //letter-spacing: $font-tracking-loose;
+        @include typography-tracking-loose();
     }
 
     &[type="range"] {
