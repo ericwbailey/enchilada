@@ -20,7 +20,7 @@ kbd,
 pre,
 samp,
 var {
-    @include typography-tracking-slight();
+    @include typography-tracking(slight);
 background-color: #F4F4F4;
     overflow: auto; // [1]
 

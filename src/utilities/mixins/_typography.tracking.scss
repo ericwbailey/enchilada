@@ -1,54 +1,44 @@
 // ============================================================================
-// Typography
+// Font
 // Tracking
 // ============================================================================
 
 
 // http://practicaltypography.com/letterspacing.html
 // Disables ligatures on tracked type to prevent this: https://twitter.com/leaverou/status/485885496305127424
-@mixin typography-tracking-tightest() { @include typography-disable-opentype(); letter-spacing: $font-tracking-tightest; }
-@mixin typography-tracking-tighter() { @include typography-disable-opentype(); letter-spacing: $font-tracking-tighter; }
-@mixin typography-tracking-tight() { @include typography-disable-opentype(); letter-spacing: $font-tracking-tight; }
-@mixin typography-tracking-slight() { @include typography-disable-opentype(); letter-spacing: $font-tracking-slight; }
-@mixin typography-tracking-loose() { @include typography-disable-opentype(); letter-spacing: $font-tracking-loose; }
-@mixin typography-tracking-looser() { @include typography-disable-opentype(); letter-spacing: $font-tracking-looser; }
-@mixin typography-tracking-loosest() { @include typography-disable-opentype(); letter-spacing: $font-tracking-loosest; }
+
+
+// Map ------------------------------------------------------------------------
+// NOTE: Remember to update these values if you change `$global-type-size`
+$tracking: (
+    tightest: -0.4375em, // 7px @ 16px
+    tighter:  -0.3125em, // 5px @ 16px
+    tight:    -0.1875em, // 3px @ 16px
+    slight:    0.0625em, // 1px @ 16px
+    loose:     0.1875em, // 3px @ 16px
+    looser:    0.3125em, // 5px @ 16px
+    loosest:   0.4375em // 7px @ 16px
+);
+
+
+// Mixin ------------------------------------------------------------------------
+@mixin typography-tracking($amount: slight) {
+    @include typography-disable-opentype();
+
+    @if (map-has-key($tracking, $amount)) {
+        letter-spacing: map-get($tracking, $amount);
+    }
+    @else {
+        @error "`#{$amount}`" + $meta-invalid-argument
+               + map-keys($tracking);
+    }
+}
 
 
 // Toggles --------------------------------------------------------------------
 // Enables functional class toggles. See `_config.scss`
-@if $toggle-typography-tracking-tightest == true {
-    .typography-tracking-tightest {
-        @include typography-tracking-tightest();
-    }
-}
-
-@if $toggle-typography-tracking-tighter == true {
-    .typography-tracking-tighter {
-        @include typography-tracking-tighter();
-    }
-}
-
-@if $toggle-typography-tracking-tight == true {
-    .typography-tracking-tight {
-        @include typography-tracking-tight();
-    }
-}
-
-@if $toggle-typography-tracking-slight == true {
-    .typography-tracking-slight {
-        @include typography-tracking-slight();
-    }
-}
-
-@if $toggle-typography-tracking-loose == true {
-    .typography-tracking-loose {
-        @include typography-tracking-loose();
-    }
-}
-
-@if $toggle-typography-tracking-looser == true {
-    .typography-tracking-looser {
-        @include typography-tracking-looser();
-    }
-}
+// @if $toggle-typography-tracking-tightest == true {
+//     .typography-tracking-tightest {
+//         @include typography-tracking-tightest();
+//     }
+// }

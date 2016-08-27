@@ -4,17 +4,18 @@
 // ============================================================================
 
 
-// Loads and manages Sass partials. Be sure to use `_config.scss` to set up
-// toggle-typography-hyphenation project basics.
 // Order is important!
+// Loads and manages Sass partials. Be sure to use `_config.scss` to set up
+// configure project basics and toggle functional classes.
+
 
 // Variables ------------------------------------------------------------------
 @import
+    "utilities/variables/meta",
     "utilities/variables/paths",
     "utilities/variables/font.families",
     "utilities/variables/font.weights",
     "utilities/variables/font.sizes",
-    "utilities/variables/font.tracking",
     "utilities/variables/ratios",
     "utilities/variables/symbols",
     "utilities/variables/animation.ease",
@@ -72,6 +73,7 @@
     "utilities/mixins/generate.triangle",
     "utilities/mixins/generate.unicode-symbol",
 
+    "utilities/mixins/typography.disable-opentype", // Needs to be declared first for other mixins to use
     "utilities/mixins/typography.align",
     "utilities/mixins/typography.alternate-contextual",
     "utilities/mixins/typography.alternate-historcial",
@@ -79,7 +81,6 @@
     "utilities/mixins/typography.caps-to-small-caps",
     "utilities/mixins/typography.case-sensitive-forms",
     "utilities/mixins/typography.direction",
-    "utilities/mixins/typography.disable-opentype",
     "utilities/mixins/typography.hyphenation",
     "utilities/mixins/typography.kerning",
     "utilities/mixins/typography.ligatures-common",

@@ -20,7 +20,7 @@ p {
 
 
 .paragraph-agate {
-    @include typography-tracking-slight();
+    @include typography-tracking(slight);
 
     text-transform: uppercase;
 }

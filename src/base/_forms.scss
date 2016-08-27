@@ -195,8 +195,7 @@ input {
     }
 
     &[type="password"] {
-        //letter-spacing: $font-tracking-loose;
-        @include typography-tracking-loose();
+        @include typography-tracking(loose);
     }
 
     &[type="range"] {
@@ -396,7 +395,7 @@ meter {
 }
 
 output {
-    @include typography-tracking-slight();
+    @include typography-tracking(slight);
 
     font-family: $font-family-code;
     line-height: $global-type-line-height;
