@@ -44,7 +44,7 @@ input[type="button"] {
     @include button-states();
     @include buttons-width();
 
-    height: ms(1.5, em);
+    height: ms(2, em);
 
     line-height: 1;
 
