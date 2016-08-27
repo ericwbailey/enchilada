@@ -92,7 +92,7 @@ background-color: #F4F4F4;
 
 
 legend {
-    //TODO: MS padding offset
+
 }
 
 
@@ -101,7 +101,7 @@ label {
     @include content-show-interaction(input);
     @include form-width();
 
-    @if $toggle-forms-custom-select == true {
+    @if $toggle-forms-label-states == true {
         @include form-states(label);
     }
 
@@ -156,6 +156,8 @@ input {
     // Input types
     &[type="color"] {
         height: $form-single-line-input-height;
+
+        background-color: c(base, background);
 
         // NOTE: Double-check these values if adjusting input heights
         &::-webkit-color-swatch-wrapper {
