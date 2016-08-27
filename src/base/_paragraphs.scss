@@ -9,9 +9,18 @@ p {
 
 
 .paragraph-lede {
-    font-size: ms(1.5, em);
+    font-size: ms(1.1, em);
 }
 
-.paragraph-legal {
-    font-size: ms(0.5, em);
+
+.paragraph-legal,
+.paragraph-agate {
+    font-size: ms(0.6, em);
+}
+
+
+.paragraph-agate {
+    @include typography-tracking-slight();
+
+    text-transform: uppercase;
 }
