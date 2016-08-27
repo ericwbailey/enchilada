@@ -7,16 +7,23 @@ $z-index: (
     // Banish things out of sight
     basement: -999999,
 
-    // Layout
+
+    // Layout -----------------------------------------------------------------
     layout: 1000,
 
-    // Component
-    component: 1000,
-        subcomponent: 1010,
 
-    // Pop up/over UI elements
-    modal: 2000,
-        submodal: 2010,
+    // Object -----------------------------------------------------------------
+    object: 2000,
+
+
+    // Component --------------------------------------------------------------
+    component: 3000,
+        subcomponent: 3010,
+
+
+    // Pop up/over UI elements ------------------------------------------------
+    modal: 4000,
+        submodal: 4010,
 
     // Ensure things are displayed
     ceiling: 999999
