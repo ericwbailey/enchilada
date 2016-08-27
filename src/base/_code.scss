@@ -3,6 +3,16 @@
 // ============================================================================
 
 
+// Code Logic -----------------------------------------------------------------
+@mixin code-inline-spacing() {
+    margin-left: em(2);
+    margin-right: em(2);
+    padding-left: em(4);
+    padding-right: em(4);
+}
+
+
+
 // Grouped Styles -------------------------------------------------------------
 // [1] Ensures hyphenation won't interfere with code
 code,
@@ -11,7 +21,7 @@ pre,
 samp,
 var {
     @include typography-tracking-slight();
-
+background-color: #F4F4F4;
     overflow: auto; // [1]
 
     font-family: $font-family-code;
@@ -26,25 +36,25 @@ var {
 
 // Individual Styles ----------------------------------------------------------
 code {
-
+    @include code-inline-spacing();
 }
 
 
 kbd {
-
+    @include code-inline-spacing();
 }
 
 
 pre {
-
+    line-height: 1.8;
 }
 
 
 samp {
-
+    @include code-inline-spacing();
 }
 
 
 var {
-
+    @include code-inline-spacing();
 }
