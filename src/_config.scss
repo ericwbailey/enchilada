@@ -24,6 +24,7 @@ $global-border-radius: rem(4);
 // regardless of whether or not they're declared in the HTML.
 
 // Component
+$toggle-component-remove-list-formatting: false;
 $toggle-component-remove-margin-padding: false;
 $toggle-component-set-type-size: false;
 $toggle-component-style-reset: false;
