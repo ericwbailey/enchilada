@@ -6,13 +6,18 @@
 // Grouped Styles -------------------------------------------------------------
 b,
 strong {
-
+    font-weight: $font-weight-bold; // NOTE: Be make sure your font supports this weight
 }
 
 
 em,
 i {
+    font-style: italic;
 
+    // Cites within italicized text
+    cite {
+        font-style: normal;
+    }
 }
 
 
@@ -20,6 +25,10 @@ i {
 abbr {
     @include typography-caps-to-small-caps()
     @include typography-tracking-slight();
+
+    border-bottom: 1px dotted;
+
+    cursor: help;
 }
 
 
@@ -28,7 +37,29 @@ b {
 }
 
 
+// http://html5doctor.com/element-index/#bdi
+bdi {
+
+}
+
+
+// http://html5doctor.com/element-index/#bdo
+bdo {
+
+}
+
+
 cite {
+    font-style: italic;
+
+    // Cited cites
+    cite {
+        font-style: normal;
+    }
+}
+
+
+del {
 
 }
 
@@ -48,8 +79,33 @@ i {
 }
 
 
+ins {
+    border-bottom: 1px double;
+}
+
+
 mark {
-    @include typography-tracking-slight();
+    background-color: c(yellow);
+
+    color: c(base, type);
+}
+
+
+// http://html5doctor.com/element-index/#ruby
+ruby {
+
+}
+
+
+// http://html5doctor.com/element-index/#rp
+rp {
+
+}
+
+
+// http://html5doctor.com/element-index/#rt
+rt {
+
 }
 
 
@@ -59,7 +115,7 @@ s {
 
 
 small {
-// TODO: Make smaller w/modular scale
+    font-size: ms(0.6, em); // Use `.paragraph-legal` for larger sections of text. See `_paragraphs.scss`
 }
 
 
@@ -69,7 +125,7 @@ strong {
 
 
 sub {
-    @include typography-subscript()
+    @include typography-subscript();
 }
 
 
