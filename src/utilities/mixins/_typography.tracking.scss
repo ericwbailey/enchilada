@@ -37,8 +37,44 @@ $tracking: (
 
 // Toggles --------------------------------------------------------------------
 // Enables functional class toggles. See `_config.scss`
-// @if $toggle-typography-tracking-tightest == true {
-//     .typography-tracking-tightest {
-//         @include typography-tracking-tightest();
-//     }
-// }
+@if $toggle-typography-tracking-tightest == true {
+    .typography-tracking-tightest {
+        @include typography-tracking(tightest);
+    }
+}
+
+@if $toggle-typography-tracking-tighter == true {
+    .typography-tracking-tighter {
+        @include typography-tracking(tighter);
+    }
+}
+
+@if $toggle-typography-tracking-tight == true {
+    .typography-tracking-tight {
+        @include typography-tracking(tight);
+    }
+}
+
+@if $toggle-typography-tracking-slight == true {
+    .typography-tracking-slight {
+        @include typography-tracking(slight);
+    }
+}
+
+@if $toggle-typography-tracking-loose == true {
+    .typography-tracking-loose {
+        @include typography-tracking(loose);
+    }
+}
+
+@if $toggle-typography-tracking-looser == true {
+    .typography-tracking-looser {
+        @include typography-tracking(looser);
+    }
+}
+
+@if $toggle-typography-tracking-loosest == true {
+    .typography-tracking-loosest {
+        @include typography-tracking(loosest);
+    }
+}
