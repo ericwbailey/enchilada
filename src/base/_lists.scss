@@ -24,9 +24,25 @@ ol {
 
 
 // Individual Styles ----------------------------------------------------------
+// Better control over unordered lists
 ul {
     li {
+        &::before {
+            @include generate-unicode-symbol($symbol-shape-circle-solid);
+            @include typography-align(center);
 
+            display: inline-block;
+            margin-right: ms(0.25, em);
+            position: relative;
+              bottom: em(1);
+            width: 1em;
+        }
+
+        li {
+            &::before {
+                @include generate-unicode-symbol($symbol-shape-circle-hollow);
+            }
+        }
     }
 }
 
