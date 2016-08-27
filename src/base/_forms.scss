@@ -400,9 +400,13 @@ meter {
 output {
     @include typography-tracking(slight);
 
+    margin-left: em(2);
+    margin-right: em(2);
+    padding-left: em(4);
+    padding-right: em(4);
+
     font-family: $font-family-code;
     line-height: $global-type-line-height;
-    // TODO: Add a little padding to the left and right
 }
 
 
