@@ -16,8 +16,7 @@
     "utilities/variables/font.families",
     "utilities/variables/font.weights",
     "utilities/variables/ratios",
-    "utilities/variables/symbols",
-    "utilities/variables/animation.ease";
+    "utilities/variables/symbols";
 
 
 // Config ---------------------------------------------------------------------
@@ -35,6 +34,7 @@
 // Functions ------------------------------------------------------------------
 @import
     "utilities/functions/animation.duration",
+    "utilities/functions/animation.ease",
     "utilities/functions/units.em",
     "utilities/functions/units.modular-scale",
     "utilities/functions/units.rem",
