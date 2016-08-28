@@ -9,7 +9,7 @@
 
 
 // Map ------------------------------------------------------------------------
-// NOTE: Remember to update these values if you change `$global-type-size`
+// REVIEW: Remember to update these values if you change `$global-type-size`
 $tracking: (
     tightest: -0.4375em, // 7px @ 16px
     tighter:  -0.3125em, // 5px @ 16px
@@ -30,7 +30,9 @@ $tracking: (
     }
 
     @else {
-        @error "`#{$amount}`" + $meta-invalid-argument
+        @error "`#{$amount}`"
+        + $meta-invalid-argument
+        + $meta-invalid-argument-select-multiple
         + map-keys($tracking);
     }
 }

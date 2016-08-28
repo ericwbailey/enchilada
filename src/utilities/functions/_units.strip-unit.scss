@@ -5,12 +5,14 @@
 
 
 @function strip-unit($number) {
-    @if type-of($number) == 'number' and not unitless($number) {
+    @if (type-of($number) == 'number')
+    and not unitless($number) {
         @return $number / ($number * 0 + 1);
     }
 
     @else {
-        @error "`#{$number}`" + $meta-invalid-argument
+        @error "`#{$number}`"
+        + $meta-invalid-argument
         + "Please use a number with a unit suffix (ex. `12px`)";
     }
 

@@ -31,7 +31,9 @@
     }
 
     @else {
-        @error "`#{$aliasing-intent}`" + $meta-invalid-argument + $meta-invalid-argument-select-multiple
+        @error "`#{$aliasing-intent}`"
+        + $meta-invalid-argument
+        + $meta-invalid-argument-select-multiple
          + "`none`, `light-on-dark`, or `dark-on-light`";
     }
 }

@@ -17,7 +17,9 @@
     }
 
     @else {
-        @error "`#{$ltr-or-rtl}`" + $meta-invalid-argument + $meta-invalid-argument-select-either
+        @error "`#{$ltr-or-rtl}`"
+        + $meta-invalid-argument
+        + $meta-invalid-argument-select-either
         + "`ltr` or `rtl`";
     }
 }

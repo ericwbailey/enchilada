@@ -72,7 +72,9 @@ $form-single-line-input-height: ms(2, em);
     }
 
     @else {
-        @error "`#{$input-or-label}`" + $meta-invalid-argument + $meta-invalid-argument-select-either
+        @error "`#{$input-or-label}`"
+        + $meta-invalid-argument
+        + $meta-invalid-argument-select-either
         + "`input` or `label`";
     }
 }
@@ -163,7 +165,7 @@ input {
 
         background-color: c(base, background);
 
-        // NOTE: Double-check these values if adjusting input heights
+        // REVIEW: Double-check these values if adjusting input heights
         &::-webkit-color-swatch-wrapper {
             @include component-remove-margin-padding();
 
@@ -202,7 +204,7 @@ input {
     }
 
     &[type="range"] {
-        margin-top: ms(0.75, em); // NOTE: Set to three quarters of `$form-label-distance`
+        margin-top: ms(0.75, em); // REVIEW: Set to three quarters of `$form-label-distance`
         margin-bottom: ms(0.5, em); // Gives range input a little breathing room
     }
 
@@ -277,6 +279,7 @@ input[type="color"] {
 }
 
 
+// http://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/
 input[type="file"] {
     background-color: c(base, background);
 }

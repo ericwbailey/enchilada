@@ -21,7 +21,9 @@
     }
 
     @else {
-        @error "`#{$add-or-remove}`" + $meta-invalid-argument + $meta-invalid-argument-select-either
+        @error "`#{$add-or-remove}`"
+        + $meta-invalid-argument
+        + $meta-invalid-argument-select-either
         + "`add` or `remove`";
     }
 }

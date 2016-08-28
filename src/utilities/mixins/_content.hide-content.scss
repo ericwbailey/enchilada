@@ -39,7 +39,9 @@
     }
 
     @else {
-        @error "`#{$how}`" + $meta-invalid-argument + $meta-invalid-argument-select-multiple
+        @error "`#{$how}`"
+        + $meta-invalid-argument
+        + $meta-invalid-argument-select-multiple
         + "`visually`, `invisible`, or `remove`";
     }
 }

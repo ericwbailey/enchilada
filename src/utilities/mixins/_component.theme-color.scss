@@ -32,7 +32,8 @@
     }
 
     @else {
-        @error "`#{$property}`" + $meta-invalid-argument
+        @error "`#{$property}`"
+        + $meta-invalid-argument
         + "Please select: background-color, color, column-rule-color, "
         + "outline-color, text-decoration-color, text-emphasis-color";
     }

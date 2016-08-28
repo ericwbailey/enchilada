@@ -4,8 +4,10 @@
 // ============================================================================
 
 
-// Use `$global-type-ratio` when you want to use a unitless ratio
+// NOTE: Use `$global-type-ratio` when you want to use a unitless ratio
 
+
+// Map ------------------------------------------------------------------------
 $units:
 em,
 ex,
@@ -18,11 +20,13 @@ vmax,
 px;
 
 
+// Function -------------------------------------------------------------------
 @function ms($scale-by, $unit: em) {
 
     // Check to see if scale is a number
     @if (type-of($scale-by) != number) {
-        @error "`#{$scale-by}`" + $meta-invalid-argument
+        @error "`#{$scale-by}`"
+        + $meta-invalid-argument
         + "Please provide a number.";
     }
 
@@ -30,7 +34,8 @@ px;
     @if ($unit == null)
     or (type-of($unit) == number)
     or not ($units) {
-        @error "`#{$unit}`" + $meta-invalid-argument
+        @error "`#{$unit}`"
+        + $meta-invalid-argument
         + "Please provide a valid CSS unit.";
     }
 

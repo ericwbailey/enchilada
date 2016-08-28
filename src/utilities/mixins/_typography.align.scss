@@ -38,7 +38,9 @@
     }
 
     @else {
-        @error "`#{$start-end-or-center}`" + $meta-invalid-argument + $meta-invalid-argument-select-either
+        @error "`#{$start-end-or-center}`"
+        + $meta-invalid-argument
+        + $meta-invalid-argument-select-either
         + "`start` or `end`";
     }
 }
