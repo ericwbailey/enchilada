@@ -48,6 +48,7 @@
 
 
 // Mixins ---------------------------------------------------------------------
+// [1] Needs to be declared after the mixins it invokes
 @import
     "utilities/mixins/component.aspect-ratio",
     "utilities/mixins/component.prevent-jumping",
@@ -90,11 +91,7 @@
     "utilities/mixins/typography.numbers-fractions-stacked",
     "utilities/mixins/typography.numbers-lining",
     "utilities/mixins/typography.numbers-oldstyle",
-    "utilities/mixins/typography.numbers-proportional-lining",
-    "utilities/mixins/typography.numbers-proportional-oldstyle",
     "utilities/mixins/typography.numbers-proportional",
-    "utilities/mixins/typography.numbers-tabular-lining",
-    "utilities/mixins/typography.numbers-tabular-oldstyle",
     "utilities/mixins/typography.numbers-tabular",
     "utilities/mixins/typography.ordinals",
     "utilities/mixins/typography.preload-adjustments",
@@ -105,7 +102,11 @@
     "utilities/mixins/typography.subscript",
     "utilities/mixins/typography.superscript",
     "utilities/mixins/typography.swashes",
-    "utilities/mixins/typography.tracking";
+    "utilities/mixins/typography.tracking",
+    "utilities/mixins/typography.numbers-proportional-lining", // [1]
+    "utilities/mixins/typography.numbers-proportional-oldstyle", // [1]
+    "utilities/mixins/typography.numbers-tabular-lining", // [1]
+    "utilities/mixins/typography.numbers-tabular-oldstyle"; // [1]
 
 
 // Vendor ---------------------------------------------------------------------
