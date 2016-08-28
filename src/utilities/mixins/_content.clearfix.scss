@@ -5,7 +5,7 @@
 
 
 @mixin content-clearfix($add-or-remove) {
-    @if (type-of($add-or-remove) == "add") {
+    @if ($add-or-remove == "add") {
         &:after {
             content: "";
             display: table;
@@ -13,7 +13,7 @@
         }
     }
 
-    @else if (type-of($add-or-remove) == "remove") {
+    @else if ($add-or-remove == "remove") {
         &:after {
             display: initial;
             clear: none;

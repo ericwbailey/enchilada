@@ -7,7 +7,7 @@
 // Undoes custom list styling. See `_reset.scss` and `_lists.scss`
 
 
-@mixin component-remove-list-formatting($list-or-list-item) {
+@mixin component-remove-list-formatting() {
     counter-reset: initial; // Only `<ol>` tags have custom styling applied to them
 
     li {
