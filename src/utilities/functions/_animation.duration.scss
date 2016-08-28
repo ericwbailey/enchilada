@@ -1,0 +1,30 @@
+// ============================================================================
+// Animation
+// Duration
+// ============================================================================
+
+
+// Map ------------------------------------------------------------------------
+$animation-duration: (
+    shortest: 100ms,
+    shorter:  200ms,
+    short:    300ms,
+    long:     500ms,
+    longer:   700ms,
+    longest:  900ms
+);
+
+
+// Function -------------------------------------------------------------------
+@function animation-duration($duration) {
+    @if (map-has-key($animation-duration, $duration)) {
+      @return map-get($animation-duration, $duration);
+    }
+
+    @else {
+        @error "`#{$duration}`"
+        + $meta-invalid-argument
+        + $meta-invalid-argument-select-multiple
+        + map-keys($animation-duration);
+    }
+}
