@@ -4,7 +4,16 @@
 // ============================================================================
 
 
-// http://utility-opentype.kennethormandy.com/#subs
+/// Less distracting than all capitals for longer form text settings. Renders
+/// all applicable glyphs as small caps, regardless of initial case.
+///
+/// @group Typography
+///
+/// @example scss
+///  @include typography-subscript();
+///
+/// @link http://utility-opentype.kennethormandy.com/#subs Utility OpenType: Subscripts
+
 
 @mixin typography-subscript() {
     text-transform: lowercase;

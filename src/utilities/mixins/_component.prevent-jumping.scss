@@ -15,6 +15,7 @@
 ///  @include component-prevent-jumping(10rem);
 ///
 /// @link https://css-tricks.com/content-jumping-avoid/ Content Jumping (and How To Avoid It)
+/// @link https://www.smashingmagazine.com/2016/08/ways-to-reduce-content-shifting-on-page-load/ Ways To Reduce Content Shifting On Page Load
 
 
 @mixin component-prevent-jumping($component-height) {

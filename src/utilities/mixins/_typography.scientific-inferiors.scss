@@ -4,9 +4,16 @@
 // ============================================================================
 
 
-// http://utility-opentype.kennethormandy.com/#sinf
+/// Chemical and mathematical notation.
+///
+/// @group Typography
+///
+/// @example scss
+///  @include typography-scientific-inferiors();
+///
+/// @link http://utility-opentype.kennethormandy.com/#sinf Utility OpenType: Scientific Inferiors
 
-// Chemical and mathematical notation
+
 @mixin typography-scientific-inferiors() {
     text-transform: lowercase;
     font-size: inherit;

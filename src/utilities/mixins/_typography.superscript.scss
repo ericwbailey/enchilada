@@ -4,7 +4,14 @@
 // ============================================================================
 
 
-// http://utility-opentype.kennethormandy.com/#sups
+/// Generates superscript glyphs, if present.
+///
+/// @group Typography
+///
+/// @example scss
+///  @include typography-superscript();
+///
+/// @link http://utility-opentype.kennethormandy.com/#sups Utility OpenType: Superscript
 
 @mixin typography-superscript() {
     text-transform: lowercase;

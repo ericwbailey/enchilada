@@ -4,10 +4,17 @@
 // ============================================================================
 
 
-// http://utility-opentype.kennethormandy.com/#smcp
+/// Less distracting than all capitals for longer form text settings. Renders
+/// all applicable glyphs as small caps, regardless of initial case.
+///
+/// @group Typography
+///
+/// @example scss
+///  @include typography-small-caps();
+///
+/// @link http://utility-opentype.kennethormandy.com/#smcp Utility OpenType: Small Caps
 
-// Less distracting than all capitals for longer form text settings. Renders
-// all applicable glyphs as small caps, regardless of initial case
+
 @mixin typography-small-caps() {
    text-transform: uppercase;
    font-variant-caps: all-small-caps;
