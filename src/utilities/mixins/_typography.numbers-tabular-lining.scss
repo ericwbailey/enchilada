@@ -4,7 +4,15 @@
 // ============================================================================
 
 
-// http://utility-opentype.kennethormandy.com/#tnum-lnum
+/// @group Typography
+///
+/// @example scss
+///  @include typography-numbers-tabular-lining();
+///
+/// @requires {mixin} typography-numbers-tabular
+/// @requires {mixin} typography-numbers-lining
+///
+/// @link http://utility-opentype.kennethormandy.com/#tnum-lnum Utility OpenType: Tabular, Lining numbers
 
 
 @mixin typography-numbers-tabular-lining() {

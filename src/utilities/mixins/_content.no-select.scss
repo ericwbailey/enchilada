@@ -4,7 +4,14 @@
 // ============================================================================
 
 
-// Removes the selection highlight from an element
+/// Removes the selection highlight from an element
+///
+/// @group Content
+///
+/// @example scss
+///  @include content-no-select();
+
+
 @mixin content-no-select() {
     user-select: none;
 }

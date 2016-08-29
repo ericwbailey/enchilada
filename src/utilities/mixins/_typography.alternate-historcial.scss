@@ -4,9 +4,16 @@
 // ============================================================================
 
 
-// http://utility-opentype.kennethormandy.com/#hist
+/// Text that references past methods of presentation.
+///
+/// @group Typography
+///
+/// @example scss
+///  @include typography-alternates-historical();
+///
+/// @link http://utility-opentype.kennethormandy.com/#hist Utility OpenType: Historical alternates
 
-// Text that references past methods of presentation
+
 @mixin typography-alternates-historical() {
     -ms-font-feature-settings: "hist";
     font-variant-alternates: historical-forms;

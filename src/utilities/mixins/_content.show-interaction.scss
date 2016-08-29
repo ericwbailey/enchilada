@@ -14,7 +14,8 @@
     }
 
     @else {
-        @error "`#{$cursor}`" + $meta-invalid-argument + $meta-invalid-argument-select-either
+        @error "`#{$cursor}`" + $meta-invalid-argument
+        + $meta-invalid-argument-select-either
         + "`link` or `input`";
     }
 }

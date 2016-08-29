@@ -4,10 +4,17 @@
 // ============================================================================
 
 
-// http://utility-opentype.kennethormandy.com/#case
+/// Alternate glyphs that are specifically designed to work alongside all caps
+/// settings, or alongside text.
+///
+/// @group Typography
+///
+/// @example scss
+///  @include typography-case-sensitive-forms();
+///
+/// @link http://utility-opentype.kennethormandy.com/#case Utility OpenType: Case sensitive forms
 
-// Alternate glyphs that are specifically designed to work alongside all caps
-// settings, or alongside text
+
 @mixin typography-case-sensitive-forms() {
     -webkit-font-feature-settings: "case";
     font-feature-settings: "case";

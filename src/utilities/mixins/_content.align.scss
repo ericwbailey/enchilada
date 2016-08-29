@@ -18,6 +18,11 @@
         float: right;
     }
 
+    @else if ($method == "float")
+    and ($direction == "center") {
+        margin: 0 auto;
+    }
+
     @else if ($method == "flex")
     and ($direction == "start") {
         margin-right: auto;

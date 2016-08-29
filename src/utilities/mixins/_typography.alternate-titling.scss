@@ -4,9 +4,16 @@
 // ============================================================================
 
 
-// http://utility-opentype.kennethormandy.com/#titl
+/// Alternate characters for display text.
+///
+/// @group Typography
+///
+/// @example scss
+///  @include typography-alternates-titling();
+///
+/// @link http://utility-opentype.kennethormandy.com/#titl Utility OpenType: Titling alternates
 
-// Alternate characters for display text
+
 @mixin typography-alternates-titling() {
     -ms-font-feature-settings: "titl";
     font-variant-caps: titling-caps;

@@ -4,13 +4,21 @@
 // ============================================================================
 
 
-// Disables OpenType features
-// https://www.typotheque.com/articles/opentype_features_in_web_browsers_-_tests
-// http://practice.typekit.com/lesson/caring-about-opentype-features/
-// http://utility-opentype.kennethormandy.com
+/// Disables all OpenType features.
+///
+/// @group Typography
+///
+/// @example scss
+///  @include typography-disable-opentype();
+///
+/// @link https://www.typotheque.com/articles/opentype_features_in_web_browsers_-_tests OpenType features in web browsers — Tests
+/// @link http://practice.typekit.com/lesson/caring-about-opentype-features/ Caring about OpenType features
+/// @link http://utility-opentype.kennethormandy.com Utility OpenType: Utility OpenType
 
-// Disable OpenType
-@mixin typography-disable-opentype() { font-feature-settings: normal; }
+
+@mixin typography-disable-opentype() {
+    font-feature-settings: normal;
+}
 
 
 // Toggles --------------------------------------------------------------------

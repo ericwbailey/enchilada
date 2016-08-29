@@ -4,6 +4,14 @@
 // ============================================================================
 
 
+/// Removes the margin and padding values on a component.
+///
+/// @group Components
+///
+/// @example scss
+///  @include component-remove-margin-padding();
+
+
 @mixin component-remove-margin-padding() {
     margin: 0;
     padding: 0;

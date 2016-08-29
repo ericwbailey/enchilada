@@ -4,23 +4,38 @@
 // ============================================================================
 
 
-// NOTE: Use `$global-type-ratio` when you want to use a unitless ratio
+// Outputs a number scaled by the document's specified Modular Scale.
+//
+// @group Modular Scale
+//
+// @parameter {Number} $scale-by - Scales the Modular Scale
+// @parameter {Unit} $unit [em]  - Specifies the unit to output to the `$scale-by` value
+//
+// @returns {Length}
+//
+// @example scss
+//  font-size: ms(3, em);
+//
+// @see em
+// @see rem
 
 
 // Map ------------------------------------------------------------------------
-$units:
-em,
-ex,
-ch,
-rem,
-vh,
-vw,
-vmin,
-vmax,
-px;
+// $units:
+// em,
+// ex,
+// ch,
+// rem,
+// vh,
+// vw,
+// vmin,
+// vmax,
+// px;
 
 
 // Function -------------------------------------------------------------------
+// NOTE: Use `$global-type-ratio` when you want to use a unitless ratio
+
 @function ms($scale-by, $unit: em) {
 
     // Check to see if scale is a number

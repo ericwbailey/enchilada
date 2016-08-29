@@ -4,10 +4,20 @@
 // ============================================================================
 
 
-// http://utility-opentype.kennethormandy.com/#pnum-lnum
+/// Tabular numerals are monospaced, so different information can be easily
+/// compared when stacked vertically.
+///
+/// @group Typography
+///
+/// @requires {mixin} typography-numbers-proportional
+/// @requires {mixin} typography-numbers-lining
+///
+/// @example scss
+///  @include typography-numbers-proportional-lining();
+///
+/// @link http://utility-opentype.kennethormandy.com/#pnum-lnum Utility OpenType: Proportional, Lining numbers
 
-// Tabular numerals are monospaced, so different information can be easily
-// compared when stacked vertically:
+
 @mixin typography-numbers-proportional-lining() {
     @include typography-numbers-proportional();
     @include typography-numbers-lining();

@@ -4,15 +4,17 @@
 // ============================================================================
 
 
-/// This function converts a pixel value into an em, based on the document's
-/// root font size.
-/// @group units
-/// @require variable $global-type-size
-/// @example scss - em function
-///   em(32)
-/// @return 2em
-/// @see rem
-/// @see strip-init
+/// Converts a pixel value into an em, based on the document's root font size.
+///
+/// @group Units
+///
+/// @parameter {Number} $pixels                      - Pixel value to be converted into ems
+/// @parameter {Length} $context [$global-type-size] - The em value that the pixel measurement gets divided by
+///
+/// @returns {Number}
+///
+/// @example scss
+///  font-size: em(18);
 
 
 @function em($pixels, $context: $global-type-size) {

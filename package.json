@@ -18,6 +18,8 @@
     "htmlmin": "0.0.6",
     "jshint": "^2.9.2",
     "jshint-stylish": "^2.1.0",
-    "require-dir": "^0.3.0"
+    "require-dir": "^0.3.0",
+    "sassdoc": "^2.1.20",
+    "sassdoc-theme-flippant": "^0.1.0"
   }
 }

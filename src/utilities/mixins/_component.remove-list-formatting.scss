@@ -4,7 +4,12 @@
 // ============================================================================
 
 
-// Undoes custom list styling. See `_reset.scss` and `_lists.scss`
+/// Undoes custom list styling. See `_reset.scss` and `_lists.scss`
+///
+/// @group Components
+///
+/// @example scss
+///  @include component-remove-list-formatting();
 
 
 @mixin component-remove-list-formatting() {

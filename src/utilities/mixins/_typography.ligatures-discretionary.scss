@@ -4,10 +4,17 @@
 // ============================================================================
 
 
-// http://utility-opentype.kennethormandy.com/#dlig
+/// Additional ligatures that might be considered too "attention-grabbing" or
+/// unconventional to be enabled in many situations.
+///
+/// @group Typography
+///
+/// @example scss
+///  @include typography-ligatures-discretionary();
+///
+/// @link http://utility-opentype.kennethormandy.com/#dlig Utility OpenType: Discretionary ligatures
 
-// Additional ligatures that might be considered too "attention-grabbing" or
-// unconventional to be enabled in many situations
+
 @mixin typography-ligatures-discretionary() {
     -ms-font-feature-settings: "dlig";
     -webkit-font-variant-ligatures: discretionary-ligatures;

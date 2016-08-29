@@ -4,8 +4,15 @@
 // ============================================================================
 
 
-// Prevents a component from inheriting host page's styling:
-// http://www.brucelawson.co.uk/2014/css-all-initial-to-prevent-widgets-inheriting-css-from-a-host-page/
+/// Prevents a component from inheriting host page's styling.
+///
+/// @group Components
+///
+/// @example scss
+///  @include component-style-reset();
+///
+/// @link http://www.brucelawson.co.uk/2014/css-all-initial-to-prevent-widgets-inheriting-css-from-a-host-page/ CSS {all: initial} to prevent widgets inheriting CSS from a host page
+
 
 @mixin component-style-reset() {
     all: initial;

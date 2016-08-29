@@ -3,7 +3,16 @@
 // Caps to Small Caps
 // ============================================================================
 
-// http://utility-opentype.kennethormandy.com/#c2sc
+
+/// Converts all letters, not just lowercase letters, into Small Caps.
+///
+/// @group Typography
+///
+/// @example scss
+///  @include typography-caps-to-small-caps();
+///
+/// @link http://utility-opentype.kennethormandy.com/#c2sc Utility OpenType: Caps to Small Caps
+
 
 @mixin typography-caps-to-small-caps() {
     text-transform: uppercase;

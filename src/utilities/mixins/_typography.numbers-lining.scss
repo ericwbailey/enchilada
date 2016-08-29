@@ -4,7 +4,14 @@
 // ============================================================================
 
 
-// Sets figures to align with the baseline and cap height
+/// Sets figures to align with the baseline and cap height.
+///
+/// @group Typography
+///
+/// @example scss
+///  @include typography-numbers-lining();
+
+
 @mixin typography-numbers-lining() {
     font-variant-numeric: lining-nums;
 

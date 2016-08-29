@@ -4,7 +4,14 @@
 // ============================================================================
 
 
-// Good for when placed in long form, serifed text
+/// Good for when placed in long form, serifed text.
+///
+/// @group Typography
+///
+/// @example scss
+///  @include typography-numbers-proportional();
+
+
 @mixin typography-numbers-proportional() {
     font-variant-numeric: proportional-nums;
 

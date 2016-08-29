@@ -4,9 +4,16 @@
 // ============================================================================
 
 
-// http://utility-opentype.kennethormandy.com/#titl
+/// Text that intends to mimic hand lettering.
+///
+/// @group Typography
+///
+/// @example scss
+///  @include typography-alternates-contextual();
+///
+/// @link http://utility-opentype.kennethormandy.com/#titl Utility OpenType: Titling alternates
 
-// Text that intends to mimic hand lettering
+
 @mixin typography-alternates-contextual() {
     -ms-font-feature-settings: "calt";
     -webkit-font-variant-ligatures: contextual;

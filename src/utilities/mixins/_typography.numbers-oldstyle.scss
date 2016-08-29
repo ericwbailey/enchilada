@@ -4,7 +4,14 @@
 // ============================================================================
 
 
-// Tends to have descenders that sit below the baseline. Typically default
+/// Tends to have descenders that sit below the baseline. Typically default.
+///
+/// @group Typography
+///
+/// @example scss
+///  @include typography-numbers-oldstyle();
+
+
 @mixin typography-numbers-oldstyle() {
     font-variant-numeric: oldstyle-nums;
 

@@ -4,11 +4,18 @@
 // ============================================================================
 
 
-// http://practicaltypography.com/ligatures.html
-// http://utility-opentype.kennethormandy.com/#liga
+/// Mitigate spacing issues between specific combinations of letters within a
+/// typeface.
+///
+/// @group Typography
+///
+/// @example scss
+///  @include typography-ligatures-common();
+///
+/// @link http://practicaltypography.com/ligatures.html Practical Typography: Ligatures
+/// @link http://utility-opentype.kennethormandy.com/#liga Utility OpenType: Common ligatures
 
-// Mitigate spacing issues between specific combinations of letters within a
-// typeface
+
 @mixin typography-ligatures-common() {
     -ms-font-feature-settings: "liga";
     -webkit-font-variant-ligatures: common-ligatures;

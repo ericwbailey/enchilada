@@ -4,7 +4,16 @@
 // ============================================================================
 
 
-// http://utility-opentype.kennethormandy.com/#tnum-onum
+/// @group Typography
+///
+/// @example scss
+///  @include typography-numbers-tabular-oldstyle();
+///
+/// @requires {mixin} typography-numbers-tabular
+/// @requires {mixin} typography-numbers-oldstyle
+///
+/// @link http://utility-opentype.kennethormandy.com/#tnum-onum Utility OpenType: Tabular, Oldstyle numbers
+
 
 @mixin typography-numbers-tabular-oldstyle() {
     @include typography-numbers-tabular();

@@ -4,7 +4,14 @@
 // ============================================================================
 
 
-// Removes cursor interaction
+/// Removes cursor interaction
+///
+/// @group Content
+///
+/// @example scss
+///  @include content-remove-interaction();
+
+
 @mixin content-remove-interaction() {
     pointer-events: none;
 }

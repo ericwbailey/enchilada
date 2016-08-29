@@ -3,7 +3,15 @@
 // Stacked Fractions
 // ============================================================================
 
-// Support for a less-common stacked presentation
+
+/// Support for a less-common stacked presentation for fractions.
+///
+/// @group Typography
+///
+/// @example scss
+///  @include typography-numbers-fractions-stacked();
+
+
 @mixin typography-numbers-fractions-stacked() {
     -ms-font-feature-settings: "frac", "afrc";
     font-variant-numeric: stacked-fractions;

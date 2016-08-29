@@ -4,6 +4,15 @@
 // ============================================================================
 
 
+/// Creates a basic full-width responsive component whose aspect ratio scales
+/// proportionately.
+///
+/// @group Components
+///
+/// @example scss
+///  @include component-responsify();
+
+
 @mixin component-responsify() {
     height: auto;
     width: 100%;
