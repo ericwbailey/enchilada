@@ -1,6 +1,6 @@
 ## Project-specific files and folders #########################################
 .build
-
+documentation/
 
 
 ## Generic files to ignore ####################################################
