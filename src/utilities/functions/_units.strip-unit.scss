@@ -13,7 +13,8 @@
     @else {
         @error "`#{$number}`"
         + $meta-invalid-argument
-        + "Please use a number with a unit suffix (ex. `12px`)";
+        + $meta-invalid-argument-provide
+        + "a number with a unit suffix (ex. `12rem`)";
     }
 
     @return $number;

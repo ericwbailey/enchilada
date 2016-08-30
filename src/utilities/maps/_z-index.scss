@@ -2,7 +2,7 @@
 // Z-index
 // ============================================================================
 
-// Map ------------------------------------------------------------------------
+
 $z-index: (
     // Banish things out of sight
     basement: -999999,
@@ -28,10 +28,3 @@ $z-index: (
     // Ensure things are displayed
     ceiling: 999999
 );
-
-
-// Function -------------------------------------------------------------------
-// Retrieve z-index vales from $z-index map
-@function z($key) {
-    @return map-get($z-index, $key);
-}

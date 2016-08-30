@@ -20,21 +20,9 @@
 // @see rem
 
 
-// Map ------------------------------------------------------------------------
-// $units:
-// em,
-// ex,
-// ch,
-// rem,
-// vh,
-// vw,
-// vmin,
-// vmax,
-// px;
-
-
 // Function -------------------------------------------------------------------
 // NOTE: Use `$global-type-ratio` when you want to use a unitless ratio
+// NOTE: Uses `_units.scss`
 
 @function ms($scale-by, $unit: em) {
 
@@ -42,7 +30,8 @@
     @if (type-of($scale-by) != number) {
         @error "`#{$scale-by}`"
         + $meta-invalid-argument
-        + "Please provide a number.";
+        + $meta-invalid-argument-provide
+        + "a number.";
     }
 
     // Check to see if unit is a valid unit
@@ -51,7 +40,8 @@
     or not ($units) {
         @error "`#{$unit}`"
         + $meta-invalid-argument
-        + "Please provide a valid CSS unit.";
+        + $meta-invalid-argument-provide
+        + "a valid CSS unit.";
     }
 
     @return #{$scale-by * $global-type-ratio}#{$unit};

@@ -8,14 +8,6 @@
 // "tiers" of interface elements.
 
 
-// Map ------------------------------------------------------------------------
-$animation-ease: (
-    character:  ease-in-out,
-    dialogue:   ease-out,
-    background: linear
-);
-
-
 // Function -------------------------------------------------------------------
 @function animation-ease($ease) {
     @if (map-has-key($animation-ease, $ease)) {
