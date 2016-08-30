@@ -4,6 +4,13 @@
 // ============================================================================
 
 
+/// Animation duration names.
+///
+/// @group Units
+///
+/// @property {Measurement} key - Aliases for specific animation durations
+
+
 $animation-duration: (
     shortest: 100ms,
     shorter:  200ms,

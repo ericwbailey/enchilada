@@ -11,7 +11,7 @@
 // @parameter {Number} $scale-by - Scales the Modular Scale
 // @parameter {Unit} $unit [em]  - Specifies the unit to output to the `$scale-by` value
 //
-// @returns {Length}
+// @returns {Measurement}
 //
 // @example scss
 //  font-size: ms(3, em);

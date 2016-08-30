@@ -4,6 +4,18 @@
 // ============================================================================
 
 
+/// Removes the unit from a measurement.
+///
+/// @group Units
+///
+/// @parameter {Measurement} $number - Number with CSS unit to be removed
+///
+/// @returns {Number}
+///
+/// @example scss
+///  margin-left: strip-unit(5em) * 10%;
+
+
 @function strip-unit($number) {
     @if (type-of($number) == 'number')
     and not unitless($number) {

@@ -5,7 +5,7 @@
 
 
 /// Adds additional flare, best applied conservatively. Manually declaring each
-/// @mixin until Sass supports dynamic @mixin creation via a @for loop. Note:
+/// mixin until Sass supports dynamic mixin creation via a for loop. Note:
 /// there are 3 Swash mixins, but only one is listed for the sake of brevity.
 ///
 /// @group Typography
@@ -14,7 +14,6 @@
 ///  @include typography-swash-1();
 ///
 /// @link http://utility-opentype.kennethormandy.com/#swsh Utility OpenType: Swash
-
 
 
 @mixin typography-swash-1 {

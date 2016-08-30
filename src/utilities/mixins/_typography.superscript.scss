@@ -13,6 +13,7 @@
 ///
 /// @link http://utility-opentype.kennethormandy.com/#sups Utility OpenType: Superscript
 
+
 @mixin typography-superscript() {
     text-transform: lowercase;
     font-variant-position: super;

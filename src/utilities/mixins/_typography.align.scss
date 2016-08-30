@@ -4,10 +4,22 @@
 // ============================================================================
 
 
-// Aligns text to the start or end of document, according to the language
-// settings. Provides a LRT-based fallback, change if working with a RTL
-// language:
-// https://davidwalsh.name/text-align-start
+/// Aligns text to the start or end of document, according to the parent node's
+/// language settings. Provides a LRT-based fallback, change if working with a
+/// RTL language.
+///
+/// @group Typography
+///
+/// @parameter {String} $start-end-or-center - Sets the `text-align` property to either `ltr` or `rtl` or `center`
+///
+/// @example scss
+///  @include typography-align(end);
+///
+/// @see {mixin} typography-direction
+///
+/// @link https://davidwalsh.name/text-align-start David Walsh BLog: text-align: start & RTL
+
+
 @mixin typography-align($start-end-or-center) {
     @if ($global-type-direction == "ltr")
     and ($start-end-or-center == "start") {

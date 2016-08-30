@@ -3,6 +3,13 @@
 // ============================================================================
 
 
+/// Z-index names.
+///
+/// @group general
+///
+/// @property {Number} key - Aliases for layouts, objects, components, etc.
+
+
 $z-index: (
     // Banish things out of sight
     basement: -999999,

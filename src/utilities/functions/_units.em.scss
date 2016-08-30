@@ -11,7 +11,7 @@
 /// @parameter {Number} $pixels                      - Pixel value to be converted into ems
 /// @parameter {Length} $context [$global-type-size] - The em value that the pixel measurement gets divided by
 ///
-/// @returns {Number}
+/// @returns {Measurement}
 ///
 /// @example scss
 ///  font-size: em(18);

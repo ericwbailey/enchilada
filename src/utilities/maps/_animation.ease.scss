@@ -4,6 +4,13 @@
 // ============================================================================
 
 
+/// Animation easing names.
+///
+/// @group Units
+///
+/// @property {String} key - Aliases for specific animation easings
+
+
 $animation-ease: (
     character:  ease-in-out,
     dialogue:   ease-out,

@@ -19,6 +19,15 @@
     "utilities/variables/symbols";
 
 
+// Maps -----------------------------------------------------------------------
+@import
+    "utilities/maps/animation.duration",
+    "utilities/maps/animation.ease",
+    "utilities/maps/colors",
+    "utilities/maps/units",
+    "utilities/maps/z-index";
+
+
 // Config ---------------------------------------------------------------------
 // Use this partial to set global font sizes, styles, etc. and toggle functional
 // classes
@@ -35,16 +44,12 @@
 @import
     "utilities/functions/animation.duration",
     "utilities/functions/animation.ease",
+    "utilities/functions/component.z-index",
+    "utilities/functions/content.color",
     "utilities/functions/units.em",
     "utilities/functions/units.modular-scale",
     "utilities/functions/units.rem",
     "utilities/functions/units.strip-unit";
-
-
-// Maps -----------------------------------------------------------------------
-@import
-    "utilities/maps/colors",
-    "utilities/maps/z-index";
 
 
 // Mixins ---------------------------------------------------------------------

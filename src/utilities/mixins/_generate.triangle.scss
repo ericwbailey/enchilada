@@ -4,12 +4,20 @@
 // ============================================================================
 
 
-// Shamelessly stolen fron Bourbon:
-// http://bourbon.io/docs/#triangle
+/// Generates a triangle. Shamelessly stolen fron [Bourbon](http://bourbon.io/).
+///
+/// @group Generate
+///
+/// @parameter {Measurement} $size      - Can take one or two values: `width`, `height`
+/// @parameter {String}      $color     - Can take one or two values: `foreground-color`, `background-color`
+/// @parameter {String}      $direction - Can take one of the following values: `up`, `down`, `left`, `right`, `up-right`, `up-left`, `down-right`, `down-left`
+///
+/// @example scss
+///  @include triangle(6em, black, down);
+///
+/// @link http://bourbon.io/docs/#triangle Bourbon: Triangle
 
-// `$size` argument accepts either one or two values: `width`/`height`
-// `$color` argument accepts either one or two values: `foreground-color`/`background-color`
-// `$direction` argument accepts the following values: `up`, `down`, `left`, `right`, `up-right`, `up-left`, `down-right`, `down-left`
+
 @mixin generate-triangle($size, $color, $direction) {
     $width: nth($size, 1);
     $height: nth($size, length($size));

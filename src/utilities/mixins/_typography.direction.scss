@@ -4,7 +4,20 @@
 // ============================================================================
 
 
-// https://css-tricks.com/almanac/properties/d/direction/
+/// Aligns the type to either the start or the end of the set language
+/// direction.
+///
+/// @group Typography
+///
+/// @parameter {String} $ltr-or-rtl [rtl] - Sets the `direction` property to either `ltr` or `rtl`
+///
+/// @example scss
+///  @include typography-direction(rtl);
+///
+/// @see {mixin} typography-align
+/// @see {variable} global-type-direction
+///
+/// @link https://css-tricks.com/almanac/properties/d/direction/ CSS Almanac » Properties » D » direction
 
 
 @mixin typography-direction($ltr-or-rtl: rtl) {
