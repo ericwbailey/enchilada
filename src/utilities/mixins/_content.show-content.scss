@@ -4,6 +4,18 @@
 // ============================================================================
 
 
+/// Reveals hidden content.
+///
+/// @group Content
+///
+/// @parameter {String} $how [visually] - Sets the reveal approach. Can be `visually`, `visible`, or `add`
+///
+/// @example scss
+///  @include content-hide(visually);
+///
+/// @see {mixin} content-hide
+
+
 @mixin content-show($how: visually) {
     // Reverts `hide(visually)`
     @if ($how == "visually") {

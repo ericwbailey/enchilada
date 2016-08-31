@@ -9,11 +9,13 @@
 ///
 /// @group Typography
 ///
-/// @requires {mixin} typography-numbers-proportional
 /// @requires {mixin} typography-numbers-lining
+/// @requires {mixin} typography-numbers-proportional
 ///
 /// @example scss
 ///  @include typography-numbers-proportional-lining();
+///
+/// @see {mixin} typography-numbers-proportional
 ///
 /// @link http://utility-opentype.kennethormandy.com/#pnum-lnum Utility OpenType: Proportional, Lining numbers
 

@@ -10,6 +10,9 @@
 ///
 /// @example scss
 ///  @include component-remove-margin-padding();
+///
+/// @see {mixin} component-remove-list-formatting
+/// @see {mixin} component-style-reset
 
 
 @mixin component-remove-margin-padding() {

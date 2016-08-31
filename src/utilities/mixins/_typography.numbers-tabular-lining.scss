@@ -9,8 +9,10 @@
 /// @example scss
 ///  @include typography-numbers-tabular-lining();
 ///
-/// @requires {mixin} typography-numbers-tabular
 /// @requires {mixin} typography-numbers-lining
+/// @requires {mixin} typography-numbers-tabular
+///
+/// @see {mixin} typography-numbers-tabular
 ///
 /// @link http://utility-opentype.kennethormandy.com/#tnum-lnum Utility OpenType: Tabular, Lining numbers
 

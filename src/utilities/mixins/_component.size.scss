@@ -4,23 +4,38 @@
 // ============================================================================
 
 
-@mixin component-size($width, $height: null) {
-    @if (type-of($width) == number)
-    and not (unitless($width)) {
-        width: $width;
-    }
+/// Specifies a component's height and opt
+///
+/// @group Units
+///
+/// @parameter {Number} $pixels                      - Pixel value to be converted into ems
+/// @parameter {Length} $context [$global-type-size] - The em value that the pixel measurement gets divided by
+///
+/// @example scss
+///  font-size: em(18);
 
-    @else {
-        @error "Please provide a unit for `$width`";
-    }
 
-    @if ($width != "") and ($height != "")
-    and (type-of($height) == number)
+@mixin component-size($height, $width: null) {
+    @if (type-of($height) == number)
     and not (unitless($height)) {
         height: $height;
     }
 
     @else {
-        @error "Please provide a unit for `$height`";
+        @error "`#{$height}`"
+        + $meta-invalid-argument
+        + "Please use a number with a valid CSS unit.";
+    }
+
+    @if ($height != "") and ($width != null)
+    and (type-of($height) == number)
+    and not (unitless($width)) {
+        width: $width;
+    }
+
+    @else {
+        @error "`#{$width}`"
+        + $meta-invalid-argument
+        + "Please use a number with a valid CSS unit.";
     }
 }

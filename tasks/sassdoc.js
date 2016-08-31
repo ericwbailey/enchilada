@@ -7,10 +7,10 @@ gulp.task('sassdoc', function () {
   var options = {
     dest: './documentation/styles',
     theme: "flippant",
+    autofill: ["requires", "content"],
     verbose: true,
     display: {
-      alias: true,
-      watermark: true,
+      alias: true
     },
   };
 

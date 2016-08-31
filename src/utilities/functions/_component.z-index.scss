@@ -1,4 +1,5 @@
 // ============================================================================
+// Component
 // Z-index
 // ============================================================================
 
@@ -10,7 +11,7 @@
 ///
 /// @group Components
 ///
-/// @parameter {String} $key - Calls a value from the `_z-index.scss` map
+/// @parameter {String} $index - Calls a value from the `_z-index.scss` map
 ///
 /// @returns {Number}
 ///
@@ -20,6 +21,6 @@
 ///  z-index: z(component);
 
 
-@function z($key) {
-    @return map-get($z-index, $key);
+@function z($index) {
+    @return map-get($z-index, $index);
 }

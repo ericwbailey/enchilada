@@ -5,7 +5,7 @@
 
 
 /// Returns a predefined animation duration (set in milliseconds). Used to
-/// provide consistent behavior for the different "tiers" of interface elements.
+/// provide consistent behavior for the different tiers of interface elements.
 ///
 /// @group Animation
 ///
@@ -17,6 +17,9 @@
 ///
 /// @example scss
 ///  transition-duration: animation-duration(short);
+///
+/// @see
+/// {function} animation-ease
 
 
 @function animation-duration($duration) {

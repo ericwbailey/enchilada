@@ -14,8 +14,8 @@
 /// @example scss
 ///  @include generate-unicode-symbol($symbol-star-full);
 ///
-/// @link http://usabilitypost.com/2012/11/05/stop-fixing-font-smoothing/ Please Stop "Fixing" Font Smoothing
-/// @link http://files.christophzillgens.com/webkit-font-smoothing.html Webkit Font Smoothing
+/// @link http://usabilitypost.com/2012/11/05/stop-fixing-font-smoothing/ Usability Post Please Stop "Fixing" Font Smoothing
+/// @link http://files.christophzillgens.com/webkit-font-smoothing.html Christoph Zillgens: Webkit Font Smoothing
 
 
 @mixin typography-smoothing($aliasing-intent) {

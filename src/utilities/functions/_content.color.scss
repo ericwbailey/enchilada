@@ -18,6 +18,8 @@
 ///
 /// @example scss
 ///  background-color: c(button, background);
+///
+/// @see {mixin} component-theme-color
 
 
 @function c($color-name, $color-variant:null) {

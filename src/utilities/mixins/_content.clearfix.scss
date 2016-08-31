@@ -4,6 +4,18 @@
 // ============================================================================
 
 
+/// Add or remove clearfix.
+///
+/// @group Content
+///
+/// @parameter {String} $add-or-remove - Adds or removes clearfix styling. Can be either `add` or `remove`
+///
+/// @example scss
+///  @include content-clearfix(add);
+///
+/// @link http://learnlayout.com/clearfix.html Learn CSS Layout: The clearfix hack
+
+
 @mixin content-clearfix($add-or-remove) {
     @if ($add-or-remove == "add") {
         &:after {

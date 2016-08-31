@@ -4,17 +4,31 @@
 // ============================================================================
 
 
-@mixin content-show-interaction($cursor) {
-    @if ($cursor == "link") {
+/// Sets the cursor to reflect the kind of content is applies to. Links should
+/// use the traditional pointing hand icon, whereas input elements should use
+/// the default OS cursor, reflecting standard OS input interactions.
+///
+/// @group Content
+///
+/// @parameter {String} $link-or-input - Sets the cursor icon. Can be either `link` or `input`
+///
+/// @example scss
+///  @include content-show-interaction(input);
+///
+/// @see {mixin} content-remove-interaction
+
+
+@mixin content-show-interaction($link-or-input) {
+    @if ($link-or-input == "link") {
         cursor: pointer;
     }
 
-    @else if ($cursor == "input") {
+    @else if ($link-or-input == "input") {
         cursor: default;
     }
 
     @else {
-        @error "`#{$cursor}`" + $meta-invalid-argument
+        @error "`#{$link-or-input}`" + $meta-invalid-argument
         + $meta-invalid-argument-select-either
         + "`link` or `input`";
     }

@@ -11,7 +11,9 @@
 /// @example scss
 ///  @include component-style-reset();
 ///
-/// @link http://www.brucelawson.co.uk/2014/css-all-initial-to-prevent-widgets-inheriting-css-from-a-host-page/ CSS {all: initial} to prevent widgets inheriting CSS from a host page
+/// @see {mixin} component-remove-margin-padding
+///
+/// @link http://www.brucelawson.co.uk/2014/css-all-initial-to-prevent-widgets-inheriting-css-from-a-host-page/ Bruce Lawson: CSS {all: initial} to prevent widgets inheriting CSS from a host page
 
 
 @mixin component-style-reset() {

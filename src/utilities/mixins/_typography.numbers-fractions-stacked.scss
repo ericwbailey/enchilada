@@ -9,7 +9,9 @@
 /// @group Typography
 ///
 /// @example scss
-///  @include typography-numbers-fractions-stacked();
+///  @include typography-numbers-fractions-diagonal;
+///
+/// @see {mixin} typography-numbers-fractions-diagonal
 
 
 @mixin typography-numbers-fractions-stacked() {

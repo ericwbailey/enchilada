@@ -4,6 +4,21 @@
 // ============================================================================
 
 
+/// Hides content from the screen. Can still make visually accessible, retain
+/// computed size, or remove entirely.
+///
+/// @group Content
+///
+/// @parameter {String} $how [visually] - Sets the hiding approach. Can be `visually`, `invisible`, or `remove`
+///
+/// @example scss
+///  @include content-hide(visually);
+///
+/// @see {mixin} content-show
+///
+/// @link http://a11yproject.com/posts/how-to-hide-content/ The A11Y Project: How-to: Hide Content
+
+
 @mixin content-hide($how: visually) {
     // Hide only visually, but have it available for screen readers:
     // http://snook.ca/archives/html_and_css/hiding-content-for-accessibility

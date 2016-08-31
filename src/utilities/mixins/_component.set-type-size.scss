@@ -11,7 +11,8 @@
 /// @example scss
 ///  @include component-set-type-size();
 ///
-/// @link https://css-tricks.com/rems-ems/ Font Size Idea: px at the Root, rem for Components, em for Text Elements
+/// @link https://css-tricks.com/rems-ems/ CSS Tricks: Font Size Idea: px at the Root, rem for Components, em for Text Elements
+/// @link https://www.lullabot.com/articles/scaling-css-components-with-bem-rems-ems Lulabot: Scaling CSS Components with BEM, REMs, & EMs
 
 
 @mixin component-set-type-size() {
