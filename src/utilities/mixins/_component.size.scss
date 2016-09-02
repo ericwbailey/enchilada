@@ -4,38 +4,75 @@
 // ============================================================================
 
 
-/// Specifies a component's height and opt
+/// Specifies a component's height and width, and optionally a different top
+/// margin.
 ///
-/// @group Units
+/// @group Components
 ///
-/// @parameter {Number} $pixels                      - Pixel value to be converted into ems
-/// @parameter {Length} $context [$global-type-size] - The em value that the pixel measurement gets divided by
+/// @parameter {Measurement} $height            - Sets the height of the component
+/// @parameter {Measurement} $width      [100%] - Sets the width of the component
+/// @parameter {Measurement} $top-margin [null] - Optionally sets the top margin using the Modular Scale function
 ///
 /// @example scss
-///  font-size: em(18);
+///  @include component-size(5rem, 50%, 3);
 
 
-@mixin component-size($height, $width: null) {
-    @if (type-of($height) == number)
-    and not (unitless($height)) {
-        height: $height;
-    }
+@mixin component-size(
+    $height,
+    $width: 100%,
+    $top-margin: null) {
 
-    @else {
+    // Validate height
+    @if type-of($height) != number {
         @error "`#{$height}`"
         + $meta-invalid-argument
-        + "Please use a number with a valid CSS unit.";
+        + $meta-invalid-argument-provide
+        + "a valid number.";
     }
 
-    @if ($height != "") and ($width != null)
-    and (type-of($height) == number)
-    and not (unitless($width)) {
-        width: $width;
+    @else if type-of($height) == number
+    and unitless($height) {
+        @error "`#{$height}`"
+        + $meta-invalid-argument
+        + $meta-invalid-argument-provide
+        + "a valid CSS unit.";
     }
 
     @else {
+      height: $height;
+    }
+
+    // Validate width
+    @if type-of($width) != number {
         @error "`#{$width}`"
         + $meta-invalid-argument
-        + "Please use a number with a valid CSS unit.";
+        + $meta-invalid-argument-provide
+        + "a valid number.";
+    }
+
+    @else if type-of($width) == number
+    and unitless($width) {
+        @error "`#{$width}`"
+        + $meta-invalid-argument
+        + $meta-invalid-argument-provide
+        + "a valid CSS unit.";
+    }
+
+    @else {
+      width: $width;
+    }
+
+    // Validate top margin, if present
+    @if $top-margin != null
+    and type-of($top-margin) == number
+    and unitless($top-margin) {
+        margin-top: ms($top-margin, rem);
+    }
+
+    @else {
+        @error "`#{$top-margin}`"
+        + $meta-invalid-argument
+        + $meta-invalid-argument-provide
+        + "a valid number.";
     }
 }
