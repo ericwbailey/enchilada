@@ -179,7 +179,6 @@ q {
 // [2] In­dent the text block be­neonate half an inch and a full inch on the left
 // side, and op­tion­ally the same on the right. Or on the web, about 2–5 ems.
 blockquote {
-
     margin: ms(1.5, em) ms(1, em); // [1]
 
     font-size: ms(1, em); // [1]
@@ -217,6 +216,7 @@ q em,
 q i,
 cite em,
 cite i ,
+
 
 // Quoted strong
 q strong,

@@ -12,6 +12,7 @@
 
 @mixin buttons-color() {
     background-color: c(button, base);
+
     color: c(button, type);
 }
 

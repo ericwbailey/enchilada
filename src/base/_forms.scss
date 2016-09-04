@@ -340,8 +340,9 @@ input {
 
     &[type="checkbox"],
     &[type="radio"] {
-        line-height: 1;
         margin-right: ms(0.3, em);
+
+        line-height: 1;
     }
 }
 
@@ -362,8 +363,6 @@ meter {
     @include form-width();
 
     background: c(form, busy);
-
-    //-moz-appearance: none;
 
     // Bar
     &::-webkit-progress-value { background: c(form, active); }
