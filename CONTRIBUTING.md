@@ -1,5 +1,17 @@
 # Contributing
 
+## Table of Contents
+1. [Before you get started](#before-you-get-started)
+    1. [Code of Conduct](#code-of-conduct)
+    - [Terms of Use](#terms-of-use)
+    - [Labeling](#labeling)
+    - [Templates](#templates)
+    - [GitMagic](#gitmagic)
+- [Submitting Issues](#submitting-issues)
+- [Pull and Feature Requests](#pull-and-feature-requests)
+    1. [Submitting Pull Requests](#submitting-pull-requests) 
+    - [Submitting Feature Requests](#submitting-feature-requests) 
+
 Thanks for getting involved! Please take a moment to review this document in order to make the contribution process easy and effective for everyone involved.
 
 Following these guidelines helps to communicate that you respect the time of the people managing and developing this open source project. In return, they should reciprocate that respect in addressing your issue or assessing patches and features.
@@ -14,7 +26,7 @@ This project adheres to the [Contributor Covenant code of conduct](http://contri
 By submitting code or a feature request, you agree to allow the project owners to license your work under the terms of the [project license](https://github.com/$$githubAuthor/$$githubTitle/blob/master/LICENSE).
 
 ### Labeling
-This project uses labels to help organize and prioritize contributions. The labels are broken into three main types: Type, Status, and Priority.
+This project uses labels to help organize and prioritize contributions. The labels are broken into three main types: **Type**, **Status**, and **Priority**.
 
 When submitting a Bug Report, Pull Request, or Feature Request, please select an appropriate label from each of the three types. Contributions that don't observe this labeling schema are likely to be rejected.
 
@@ -23,13 +35,18 @@ Labels will be updated throughout the submission process to reflect the submissi
 ### Templates
 This project uses templates for Issue and Pull Requests. Following the provided template helps the project maintainers have all the right details up front, which makes addressing feedback easier. 
 
+### GitMagic
+$$githubTitle repo uses [GitMagic](https://gitmagic.io/) to help ensure that contributions are formatted in a way that's easy to work with. All Issues, Pull Requests, and Feature requests must:
+
+- Have a single-line subject that starts in upper case and does not end with a period
+- Must be in progressive tense (ex: "Removing the blue outline")
+
 ## Submitting Issues
 *An Issue is a demonstrable problem that is caused by the code in the repository.*
 
 First, use the [GitHub Issue search](https://github.com/$$githubAuthor/$$githubTitle/issues) to check if the issue has already been reported—then, check if the issue has been fixed. Try to reproduce it using the latest [master branch](https://github.com/$$githubAuthor/$$githubTitle) in the repository. Next, isolate the problem—ideally [create a reduced test case](https://css-tricks.com/reduced-test-cases/) and a live example.
 
 A good Issue report shouldn't leave others needing to chase you up for more information. Please try to be as detailed as possible in your report. What is your environment? What steps will reproduce the issue? What browser(s) and OS versions experience the problem? What would you expect to be the outcome? Any guesses to a possible solution? All these details will help people to fix any potential bugs.
-
 
 ## Pull and Feature Requests
 
