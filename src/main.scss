@@ -132,6 +132,17 @@
 // @import "vendor/pesticide/pesticide";
 // @import "vendor/pesticide/pesticide-depth";
 
+// https://lukyvj.github.io/accecss/
+// Availably colorblindness types:
+// `protanopia`, `protanomaly`, `deuteranopia`, `deuteranomaly`,
+// `tritanopia`, `tritanomaly`, `achromatopsia`, `achromatomal
+// @import "vendor/accecss/accecss.scss";
+// @include accecss(
+//     'html body', // Element
+//     false, // CSS Zone
+//     false, // Grayscale
+//     false // Colorblindness type
+// );
 
 // Base -----------------------------------------------------------------------
 @import
