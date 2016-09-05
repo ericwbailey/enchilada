@@ -57,6 +57,7 @@
 // [1] Needs to be declared after the mixins it invokes
 @import
     "utilities/mixins/component.aspect-ratio",
+    "utilities/mixins/component.centerize",
     "utilities/mixins/component.prevent-jumping",
     "utilities/mixins/component.remove-list-formatting",
     "utilities/mixins/component.remove-margin-padding",
@@ -138,7 +139,7 @@
 // `tritanopia`, `tritanomaly`, `achromatopsia`, `achromatomal
 // @import "vendor/accecss/accecss.scss";
 // @include accecss(
-//     'html body', // Element
+//     "html body", // Element
 //     false, // CSS Zone
 //     false, // Grayscale
 //     false // Colorblindness type

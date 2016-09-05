@@ -49,31 +49,31 @@ $global-border-radius: rem(4) !default;
 // Underlines
 
 /// @group general
-/// @type  Variable
+/// @type  Color
 $global-underline-color: currentColor !default;
 
 /// @group general
-/// @type  Variable
+/// @type  Color
 $global-underline-background-color: c(base, background) !default;
 
 /// @group general
-/// @type  Variable
+/// @type  Measurement
 $global-underline-gap: 0.05em !default;
 
 /// @group general
-/// @type  Variable
+/// @type  Measurement
 $global-underline-gap-minimum: 1.5px !default;
 
 /// @group general
-/// @type  Variable
+/// @type  Number
 $global-underline-opacity: 1 !default;
 
 /// @group general
-/// @type  Variable
+/// @type  Measurement
 $global-underline-position: -0.14em !default;
 
 /// @group general
-/// @type  Variable
+/// @type  Measurement
 $global-underline-size: 0.02em !default;
 
 
@@ -83,6 +83,13 @@ $global-underline-size: 0.02em !default;
 // regardless of whether or not they're declared in the HTML.
 
 // Component
+$toggle-component-align-float-start: false;
+$toggle-component-align-float-end: false;
+$toggle-component-align-float-center: false;
+$toggle-component-align-flex-start: false;
+$toggle-component-align-flex-end: false;
+$toggle-component-align-flex-center: false;
+$toggle-component-centerize: false;
 $toggle-component-remove-list-formatting: false;
 $toggle-component-remove-margin-padding: false;
 $toggle-component-responsify: false;
@@ -90,10 +97,6 @@ $toggle-component-set-type-size: false;
 $toggle-component-style-reset: false;
 
 // Content
-$toggle-content-align-float-start: false;
-$toggle-content-align-float-end: false;
-$toggle-content-align-flex-start: false;
-$toggle-content-align-flex-end: false;
 $toggle-content-clearfix-add: false;
 $toggle-content-clearfix-remove: false;
 $toggle-content-hide-visually: false;

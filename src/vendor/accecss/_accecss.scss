@@ -62,21 +62,20 @@ $path-to-filter: "../../src/vendor/accecss";
 }
 
 
-/// Mixin debug
-/// @include debug(<true:false>, <true:false>, <false:filterName>, <false:elementName>);
-/// Param :
-///        [1]: Specified debug element
-///        [2]: css zone
-///        [3]: Grayscale view
-///        [4]: Colorblind filters **
-///
-/// ** Available filters : `protanopia`, `protanomaly`, `deuteranopia`, `deuteranomaly`, `tritanopia`, `tritanomaly`, `achromatopsia`, `achromatomal
-///
-///
-/// Usage :
-/// `@include accecss(<element:false>, <true:false>, <true:false>, <filterName:false>);`
-///
-/// @group helpers
+// Mixin debug
+// @include debug(<true:false>, <true:false>, <false:filterName>, <false:elementName>);
+// Param :
+//        [1]: Specified debug element
+//        [2]: css zone///        [3]: Grayscale view
+//        [4]: Colorblind filters **
+//
+// ** Available filters : `protanopia`, `protanomaly`, `deuteranopia`, `deuteranomaly`, `tritanopia`, `tritanomaly`, `achromatopsia`, `achromatomal
+//
+//
+// Usage :
+// `@include accecss(<element:false>, <true:false>, <true:false>, <filterName:false>);`
+//
+// @group helpers
 
 @mixin accecss($element: false, $zones: false, $grayscale: false, $cbFilter: false){
 

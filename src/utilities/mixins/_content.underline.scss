@@ -4,32 +4,35 @@
 // ============================================================================
 
 
-/// Creates a thin underline with outlines for the font's descenders. Settings
+$content-underline-color: $global-underline-color;
+$content-underline-background-color: $global-underline-background-color;
+$content-underline-gap: $global-underline-gap;
+$content-underline-gap-minimum: $global-underline-gap-minimum;
+$content-underline-opacity: $global-underline-opacity;
+$content-underline-position: $global-underline-position;
+$content-underline-size: $global-underline-size;
+
+
+/// Creates a thin underline with gaps for the font's descenders. Settings
 /// provide a decent default, tweak as needed. Set state effects (hover, active,
 /// etc.) on a case-by-case basis. See `_links.scss`.
 ///
 /// @group Content
 ///
-/// @parameter {Measurement} $link-or-input - Sets the cursor icon. Can be either `link` or `input`
+/// @parameter {Color}       $color            [$global-underline-color]            - Sets the color of the underline
+/// @parameter {Color}       $background-color [$global-underline-background-color] - Should be set to the component's background color
+/// @parameter {Measurement} $gap              [$global-underline-gap]              - Sets the stroke outline size
+/// @parameter {Measurement} $gap-minumum      [$global-underline-gap-minimum]      - Sets the minimum outline gap
+/// @parameter {Number}      $opacity          [$global-underline-opacity]          - Sets how much of the background color shows through
+/// @parameter {Measurement} $position         [$global-underline-position]         - Sets the distance of the underline from the text
+/// @parameter {Measurement} $size             [$global-underline-size]             - Sets the thickness of the underline
 ///
 /// @example scss
-///  @include content-show-interaction(input);
+///  @include content-underline();
 ///
-/// @see {mixin} content-remove-interaction
+/// @link https://codepen.io/jonneal/pen/PzGYEE?editors=0100 Decorative Text Underline
 
 
-//
-
-// Mixin Variables
-$content-underline-color: currentColor !default;
-$content-underline-background-color: c(base, background) !default;
-$content-underline-gap: 0.05em !default;
-$content-underline-gap-minimum: 1.5px !default;
-$content-underline-opacity: 1 !default;
-$content-underline-position: -0.14em !default;
-$content-underline-size: 0.02em !default;
-
-// Mixin Logic
 @mixin content-underline(
     $color: $content-underline-color,
     $background-color: $content-underline-background-color,
