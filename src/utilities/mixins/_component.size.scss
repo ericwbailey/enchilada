@@ -9,9 +9,9 @@
 ///
 /// @group Components
 ///
-/// @parameter {Measurement} $height            - Sets the height of the component
-/// @parameter {Measurement} $width      [100%] - Sets the width of the component
-/// @parameter {Measurement} $top-margin [null] - Optionally sets the top margin using the Modular Scale function
+/// @parameter {Measurement} $height               - Sets the height of the component
+/// @parameter {Measurement} $width      [inherit] - Sets the width of the component
+/// @parameter {Measurement} $top-margin [null]    - Optionally sets the top margin using the Modular Scale function
 ///
 /// @example scss
 ///  @include component-size(5rem, 50%, 3);
@@ -19,7 +19,7 @@
 
 @mixin component-size(
     $height,
-    $width: 100%,
+    $width: inherit,
     $top-margin: null
 ) {
 
