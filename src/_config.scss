@@ -46,37 +46,6 @@ $global-type-weight: $font-weight-normal !default;
 $global-border-radius: rem(4) !default;
 
 
-// Underlines
-
-/// @group general
-/// @type  Color
-$global-underline-color: currentColor !default;
-
-/// @group general
-/// @type  Color
-$global-underline-background-color: c(base, background) !default;
-
-/// @group general
-/// @type  Measurement
-$global-underline-gap: 0.05em !default;
-
-/// @group general
-/// @type  Measurement
-$global-underline-gap-minimum: 1.5px !default;
-
-/// @group general
-/// @type  Number
-$global-underline-opacity: 1 !default;
-
-/// @group general
-/// @type  Measurement
-$global-underline-position: -0.14em !default;
-
-/// @group general
-/// @type  Measurement
-$global-underline-size: 0.02em !default;
-
-
 // Toggles --------------------------------------------------------------------
 // Set variables to `true` to generate functional classes as needed. Unlike
 // their source @mixins, generated classes will be added to `main.css`

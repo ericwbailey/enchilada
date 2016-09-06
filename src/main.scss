@@ -56,6 +56,7 @@
 // Mixins ---------------------------------------------------------------------
 // [1] Needs to be declared after the mixins it invokes
 @import
+    "utilities/mixins/component.align",
     "utilities/mixins/component.aspect-ratio",
     "utilities/mixins/component.centerize",
     "utilities/mixins/component.prevent-jumping",
@@ -67,7 +68,6 @@
     "utilities/mixins/component.style-reset",
     "utilities/mixins/component.theme-color",
 
-    "utilities/mixins/content.align",
     "utilities/mixins/content.clearfix",
     "utilities/mixins/content.hide-content",
     "utilities/mixins/content.no-select",

@@ -20,7 +20,8 @@
 @mixin component-size(
     $height,
     $width: 100%,
-    $top-margin: null) {
+    $top-margin: null
+) {
 
     // Validate height
     @if type-of($height) != number {

@@ -115,7 +115,7 @@ label {
         // `<select>` does not support CSS generated content
         &[data-custom-select] {
             &::after {
-                @include content-align(float, end);
+                @include component-align(float, end);
                 @include content-remove-interaction();
                 @include generate-unicode-symbol($forms-custom-select-dropdown-icon);
 
