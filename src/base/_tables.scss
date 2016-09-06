@@ -51,6 +51,8 @@ table {
 
     caption {
         @include typography-align(start);
+
+        margin-bottom: ms(1, em);
     }
 
     // Styles all table rows
@@ -63,6 +65,8 @@ table {
     th,
     td {
         @include table-col-align-text();
+
+        padding: ms(0.25, em);
 
         &[colspan] {
             @include typography-align(center);
@@ -102,7 +106,7 @@ table {
         tr {
 
             td {
-
+                border-top: 1px solid c(base, type);
             }
         }
     }
@@ -112,7 +116,7 @@ table {
         tr {
 
             td {
-
+                border-top: 1px solid c(base, type);
             }
         }
     }
