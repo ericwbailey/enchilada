@@ -36,10 +36,9 @@ Labels will be updated throughout the submission process to reflect the submissi
 This project uses templates for Issue and Pull Requests. Following the provided template helps the project maintainers have all the right details up front, which makes addressing feedback easier. 
 
 ### GitMagic
-$$githubTitle repo uses [GitMagic](https://gitmagic.io/) to help ensure that contributions are formatted in a way that's easy to work with. All Issues, Pull Requests, and Feature requests must:
+$$githubTitle repo uses [GitMagic](https://gitmagic.io/) to help ensure that contributions are consistently formatted in a way that's easy to work with. The rules can be seen here: 
+https://github.com/$$githubAuthor/$$githubTitle/blob/master/contributing.json
 
-- Have a single-line subject that starts in upper case and does not end with a period
-- Must be in progressive tense (ex: "Removing the blue outline")
 
 ## Submitting Issues
 *An Issue is a demonstrable problem that is caused by the code in the repository.*
