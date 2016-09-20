@@ -2,6 +2,7 @@
 .build
 .sass-cache/
 documentation/
+test/
 
 
 ## Generic files to ignore ####################################################
