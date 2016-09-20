@@ -1,7 +1,8 @@
 // Task dependencies
 var gulp = require('gulp');
 
-// [1] Copies all miscellaneous to `.build/`
+
+// [1] Copies all remaining files to `.build/`
 gulp.task('errata', function() {
     return gulp.src([
         './src/browserconfig.xml',

@@ -1,10 +1,13 @@
 // Task dependencies
-var gulp = require('gulp');
+var gulp        = require('gulp'),
+    paths       = require('./paths.js')
+    reportError = require('./report-error.js');
+
 
 // Copies images to `.build/`
-gulp.task('dev-images', function() {
-    return gulp.src('./src/**/*.{bmp,ico,jpg,jpeg,gif,pdf,webp,png,tiff,svg}')
-        .pipe(gulp.dest('.build/'));
+gulp.task('buildImages', function() {
+    return gulp.src(paths.images.src)
+        .pipe(gulp.dest(paths.images.build));
 });
 
 

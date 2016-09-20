@@ -1,10 +1,12 @@
 // Task dependencies
 var gulp        = require('gulp'),
-    browserSync = require('browser-sync');
+    paths       = require('./paths.js'),
+    browsersync = require('browser-sync');
+
 
 // Browsersync task for starting the server
 gulp.task('browsersync', function() {
-    browserSync({
+    browsersync({
         server: {
             baseDir: '.build/',
             index: 'index.html'
@@ -15,6 +17,6 @@ gulp.task('browsersync', function() {
     });
 });
 
-gulp.task('browsersync-reload', function() {
-    browserSync.reload();
+gulp.task('browsersyncReload', function() {
+    browsersync.reload();
 });

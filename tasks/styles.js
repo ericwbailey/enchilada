@@ -1,18 +1,22 @@
 // Task dependencies
 var gulp        = require('gulp'),
+    paths       = require('./paths.js'),
     autoprefix  = require('gulp-autoprefixer'),
-    browserSync = require('browser-sync'),
+    browsersync = require('browser-sync'),
     plumber     = require('gulp-plumber'),
     sass        = require('gulp-sass'),
+    reportError = require('./report-error.js'),
+    size        = require('gulp-filesize'),
     sourcemaps  = require('gulp-sourcemaps');
+
 
 // [1] Compile Sass
 // [2] Autoprefix properties
 // [3] Add soucemaps
 // [4] Refresh changes in the browser
-gulp.task('dev-styles', function () {
-    return gulp.src('./src/**/*.scss')
-        .pipe(plumber())
+gulp.task('buildStyles', function () {
+    return gulp.src(paths.styles.src)
+        .pipe(plumber({ errorHandler: reportError }))
         .pipe(sourcemaps.init())
         .pipe(sass({
             outputStyle: 'compact',
@@ -21,10 +25,21 @@ gulp.task('dev-styles', function () {
         .pipe(autoprefix({
             browsers: ['last 2 versions']
         })) // [2]
+        .pipe(size())
         .pipe(sourcemaps.write()) // [3]
-        .pipe(gulp.dest('.build/styles'))
-        .pipe(browserSync.stream({ match: '**/*.css' })); // [4]
+        .pipe(gulp.dest(paths.styles.build))
+        .pipe(browsersync.stream({ match: '**/*.css' })); // [4]
 });
 
 
-// TODO: PROD styles
+gulp.task('testStyles', function () {
+    return gulp.src(paths.styles.src)
+        .pipe(sass({
+            outputStyle: 'compressed'
+        }))
+        .pipe(autoprefix({
+            browsers: ['last 2 versions']
+        }))
+        .pipe(size())
+        .pipe(gulp.dest(paths.styles.test));
+});
