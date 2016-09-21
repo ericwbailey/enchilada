@@ -1,8 +1,9 @@
 ## Project-specific files and folders #########################################
 .build
 .sass-cache/
+.test/
 documentation/
-test/
+
 
 
 ## Generic files to ignore ####################################################
