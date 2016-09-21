@@ -1,12 +1,18 @@
-// Task dependencies
-var gulp    = require('gulp'),
+// ============================================================================
+// Task
+// Documentation
+// ============================================================================
+var gulp    = require('gulp'),       // http://gulpjs.com/
     paths   = require('./paths.js'),
-    sassdoc = require('sassdoc');
+    sassdoc = require('sassdoc');    // http://sassdoc.com/
 
 
+// Tasks ----------------------------------------------------------------------
+// Generate a Scss styleguide via SassDoc
+// http://sassdoc.com/
 gulp.task('documentStyles', function () {
     var options = {
-        dest: paths.documentation.buildSassdoc,
+        dest: paths.documentation.sassdoc.dest,
         theme: "flippant",
         autofill: ["requires", "content"],
         verbose: true,
@@ -14,6 +20,6 @@ gulp.task('documentStyles', function () {
             alias: true
         },
     };
-    return gulp.src(paths.documentation.srcSassdoc)
+    return gulp.src(paths.documentation.sassdoc.src)
         .pipe(sassdoc(options));
 });

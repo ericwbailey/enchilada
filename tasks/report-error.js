@@ -1,10 +1,14 @@
-// Task dependencies
-var gulp   = require('gulp'),
+// ============================================================================
+// Task
+// Report Error
+// ============================================================================
+var gulp   = require('gulp'),        // http://gulpjs.com/
     paths  = require('./paths.js'),
-    gutil  = require('gulp-util'),
-    notify = require('gulp-notify');
+    gutil  = require('gulp-util'),   // https://www.npmjs.com/package/gulp-util
+    notify = require('gulp-notify'); // https://www.npmjs.com/package/gulp-notify
 
 
+// Tasks ----------------------------------------------------------------------
 module.exports = function(error) {
 	var lineNumber = (error.lineNumber) ? 'LINE ' + error.lineNumber + ' -- ' : '';
 

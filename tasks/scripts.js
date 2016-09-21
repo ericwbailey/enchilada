@@ -1,22 +1,37 @@
-// Task dependencies
-var gulp        = require('gulp'),
+// ============================================================================
+// Task
+// Scripts
+// ============================================================================
+var gulp        = require('gulp'),              // http://gulpjs.com/
     paths       = require('./paths.js'),
-    concat      = require('gulp-concat'),
-    plumber     = require('gulp-plumber'),
     reportError = require('./report-error.js'),
-    size        = require('gulp-filesize'),
-    uglify      = require('gulp-uglify');
+    concat      = require('gulp-concat'),       // https://www.npmjs.com/package/gulp-concat
+    plumber     = require('gulp-plumber'),      // https://www.npmjs.com/package/gulp-plumber
+    size        = require('gulp-filesize'),     // https://www.npmjs.com/package/gulp-filesize
+    uglify      = require('gulp-uglify');       // https://www.npmjs.com/package/gulp-uglify
 
 
-// Copy scripts
+// Tasks ----------------------------------------------------------------------
+// Collect scripts and combine them into one js file
 gulp.task('buildScripts', function () {
     return gulp.src(paths.scripts.src)
         .pipe(plumber({ errorHandler: reportError }))
         .pipe(concat('main.js'))
-        //.pipe(uglify())
-        .pipe(size())
         .pipe(gulp.dest(paths.scripts.build));
 });
 
 
-// TODO: PROD scripts
+// Optimizes scripts and copies them to `./test/scripts/`
+gulp.task('testScripts', function () {
+    return gulp.src(paths.scripts.src)
+        .pipe(concat('main.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest(paths.scripts.test));
+});
+
+
+// Optimizes scripts and copies them to `./test/scripts/`
+gulp.task('deployScripts', function () {
+    return gulp.src(paths.scripts.deploy.src)
+        .pipe(gulp.dest(paths.scripts.deploy.dest));
+});

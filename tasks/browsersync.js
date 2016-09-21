@@ -1,10 +1,13 @@
-// Task dependencies
-var gulp        = require('gulp'),
+// ============================================================================
+// Task
+// BrowserSync
+// ============================================================================
+var gulp        = require('gulp'),         // http://gulpjs.com/
     paths       = require('./paths.js'),
-    browsersync = require('browser-sync');
+    browsersync = require('browser-sync'); // https://www.browsersync.io/
 
 
-// Browsersync task for starting the server
+// Tasks ----------------------------------------------------------------------
 gulp.task('browsersync', function() {
     browsersync({
         server: {

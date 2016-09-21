@@ -1,42 +1,42 @@
-// Task dependencies
-var gulp          = require('gulp'),
+// ============================================================================
+// Task
+// Pages
+// ============================================================================
+var gulp          = require('gulp'),                // http://gulpjs.com/
     paths         = require('./paths.js'),
-    entityconvert = require('gulp-entity-convert');
-    htmlmin       = require('htmlmin'),
-    include       = require('gulp-file-include'),
-    plumber       = require('gulp-plumber'),
-    reportError   = require('./report-error.js');
+    reportError   = require('./report-error.js'),
+    entityconvert = require('gulp-entity-convert'), // https://www.npmjs.com/package/gulp-entity-convert
+    htmlmin       = require('gulp-html-minifier'),  // https://www.npmjs.com/package/gulp-entity-convert
+    include       = require('gulp-file-include'),   // https://www.npmjs.com/package/gulp-file-include
+    plumber       = require('gulp-plumber');        // https://www.npmjs.com/package/gulp-plumber
 
 
+// Tasks ----------------------------------------------------------------------
 gulp.task('buildPages', function() {
-    return gulp.src(paths.pages.src) // [1]
+    return gulp.src(paths.pages.src)
         .pipe(plumber({ errorHandler: reportError }))
         .pipe(include({
             prefix: '@@',
             basepath: '@file'
-        })) // [2]
-        .pipe(entityconvert()) // [3]
+        }))
+        .pipe(entityconvert())
         .pipe(gulp.dest(paths.pages.build));
 });
 
 
 gulp.task('testPages', function() {
-    return gulp.src(paths.pages.src) // [1]
-        .pipe(include({
-            prefix: '@@',
-            basepath: '@file'
-        })) // [2]
+    return gulp.src(paths.pages.test.src)
+        .pipe(entityconvert())
         .pipe(htmlmin({
             collapseBooleanAttributes: true,
             collapseInlineTagWhitespace: true,
             collapseWhitespace: true,
             keepClosingSlash: true,
-            minifyCSS: true,
-            minifyJS: true,
+            processConditionalComments: true,
             removeComments: true,
             removeRedundantAttributes: true,
             sortAttributes: true,
             sortClassName: true
         }))
-        .pipe(gulp.dest(paths.pages.test));
+        .pipe(gulp.dest(paths.pages.test.dest));
 });

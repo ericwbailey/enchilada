@@ -1,15 +1,18 @@
-// Task dependencies
-var gulp        = require('gulp'),
+// ============================================================================
+// Task
+// Styles
+// ============================================================================
+var gulp        = require('gulp'),              // http://gulpjs.com/
     paths       = require('./paths.js'),
-    autoprefix  = require('gulp-autoprefixer'),
-    browsersync = require('browser-sync'),
-    plumber     = require('gulp-plumber'),
-    sass        = require('gulp-sass'),
     reportError = require('./report-error.js'),
-    size        = require('gulp-filesize'),
-    sourcemaps  = require('gulp-sourcemaps');
+    autoprefix  = require('gulp-autoprefixer'), // https://www.npmjs.com/package/gulp-autoprefixer
+    browsersync = require('browser-sync'),      // http://www.browsersync.io/
+    plumber     = require('gulp-plumber'),      // https://www.npmjs.com/package/gulp-plumber
+    sass        = require('gulp-sass'),         // https://www.npmjs.com/package/gulp-sass
+    sourcemaps  = require('gulp-sourcemaps');   // https://www.npmjs.com/package/gulp-sourcemaps
 
 
+// Tasks ----------------------------------------------------------------------
 // [1] Compile Sass
 // [2] Autoprefix properties
 // [3] Add soucemaps
@@ -25,7 +28,6 @@ gulp.task('buildStyles', function () {
         .pipe(autoprefix({
             browsers: ['last 2 versions']
         })) // [2]
-        .pipe(size())
         .pipe(sourcemaps.write()) // [3]
         .pipe(gulp.dest(paths.styles.build))
         .pipe(browsersync.stream({ match: '**/*.css' })); // [4]
@@ -40,6 +42,5 @@ gulp.task('testStyles', function () {
         .pipe(autoprefix({
             browsers: ['last 2 versions']
         }))
-        .pipe(size())
         .pipe(gulp.dest(paths.styles.test));
 });
