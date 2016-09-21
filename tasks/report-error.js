@@ -9,6 +9,7 @@ var gulp   = require('gulp'),        // http://gulpjs.com/
 
 
 // Tasks ----------------------------------------------------------------------
+// - Better error reporting in the console
 module.exports = function(error) {
 	var lineNumber = (error.lineNumber) ? 'LINE ' + error.lineNumber + ' -- ' : '';
 

@@ -8,11 +8,13 @@ var gulp        = require('gulp'),         // http://gulpjs.com/
 
 
 // Tasks ----------------------------------------------------------------------
+// - Launches the site in your default browser
+// - Updates when source files are saved
 gulp.task('browsersync', function() {
     browsersync({
         server: {
-            baseDir: '.build/',
-            index: 'index.html'
+            baseDir: paths.browsersync.basedir,
+            index: paths.browsersync.index
         },
         minify: false,
         notify: false,
@@ -20,6 +22,7 @@ gulp.task('browsersync', function() {
     });
 });
 
+// - Reloads BrowserSync
 gulp.task('browsersyncReload', function() {
     browsersync.reload();
 });

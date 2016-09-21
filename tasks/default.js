@@ -8,18 +8,18 @@ var gulp        = require('gulp'),         // http://gulpjs.com/
 
 
 // Tasks ----------------------------------------------------------------------
-// Default task to be run with `gulp`
+// - Default task to be run with `gulp`
 gulp.task('default', ['build'], function() {
     gulp.watch(paths.styles.watch, ['buildStyles']);
     gulp.watch(paths.pages.watch, ['buildPages']);
-    //gulp.watch('src/js/**/*.js', ['js-dev']);
-    //gulp.watch('src/assets/**/*', ['assets-dev']);
+    gulp.watch(paths.scripts.watch, ['buildScripts']);
     gulp.watch(paths.images.watch, ['buildImages']);
-    gulp.watch('./.build/index.html', ['browsersyncReload']);
+    gulp.watch(paths.browsersync.watch, ['browsersyncReload']);
+    //TODO: Assets gulp.watch('src/assets/**/*', ['assets-dev']);
 });
 
 
-// Deletes all generated files
+// - Deletes all generated files
 gulp.task('clean', function() {
     runSequence(
         'cleanBuild',
@@ -30,7 +30,7 @@ gulp.task('clean', function() {
 });
 
 
-// Copies vendor files
+// - Copies vendor files
 gulp.task('vendor', function() {
     runSequence(
         'vendorJquery'
@@ -38,7 +38,7 @@ gulp.task('vendor', function() {
 });
 
 
-// Generates development site
+// - Generates development site
 gulp.task('build', function() {
     runSequence(
         'cleanBuild',
@@ -48,7 +48,7 @@ gulp.task('build', function() {
         'buildScripts',
         'buildStatic',
         'errata',
-        'buildImages'
-        //'browsersync' // do I need this
+        'buildImages',
+        'browsersync'
     );
 });

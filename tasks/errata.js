@@ -7,7 +7,7 @@ var gulp  = require('gulp'),       //http://gulpjs.com/
 
 
 // Tasks ----------------------------------------------------------------------
-// Copies all remaining files to `.build/`
+// - Copies all remaining files to `.build/`
 gulp.task('errata', function() {
     return gulp.src([
         paths.errata.src + 'browserconfig.xml',
@@ -16,6 +16,7 @@ gulp.task('errata', function() {
         paths.errata.src + 'manifest.json',
         paths.errata.src + 'robots.txt'
     ])
-        .pipe(gulp.dest(paths.errata.build))
-        .pipe(gulp.dest(paths.errata.test));
+        .pipe(gulp.dest(paths.errata.build));
 });
+
+// TODO: test errata

@@ -10,15 +10,14 @@ var gulp        = require('gulp'),           // http://gulpjs.com/
 
 
 // Tasks ----------------------------------------------------------------------
-// [1] Runs Javascript through jshint
-// [2] Displays errors in a easy to parse way
+// - Checks JavaScript for issues
 gulp.task('lintScripts', function() {
     return gulp.src(paths.lint.scripts)
-        .pipe(jshint()) // [1]
-        .pipe(jshint.reporter(stylish)); // [2]
+        .pipe(jshint())
+        .pipe(jshint.reporter(stylish));
 });
 
-
+// - Checks Sass for issues
 gulp.task('lintStyles', function() {
     return gulp.src(paths.lint.styles)
         .pipe(stylelint({

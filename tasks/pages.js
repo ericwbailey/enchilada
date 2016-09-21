@@ -12,6 +12,8 @@ var gulp          = require('gulp'),                // http://gulpjs.com/
 
 
 // Tasks ----------------------------------------------------------------------
+// - Compiles HTML partials
+// - Converts special symbols into valid HTML entities
 gulp.task('buildPages', function() {
     return gulp.src(paths.pages.src)
         .pipe(plumber({ errorHandler: reportError }))
@@ -24,9 +26,9 @@ gulp.task('buildPages', function() {
 });
 
 
+// - Minifies HTML
 gulp.task('testPages', function() {
     return gulp.src(paths.pages.test.src)
-        .pipe(entityconvert())
         .pipe(htmlmin({
             collapseBooleanAttributes: true,
             collapseInlineTagWhitespace: true,

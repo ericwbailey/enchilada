@@ -8,8 +8,7 @@ var gulp    = require('gulp'),       // http://gulpjs.com/
 
 
 // Tasks ----------------------------------------------------------------------
-// Generate a Scss styleguide via SassDoc
-// http://sassdoc.com/
+// - Generate a Scss styleguide via SassDoc
 gulp.task('documentStyles', function () {
     var options = {
         dest: paths.documentation.sassdoc.dest,

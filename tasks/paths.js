@@ -1,4 +1,9 @@
 module.exports = {
+    browsersync: {
+        basedir: './.build/',
+        index: 'index.html',
+        watch: './.build/index.html'
+    },
     clean: {
         build: {
             root: './.build/**',
@@ -38,13 +43,6 @@ module.exports = {
             dest: './docs/images/'
         }
     },
-    styles: {
-        src: './src/main.scss',
-        watch: './src/**/*.scss',
-        build: './.build/',
-        test: './.test/',
-        deploy: './docs/'
-    },
     lint: {
         scripts: ['./src/*.js', '!./src/vendor/**/*.js'],
         styles: './src/**/*.scss'
@@ -64,6 +62,7 @@ module.exports = {
     },
     scripts: {
         src: './src/**/*.js',
+        watch: './src/**/*.js',
         build: './.build/scripts/',
         test: './.test/scripts/',
         deploy: {
@@ -75,6 +74,13 @@ module.exports = {
         src: './src/static/**/*',
         build: './.build/static/',
         test: './.test/static/'
+    },
+    styles: {
+        src: './src/main.scss',
+        watch: './src/**/*.scss',
+        build: './.build/',
+        test: './.test/',
+        deploy: './docs/'
     },
     vendor: {
         jquery: {
