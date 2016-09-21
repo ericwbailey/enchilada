@@ -17,7 +17,7 @@ var gulp        = require('gulp'),              // http://gulpjs.com/
 // - Generate sourcemaps
 // - Compile auditable Sass and report if there are syntax errors
 // - Generate vendor prefixes
-gulp.task('buildStyles', function () {
+gulp.task('build-styles', function () {
     return gulp.src(paths.styles.src)
         .pipe(plumber({ errorHandler: reportError }))
         .pipe(sourcemaps.init())
@@ -37,7 +37,7 @@ gulp.task('buildStyles', function () {
 // - Rewrites CSS according to `.stylelintrc`
 // - Compile optimized Sass
 // - Generate vendor prefixes
-gulp.task('testStyles', function () {
+gulp.task('test-styles', function () {
     return gulp.src(paths.styles.src)
         .pipe(stylefmt())
         .pipe(sass({

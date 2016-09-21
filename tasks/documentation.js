@@ -9,7 +9,7 @@ var gulp    = require('gulp'),       // http://gulpjs.com/
 
 // Tasks ----------------------------------------------------------------------
 // - Generate a Scss styleguide via SassDoc
-gulp.task('documentStyles', function () {
+gulp.task('document-styles', function () {
     var options = {
         dest: paths.documentation.sassdoc.dest,
         theme: "flippant",

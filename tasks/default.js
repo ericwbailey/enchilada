@@ -10,10 +10,10 @@ var gulp        = require('gulp'),         // http://gulpjs.com/
 // Tasks ----------------------------------------------------------------------
 // - Default task to be run with `gulp`
 gulp.task('default', ['build'], function() {
-    gulp.watch(paths.styles.watch, ['buildStyles']);
-    gulp.watch(paths.pages.watch, ['buildPages']);
-    gulp.watch(paths.scripts.watch, ['buildScripts']);
-    gulp.watch(paths.images.watch, ['buildImages']);
+    gulp.watch(paths.styles.watch, ['build-styles']);
+    gulp.watch(paths.pages.watch, ['build-pages']);
+    gulp.watch(paths.scripts.watch, ['build-scripts']);
+    gulp.watch(paths.images.watch, ['build-images']);
     gulp.watch(paths.browsersync.watch, ['browsersyncReload']);
     //TODO: Assets gulp.watch('src/assets/**/*', ['assets-dev']);
 });
@@ -22,10 +22,10 @@ gulp.task('default', ['build'], function() {
 // - Deletes all generated files
 gulp.task('clean', function() {
     runSequence(
-        'cleanBuild',
-        'cleanTest',
-        'cleanDeploy',
-        'cleanDocumentation'
+        'clean-build',
+        'clean-test',
+        'clean-deploy',
+        'clean-documentation'
     );
 });
 
@@ -33,7 +33,7 @@ gulp.task('clean', function() {
 // - Copies vendor files
 gulp.task('vendor', function() {
     runSequence(
-        'vendorJquery'
+        'vendor-jquery'
     );
 });
 
@@ -41,14 +41,20 @@ gulp.task('vendor', function() {
 // - Generates development site
 gulp.task('build', function() {
     runSequence(
-        'cleanBuild',
+        'clean-build',
         'vendor',
-        'buildPages',
-        'buildStyles',
-        'buildScripts',
-        'buildStatic',
+        'build-pages',
+        'build-styles',
+        'build-scripts',
+        'build-static',
         'errata',
-        'buildImages',
+        'build-images',
         'browsersync'
     );
 });
+
+
+// TODO: test
+
+
+// TODO: deploy

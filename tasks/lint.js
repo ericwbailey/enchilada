@@ -11,14 +11,14 @@ var gulp        = require('gulp'),           // http://gulpjs.com/
 
 // Tasks ----------------------------------------------------------------------
 // - Checks JavaScript for issues
-gulp.task('lintScripts', function() {
+gulp.task('lint-scripts', function() {
     return gulp.src(paths.lint.scripts)
         .pipe(jshint())
         .pipe(jshint.reporter(stylish));
 });
 
 // - Checks Sass for issues
-gulp.task('lintStyles', function() {
+gulp.task('lint-styles', function() {
     return gulp.src(paths.lint.styles)
         .pipe(stylelint({
             reporters: [{
