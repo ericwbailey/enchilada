@@ -24,68 +24,68 @@ module.exports = {
     },
     documentation: {
         sassdoc: {
-            src: './src/**/*.scss',
+            source: './source/**/*.scss',
             dest: './documentation/styles'
         }
     },
     errata: {
-        src: './src/',
+        source: './source/',
         build: './.build/',
         test: './.test/'
     },
     images: {
-        src: ['./src/**/*.{bmp,ico,jpg,jpeg,gif,pdf,webp,png,tiff,svg}', '!./src/vendor/**/*', '!./src/static/**/*'],
-        watch: ['./src/**/*.{bmp,ico,jpg,jpeg,gif,pdf,webp,png,tiff,svg}', '!./src/vendor/**/*', '!./src/static/**/*'],
+        source: ['./source/**/*.{bmp,ico,jpg,jpeg,gif,pdf,webp,png,tiff,svg}', '!./source/vendor/**/*', '!./source/static/**/*'],
+        watch: ['./source/**/*.{bmp,ico,jpg,jpeg,gif,pdf,webp,png,tiff,svg}', '!./source/vendor/**/*', '!./source/static/**/*'],
         build: './.build/images/',
         test: './.test/images/',
         deploy: {
-            src: './.test/images/**/*',
+            source: './.test/images/**/*',
             dest: './docs/images/'
         }
     },
     lint: {
-        scripts: ['./src/*.js', '!./src/vendor/**/*.js'],
-        styles: './src/**/*.scss'
+        scripts: ['./source/*.js', '!./source/vendor/**/*.js'],
+        styles: './source/**/*.scss'
     },
     pages: {
-        src: './src/*.html',
-        watch: './src/**/*.html',
+        source: './source/*.html',
+        watch: './source/**/*.html',
         build: './.build/',
         test: {
-            src: './.build/*.html',
+            source: './.build/*.html',
             dest: './.test/',
         },
         deploy: {
-            src: './.test/*.html',
+            source: './.test/*.html',
             dest: './docs/'
         }
     },
     scripts: {
-        src: './src/**/*.js',
-        watch: './src/**/*.js',
+        source: './source/**/*.js',
+        watch: './source/**/*.js',
         build: './.build/scripts/',
         test: './.test/scripts/',
         deploy: {
-            src: './.test/main.js',
+            source: './.test/main.js',
             dest: './docs/scripts/'
         }
     },
     static: {
-        src: './src/static/**/*',
+        source: './source/static/**/*',
         build: './.build/static/',
         test: './.test/static/'
     },
     styles: {
-        src: './src/main.scss',
-        watch: './src/**/*.scss',
+        source: './source/main.scss',
+        watch: './source/**/*.scss',
         build: './.build/',
         test: './.test/',
         deploy: './docs/'
     },
     vendor: {
         jquery: {
-            src: 'node_modules/jquery/dist/jquery.min.js',
-            dest: './src/vendor/jquery/'
+            source: 'node_modules/jquery/dist/jquery.min.js',
+            dest: './source/vendor/jquery/'
         }
     }
 };

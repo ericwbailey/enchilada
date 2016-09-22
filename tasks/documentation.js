@@ -19,6 +19,6 @@ gulp.task('document-styles', false, function () {
             alias: true
         },
     };
-    return gulp.src(paths.documentation.sassdoc.src)
+    return gulp.src(paths.documentation.sassdoc.source)
         .pipe(sassdoc(options));
 });

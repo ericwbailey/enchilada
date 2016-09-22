@@ -10,11 +10,11 @@ var gulp  = require('gulp-help')(require('gulp')), // http://gulpjs.com/
 // - Copies all remaining files to `.build/`
 gulp.task('errata', false, function() {
     return gulp.src([
-        paths.errata.src + 'browserconfig.xml',
-        paths.errata.src + 'crossdomain.xml',
-        paths.errata.src + 'humans.txt',
-        paths.errata.src + 'manifest.json',
-        paths.errata.src + 'robots.txt'
+        paths.errata.source + 'browserconfig.xml',
+        paths.errata.source + 'crossdomain.xml',
+        paths.errata.source + 'humans.txt',
+        paths.errata.source + 'manifest.json',
+        paths.errata.source + 'robots.txt'
     ])
         .pipe(gulp.dest(paths.errata.build));
 });

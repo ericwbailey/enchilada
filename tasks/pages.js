@@ -15,7 +15,7 @@ var gulp          = require('gulp-help')(require('gulp')), // http://gulpjs.com/
 // - Compiles HTML partials
 // - Converts special symbols into valid HTML entities
 gulp.task('build-pages', false, function() {
-    return gulp.src(paths.pages.src)
+    return gulp.src(paths.pages.source)
         .pipe(plumber({ errorHandler: reportError }))
         .pipe(include({
             prefix: '@@',
@@ -28,7 +28,7 @@ gulp.task('build-pages', false, function() {
 
 // - Minifies HTML
 gulp.task('test-pages', false, function() {
-    return gulp.src(paths.pages.test.src)
+    return gulp.src(paths.pages.test.source)
         .pipe(htmlmin({
             collapseBooleanAttributes: true,
             collapseInlineTagWhitespace: true,

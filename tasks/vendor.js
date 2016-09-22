@@ -9,6 +9,6 @@ var gulp  = require('gulp-help')(require('gulp')), // http://gulpjs.com/
 // Tasks ----------------------------------------------------------------------
 // - Copy jQuery from `node_modules/` to `src/vendor/jquery/`
 gulp.task('vendor-jquery', false, function() {
-    return gulp.src(paths.vendor.jquery.src)
+    return gulp.src(paths.vendor.jquery.source)
         .pipe(gulp.dest(paths.vendor.jquery.dest));
 });

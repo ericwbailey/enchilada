@@ -18,7 +18,7 @@ var gulp        = require('gulp-help')(require('gulp')), // http://gulpjs.com/
 // - Compile auditable Sass and report if there are syntax errors
 // - Generate vendor prefixes
 gulp.task('build-styles', false, function () {
-    return gulp.src(paths.styles.src)
+    return gulp.src(paths.styles.source)
         .pipe(plumber({ errorHandler: reportError }))
         .pipe(sourcemaps.init())
         .pipe(sass({
@@ -38,7 +38,7 @@ gulp.task('build-styles', false, function () {
 // - Compile optimized Sass
 // - Generate vendor prefixes
 gulp.task('test-styles', false, function () {
-    return gulp.src(paths.styles.src)
+    return gulp.src(paths.styles.source)
         .pipe(stylefmt())
         .pipe(sass({
             outputStyle: 'compressed'

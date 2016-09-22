@@ -15,7 +15,7 @@ var gulp        = require('gulp-help')(require('gulp')), // http://gulpjs.com/
 // - Collect JavaScript files and combine into one main file
 // - Copy main file to `.build/`
 gulp.task('build-scripts', false, function () {
-    return gulp.src(paths.scripts.src)
+    return gulp.src(paths.scripts.source)
         .pipe(plumber({ errorHandler: reportError }))
         .pipe(concat('main.js'))
         .pipe(gulp.dest(paths.scripts.build));
@@ -25,7 +25,7 @@ gulp.task('build-scripts', false, function () {
 // - Optimizes scripts
 // - Copies them to `.test/scripts/`
 gulp.task('test-scripts', false, function () {
-    return gulp.src(paths.scripts.src)
+    return gulp.src(paths.scripts.source)
         .pipe(concat('main.js'))
         .pipe(uglify())
         .pipe(gulp.dest(paths.scripts.test));
@@ -35,6 +35,6 @@ gulp.task('test-scripts', false, function () {
 // - Optimizes scripts
 // - Copies them to `.test/scripts/`
 gulp.task('deploy-scripts', false, function () {
-    return gulp.src(paths.scripts.deploy.src)
+    return gulp.src(paths.scripts.deploy.source)
         .pipe(gulp.dest(paths.scripts.deploy.dest));
 });
