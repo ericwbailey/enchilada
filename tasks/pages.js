@@ -10,6 +10,7 @@ var gulp          = require('gulp-help')(require('gulp')), // http://gulpjs.com/
     htmlmin       = require('gulp-html-minifier'),         // https://www.npmjs.com/package/gulp-entity-convert
     include       = require('gulp-file-include'),          // https://www.npmjs.com/package/gulp-file-include
     plumber       = require('gulp-plumber');               // https://www.npmjs.com/package/gulp-plumber
+    rev           = require('gulp-rev-append-wc'),         // https://www.npmjs.com/package/gulp-rev-append-wc
 
 
 // Tasks ----------------------------------------------------------------------
@@ -38,5 +39,6 @@ gulp.task('test-pages', help.pages.test, function() {
             sortAttributes: true,
             sortClassName: true
         }))
+        .pipe(rev())
         .pipe(gulp.dest(paths.pages.test.dest));
 });
