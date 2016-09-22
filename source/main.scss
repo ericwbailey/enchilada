@@ -154,21 +154,29 @@
     "base/root",
     "base/html",
     "base/body",
-    "base/global-attributes",
-    "base/links",
-    "base/headings",
-    "base/hr",
-    "base/paragraphs",
-    "base/lists",
-    "base/images",
-    "base/tables",
-    "base/media",
-    "base/embeds",
-    "base/forms",
-    "base/buttons",
-    "base/code",
-    "base/quotes",
-    "base/text-level";
+    "base/global-attributes";
+
+// Elements -------------------------------------------------------------------
+@import
+    "elements/reset",
+    "elements/root",
+    "elements/html",
+    "elements/body",
+    "elements/global-attributes",
+    "elements/links",
+    "elements/headings",
+    "elements/hr",
+    "elements/paragraphs",
+    "elements/lists",
+    "elements/images",
+    "elements/tables",
+    "elements/media",
+    "elements/embeds",
+    "elements/forms",
+    "elements/buttons",
+    "elements/code",
+    "elements/quotes",
+    "elements/text-level";
 
 
 // Layout ---------------------------------------------------------------------
