@@ -1,7 +1,7 @@
 {
     "rules": {
         "at-rule-no-unknown": [true, {
-            "ignoreAtRules": ["at-root", "debug", "each", "else", "error", "extend", "for", "import", "if", "include", "media", "mixin", "warn", "while"]
+            "ignoreAtRules": ["at-root", "debug", "each", "else", "error", "extend", "for", "function", "import", "if", "include", "media", "mixin", "return", "warn", "while"]
         }],
         "at-rule-no-vendor-prefix": [true, {
             "message": "Vendor prefixes are automatically generated (at-rule-no-vendor-prefix)"
