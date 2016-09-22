@@ -45,7 +45,8 @@ module.exports = {
     },
     lint: {
         scripts: ['./source/*.js', '!./source/vendor/**/*.js'],
-        styles: ['./source/**/*.scss', '!./source/base/_reset.scss', '!./source/vendor/**/*']
+        styles: ['./source/**/*.scss', '!./source/base/_reset.scss', '!./source/vendor/**/*'],
+        pages: './source/**/*.html'
     },
     pages: {
         source: './source/*.html',

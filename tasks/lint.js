@@ -5,6 +5,7 @@
 var gulp        = require('gulp-help')(require('gulp')), // http://gulpjs.com/
     help        = require('./help.js'),
     paths       = require('./paths.js'),
+    htmllint    = require('gulp-htmllint'),              // https://www.npmjs.com/package/gulp-htmllint
     jshint      = require('gulp-jshint'),                // https://www.npmjs.com/package/gulp-jshint
     stylelint   = require('gulp-stylelint'),             // https://www.npmjs.com/package/gulp-stylelint
     stylish     = require('jshint-stylish');             // http://gulpjs.com/
@@ -17,6 +18,7 @@ gulp.task('lint-scripts', help.lint.scripts, function() {
         .pipe(jshint.reporter(stylish));
 });
 
+
 gulp.task('lint-styles', help.lint.styles, function() {
     return gulp.src(paths.lint.styles)
         .pipe(stylelint({
@@ -25,4 +27,10 @@ gulp.task('lint-styles', help.lint.styles, function() {
                 console: true
             }]
         }));
+});
+
+
+gulp.task('lint-pages', help.lint.pages, function() {
+    return gulp.src(paths.lint.pages)
+        .pipe(htmllint());
 });

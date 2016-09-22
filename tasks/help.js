@@ -30,7 +30,8 @@ module.exports = {
     lint: {
         parent: '[Parent Task] Checks all code for issues.',
         scripts: '[Child Task] Checks JavaScript for issues.',
-        styles: '[Child Task] Checks Sass for issues.'
+        styles: '[Child Task] Checks Sass for issues.',
+        pages: '[Child Task] HTML for issues.'
     },
     pages: {
         build: '[Child Task] Compiles HTML partials and converts special symbols into valid HTML entities.',
