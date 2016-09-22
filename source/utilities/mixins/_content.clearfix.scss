@@ -18,7 +18,7 @@
 
 @mixin content-clearfix($add-or-remove) {
     @if ($add-or-remove == "add") {
-        &:after {
+        &::after {
             content: "";
             display: table;
             clear: both;
@@ -26,7 +26,7 @@
     }
 
     @else if ($add-or-remove == "remove") {
-        &:after {
+        &::after {
             display: initial;
             clear: none;
         }

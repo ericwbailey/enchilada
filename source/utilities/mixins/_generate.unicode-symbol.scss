@@ -19,7 +19,7 @@
 
 
 @mixin generate-unicode-symbol($symbol: null) {
-    font-family: Arial, sans-serif;
+    font-family: "Arial", sans-serif;
 
     speak: none;
 
