@@ -17,7 +17,9 @@
     "gulp-imagemin": "^3.0.3",
     "gulp-jshint": "^2.0.0",
     "gulp-notify": "^2.2.0",
+    "gulp-npm-script-sync": "^1.1.0",
     "gulp-plumber": "^1.1.0",
+    "gulp-rev-append-wc": "^0.2.0",
     "gulp-sass": "^2.2.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-stylefmt": "^1.0.0",
@@ -34,5 +36,23 @@
     "run-sequence": "^1.2.2",
     "sassdoc": "^2.1.20",
     "sassdoc-theme-flippant": "^0.1.0"
+  },
+  "scripts": {
+    "help": "gulp help",
+    "default": "gulp default",
+    "browsersync": "gulp browsersync",
+    "browsersync-reload": "gulp browsersync-reload",
+    "clean-build": "gulp clean-build",
+    "clean-build-images": "gulp clean-build-images",
+    "clean-test": "gulp clean-test",
+    "clean-test-images": "gulp clean-test-images",
+    "clean-deploy": "gulp clean-deploy",
+    "clean-documentation": "gulp clean-documentation",
+    "clean-documentation-styles": "gulp clean-documentation-styles",
+    "document": "gulp document",
+    "clean": "gulp clean",
+    "lint": "gulp lint",
+    "vendor": "gulp vendor",
+    "build": "gulp build"
   }
 }
