@@ -2,15 +2,16 @@
 // Task
 // BrowserSync
 // ============================================================================
-var gulp        = require('gulp'),         // http://gulpjs.com/
+var gulp        = require('gulp-help')(require('gulp')), // http://gulpjs.com/
+    help        = require('./help.js'),
     paths       = require('./paths.js'),
-    browsersync = require('browser-sync'); // https://www.browsersync.io/
+    browsersync = require('browser-sync');               // https://www.browsersync.io/
 
 
 // Tasks ----------------------------------------------------------------------
 // - Launches the site in your default browser
 // - Updates when source files are saved
-gulp.task('browsersync', function() {
+gulp.task('browsersync', help.browsersync, function() {
     browsersync({
         server: {
             baseDir: paths.browsersync.basedir,
@@ -23,6 +24,6 @@ gulp.task('browsersync', function() {
 });
 
 // - Reloads BrowserSync
-gulp.task('browsersyncReload', function() {
+gulp.task('browsersyncReload', false, function() {
     browsersync.reload();
 });

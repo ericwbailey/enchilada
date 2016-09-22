@@ -2,9 +2,10 @@
 // Task
 // Default
 // ============================================================================
-var gulp        = require('gulp'),         // http://gulpjs.com/
+var gulp        = require('gulp-help')(require('gulp')), // http://gulpjs.com/
+    help        = require('./help.js'),
     paths       = require('./paths.js'),
-    runSequence = require('run-sequence'); // https://www.npmjs.com/package/run-sequence
+    runSequence = require('run-sequence');               // https://www.npmjs.com/package/run-sequence
 
 
 // Tasks ----------------------------------------------------------------------
@@ -20,7 +21,7 @@ gulp.task('default', ['build'], function() {
 
 
 // - Deletes all generated files
-gulp.task('clean', function() {
+gulp.task('clean', help.clean, function() {
     runSequence(
         'clean-build',
         'clean-test',
@@ -31,7 +32,7 @@ gulp.task('clean', function() {
 
 
 // - Copies vendor files
-gulp.task('vendor', function() {
+gulp.task('vendor', help.vendor, function() {
     runSequence(
         'vendor-jquery'
     );
@@ -39,7 +40,7 @@ gulp.task('vendor', function() {
 
 
 // - Generates development site
-gulp.task('build', function() {
+gulp.task('build', help.build, function() {
     runSequence(
         'clean-build',
         'vendor',

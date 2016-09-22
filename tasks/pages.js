@@ -2,19 +2,19 @@
 // Task
 // Pages
 // ============================================================================
-var gulp          = require('gulp'),                // http://gulpjs.com/
+var gulp          = require('gulp-help')(require('gulp')), // http://gulpjs.com/
     paths         = require('./paths.js'),
     reportError   = require('./report-error.js'),
-    entityconvert = require('gulp-entity-convert'), // https://www.npmjs.com/package/gulp-entity-convert
-    htmlmin       = require('gulp-html-minifier'),  // https://www.npmjs.com/package/gulp-entity-convert
-    include       = require('gulp-file-include'),   // https://www.npmjs.com/package/gulp-file-include
-    plumber       = require('gulp-plumber');        // https://www.npmjs.com/package/gulp-plumber
+    entityconvert = require('gulp-entity-convert'),        // https://www.npmjs.com/package/gulp-entity-convert
+    htmlmin       = require('gulp-html-minifier'),         // https://www.npmjs.com/package/gulp-entity-convert
+    include       = require('gulp-file-include'),          // https://www.npmjs.com/package/gulp-file-include
+    plumber       = require('gulp-plumber');               // https://www.npmjs.com/package/gulp-plumber
 
 
 // Tasks ----------------------------------------------------------------------
 // - Compiles HTML partials
 // - Converts special symbols into valid HTML entities
-gulp.task('build-pages', function() {
+gulp.task('build-pages', false, function() {
     return gulp.src(paths.pages.src)
         .pipe(plumber({ errorHandler: reportError }))
         .pipe(include({
@@ -27,7 +27,7 @@ gulp.task('build-pages', function() {
 
 
 // - Minifies HTML
-gulp.task('test-pages', function() {
+gulp.task('test-pages', false, function() {
     return gulp.src(paths.pages.test.src)
         .pipe(htmlmin({
             collapseBooleanAttributes: true,
