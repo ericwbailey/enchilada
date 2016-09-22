@@ -3,6 +3,7 @@
 // Pages
 // ============================================================================
 var gulp          = require('gulp-help')(require('gulp')), // http://gulpjs.com/
+    help          = require('./help.js'),
     paths         = require('./paths.js'),
     reportError   = require('./report-error.js'),
     entityconvert = require('gulp-entity-convert'),        // https://www.npmjs.com/package/gulp-entity-convert
@@ -12,9 +13,7 @@ var gulp          = require('gulp-help')(require('gulp')), // http://gulpjs.com/
 
 
 // Tasks ----------------------------------------------------------------------
-// - Compiles HTML partials
-// - Converts special symbols into valid HTML entities
-gulp.task('build-pages', false, function() {
+gulp.task('build-pages', help.pages.build, function() {
     return gulp.src(paths.pages.source)
         .pipe(plumber({ errorHandler: reportError }))
         .pipe(include({
@@ -26,8 +25,7 @@ gulp.task('build-pages', false, function() {
 });
 
 
-// - Minifies HTML
-gulp.task('test-pages', false, function() {
+gulp.task('test-pages', help.pages.test, function() {
     return gulp.src(paths.pages.test.source)
         .pipe(htmlmin({
             collapseBooleanAttributes: true,

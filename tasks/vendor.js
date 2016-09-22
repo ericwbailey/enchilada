@@ -3,12 +3,12 @@
 // Vendor
 // ============================================================================
 var gulp  = require('gulp-help')(require('gulp')), // http://gulpjs.com/
+    help  = require('./help.js'),
     paths = require('./paths.js');
 
 
 // Tasks ----------------------------------------------------------------------
-// - Copy jQuery from `node_modules/` to `src/vendor/jquery/`
-gulp.task('vendor-jquery', false, function() {
+gulp.task('vendor-jquery', help.vendor.jquery, function() {
     return gulp.src(paths.vendor.jquery.source)
         .pipe(gulp.dest(paths.vendor.jquery.dest));
 });

@@ -3,12 +3,12 @@
 // Errata
 // ============================================================================
 var gulp  = require('gulp-help')(require('gulp')), // http://gulpjs.com/
+    help  = require('./help.js'),
     paths = require('./paths.js');
 
 
 // Tasks ----------------------------------------------------------------------
-// - Copies all remaining files to `.build/`
-gulp.task('errata', false, function() {
+gulp.task('errata', help.errata.parent, function() {
     return gulp.src([
         paths.errata.source + 'browserconfig.xml',
         paths.errata.source + 'crossdomain.xml',

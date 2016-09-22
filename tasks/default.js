@@ -9,19 +9,24 @@ var gulp        = require('gulp-help')(require('gulp')), // http://gulpjs.com/
 
 
 // Tasks ----------------------------------------------------------------------
-// - Default task to be run with `gulp`
 gulp.task('default', ['build'], function() {
     gulp.watch(paths.styles.watch, ['build-styles']);
     gulp.watch(paths.pages.watch, ['build-pages']);
     gulp.watch(paths.scripts.watch, ['build-scripts']);
     gulp.watch(paths.images.watch, ['build-images']);
-    gulp.watch(paths.browsersync.watch, ['browsersyncReload']);
+    gulp.watch(paths.browsersync.watch, ['browsersync-reload']);
     //TODO: Assets gulp.watch('src/assets/**/*', ['assets-dev']);
 });
 
 
-// - Deletes all generated files
-gulp.task('clean', help.clean, function() {
+gulp.task('document', help.document.parent, function() {
+    runSequence(
+        'document-styles'
+    );
+});
+
+
+gulp.task('clean', help.clean.parent, function() {
     runSequence(
         'clean-build',
         'clean-test',
@@ -31,16 +36,22 @@ gulp.task('clean', help.clean, function() {
 });
 
 
-// - Copies vendor files
-gulp.task('vendor', help.vendor, function() {
+gulp.task('lint', help.lint.parent, function() {
+    runSequence(
+        'lint-scripts',
+        'lint-styles'
+    );
+});
+
+
+gulp.task('vendor', help.vendor.parent, function() {
     runSequence(
         'vendor-jquery'
     );
 });
 
 
-// - Generates development site
-gulp.task('build', help.build, function() {
+gulp.task('build', help.build.parent, function() {
     runSequence(
         'clean-build',
         'vendor',

@@ -3,6 +3,7 @@
 // Scripts
 // ============================================================================
 var gulp        = require('gulp-help')(require('gulp')), // http://gulpjs.com/
+    help        = require('./help.js'),
     paths       = require('./paths.js'),
     reportError = require('./report-error.js'),
     concat      = require('gulp-concat'),                // https://www.npmjs.com/package/gulp-concat
@@ -12,29 +13,16 @@ var gulp        = require('gulp-help')(require('gulp')), // http://gulpjs.com/
 
 
 // Tasks ----------------------------------------------------------------------
-// - Collect JavaScript files and combine into one main file
-// - Copy main file to `.build/`
-gulp.task('build-scripts', false, function () {
+gulp.task('build-scripts', help.scripts.build, function () {
     return gulp.src(paths.scripts.source)
         .pipe(plumber({ errorHandler: reportError }))
         .pipe(concat('main.js'))
         .pipe(gulp.dest(paths.scripts.build));
 });
 
-
-// - Optimizes scripts
-// - Copies them to `.test/scripts/`
-gulp.task('test-scripts', false, function () {
+gulp.task('test-scripts', help.scripts.build, function () {
     return gulp.src(paths.scripts.source)
         .pipe(concat('main.js'))
         .pipe(uglify())
         .pipe(gulp.dest(paths.scripts.test));
-});
-
-
-// - Optimizes scripts
-// - Copies them to `.test/scripts/`
-gulp.task('deploy-scripts', false, function () {
-    return gulp.src(paths.scripts.deploy.source)
-        .pipe(gulp.dest(paths.scripts.deploy.dest));
 });

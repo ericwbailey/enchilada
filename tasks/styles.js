@@ -3,6 +3,7 @@
 // Styles
 // ============================================================================
 var gulp        = require('gulp-help')(require('gulp')), // http://gulpjs.com/
+    help        = require('./help.js'),
     paths       = require('./paths.js'),
     reportError = require('./report-error.js'),
     autoprefix  = require('gulp-autoprefixer'),          // https://www.npmjs.com/package/gulp-autoprefixer
@@ -14,10 +15,7 @@ var gulp        = require('gulp-help')(require('gulp')), // http://gulpjs.com/
 
 
 // Tasks ----------------------------------------------------------------------
-// - Generate sourcemaps
-// - Compile auditable Sass and report if there are syntax errors
-// - Generate vendor prefixes
-gulp.task('build-styles', false, function () {
+gulp.task('build-styles', help.styles.build, function () {
     return gulp.src(paths.styles.source)
         .pipe(plumber({ errorHandler: reportError }))
         .pipe(sourcemaps.init())
@@ -34,10 +32,7 @@ gulp.task('build-styles', false, function () {
 });
 
 
-// - Rewrites CSS according to `.stylelintrc`
-// - Compile optimized Sass
-// - Generate vendor prefixes
-gulp.task('test-styles', false, function () {
+gulp.task('test-styles', help.styles.test, function () {
     return gulp.src(paths.styles.source)
         .pipe(stylefmt())
         .pipe(sass({

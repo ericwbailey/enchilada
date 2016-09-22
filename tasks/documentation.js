@@ -3,13 +3,13 @@
 // Documentation
 // ============================================================================
 var gulp    = require('gulp-help')(require('gulp')), // http://gulpjs.com/
+    help    = require('./help.js'),
     paths   = require('./paths.js'),
     sassdoc = require('sassdoc');                    // http://sassdoc.com/
 
 
 // Tasks ----------------------------------------------------------------------
-// - Generate a Scss styleguide via SassDoc
-gulp.task('document-styles', false, function () {
+gulp.task('document-styles', help.document.styles, function () {
     var options = {
         dest: paths.documentation.sassdoc.dest,
         theme: "flippant",
