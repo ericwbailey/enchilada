@@ -8,6 +8,7 @@ var gulp        = require('gulp-help')(require('gulp')), // http://gulpjs.com/
     reportError = require('./report-error.js'),
     autoprefix  = require('gulp-autoprefixer'),          // https://www.npmjs.com/package/gulp-autoprefixer
     browsersync = require('browser-sync'),               // http://www.browsersync.io/
+    changed     = require('gulp-changed'),               // https://www.npmjs.com/package/gulp-changed
     plumber     = require('gulp-plumber'),               // https://www.npmjs.com/package/gulp-plumber
     sass        = require('gulp-sass'),                  // https://www.npmjs.com/package/gulp-sass
     sourcemaps  = require('gulp-sourcemaps'),            // https://www.npmjs.com/package/gulp-sourcemaps
@@ -17,6 +18,7 @@ var gulp        = require('gulp-help')(require('gulp')), // http://gulpjs.com/
 // Tasks ----------------------------------------------------------------------
 gulp.task('build-styles', help.styles.build, function () {
     return gulp.src(paths.styles.source)
+        .pipe(changed(paths.styles.build))
         .pipe(plumber({ errorHandler: reportError }))
         .pipe(sourcemaps.init())
         .pipe(sass({

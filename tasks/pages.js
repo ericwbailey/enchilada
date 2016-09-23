@@ -6,6 +6,7 @@ var gulp          = require('gulp-help')(require('gulp')), // http://gulpjs.com/
     help          = require('./help.js'),
     paths         = require('./paths.js'),
     reportError   = require('./report-error.js'),
+    changed       = require('gulp-changed'),               // https://www.npmjs.com/package/gulp-changed
     entityconvert = require('gulp-entity-convert'),        // https://www.npmjs.com/package/gulp-entity-convert
     htmlmin       = require('gulp-html-minifier'),         // https://www.npmjs.com/package/gulp-entity-convert
     include       = require('gulp-file-include'),          // https://www.npmjs.com/package/gulp-file-include
@@ -16,6 +17,7 @@ var gulp          = require('gulp-help')(require('gulp')), // http://gulpjs.com/
 // Tasks ----------------------------------------------------------------------
 gulp.task('build-pages', help.pages.build, function() {
     return gulp.src(paths.pages.source)
+        .pipe(changed(paths.pages.build))
         .pipe(plumber({ errorHandler: reportError }))
         .pipe(include({
             prefix: '@@',
