@@ -16,14 +16,6 @@ gulp.task('default', ['build'], function() {
     gulp.watch(paths.scripts.watch, ['build-scripts']);
     gulp.watch(paths.images.watch, ['build-images']);
     gulp.watch(paths.browsersync.watch, ['browsersync-reload']);
-    //TODO: Assets gulp.watch('src/assets/**/*', ['assets-dev']);
-});
-
-
-gulp.task('document', help.document.parent, function() {
-    runSequence(
-        'document-styles'
-    );
 });
 
 
@@ -33,6 +25,13 @@ gulp.task('clean', help.clean.parent, function() {
         'clean-test',
         'clean-deploy',
         'clean-documentation'
+    );
+});
+
+
+gulp.task('document', help.document.parent, function() {
+    runSequence(
+        'document-styles'
     );
 });
 
@@ -56,7 +55,7 @@ gulp.task('build', help.build.parent, function() {
     runSequence(
         'clean-build',
         'vendor',
-        'errata',
+        'build-errata',
         'build-pages',
         'build-styles',
         'build-scripts',
@@ -67,12 +66,25 @@ gulp.task('build', help.build.parent, function() {
 });
 
 
-// TODO: test
+gulp.task('test', help.test.parent, function() {
+    runSequence(
+        'clean-test',
+        'vendor',
+        'test-errata',
+        'test-pages',
+        'test-styles',
+        'test-scripts',
+        'test-static',
+        'test-images',
+        'browsersync'
+    );
+});
 
 
-// TODO: deploy
-
-
+gulp.task('deploy', help.deploy.parent, function() {
+    return gulp.src(paths.deploy.source)
+        .pipe(gulp.dest(paths.deploy.dest));
+});
 
 
 // Turns Gulp tasks into NPM scripts in `package.json`

@@ -12,7 +12,6 @@ var gulp        = require('gulp-help')(require('gulp')), // http://gulpjs.com/
 
 
 // Tasks ----------------------------------------------------------------------
-// - Copies images from `src/` to `.build/`
 gulp.task('build-images', help.images.build, function() {
     return gulp.src(paths.images.source)
         .pipe(changed(paths.images.build))
@@ -20,8 +19,6 @@ gulp.task('build-images', help.images.build, function() {
 });
 
 
-// - Optimizes images
-// - Copies optimized images to `.test/`
 gulp.task('test-images', help.images.test, function() {
     return gulp.src(paths.images.source)
         .pipe(imagemin())

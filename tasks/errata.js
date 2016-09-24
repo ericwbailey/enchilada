@@ -8,15 +8,13 @@ var gulp  = require('gulp-help')(require('gulp')), // http://gulpjs.com/
 
 
 // Tasks ----------------------------------------------------------------------
-gulp.task('errata', help.errata.parent, function() {
-    return gulp.src([
-        paths.errata.source + 'browserconfig.xml',
-        paths.errata.source + 'crossdomain.xml',
-        paths.errata.source + 'humans.txt',
-        paths.errata.source + 'manifest.json',
-        paths.errata.source + 'robots.txt'
-    ])
+gulp.task('build-errata', help.errata.parent, function() {
+    return gulp.src(paths.errata.source)
         .pipe(gulp.dest(paths.errata.build));
 });
 
-// TODO: test errata
+
+gulp.task('test-errata', help.errata.parent, function() {
+    return gulp.src(paths.errata.source)
+        .pipe(gulp.dest(paths.errata.test));
+});

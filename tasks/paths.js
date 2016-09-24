@@ -31,6 +31,10 @@ module.exports = {
             styles: './.test/main.css'
         }
     },
+    deploy: {
+        source: './.test/**/*',
+        dest: './docs/'
+    },
     documentation: {
         sassdoc: {
             source: './source/**/*.scss',
@@ -38,7 +42,13 @@ module.exports = {
         }
     },
     errata: {
-        source: './source/',
+        source: [
+            './source/browserconfig.xml',
+            './source/crossdomain.xml',
+            './source/humans.txt',
+            './source/manifest.json',
+            './source/robots.txt'
+        ],
         build: './.build/',
         test: './.test/'
     },
