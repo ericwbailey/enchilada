@@ -81,7 +81,7 @@ gulp.task('test', help.test.parent, function() {
 });
 
 
-gulp.task('deploy', help.deploy.parent, function() {
+gulp.task('deploy', ['document'], function() {
     return gulp.src(paths.deploy.source)
         .pipe(gulp.dest(paths.deploy.dest));
 });
