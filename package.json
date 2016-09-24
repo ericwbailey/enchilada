@@ -55,6 +55,18 @@
     "clean": "gulp clean",
     "lint": "gulp lint",
     "vendor": "gulp vendor",
-    "build": "gulp build"
+    "build": "gulp build",
+    "clean-build-scripts": "gulp clean-build-scripts",
+    "clean-build-static": "gulp clean-build-static",
+    "clean-build-styles": "gulp clean-build-styles",
+    "clean-test-scripts": "gulp clean-test-scripts",
+    "clean-test-static": "gulp clean-test-static",
+    "clean-test-styles": "gulp clean-test-styles",
+    "clean-deploy-images": "gulp clean-deploy-images",
+    "clean-deploy-scripts": "gulp clean-deploy-scripts",
+    "clean-deploy-static": "gulp clean-deploy-static",
+    "clean-deploy-styles": "gulp clean-deploy-styles",
+    "test": "gulp test",
+    "deploy": "gulp deploy"
   }
 }
