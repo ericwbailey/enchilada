@@ -2,7 +2,7 @@ module.exports = {
     browsersync: {
         basedir: './.build/',
         index: 'index.html',
-        watch: './.build/index.html'
+        watch: './.build/**/*.html'
     },
     clean: {
         build: {
@@ -53,18 +53,29 @@ module.exports = {
         test: './.test/'
     },
     images: {
-        source: ['./source/**/*.{bmp,ico,jpg,jpeg,gif,pdf,webp,png,tiff,svg}', '!./source/vendor/**/*', '!./source/static/**/*'],
-        watch: ['./source/**/*.{bmp,ico,jpg,jpeg,gif,pdf,webp,png,tiff,svg}', '!./source/vendor/**/*', '!./source/static/**/*'],
+        source: [
+            './source/**/*.{bmp,ico,jpg,jpeg,gif,pdf,webp,png,tiff,svg}',
+            '!./source/vendor/**/*',
+            '!./source/static/**/*'
+        ],
+        watch: [
+            './source/**/*.{bmp,ico,jpg,jpeg,gif,pdf,webp,png,tiff,svg}',
+            '!./source/vendor/**/*',
+            '!./source/static/**/*'
+        ],
         build: './.build/images/',
-        test: './.test/images/',
-        deploy: {
-            source: './.test/images/**/*',
-            dest: './docs/images/'
-        }
+        test: './.test/images/'
     },
     lint: {
-        scripts: ['./source/*.js', '!./source/vendor/**/*.js'],
-        styles: ['./source/**/*.scss', '!./source/base/_reset.scss', '!./source/vendor/**/*'],
+        scripts: [
+            './source/*.js',
+            '!./source/vendor/**/*.js'
+        ],
+        styles: [
+            './source/**/*.scss',
+            '!./source/base/_reset.scss',
+            '!./source/vendor/**/*'
+        ],
         pages: './source/**/*.html'
     },
     pages: {
@@ -74,10 +85,6 @@ module.exports = {
         test: {
             source: './.build/*.html',
             dest: './.test/',
-        },
-        deploy: {
-            source: './.test/*.html',
-            dest: './docs/'
         }
     },
     scripts: {
@@ -85,10 +92,6 @@ module.exports = {
         watch: './source/**/*.js',
         build: './.build/',
         test: './.test/',
-        deploy: {
-            source: './.test/main.js',
-            dest: './docs/'
-        }
     },
     static: {
         source: './source/static/**/*',
@@ -99,8 +102,7 @@ module.exports = {
         source: './source/main.scss',
         watch: './source/**/*.scss',
         build: './.build/',
-        test: './.test/',
-        deploy: './docs/'
+        test: './.test/'
     },
     vendor: {
         jquery: {
