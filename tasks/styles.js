@@ -30,7 +30,7 @@ gulp.task('build-styles', help.styles.build, function () {
         }))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(paths.styles.build))
-        .pipe(browsersync.stream({ match: '**/*.css' }));
+        .pipe(browsersync.stream({ match: '**/*.css' })); // TODO: Do I need this
 });
 
 

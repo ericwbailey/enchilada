@@ -22,6 +22,7 @@ gulp.task('build-scripts', help.scripts.build, function () {
         .pipe(gulp.dest(paths.scripts.build));
 });
 
+
 gulp.task('test-scripts', help.scripts.build, function () {
     return gulp.src(paths.scripts.source)
         .pipe(concat('main.js'))

@@ -7,11 +7,17 @@ module.exports = {
     clean: {
         build: {
             root: './.build/**',
-            images: './.build/images/**'
+            images: './.build/images/**',
+            scripts: './.build/main.js',
+            static: './.build/static/**/*',
+            styles: './.build/main.css'
         },
         deploy: {
             root: './docs/**',
-            images: './docs/images/**'
+            images: './docs/images/**',
+            scripts: './docs/main.js',
+            static: './docs/static/**/*',
+            styles: './docs/main.css'
         },
         documentation: {
             root: './documentation/**',
@@ -19,7 +25,10 @@ module.exports = {
         },
         test: {
             root: './.test/**',
-            images: './.test/images/**'
+            images: './.test/images/**',
+            scripts: './.test/main.js',
+            static: './.test/static/**/*',
+            styles: './.test/main.css'
         }
     },
     documentation: {
@@ -64,11 +73,11 @@ module.exports = {
     scripts: {
         source: './source/**/*.js',
         watch: './source/**/*.js',
-        build: './.build/scripts/',
-        test: './.test/scripts/',
+        build: './.build/',
+        test: './.test/',
         deploy: {
             source: './.test/main.js',
-            dest: './docs/scripts/'
+            dest: './docs/'
         }
     },
     static: {

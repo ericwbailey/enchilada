@@ -56,11 +56,11 @@ gulp.task('build', help.build.parent, function() {
     runSequence(
         'clean-build',
         'vendor',
+        'errata',
         'build-pages',
         'build-styles',
         'build-scripts',
         'build-static',
-        'errata',
         'build-images',
         'browsersync'
     );
