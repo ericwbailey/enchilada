@@ -17,6 +17,7 @@ gulp.task('browsersync', help.browsersync.parent, function() {
         },
         minify: false,
         notify: false,
+        proxy: '$$projectURL.dev',
         logPrefix: "$$projectShortTitle"
     });
 });
