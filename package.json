@@ -13,6 +13,7 @@
     "gulp-entity-convert": "0.0.2",
     "gulp-file-include": "^0.13.7",
     "gulp-filesize": "0.0.6",
+    "gulp-git": "^1.11.3",
     "gulp-help": "^1.6.1",
     "gulp-html-minifier": "^0.1.8",
     "gulp-htmlhint": "^0.3.1",
@@ -67,6 +68,7 @@
     "clean-deploy-static": "gulp clean-deploy-static",
     "clean-deploy-styles": "gulp clean-deploy-styles",
     "test": "gulp test",
-    "deploy": "gulp deploy"
+    "deploy": "gulp deploy",
+    "status": "gulp status"
   }
 }
