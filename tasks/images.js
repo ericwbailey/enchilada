@@ -21,6 +21,9 @@ gulp.task('build-images', help.images.build, function() {
 
 gulp.task('test-images', help.images.test, function() {
     return gulp.src(paths.images.source)
-        .pipe(imagemin())
+        .pipe(imagemin({
+            progressive: true,
+            interlaced: true,
+        }))
         .pipe(gulp.dest(paths.images.test));
 });
