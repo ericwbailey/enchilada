@@ -9,11 +9,13 @@ var gulp        = require('gulp-help')(require('gulp')), // http://gulpjs.com/
     changed     = require('gulp-changed'),               // https://www.npmjs.com/package/gulp-changed
     concat      = require('gulp-concat'),                // https://www.npmjs.com/package/gulp-concat
     plumber     = require('gulp-plumber'),               // https://www.npmjs.com/package/gulp-plumber
+    runSequence = require('run-sequence'),               // https://www.npmjs.com/package/run-sequence
     size        = require('gulp-filesize'),              // https://www.npmjs.com/package/gulp-filesize
     uglify      = require('gulp-uglify');                // https://www.npmjs.com/package/gulp-uglify
 
 
 // Tasks ----------------------------------------------------------------------
+// Build
 gulp.task('build-scripts', help.scripts.build, function () {
     return gulp.src(paths.scripts.source)
         .pipe(changed(paths.scripts.build))
@@ -23,9 +25,27 @@ gulp.task('build-scripts', help.scripts.build, function () {
 });
 
 
+// Test
 gulp.task('test-scripts', help.scripts.build, function () {
     return gulp.src(paths.scripts.source)
         .pipe(concat('main.js'))
         .pipe(uglify())
         .pipe(gulp.dest(paths.scripts.test));
+});
+
+
+// Deploy
+gulp.task('deploy-scripts', help.scripts.deploy, function() {
+    return gulp.src(paths.scripts.deploy.source)
+        .pipe(gulp.dest(paths.scripts.deploy.dest))
+});
+
+
+// Parent
+gulp.task('scripts', help.scripts.parent, function() {
+    runSequence(
+        'build-scripts',
+        'test-scripts',
+        'deploy-scripts'
+    );
 });

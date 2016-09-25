@@ -12,9 +12,11 @@ var gulp          = require('gulp-help')(require('gulp')), // http://gulpjs.com/
     include       = require('gulp-file-include'),          // https://www.npmjs.com/package/gulp-file-include
     plumber       = require('gulp-plumber');               // https://www.npmjs.com/package/gulp-plumber
     rev           = require('gulp-rev-append-wc'),         // https://www.npmjs.com/package/gulp-rev-append-wc
+    runSequence   = require('run-sequence');               // https://www.npmjs.com/package/run-sequence
 
 
 // Tasks ----------------------------------------------------------------------
+// Build
 gulp.task('build-pages', help.pages.build, function() {
     return gulp.src(paths.pages.source)
         .pipe(changed(paths.pages.build))
@@ -28,6 +30,7 @@ gulp.task('build-pages', help.pages.build, function() {
 });
 
 
+// Test
 gulp.task('test-pages', help.pages.test, function() {
     return gulp.src(paths.pages.test.source)
         .pipe(htmlmin({
@@ -43,4 +46,21 @@ gulp.task('test-pages', help.pages.test, function() {
         }))
         .pipe(rev())
         .pipe(gulp.dest(paths.pages.test.dest));
+});
+
+
+// Deploy
+gulp.task('deploy-pages', help.pages.deploy, function() {
+    return gulp.src(paths.pages.deploy.source)
+        .pipe(gulp.dest(paths.pages.deploy.dest))
+});
+
+
+// Parent
+gulp.task('pages', help.pages.parent, function() {
+    runSequence(
+        'build-pages',
+        'test-pages',
+        'deploy-pages'
+    );
 });

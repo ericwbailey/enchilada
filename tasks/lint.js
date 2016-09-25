@@ -7,11 +7,13 @@ var gulp        = require('gulp-help')(require('gulp')), // http://gulpjs.com/
     paths       = require('./paths.js'),
     htmlhint    = require("gulp-htmlhint"),              // https://www.npmjs.com/package/gulp-htmlhint
     jshint      = require('gulp-jshint'),                // https://www.npmjs.com/package/gulp-jshint
+    runSequence = require('run-sequence'),               // http://gulpjs.com/
     stylelint   = require('gulp-stylelint'),             // https://www.npmjs.com/package/gulp-stylelint
     stylish     = require('jshint-stylish');             // http://gulpjs.com/
 
 
 // Tasks ----------------------------------------------------------------------
+// Scripts
 gulp.task('lint-scripts', help.lint.scripts, function() {
     return gulp.src(paths.lint.scripts)
         .pipe(jshint())
@@ -19,6 +21,7 @@ gulp.task('lint-scripts', help.lint.scripts, function() {
 });
 
 
+// Styles
 gulp.task('lint-styles', help.lint.styles, function() {
     return gulp.src(paths.lint.styles)
         .pipe(stylelint({
@@ -30,8 +33,18 @@ gulp.task('lint-styles', help.lint.styles, function() {
 });
 
 
+// Pages
 gulp.task('lint-pages', help.lint.pages, function() {
     return gulp.src(paths.lint.pages)
         .pipe(htmlhint('.htmlhintrc'))
         .pipe(htmlhint.reporter());
+});
+
+
+// Parent
+gulp.task('lint', help.lint.parent, function() {
+    runSequence(
+        'lint-scripts',
+        'lint-styles'
+    );
 });

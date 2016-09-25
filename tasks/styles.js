@@ -10,12 +10,14 @@ var gulp        = require('gulp-help')(require('gulp')), // http://gulpjs.com/
     browsersync = require('browser-sync'),               // http://www.browsersync.io/
     changed     = require('gulp-changed'),               // https://www.npmjs.com/package/gulp-changed
     plumber     = require('gulp-plumber'),               // https://www.npmjs.com/package/gulp-plumber
+    runSequence = require('run-sequence');               // https://www.npmjs.com/package/run-sequence
     sass        = require('gulp-sass'),                  // https://www.npmjs.com/package/gulp-sass
     sourcemaps  = require('gulp-sourcemaps'),            // https://www.npmjs.com/package/gulp-sourcemaps
     stylefmt    = require('gulp-stylefmt');              // https://www.npmjs.com/package/gulp-stylefmt
 
 
 // Tasks ----------------------------------------------------------------------
+// Build
 gulp.task('build-styles', help.styles.build, function () {
     return gulp.src(paths.styles.source)
         .pipe(changed(paths.styles.build))
@@ -34,6 +36,7 @@ gulp.task('build-styles', help.styles.build, function () {
 });
 
 
+// Test
 gulp.task('test-styles', help.styles.test, function () {
     return gulp.src(paths.styles.source)
         .pipe(stylefmt())
@@ -44,4 +47,21 @@ gulp.task('test-styles', help.styles.test, function () {
             browsers: ['last 2 versions']
         }))
         .pipe(gulp.dest(paths.styles.test));
+});
+
+
+// Deploy
+gulp.task('deploy-styles', help.styles.deploy, function() {
+    return gulp.src(paths.styles.deploy.source)
+        .pipe(gulp.dest(paths.styles.deploy.dest))
+});
+
+
+// Parent
+gulp.task('styles', help.styles.parent, function() {
+    runSequence(
+        'build-styles',
+        'test-styles',
+        'deploy-styles'
+    );
 });

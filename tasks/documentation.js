@@ -6,6 +6,7 @@ var gulp    = require('gulp-help')(require('gulp')), // http://gulpjs.com/
     help    = require('./help.js'),
     paths   = require('./paths.js'),                 // https://www.npmjs.com/package/gulp-changed
     changed = require('gulp-changed'),               // https://www.npmjs.com/package/gulp-changed
+    runSequence = require('run-sequence'),           // http://gulpjs.com/
     sassdoc = require('sassdoc'),                    // http://sassdoc.com/
 
     optionsSassdoc = {
@@ -20,8 +21,17 @@ var gulp    = require('gulp-help')(require('gulp')), // http://gulpjs.com/
 
 
 // Tasks ----------------------------------------------------------------------
+// Styles
 gulp.task('document-styles', help.document.styles, function () {
     return gulp.src(paths.documentation.sassdoc.source)
         .pipe(changed(paths.documentation.sassdoc.dest))
         .pipe(sassdoc(optionsSassdoc));
+});
+
+
+// Parent
+gulp.task('document', help.document.parent, function() {
+    runSequence(
+        'document-styles'
+    );
 });

@@ -31,10 +31,6 @@ module.exports = {
             styles: './.test/main.css'
         }
     },
-    deploy: {
-        source: './.test/**/*',
-        dest: './docs/'
-    },
     documentation: {
         sassdoc: {
             source: './source/**/*.scss',
@@ -50,7 +46,8 @@ module.exports = {
             './source/robots.txt'
         ],
         build: './.build/',
-        test: './.test/'
+        test: './.test/',
+        deploy: './docs/'
     },
     images: {
         source: [
@@ -64,7 +61,11 @@ module.exports = {
             '!./source/static/**/*'
         ],
         build: './.build/images/',
-        test: './.test/images/'
+        test: './.test/images/',
+        deploy: {
+            source: './.test/images/**/*',
+            dest: './docs/images/'
+        }
     },
     lint: {
         scripts: [
@@ -85,6 +86,10 @@ module.exports = {
         test: {
             source: './.build/*.html',
             dest: './.test/',
+        },
+        deploy: {
+            source: './.test/*.html',
+            dest: './docs/',
         }
     },
     scripts: {
@@ -92,17 +97,29 @@ module.exports = {
         watch: './source/**/*.js',
         build: './.build/',
         test: './.test/',
+        deploy: {
+            source: './.test/*.js',
+            dest: './docs/',
+        }
     },
     static: {
         source: './source/static/**/*',
         build: './.build/static/',
-        test: './.test/static/'
+        test: './.test/static/',
+        deploy: {
+            source: './.test/static/**/*',
+            dest: './docs/static/'
+        }
     },
     styles: {
         source: './source/main.scss',
         watch: './source/**/*.scss',
         build: './.build/',
-        test: './.test/'
+        test: './.test/',
+        deploy: {
+            source: './.test/main.css',
+            dest: './docs/',
+        }
     },
     vendor: {
         jquery: {

@@ -10,6 +10,7 @@ var gulp        = require('gulp-help')(require('gulp')), // http://gulpjs.com/
 
 
 // Tasks ----------------------------------------------------------------------
+// Default
 gulp.task('default', ['build'], function() {
     gulp.watch(paths.styles.watch, ['build-styles']);
     gulp.watch(paths.pages.watch, ['build-pages']);
@@ -19,39 +20,8 @@ gulp.task('default', ['build'], function() {
 });
 
 
-gulp.task('clean', help.clean.parent, function() {
-    runSequence(
-        'clean-build',
-        'clean-test',
-        'clean-deploy',
-        'clean-documentation'
-    );
-});
-
-
-gulp.task('document', help.document.parent, function() {
-    runSequence(
-        'document-styles'
-    );
-});
-
-
-gulp.task('lint', help.lint.parent, function() {
-    runSequence(
-        'lint-scripts',
-        'lint-styles'
-    );
-});
-
-
-gulp.task('vendor', help.vendor.parent, function() {
-    runSequence(
-        'vendor-jquery'
-    );
-});
-
-
-gulp.task('build', help.build.parent, function() {
+// Build
+gulp.task('build', help.default.build, function() {
     runSequence(
         'clean-build',
         'vendor',
@@ -66,7 +36,8 @@ gulp.task('build', help.build.parent, function() {
 });
 
 
-gulp.task('test', help.test.parent, function() {
+// Test
+gulp.task('test', help.default.test, function() {
     runSequence(
         'clean-test',
         'vendor',
@@ -81,9 +52,21 @@ gulp.task('test', help.test.parent, function() {
 });
 
 
-gulp.task('deploy', ['document'], function() {
-    return gulp.src(paths.deploy.source)
-        .pipe(gulp.dest(paths.deploy.dest));
+// Deploy
+gulp.task('deploy', help.default.deploy, function() {
+    runSequence(
+        'clean-deploy',
+        'deploy-errata',
+        'deploy-pages',
+        'deploy-styles',
+        'deploy-scripts',
+        'deploy-static',
+        'deploy-images',
+        'git-add',
+        'git-commit',
+        'git-push',
+        'document'
+    );
 });
 
 

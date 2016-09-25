@@ -106,7 +106,7 @@ gulp.task('clean-deploy-styles', false, function(cb) {
 });
 
 
-// Documentation
+// Document
 gulp.task('clean-documentation', help.clean.root, function(cb) {
     del(paths.clean.documentation.root).then(function() {
         cb();
@@ -117,4 +117,15 @@ gulp.task('clean-documentation-styles', false, function(cb) {
     del(paths.clean.documentation.styles).then(function() {
         cb();
     });
+});
+
+
+// Parent
+gulp.task('clean', help.clean.parent, function() {
+    runSequence(
+        'clean-build',
+        'clean-test',
+        'clean-deploy',
+        'clean-documentation'
+    );
 });
