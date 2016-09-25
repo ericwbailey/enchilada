@@ -26,7 +26,7 @@ gulp.task('build-styles', help.styles.build, function () {
             errLogToConsole: true
         }))
         .pipe(autoprefix({
-            browsers: ['last 2 versions']
+            browsers: ['last 3 versions']
         }))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(paths.styles.build))
