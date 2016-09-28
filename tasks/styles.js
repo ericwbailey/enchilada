@@ -9,6 +9,7 @@ var gulp        = require('gulp-help')(require('gulp')), // http://gulpjs.com/
     autoprefix  = require('gulp-autoprefixer'),          // https://www.npmjs.com/package/gulp-autoprefixer
     browsersync = require('browser-sync'),               // http://www.browsersync.io/
     changed     = require('gulp-changed'),               // https://www.npmjs.com/package/gulp-changed
+    cssnano     = require('gulp-cssnano'),               // https://www.npmjs.com/package/gulp-cssnano
     plumber     = require('gulp-plumber'),               // https://www.npmjs.com/package/gulp-plumber
     runSequence = require('run-sequence');               // https://www.npmjs.com/package/run-sequence
     sass        = require('gulp-sass'),                  // https://www.npmjs.com/package/gulp-sass
@@ -46,6 +47,7 @@ gulp.task('test-styles', help.styles.test, function () {
         .pipe(autoprefix({
             browsers: ['last 2 versions']
         }))
+        .pipe(cssnano())
         .pipe(gulp.dest(paths.styles.test));
 });
 
