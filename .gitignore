@@ -3,6 +3,7 @@
 .sass-cache/
 .test/
 documentation/
+screenshots/
 source/vendor/jquery/jquery.min.js
 
 
