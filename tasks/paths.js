@@ -1,53 +1,60 @@
+const SOURCE_DIR = './source';
+const BUILD_DIR = './.build';
+const TEST_DIR = './.test';
+const DEPLOY_DIR = './docs';
+const DOCUMENTATION_DIR = './docs';
+
+
 module.exports = {
     browsersync: {
-        basedir: './.build/',
+        basedir: BUILD_DIR,
         index: 'index.html',
-        watch: './.build/**/*.html'
+        watch: BUILD_DIR + '/**/*.html'
     },
     clean: {
         build: {
-            root: './.build/**',
-            images: './.build/images/**',
-            scripts: './.build/main.js',
-            static: './.build/static/**/*',
-            styles: './.build/main.css'
+            root: BUILD_DIR + '/**',
+            images: BUILD_DIR + '/images/**',
+            scripts: BUILD_DIR + '/main.js',
+            static: BUILD_DIR + '/static/**/*',
+            styles: BUILD_DIR + '/main.css'
         },
         deploy: {
-            root: './docs/**',
-            images: './docs/images/**',
-            scripts: './docs/main.js',
-            static: './docs/static/**/*',
-            styles: './docs/main.css'
+            root: DEPLOY_DIR + '/**',
+            images: DEPLOY_DIR + '/images/**',
+            scripts: DEPLOY_DIR + '/main.js',
+            static: DEPLOY_DIR + '/static/**/*',
+            styles: DEPLOY_DIR + '/main.css'
         },
         documentation: {
-            root: './documentation/**',
-            styles: './documentation/styles/**',
+            root: DOCUMENTATION_DIR + '/**',
+            styles: DOCUMENTATION_DIR + '/styles/**',
         },
         test: {
-            root: './.test/**',
-            images: './.test/images/**',
-            scripts: './.test/main.js',
-            static: './.test/static/**/*',
-            styles: './.test/main.css'
+            root: TEST_DIR + '/**',
+            images: TEST_DIR + '/images/**',
+            scripts: TEST_DIR + '/main.js',
+            static: TEST_DIR + '/static/**/*',
+            styles: TEST_DIR + '/main.css'
         }
     },
     documentation: {
         sassdoc: {
-            source: './source/**/*.scss',
-            dest: './documentation/styles'
+            source: SOURCE_DIR + '/**/*.scss',
+            dest: DOCUMENTATION_DIR + '/styles'
         }
     },
     errata: {
         source: [
-            './source/browserconfig.xml',
-            './source/crossdomain.xml',
-            './source/humans.txt',
-            './source/manifest.json',
-            './source/robots.txt'
+            SOURCE_DIR + '/browserconfig.xml',
+            SOURCE_DIR + '/crossdomain.xml',
+            SOURCE_DIR + '/humans.txt',
+            SOURCE_DIR + '/manifest.json',
+            SOURCE_DIR + '/robots.txt'
         ],
-        build: './.build/',
-        test: './.test/',
-        deploy: './docs/'
+        build: BUILD_DIR,
+        test: TEST_DIR,
+        deploy: DEPLOY_DIR
     },
     images: {
         source: [
@@ -60,11 +67,11 @@ module.exports = {
             '!./source/vendor/**/*',
             '!./source/static/**/*'
         ],
-        build: './.build/images/',
-        test: './.test/images/',
+        build: BUILD_DIR + '/images/',
+        test: TEST_DIR + '/images/',
         deploy: {
-            source: './.test/images/**/*',
-            dest: './docs/images/'
+            source: TEST_DIR + '/images/**/*',
+            dest: DEPLOY_DIR + '/images/'
         }
     },
     lint: {
@@ -77,54 +84,54 @@ module.exports = {
             '!./source/base/_reset.scss',
             '!./source/vendor/**/*'
         ],
-        pages: './source/**/*.html'
+        pages: SOURCE_DIR + '/**/*.html'
     },
     pages: {
-        source: './source/*.html',
-        watch: './source/**/*.html',
-        build: './.build/',
+        source: SOURCE_DIR + '/*.html',
+        watch: SOURCE_DIR + '/**/*.html',
+        build: BUILD_DIR,
         test: {
-            source: './.build/*.html',
-            dest: './.test/',
+            source: BUILD_DIR + '/*.html',
+            dest: TEST_DIR,
         },
         deploy: {
-            source: './.test/*.html',
-            dest: './docs/',
+            source: TEST_DIR + '/*.html',
+            dest: DEPLOY_DIR
         }
     },
     scripts: {
-        source: './source/**/*.js',
-        watch: './source/**/*.js',
-        build: './.build/',
-        test: './.test/',
+        source: SOURCE_DIR + '/**/*.js',
+        watch: SOURCE_DIR + '/**/*.js',
+        build: BUILD_DIR,
+        test: TEST_DIR,
         deploy: {
-            source: './.test/*.js',
-            dest: './docs/',
+            source: TEST_DIR + '/*.js',
+            dest: DEPLOY_DIR
         }
     },
     static: {
-        source: './source/static/**/*',
-        build: './.build/static/',
-        test: './.test/static/',
+        source: SOURCE_DIR + '/static/**/*',
+        build: BUILD_DIR + '/static/',
+        test: TEST_DIR + '/static/',
         deploy: {
-            source: './.test/static/**/*',
-            dest: './docs/static/'
+            source: TEST_DIR + '/static/**/*',
+            dest: DEPLOY_DIR + '/static/'
         }
     },
     styles: {
-        source: './source/main.scss',
-        watch: './source/**/*.scss',
-        build: './.build/',
-        test: './.test/',
+        source: SOURCE_DIR + '/main.scss',
+        watch: SOURCE_DIR + '/**/*.scss',
+        build: BUILD_DIR,
+        test: TEST_DIR,
         deploy: {
-            source: './.test/main.css',
-            dest: './docs/',
+            source: TEST_DIR + '/main.css',
+            dest: DEPLOY_DIR
         }
     },
     vendor: {
         jquery: {
             source: 'node_modules/jquery/dist/jquery.min.js',
-            dest: './source/vendor/jquery/'
+            dest: SOURCE_DIR + '/vendor/jquery/'
         }
     }
 };
