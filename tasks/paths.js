@@ -56,6 +56,14 @@ module.exports = {
         test: TEST_DIR,
         deploy: DEPLOY_DIR
     },
+    icons: {
+        source: [
+            SOURCE_DIR + '/**/icon-*.svg',
+            '!' + SOURCE_DIR + '/vendor/**/*',
+            '!' + SOURCE_DIR + '/static/**/*'
+        ],
+        dest: SOURCE_DIR + '/elements/'
+    },
     images: {
         source: [
             SOURCE_DIR + '/**/*.{bmp,ico,jpg,jpeg,gif,pdf,webp,png,tiff,svg}',
