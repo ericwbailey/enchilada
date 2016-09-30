@@ -22,6 +22,9 @@ module.exports = {
         test: '[Child Task] Copies all remaining files to `.test/`.',
         deploy: '[Child Task] Copies all remaining files to `docs/`.'
     },
+    icons: {
+        parent: '[Parent Task] Generates the SVG icon sprite. Requires all icons to have an `icon-` prefix.'
+    },
     images: {
         parent: '[Parent Task] Processes and copies images to `.build/`, `.test/`, and `docs/`.',
         build: '[Child Task] Copies images to `.build/`.',

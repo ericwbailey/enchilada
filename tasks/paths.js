@@ -58,14 +58,16 @@ module.exports = {
     },
     images: {
         source: [
-            './source/**/*.{bmp,ico,jpg,jpeg,gif,pdf,webp,png,tiff,svg}',
-            '!./source/vendor/**/*',
-            '!./source/static/**/*'
+            SOURCE_DIR + '/**/*.{bmp,ico,jpg,jpeg,gif,pdf,webp,png,tiff,svg}',
+            '!' + SOURCE_DIR + '/vendor/**/*',
+            '!' + SOURCE_DIR + '/static/**/*',
+            '!' + SOURCE_DIR + '/**/icon-*.svg'
         ],
         watch: [
-            './source/**/*.{bmp,ico,jpg,jpeg,gif,pdf,webp,png,tiff,svg}',
-            '!./source/vendor/**/*',
-            '!./source/static/**/*'
+            SOURCE_DIR + '/**/*.{bmp,ico,jpg,jpeg,gif,pdf,webp,png,tiff,svg}',
+            '!' + SOURCE_DIR + '/vendor/**/*',
+            '!' + SOURCE_DIR + '/static/**/*',
+            '!' + SOURCE_DIR + '/**/icon-*.svg'
         ],
         build: BUILD_DIR + '/images/',
         test: TEST_DIR + '/images/',
@@ -76,13 +78,13 @@ module.exports = {
     },
     lint: {
         scripts: [
-            './source/*.js',
-            '!./source/vendor/**/*.js'
+            SOURCE_DIR + '/*.js',
+            '!' + SOURCE_DIR + '/vendor/**/*.js'
         ],
         styles: [
-            './source/**/*.scss',
-            '!./source/base/_reset.scss',
-            '!./source/vendor/**/*'
+            SOURCE_DIR + '/**/*.scss',
+            '!' + SOURCE_DIR + '/base/_reset.scss',
+            '!' + SOURCE_DIR + '/vendor/**/*'
         ],
         pages: SOURCE_DIR + '/**/*.html'
     },
