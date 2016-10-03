@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "accessible-html-content-patterns": "^0.1.0",
     "browser-sync": "^2.12.3",
     "del": "^2.2.0",
     "family.scss": "^1.0.8",
