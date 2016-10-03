@@ -22,9 +22,6 @@ module.exports = {
         test: '[Child Task] Copies all remaining files to `.test/`.',
         deploy: '[Child Task] Copies all remaining files to `docs/`.'
     },
-    icons: {
-        parent: '[Parent Task] Generates the SVG icon sprite. Requires all icons to have an `icon-` prefix.'
-    },
     images: {
         parent: '[Parent Task] Processes and copies images to `.build/`, `.test/`, and `docs/`.',
         build: '[Child Task] Copies images to `.build/`.',
@@ -48,6 +45,9 @@ module.exports = {
         build: '[Child Task] Collects JavaScript files and combine into one main file.',
         test: '[Child Task] Optimizes combined JavaScript.',
         deploy: '[Child Task] Copies the optimized and combined JavaScript to `docs/`.'
+    },
+    sprites: {
+        parent: '[Parent Task] Generates the SVG icon sprite. Requires all icons to have an `icon-` prefix.'
     },
     static: {
         parent: '[Parent Task] Copies static files and subfolders to `.build/`, `.test/`, and `docs/`.',
