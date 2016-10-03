@@ -146,7 +146,7 @@ module.exports = {
         },
         accessiblehtml: {
             source: VENDOR_DIR + '/accessible-html-content-patterns/docs/index.html',
-            dest: SOURCE_DIR + 'foo/bar/'
+            dest: SOURCE_DIR
         }
     }
 };
