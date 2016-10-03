@@ -3,6 +3,7 @@ const BUILD_DIR = './.build';
 const TEST_DIR = './.test';
 const DEPLOY_DIR = './docs';
 const DOCUMENTATION_DIR = './docs';
+const VENDOR_DIR = 'node_modules';
 
 
 module.exports = {
@@ -55,14 +56,6 @@ module.exports = {
         build: BUILD_DIR,
         test: TEST_DIR,
         deploy: DEPLOY_DIR
-    },
-    icons: {
-        source: [
-            SOURCE_DIR + '/**/icon-*.svg',
-            '!' + SOURCE_DIR + '/vendor/**/*',
-            '!' + SOURCE_DIR + '/static/**/*'
-        ],
-        dest: SOURCE_DIR + '/elements/'
     },
     images: {
         source: [
@@ -119,6 +112,14 @@ module.exports = {
             dest: DEPLOY_DIR
         }
     },
+    sprites: {
+        source: [
+            SOURCE_DIR + '/**/icon-*.svg',
+            '!' + SOURCE_DIR + '/vendor/**/*',
+            '!' + SOURCE_DIR + '/static/**/*'
+        ],
+        dest: SOURCE_DIR + '/elements/'
+    },
     static: {
         source: SOURCE_DIR + '/static/**/*',
         build: BUILD_DIR + '/static/',
@@ -140,8 +141,12 @@ module.exports = {
     },
     vendor: {
         jquery: {
-            source: 'node_modules/jquery/dist/jquery.min.js',
+            source: VENDOR_DIR + '/jquery/dist/jquery.min.js',
             dest: SOURCE_DIR + '/vendor/jquery/'
+        },
+        accessiblehtml: {
+            source: VENDOR_DIR + '/accessible-html-content-patterns/docs/index.html',
+            dest: SOURCE_DIR + 'foo/bar/'
         }
     }
 };
