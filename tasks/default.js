@@ -30,7 +30,7 @@ gulp.task('build', help.default.build, function() {
         'build-styles',
         'build-scripts',
         'build-static',
-        'icon-sprite',
+        'build-sprites',
         'build-images',
         'browsersync'
     );
