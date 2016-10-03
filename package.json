@@ -1,7 +1,4 @@
 {
-  "dependencies": {
-    "normalize.css": "^4.2.0"
-  },
   "devDependencies": {
     "browser-sync": "^2.12.3",
     "del": "^2.2.0",
@@ -39,6 +36,7 @@
     "jshint": "^2.9.2",
     "jshint-stylish": "^2.1.0",
     "mappy-breakpoints": "^0.2.3",
+    "normalize.css": "^4.2.0",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.2.2",
     "sassdoc": "^2.1.20",
