@@ -10,13 +10,13 @@ var gulp     = require('gulp-help')(require('gulp')), // http://gulpjs.com/
 
 
 // Tasks ----------------------------------------------------------------------
-gulp.task('icon-sprite', help.icons.parent, function() {
-    return gulp.src(paths.icons.source)
+gulp.task('build-sprites', help.sprites.parent, function() {
+    return gulp.src(paths.sprites.source)
         .pipe(svgstore({
             inlineSvg: true
         }))
         .pipe(rename({
             basename: 'icon-sprite'
         }))
-        .pipe(gulp.dest(paths.icons.dest))
+        .pipe(gulp.dest(paths.sprites.dest))
 });
