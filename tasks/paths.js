@@ -87,11 +87,11 @@ module.exports = {
             '!' + SOURCE_DIR + '/base/_reset.scss',
             '!' + SOURCE_DIR + '/vendor/**/*'
         ],
-        pages: SOURCE_DIR + '/**/*.html'
+        pages: SOURCE_DIR + '/**/*.hbs'
     },
     pages: {
-        source: SOURCE_DIR + '/*.html',
-        watch: SOURCE_DIR + '/**/*.html',
+        source: SOURCE_DIR + '/*.hbs',
+        watch: SOURCE_DIR + '/**/*.hbs',
         build: BUILD_DIR,
         test: {
             source: BUILD_DIR + '/*.html',
@@ -114,7 +114,7 @@ module.exports = {
     },
     sprites: {
         source: [
-            SOURCE_DIR + '/**/icon-*.svg',
+            SOURCE_DIR + '/**/sprite-*.svg',
             '!' + SOURCE_DIR + '/vendor/**/*',
             '!' + SOURCE_DIR + '/static/**/*'
         ],
