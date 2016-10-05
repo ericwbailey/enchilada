@@ -13,6 +13,8 @@
     "gulp-file-include": "^0.13.7",
     "gulp-filesize": "0.0.6",
     "gulp-git": "^1.11.3",
+    "gulp-gm": "0.0.8",
+    "gulp-hb": "^5.1.4",
     "gulp-help": "^1.6.1",
     "gulp-html-minifier": "^0.1.8",
     "gulp-htmlhint": "^0.3.1",
