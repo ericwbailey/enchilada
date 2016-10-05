@@ -5,32 +5,32 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<!-- @@include('meta/description/title.html')
-@@include('meta/description/description.html')
-@@include('meta/description/author.html') -->
+{{>meta/description/title}}
+{{>meta/description/description}}
+{{>meta/description/author}}
 
-<!-- @@include('meta/styles/main.html') -->
 {{>meta/styles/main}}
-<!-- @@include('vendor/modernizr/modernizr.html')
-@@include('meta/icons-and-theming/icons-and-theming.html')
+{{>vendor/modernizr/modernizr}}
+{{>meta/icons-and-theming/icons-and-theming}}
 
-@@include('meta/social-media/facebook.html')
-@@include('meta/social-media/twitter.html')
-@@include('meta/social-media/google-plus.html') -->
+{{>meta/social-media/facebook}}
+{{>meta/social-media/twitter}}
+{{>meta/social-media/google-plus}}
+
 </head>
 <body>
+
 <!-- Start of Icon Sprite -->
 <div class="icon-sprite">
-<!-- @@include('elements/icon-sprite.svg') -->
+{{>elements/icon-sprite}}
 </div>
 <!-- End of Icon Sprite -->
 
-<!-- @@include('objects/o-browserupgrade/o-browserupgrade.html') -->
+{{>objects/o-browserupgrade/o-browserupgrade}}
 
 <main>
 
 <h1>hi hello screenshot test</h1>
-{{>objects/test}}
 <h1 style="color:red;">
     the bird says {{content.animals.bird}}
 </h1>
@@ -42,8 +42,10 @@
 </p>
 
 </main>
-<!-- @@include('meta/scripts/main.html')
-@@include('meta/scripts/plugins.html')
-@@include('meta/analytics/google-analytics.html') -->
+
+{{>meta/scripts/main}}
+{{>meta/scripts/plugins}}
+{{>meta/analytics/google-analytics}}
+
 </body>
 </html>
