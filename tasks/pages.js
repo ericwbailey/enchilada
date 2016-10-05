@@ -8,24 +8,30 @@ var gulp          = require('gulp-help')(require('gulp')), // http://gulpjs.com/
     reportError   = require('./report-error.js'),
     changed       = require('gulp-changed'),               // https://www.npmjs.com/package/gulp-changed
     entityconvert = require('gulp-entity-convert'),        // https://www.npmjs.com/package/gulp-entity-convert
+    hb            = require('gulp-hb'),                    // https://www.npmjs.com/package/gulp-hb
     htmlmin       = require('gulp-html-minifier'),         // https://www.npmjs.com/package/gulp-entity-convert
-    include       = require('gulp-file-include'),          // https://www.npmjs.com/package/gulp-file-include
-    plumber       = require('gulp-plumber');               // https://www.npmjs.com/package/gulp-plumber
-    rev           = require('gulp-rev-append-wc'),         // https://www.npmjs.com/package/gulp-rev-append-wc
+    plumber       = require('gulp-plumber'),               // https://www.npmjs.com/package/gulp-plumber
+    rename        = require("gulp-rename"),                // https://www.npmjs.com/package/gulp-rename
     runSequence   = require('run-sequence');               // https://www.npmjs.com/package/run-sequence
 
 
 // Tasks ----------------------------------------------------------------------
 // Build
 gulp.task('build-pages', help.pages.build, function() {
+
+    var hbstream = hb()
+        .partials(paths.pages.partials)
+        .data(paths.pages.content)
+        .data({timestamp: Date.now()})
+
     return gulp.src(paths.pages.source)
         .pipe(changed(paths.pages.build))
         .pipe(plumber({ errorHandler: reportError }))
-        .pipe(include({
-            prefix: '@@',
-            basepath: '@file'
-        }))
+        .pipe(hbstream)
         .pipe(entityconvert())
+        .pipe(rename({
+            extname: '.html'
+        }))
         .pipe(gulp.dest(paths.pages.build));
 });
 
@@ -44,7 +50,6 @@ gulp.task('test-pages', help.pages.test, function() {
             sortAttributes: true,
             sortClassName: true
         }))
-        .pipe(rev())
         .pipe(gulp.dest(paths.pages.test.dest));
 });
 
