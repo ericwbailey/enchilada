@@ -114,7 +114,7 @@ module.exports = {
     },
     sprites: {
         source: [
-            SOURCE_DIR + '/**/sprite-*.svg',
+            SOURCE_DIR + '/**/icon-*.svg',
             '!' + SOURCE_DIR + '/vendor/**/*',
             '!' + SOURCE_DIR + '/static/**/*'
         ],

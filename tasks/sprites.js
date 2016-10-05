@@ -16,7 +16,8 @@ gulp.task('build-sprites', help.sprites.parent, function() {
             inlineSvg: true
         }))
         .pipe(rename({
-            basename: 'icon-sprite'
+            basename: 'icon-sprite',
+            extname: '.hbs'
         }))
         .pipe(gulp.dest(paths.sprites.dest))
 });
