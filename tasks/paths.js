@@ -104,6 +104,12 @@ module.exports = {
             dest: DEPLOY_DIR
         }
     },
+    responsify: {
+        source: {
+            jpgs: SOURCE_DIR + '/**/*-fullsize.{jpg,jpeg}',
+            pngs: SOURCE_DIR + '/**/*-fullsize.png'
+        }
+    },
     scripts: {
         source: SOURCE_DIR + '/**/*.js',
         watch: SOURCE_DIR + '/**/*.js',

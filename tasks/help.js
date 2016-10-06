@@ -40,6 +40,11 @@ module.exports = {
         test: '[Child Task] Minifies the compiled HTML.',
         deploy: '[Child Task] Copies the minified and compiled HTML to `docs/`.'
     },
+    responsify: {
+        parent: '[Parent Task] Takes images that end with `-fullwidth` and generates different sizes for use with responsive images.',
+        jpgs: '[Child Task] Generates JPG responsive images.',
+        pngs: '[Child Task] Generates PNG responsive images.'
+    },
     scripts: {
         parent: '[Parent Task] Processes and copies scripts to `.build/`, `.test/`, and `docs/`.',
         build: '[Child Task] Collects JavaScript files and combine into one main file.',

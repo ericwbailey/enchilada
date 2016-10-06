@@ -30,6 +30,7 @@ gulp.task('build', help.default.build, function() {
         'build-styles',
         'build-scripts',
         'build-static',
+        'responsify-images',
         'build-sprites',
         'build-images',
         'browsersync'
