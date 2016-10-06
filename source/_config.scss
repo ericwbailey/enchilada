@@ -6,6 +6,16 @@
 // Global ---------------------------------------------------------------------
 // Set the base properties and modular scale.
 
+// Grid
+
+/// @group general
+/// @type  Measurement
+$global-grid-gutter: 0.5em !default;
+
+/// @group general
+/// @type  Measurement
+$global-grid-col-width: 5em !default;
+
 
 // Typography
 
