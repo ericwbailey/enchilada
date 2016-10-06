@@ -10,6 +10,7 @@ var gulp        = require('gulp-help')(require('gulp')), // http://gulpjs.com/
     runSequence = require('run-sequence');               // https://www.npmjs.com/package/run-sequence
 
 
+// https://www.smashingmagazine.com/2015/06/efficient-image-resizing-with-imagemagick/
 function gmFileConfig (gmfile, options) {
     return gmfile.setFormat(options.setFormat || 'jpg'),
            gmfile.resample.apply(gmfile, options.resample || [72, 72]),
