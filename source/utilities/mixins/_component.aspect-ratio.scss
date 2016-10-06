@@ -17,6 +17,7 @@
 ///  @include component-aspect-ratio(16/9);
 ///
 /// @see {mixin} component-responsify
+/// @see {mixin} component-column-buster
 
 
 @mixin component-aspect-ratio($aspect: 16/9, $target: "> *") {
