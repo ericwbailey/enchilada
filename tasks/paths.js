@@ -110,6 +110,10 @@ module.exports = {
             pngs: SOURCE_DIR + '/**/*-fullsize.png'
         }
     },
+    screenshots: {
+        source: DEPLOY_DIR + '/*.html',
+        dest: './screenshots/'
+    },
     scripts: {
         source: SOURCE_DIR + '/**/*.js',
         watch: SOURCE_DIR + '/**/*.js',
