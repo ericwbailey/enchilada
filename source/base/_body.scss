@@ -4,8 +4,6 @@
 
 
 body {
-    @include component-set-type-size();
-
     overflow-x: hidden;
 
     color: c(base, type);
