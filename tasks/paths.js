@@ -31,6 +31,7 @@ module.exports = {
             root: DOCUMENTATION_DIR + '/**',
             styles: DOCUMENTATION_DIR + '/styles/**',
         },
+        screenshots: './screenshots/',
         test: {
             root: TEST_DIR + '/**',
             images: TEST_DIR + '/images/**',

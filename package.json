@@ -70,6 +70,7 @@
     "clean-deploy-scripts": "gulp clean-deploy-scripts",
     "clean-deploy-static": "gulp clean-deploy-static",
     "clean-deploy-styles": "gulp clean-deploy-styles",
+    "clean-screenshots": "gulp clean-screenshots",
     "test": "gulp test",
     "deploy": "gulp deploy",
     "status": "gulp status"
