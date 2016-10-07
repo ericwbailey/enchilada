@@ -1,6 +1,10 @@
 [
   {
     "name": "[Status] Rejected",
+    "color": "#ececec"
+  },
+  {
+    "name": "[Status] Submitted",
     "color": "#fef2c0"
   },
   {
@@ -13,7 +17,7 @@
   },
   {
     "name": "[Status] Abandoned",
-    "color": "#ECECEC"
+    "color": "#ececec"
   },
   {
     "name": "[Status] Accepted",
