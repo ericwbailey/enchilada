@@ -4,6 +4,7 @@
 .test/
 documentation/
 screenshots/
+source/element-patterns.html
 source/vendor/jquery/jquery.min.js
 
 
