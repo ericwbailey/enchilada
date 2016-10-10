@@ -1,4 +1,33 @@
 {
+  "name": "$$projectFullTitle",
+  "description": "$$projectFullDescription",
+  "homepage": "$$projectURL",
+  "version": "0.0.1",
+  "license": "$$projectLicense",
+  "author": {
+    "name": "$$projectAuthorEmail",
+    "email": "$$projectEmail",
+    "url": "$$projectAuthorURL"
+  },
+  "contributors": [
+    { "name": "", "email": "" },
+    { "name": "", "email": "" }
+  ],
+  "repository": {
+    "type": "git",
+      "url": "git://github.com/$$githubAuthor/$$githubTitle.git"
+  },
+  "keywords": [
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "bugs": {
+    "url": "https://github.com/$$githubAuthor/$$githubTitle/issues",
+    "email": "$$projectAuthorEmail"
+  },
   "devDependencies": {
     "accessible-html-content-patterns": "^0.1.0",
     "browser-sync": "^2.12.3",
@@ -45,8 +74,16 @@
   },
   "scripts": {
     "help": "gulp help",
-    "default": "gulp default",
     "browsersync": "gulp browsersync",
+    "build": "gulp build",
+    "clean": "gulp clean",
+    "default": "gulp default",
+    "deploy": "gulp deploy",
+    "document": "gulp document",
+    "lint": "gulp lint",
+    "status": "gulp status",
+    "test": "gulp test",
+    "vendor": "gulp vendor",
     "browsersync-reload": "gulp browsersync-reload",
     "clean-build": "gulp clean-build",
     "clean-build-images": "gulp clean-build-images",
@@ -55,11 +92,6 @@
     "clean-deploy": "gulp clean-deploy",
     "clean-documentation": "gulp clean-documentation",
     "clean-documentation-styles": "gulp clean-documentation-styles",
-    "document": "gulp document",
-    "clean": "gulp clean",
-    "lint": "gulp lint",
-    "vendor": "gulp vendor",
-    "build": "gulp build",
     "clean-build-scripts": "gulp clean-build-scripts",
     "clean-build-static": "gulp clean-build-static",
     "clean-build-styles": "gulp clean-build-styles",
@@ -70,9 +102,6 @@
     "clean-deploy-scripts": "gulp clean-deploy-scripts",
     "clean-deploy-static": "gulp clean-deploy-static",
     "clean-deploy-styles": "gulp clean-deploy-styles",
-    "clean-screenshots": "gulp clean-screenshots",
-    "test": "gulp test",
-    "deploy": "gulp deploy",
-    "status": "gulp status"
+    "clean-screenshots": "gulp clean-screenshots"
   }
 }
