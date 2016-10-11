@@ -9,8 +9,8 @@
     - [GitMagic](#gitmagic)
 - [Submitting Issues](#submitting-issues)
 - [Pull and Feature Requests](#pull-and-feature-requests)
-    1. [Submitting Pull Requests](#submitting-pull-requests) 
-    - [Submitting Feature Requests](#submitting-feature-requests) 
+    1. [Submitting Pull Requests](#submitting-pull-requests)
+    - [Submitting Feature Requests](#submitting-feature-requests)
 
 Thanks for getting involved! Please take a moment to review this document in order to make the contribution process easy and effective for everyone involved.
 
@@ -33,11 +33,10 @@ When submitting a Bug Report, Pull Request, or Feature Request, please select an
 Labels will be updated throughout the submission process to reflect the submission's overall status. For more information, please refer to [this article](https://medium.com/@dave_lunny/sane-github-labels-c5d2e6004b63#.fh462xzfj).
 
 ### Templates
-This project uses templates for Issue and Pull Requests. Following the provided template helps the project maintainers have all the right details up front, which makes addressing feedback easier. 
+This project uses templates for Issue and Pull Requests. Following the provided template helps the project maintainers have all the right details up front, which makes addressing feedback easier.
 
 ### GitMagic
-$$githubTitle repo uses [GitMagic](https://gitmagic.io/) to help ensure that contributions are consistently formatted in a way that's easy to work with. The rules can be seen here: 
-https://github.com/$$githubAuthor/$$githubTitle/blob/master/contributing.json
+$$githubTitle repo uses [GitMagic](https://gitmagic.io/) to help ensure that contributions are consistently formatted in a way that's easy to work with. The rules can be seen [here](https://github.com/$$githubAuthor/$$githubTitle/blob/master/contributing.json):
 
 
 ## Submitting Issues
@@ -54,7 +53,7 @@ A good Issue report shouldn't leave others needing to chase you up for more info
 
 Good Pull Requests, patches, improvements, new features, etc. are a fantastic help. They should remain focused in scope and avoid containing unrelated commits.
 
-When submitting a Pull Request, first use the [GitHub Pull Request search](https://github.com/$$githubAuthor/$$githubTitle/pulls) to check if the request has already been submitted. 
+When submitting a Pull Request, first use the [GitHub Pull Request search](https://github.com/$$githubAuthor/$$githubTitle/pulls) to check if the request has already been submitted.
 
 If it hasn't, please ask first before embarking on any significant Pull Request (e.g. implementing features, refactoring code, porting to a different language), otherwise you risk spending a lot of time working on something that the project's developers might not want to merge into the project.
 
