@@ -10,12 +10,18 @@
     "url": "$$projectAuthorURL"
   },
   "contributors": [
-    { "name": "", "email": "" },
-    { "name": "", "email": "" }
+    {
+      "name": "",
+      "email": ""
+    },
+    {
+      "name": "",
+      "email": ""
+    }
   ],
   "repository": {
     "type": "git",
-      "url": "git://github.com/$$githubAuthor/$$githubTitle.git"
+    "url": "git://github.com/$$githubAuthor/$$githubTitle.git"
   },
   "keywords": [
     "",
