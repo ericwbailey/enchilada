@@ -9,19 +9,36 @@ var gulp        = require('gulp-help')(require('gulp')), // http://gulpjs.com/
 
 
 // Tasks ----------------------------------------------------------------------
-gulp.task('browsersync', help.browsersync.parent, function() {
+// Build
+gulp.task('browsersync-build', help.browsersync.build, function() {
     browsersync({
         server: {
-            baseDir: paths.browsersync.basedir,
+            baseDir: paths.browsersync.basedir.build,
             index: paths.browsersync.index
         },
         minify: false,
         notify: false,
-        logPrefix: "$$githubTitle"
+        logPrefix: "ericbailey.design"
     });
 });
 
-// - Reloads BrowserSync
+
+// Test
+gulp.task('browsersync-test', help.browsersync.test, function() {
+    browsersync({
+        server: {
+            baseDir: paths.browsersync.basedir.test,
+            index: paths.browsersync.index
+        },
+        minify: false,
+        notify: false,
+        browser: ["firefox", "google chrome", "safari", "opera"],
+        logPrefix: "ericbailey.design"
+    });
+});
+
+
+// Reload
 gulp.task('browsersync-reload', help.browsersync.reload, function() {
     browsersync.reload();
 });
