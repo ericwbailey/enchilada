@@ -14,11 +14,11 @@
 
 
 $tracking: (
-    tightest: -(7 / strip-unit($global-type-size)) + em, // 7px
-    tighter:  -(5 / strip-unit($global-type-size)) + em, // 5px
-    tight:    -(3 / strip-unit($global-type-size)) + em, // 3px
-    slight:    (1 / strip-unit($global-type-size)) + em, // 1px
-    loose:     (3 / strip-unit($global-type-size)) + em, // 3px
-    looser:    (5 / strip-unit($global-type-size)) + em, // 5px
-    loosest:   (7 / strip-unit($global-type-size)) + em // 7px
+    tightest: -0.075em,
+    tighter:  -0.05em,
+    tight:    -0.025em,
+    slight:    0.025em,
+    loose:     0.05em,
+    looser:    0.075em,
+    loosest:   0.1em
 );
