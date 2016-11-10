@@ -6,7 +6,7 @@
 // [1] Ensure the page always fills at least the entire height of the viewport
 // [2] Force scrollbars to always be visible to prevent awkward jumps when
 // navigating between path-to-images
-// Overrides smartphone text resizing algorithms:
+// [3] Overrides smartphone text resizing algorithms:
 // https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust
 // [4] Triggers browser hyphenation based off of declared language:
 // http://thenewcode.com/429/Classic-Typography-Effects-Hyphenation
@@ -24,7 +24,7 @@ html {
 
     color: c(base, type);
     direction: $global-type-direction;
-    font-family: $global-type-family;
+    font-family: $font-family-primary-preload; // See Type Loading section below
     font-size: $global-type-size;
     font-weight: $global-type-weight;
     line-height: $global-type-line-height;
@@ -32,6 +32,23 @@ html {
 
     &:lang(en-US) {
          @include typography-hyphenation(); // [4]
+    }
+}
+
+
+// Type loading
+// https://helpx.adobe.com/typekit/using/font-events.html
+.wf {
+    &-loading {
+
+    }
+
+    &-inactive {
+
+    }
+
+    &-active {
+        font-family: $global-type-family;
     }
 }
 
