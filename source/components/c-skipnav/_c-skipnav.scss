@@ -1,0 +1,27 @@
+// ============================================================================
+// Component
+// Skipnav
+// ============================================================================
+
+
+// Component Logic ------------------------------------------------------------
+
+
+
+// Component Styling ----------------------------------------------------------
+.c-skipnav {
+    &__link {
+        @include content-hide(visually);
+
+        opacity: 0;
+
+        transition: opacity animation-duration(short) animation-ease(dialogue);
+
+        // States
+        &:hover,
+        &:focus,
+        &:active {
+            // Style when focused
+        }
+    }
+}
