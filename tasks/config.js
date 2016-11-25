@@ -48,7 +48,7 @@ gulp.task('config-make', function() {
         },
         {
             name: 'projectLanguage',
-            message: 'Project language'
+            message: 'Project language (lang="en-US")'
         },
         {
             name: 'projectLicense',
@@ -68,11 +68,11 @@ gulp.task('config-make', function() {
         },
         {
             name: 'siteTwitter',
-            message: 'Project Twitter handle'
+            message: 'Project Twitter handle (@example)'
         },
         {
             name: 'authorTwitter',
-            message: 'Author Twitter handle'
+            message: 'Author Twitter handle (@example)'
         },
         {
             name: 'jumpListTask',
@@ -96,7 +96,7 @@ gulp.task('config-make', function() {
         },
         {
             name: 'googleAnalyticsID',
-            message: 'Google Analytics ID'
+            message: 'Google Analytics ID (UA-XXXXX-X)'
         }
     ];
 
