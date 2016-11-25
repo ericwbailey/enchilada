@@ -1,1 +1,1 @@
-$$projectAuthor <$$projectEmail>
+{{site.projectAuthor}} <{{site.projectAuthorEmail}}>

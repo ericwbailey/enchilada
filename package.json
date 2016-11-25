@@ -1,13 +1,13 @@
 {
-  "name": "$$projectFullTitle",
-  "description": "$$projectFullDescription",
-  "homepage": "$$projectURL",
+  "name": "{{site.projectFullTitle}}",
+  "description": "{{site.projectFullDescription}}",
+  "homepage": "{{site.projectURL}}",
   "version": "0.0.1",
-  "license": "$$projectLicense",
+  "license": "{{site.projectLicense}}",
   "author": {
-    "name": "$$projectAuthorEmail",
-    "email": "$$projectEmail",
-    "url": "$$projectAuthorURL"
+    "name": "{{site.projectAuthor}}Email",
+    "email": "{{site.projectAuthorEmail}}",
+    "url": "{{site.projectAuthor}}URL"
   },
   "contributors": [
     {
@@ -21,7 +21,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/$$githubAuthor/$$githubTitle.git"
+    "url": "git://github.com/{{site.githubAuthor}}/{{site.githubTitle}}.git"
   },
   "keywords": [
     "",
@@ -31,8 +31,8 @@
     ""
   ],
   "bugs": {
-    "url": "https://github.com/$$githubAuthor/$$githubTitle/issues",
-    "email": "$$projectAuthorEmail"
+    "url": "https://github.com/{{site.githubAuthor}}/{{site.githubTitle}}/issues",
+    "email": "{{site.projectAuthor}}Email"
   },
   "devDependencies": {
     "accessible-html-content-patterns": "^0.1.0",
