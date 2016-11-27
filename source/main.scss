@@ -5,8 +5,9 @@
 
 
 // Order is important!
-// Loads and manages Sass partials. Be sure to use `_config.scss` to set up
-// configure project basics and toggle functional classes.
+// Loads and manages Sass partials. Be sure to use `_config.scss` and
+// `_toggles.scss` to set up configure project basics and toggle functional
+// classes.
 
 
 // Variables ------------------------------------------------------------------
@@ -28,24 +29,30 @@
     "utilities/maps/breakpoints",
     "utilities/maps/colors",
     "utilities/maps/shadows",
+    "utilities/maps/typography.tracking",
     "utilities/maps/units",
     "utilities/maps/z-index";
 
 
 // Config and Toggles ---------------------------------------------------------
 // Use these partials to set global variables and generate functional classes
-// from Sass mixins. Tracking is declared here to take advantage of the
-// global-type-size variable
+// from Sass mixins.
 @import
     "config",
-    "toggles",
-    "utilities/maps/typography.tracking";
+    "toggles";
 
 
 // Imports --------------------------------------------------------------------
 @import
     "utilities/imports/typefaces";
 
+
+// Reset ----------------------------------------------------------------------
+// `normalize.css` fixes inconsistencies across major browsers, then
+// `base/_reset.scss` zeroes out elements and provides some extra defaults.
+@import
+    "../node_modules/normalize.css/normalize", // https://necolas.github.io/normalize.css/
+    "base/reset";
 
 // Functions ------------------------------------------------------------------
 @import
@@ -133,8 +140,7 @@
     "../node_modules/family.scss/source/src/family",       // http://lukyvj.github.io/family.scss/
     "vendor/fault/fault",                                  // https://github.com/jpdevries/fault
     "vendor/fukol-grids/fukol-grids",                      // https://github.com/Heydon/fukol-grids
-    "../node_modules/mappy-breakpoints/mappy-breakpoints", // https://github.com/zellwk/mappy-breakpoints
-    "../node_modules/normalize.css/normalize";             // https://necolas.github.io/normalize.css/
+    "../node_modules/mappy-breakpoints/mappy-breakpoints"; // https://github.com/zellwk/mappy-breakpoints
 
 
 // Modes ----------------------------------------------------------------------
@@ -162,7 +168,6 @@
 
 // Base -----------------------------------------------------------------------
 @import
-    "base/reset",
     "base/root",
     "base/html",
     "base/body",
