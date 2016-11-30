@@ -1,13 +1,13 @@
 {
-  "name": "{{site.projectFullTitle}}",
-  "description": "{{site.projectFullDescription}}",
-  "homepage": "{{site.projectURL}}",
+  "name": "PROJECT TITLE",
+  "description": "PROJECT DESCRIPTION",
+  "homepage": "PROJECT URL",
   "version": "0.0.1",
-  "license": "{{site.projectLicense}}",
+  "license": "PROJECT LICENSE",
   "author": {
-    "name": "{{site.projectAuthor}}Email",
-    "email": "{{site.projectAuthorEmail}}",
-    "url": "{{site.projectAuthor}}URL"
+    "name": "AUTHOR NAME",
+    "email": "AUTHOR EMAIL",
+    "url": "AUTHOR URL"
   },
   "contributors": [
     {
@@ -21,18 +21,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/{{site.githubAuthor}}/{{site.githubTitle}}.git"
+    "url": "PROJECT GIT URL"
   },
   "keywords": [
-    "",
-    "",
-    "",
-    "",
-    ""
+    "COMMA SEPARATED LIST OF KEYWORDS"
   ],
   "bugs": {
-    "url": "https://github.com/{{site.githubAuthor}}/{{site.githubTitle}}/issues",
-    "email": "{{site.projectAuthor}}Email"
+    "url": "URL TO FILE BUGS",
+    "email": "EMAIL ADDRESS TO FILE BUGS"
   },
   "devDependencies": {
     "accessible-html-content-patterns": "^0.1.0",
