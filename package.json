@@ -1,13 +1,13 @@
 {
-  "name": "$$projectFullTitle",
-  "description": "$$projectFullDescription",
-  "homepage": "$$projectURL",
+  "name": "PROJECT TITLE",
+  "description": "PROJECT DESCRIPTION",
+  "homepage": "PROJECT URL",
   "version": "0.0.1",
-  "license": "$$projectLicense",
+  "license": "PROJECT LICENSE",
   "author": {
-    "name": "$$projectAuthorEmail",
-    "email": "$$projectEmail",
-    "url": "$$projectAuthorURL"
+    "name": "AUTHOR NAME",
+    "email": "AUTHOR EMAIL",
+    "url": "AUTHOR URL"
   },
   "contributors": [
     {
@@ -21,18 +21,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/$$githubAuthor/$$githubTitle.git"
+    "url": "PROJECT GIT URL"
   },
   "keywords": [
-    "",
-    "",
-    "",
-    "",
-    ""
+    "COMMA SEPARATED LIST OF KEYWORDS"
   ],
   "bugs": {
-    "url": "https://github.com/$$githubAuthor/$$githubTitle/issues",
-    "email": "$$projectAuthorEmail"
+    "url": "URL TO FILE BUGS",
+    "email": "EMAIL ADDRESS TO FILE BUGS"
   },
   "devDependencies": {
     "accessible-html-content-patterns": "^0.1.0",
@@ -66,9 +62,11 @@
     "gulp-stylelint": "^3.2.0",
     "gulp-svgstore": "^6.0.0",
     "gulp-task-listing": "^1.0.1",
+    "gulp-token-replace": "^1.0.3",
     "gulp-uglify": "^1.5.3",
     "gulp-util": "^3.0.7",
     "htmlmin": "0.0.6",
+    "inquirer": "^1.2.3",
     "jquery": "^3.1.0",
     "jshint": "^2.9.2",
     "jshint-stylish": "^2.1.0",
