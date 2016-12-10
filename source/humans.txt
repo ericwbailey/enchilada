@@ -2,8 +2,8 @@ The Humans Responsible & Colophon
 humanstxt.org
 
 
-{{site.projectFullTitle}}
-{{site.projectURL}}
+$$projectFullTitle
+$$projectURL
 
 
 ## Team

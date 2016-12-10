@@ -1,13 +1,13 @@
 {
-  "name": "PROJECT TITLE",
-  "description": "PROJECT DESCRIPTION",
-  "homepage": "PROJECT URL",
+  "name": "$$projectFullTitle",
+  "description": "$$projectFullDescription",
+  "homepage": "$$projectURL",
   "version": "0.0.1",
-  "license": "PROJECT LICENSE",
+  "license": "$$projectLicense",
   "author": {
-    "name": "AUTHOR NAME",
-    "email": "AUTHOR EMAIL",
-    "url": "AUTHOR URL"
+    "name": "$$projectAuthorEmail",
+    "email": "$$projectEmail",
+    "url": "$$projectAuthorURL"
   },
   "contributors": [
     {
@@ -21,14 +21,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "PROJECT GIT URL"
+    "url": "git://github.com/{{site.githubAuthor}}/{{site.githubTitle}}.git"
   },
   "keywords": [
     "COMMA SEPARATED LIST OF KEYWORDS"
   ],
   "bugs": {
-    "url": "URL TO FILE BUGS",
-    "email": "EMAIL ADDRESS TO FILE BUGS"
+    "url": "https://github.com/$$githubAuthor/$$githubTitle/issues",
+    "email": "$$projectAuthorEmail"
   },
   "devDependencies": {
     "accessible-html-content-patterns": "^0.1.0",

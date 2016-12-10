@@ -6,7 +6,7 @@ var gulp        = require('gulp-help')(require('gulp')), // http://gulpjs.com/
     help        = require('./help.js'),
     paths       = require('./paths.js'),
     runSequence = require('run-sequence'),               // https://www.npmjs.com/package/run-sequence
-    sitemap     = require('gulp-sitemap');               // https://www.npmjs.com/package/run-sequence
+    sitemap     = require('gulp-sitemap');               // https://www.npmjs.com/package/gulp-sitemap
 
 
 // Tasks ----------------------------------------------------------------------
@@ -16,7 +16,7 @@ gulp.task('build-sitemap', help.sitemap.build, function() {
         read: false
     })
     .pipe(sitemap({
-        siteUrl: 'https://{{site.projectURL}}.com'
+        siteUrl: 'https://$$projectURL.com'
     }))
     .pipe(gulp.dest(paths.sitemap.build.dest));
 });

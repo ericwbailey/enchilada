@@ -1,5 +1,5 @@
 {
-	"name": "{{site.projectShortTitle}}",
+	"name": "$$projectShortTitle",
 	"icons": [
 		{
 			"src": "static/favicons/android/android-chrome-36x36.png",
