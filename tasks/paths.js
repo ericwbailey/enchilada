@@ -139,6 +139,9 @@ module.exports = {
         dest: './screenshots/'
     },
     scripts: {
+        vendor: {
+            jquery: VENDOR_DIR + '/jquery/dist/jquery.min.js'
+        },
         source: SOURCE_DIR + '/**/*.js',
         watch: SOURCE_DIR + '/**/*.js',
         build: BUILD_DIR,
@@ -176,10 +179,6 @@ module.exports = {
         }
     },
     vendor: {
-        jquery: {
-            source: VENDOR_DIR + '/jquery/dist/jquery.min.js',
-            dest: SOURCE_DIR + '/vendor/jquery/'
-        },
         accessiblehtml: {
             source: VENDOR_DIR + '/accessible-html-content-patterns/docs/index.html',
             dest: SOURCE_DIR
