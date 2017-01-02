@@ -324,14 +324,14 @@ select {
 select optgroup {
     margin-top: 0;  // Undoes lobotomoized owl selector
 
-    font-weight: bold; // Creates distinction between optgroup and option
+    font-weight: $font-weight-bold; // Creates distinction between optgroup and option
 }
 
 
 select option {
     margin-top: 0; // Undoes lobotomoized owl selector
 
-    font-weight: normal; // Creates distinction between optgroup and option
+    font-weight: $font-weight-normal; // Creates distinction between optgroup and option
 }
 
 
