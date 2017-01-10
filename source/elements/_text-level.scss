@@ -26,7 +26,7 @@ abbr {
     @include typography-caps-to-small-caps()
     @include typography-tracking(slight);
 
-    border-bottom: 1px dotted;
+    border-bottom: border(thinnest) dotted;
 
     cursor: help;
 }
@@ -79,7 +79,7 @@ i {
 
 
 ins {
-    border-bottom: 1px double;
+    border-bottom: border(thinnest) double;
 }
 
 
