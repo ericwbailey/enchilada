@@ -4,24 +4,13 @@
   "homepage": "$$projectURL",
   "version": "0.0.1",
   "license": "$$projectLicense",
-  "author": {
-    "name": "$$projectAuthorEmail",
-    "email": "$$projectEmail",
-    "url": "$$projectAuthorURL"
-  },
-  "contributors": [
-    {
-      "name": "",
-      "email": ""
-    },
-    {
-      "name": "",
-      "email": ""
-    }
+  "author": "$$projectAuthorName <$$projectAuthorEmail> ($$projectAuthorURL)",
+  "keywords": [
+      "REVIEW: ADD CONTRIBUTORS AS NEEDED"
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/{{site.githubAuthor}}/{{site.githubTitle}}.git"
+    "url": "git://github.com/$$githubAuthor/$$githubTitle.git"
   },
   "keywords": [
     "COMMA SEPARATED LIST OF KEYWORDS"
