@@ -35,8 +35,8 @@
 
 // Column alignments
 @mixin table-col-align-text() { text-align: left; }
-@mixin table-col-align-image { text-align: center; }
-@mixin table-col-align-number { text-align: right; }
+@mixin table-col-align-image() { text-align: center; }
+@mixin table-col-align-number() { text-align: right; }
 
 
 // Row alignments
