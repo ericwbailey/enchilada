@@ -20,8 +20,14 @@
 
 // Toggles --------------------------------------------------------------------
 // Enables functional class toggles. See `_config.scss`
-@if $toggle-typography-hyphenation == true {
-    .typography-hyphenation {
-        @include typography-hyphenation();
+@if $toggle-typography-hyphenation-add == true {
+    .typography-hyphenation-add {
+        @include typography-hyphenation(add);
+    }
+}
+
+@if $toggle-typography-hyphenation-remove == true {
+    .typography-hyphenation-remove {
+        @include typography-hyphenation(remove);
     }
 }

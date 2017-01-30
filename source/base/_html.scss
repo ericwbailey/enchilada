@@ -31,7 +31,7 @@ html {
     text-size-adjust: 100%; // [3]
 
     &:lang(en-US) {
-         @include typography-hyphenation(); // [4]
+         @include typography-hyphenation(add); // [4]
     }
 }
 
