@@ -6,8 +6,8 @@
   "license": "$$projectLicense",
   "author": "$$projectAuthorName <$$projectAuthorEmail> ($$projectAuthorURL)",
   "contributors": [
-      "$$projectContributorName <$$projectContributorEmail> ($$projectContributorURL)",
-      "$$projectContributorName <$$projectContributorEmail> ($$projectContributorURL)"
+    "$$projectContributorName <$$projectContributorEmail> ($$projectContributorURL)",
+    "$$projectContributorName <$$projectContributorEmail> ($$projectContributorURL)"
   ],
   "keywords": [
     "COMMA SEPARATED LIST OF KEYWORDS"

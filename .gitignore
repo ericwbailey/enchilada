@@ -5,7 +5,7 @@
 .test/
 documentation/
 screenshots/
-source/element-patterns.html
+source/element-patterns.hbs
 source/vendor/jquery/jquery.min.js
 
 
