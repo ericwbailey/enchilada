@@ -4,9 +4,9 @@
 // ============================================================================
 var gulp        = require('gulp-help')(require('gulp')), // http://gulpjs.com/
     help        = require('./help.js'),
-    paths       = require('./paths.js'),                 // https://www.npmjs.com/package/gulp-changed
+    paths       = require('./paths.js'),
     changed     = require('gulp-changed'),               // https://www.npmjs.com/package/gulp-changed
-    runSequence = require('run-sequence'),               // http://gulpjs.com/
+    runSequence = require('run-sequence'),               // https://www.npmjs.com/package/run-sequence
     sassdoc     = require('sassdoc'),                    // http://sassdoc.com/
 
     optionsSassdoc = {
