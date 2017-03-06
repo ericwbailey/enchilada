@@ -23,7 +23,7 @@
 
 
 @mixin content-underline(
-    $underline-background-color: c(background, light),
+    $underline-background-color: c(base, background),
     $underline-color: currentColor,
     $underline-outline: 0.75px,
     $underline-thickness: 0.175em,

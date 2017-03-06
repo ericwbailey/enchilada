@@ -231,8 +231,6 @@ input {
     &[type="week"] {
 
     }
-
-
 }
 
 textarea {
@@ -249,6 +247,25 @@ textarea {
 }
 
 
+// Prevent zooming on mobile viewports when tapped ----------------------------
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+input[type="search"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input datalist,
+select,
+textarea {
+    font-size: 1rem;
+}
+
+
 // Text-based Inputs ----------------------------------------------------------
 input[type="text"],
 input[type="email"],
@@ -261,7 +278,9 @@ input[type="date"],
 input[type="month"],
 input[type="time"],
 input[type="week"],
-input datalist {
+input datalist,
+select,
+textarea {
 
 }
 
@@ -389,7 +408,6 @@ meter {
 *::-moz-meter-sub-sub-optimum::-moz-meter-bar { background: c(form, active); }
 
 
-
 progress {
 
 }
@@ -398,6 +416,7 @@ progress {
 meter {
 
 }
+
 
 output {
     @include typography-tracking(slight);
