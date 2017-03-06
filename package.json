@@ -5,16 +5,17 @@
   "version": "0.0.1",
   "license": "$$projectLicense",
   "author": "$$projectAuthorName <$$projectAuthorEmail> ($$projectAuthorURL)",
+  "contributors": [
+      "$$projectContributorName <$$projectContributorEmail> ($$projectContributorURL)",
+      "$$projectContributorName <$$projectContributorEmail> ($$projectContributorURL)"
+  ],
   "keywords": [
-      "REVIEW: ADD CONTRIBUTORS AS NEEDED"
+    "COMMA SEPARATED LIST OF KEYWORDS"
   ],
   "repository": {
     "type": "git",
     "url": "git://github.com/$$githubAuthor/$$githubTitle.git"
   },
-  "keywords": [
-    "COMMA SEPARATED LIST OF KEYWORDS"
-  ],
   "bugs": {
     "url": "https://github.com/$$githubAuthor/$$githubTitle/issues",
     "email": "$$projectAuthorEmail"
