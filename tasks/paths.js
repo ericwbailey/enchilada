@@ -5,6 +5,8 @@ const DEPLOY_DIR = './docs';
 const DOCUMENTATION_DIR = './documentation';
 const VENDOR_DIR = './node_modules';
 
+const IMG_FILES = '.{bmp,ico,jpg,jpeg,gif,pdf,webp,png,tiff,svg}';
+
 
 module.exports = {
     browsersync: {
@@ -21,14 +23,14 @@ module.exports = {
     clean: {
         build: {
             root: BUILD_DIR + '/**',
-            images: BUILD_DIR + '/**/*.{bmp,ico,jpg,jpeg,gif,pdf,webp,png,tiff,svg}',
+            images: BUILD_DIR + '/**/*' + IMG_FILES,
             scripts: BUILD_DIR + '/main.js',
             static: BUILD_DIR + '/static/**/*',
             styles: BUILD_DIR + '/main.css'
         },
         deploy: {
             root: DEPLOY_DIR + '/**',
-            images: DEPLOY_DIR + '/**/*.{bmp,ico,jpg,jpeg,gif,pdf,webp,png,tiff,svg}',
+            images: DEPLOY_DIR + '/**/*' + IMG_FILES,
             scripts: DEPLOY_DIR + '/main.js',
             static: DEPLOY_DIR + '/static/**/*',
             styles: DEPLOY_DIR + '/main.css'
@@ -40,7 +42,7 @@ module.exports = {
         screenshots: './screenshots/',
         test: {
             root: TEST_DIR + '/**',
-            images: TEST_DIR + '/**/*.{bmp,ico,jpg,jpeg,gif,pdf,webp,png,tiff,svg}',
+            images: TEST_DIR + '/**/*' + IMG_FILES,
             scripts: TEST_DIR + '/main.js',
             static: TEST_DIR + '/static/**/*',
             styles: TEST_DIR + '/main.css'
@@ -67,13 +69,13 @@ module.exports = {
     },
     images: {
         source: [
-            SOURCE_DIR + '/**/*.{bmp,ico,jpg,jpeg,gif,pdf,webp,png,tiff,svg}',
+            SOURCE_DIR + '/**/*' + IMG_FILES,
             '!' + SOURCE_DIR + '/vendor/**/*',
             '!' + SOURCE_DIR + '/static/**/*',
             '!' + SOURCE_DIR + '/**/icon-*.svg'
         ],
         watch: [
-            SOURCE_DIR + '/**/*.{bmp,ico,jpg,jpeg,gif,pdf,webp,png,tiff,svg}',
+            SOURCE_DIR + '/**/*' + IMG_FILES,
             '!' + SOURCE_DIR + '/vendor/**/*',
             '!' + SOURCE_DIR + '/static/**/*',
             '!' + SOURCE_DIR + '/**/icon-*.svg'
