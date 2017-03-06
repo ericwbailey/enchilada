@@ -11,10 +11,10 @@ var gulp        = require('gulp-help')(require('gulp')), // http://gulpjs.com/
 
 // Tasks ----------------------------------------------------------------------
 // jQuery
-gulp.task('vendor-jquery', help.vendor.jquery, function() {
-    return gulp.src(paths.vendor.jquery.source)
-        .pipe(gulp.dest(paths.vendor.jquery.dest));
-});
+// gulp.task('vendor-jquery', help.vendor.jquery, function() {
+//     return gulp.src(paths.vendor.jquery.source)
+//         .pipe(gulp.dest(paths.vendor.jquery.dest));
+// });
 
 // Accessible HTML Conent Patterns
 gulp.task('vendor-accessiblehtml', help.vendor.jquery, function() {
@@ -29,7 +29,7 @@ gulp.task('vendor-accessiblehtml', help.vendor.jquery, function() {
 // Parent
 gulp.task('vendor', help.vendor.parent, function() {
     runSequence(
-        'vendor-accessiblehtml',
-        'vendor-jquery'
+        'vendor-accessiblehtml'
+        // 'vendor-jquery'
     );
 });
