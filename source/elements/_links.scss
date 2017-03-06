@@ -37,6 +37,17 @@ a {
         }
     }
 
+    // Styles links that don't have a class declared on them
+    &[href]:not([class]) {
+
+    }
+
+    // Display links when the `<a>` element has no text value but the href
+    // attribute has a link
+    &[href^="http"]:empty::before {
+      content: attr(href);
+    }
+
     &[aria-busy="true"] {
         color: c(link, busy);
     }
