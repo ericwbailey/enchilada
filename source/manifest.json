@@ -1,6 +1,6 @@
 {
-    "short_name": "$$projectFullTitle",
-    "name": "$$projectShortTitle",
+    "short_name": "$$projectShortTitle",
+    "name": "$$projectFullTitle",
     "theme_color": "$$projectThemeColor",
     "background_color": "$$projectBackgroundColor",
 	"icons": [
