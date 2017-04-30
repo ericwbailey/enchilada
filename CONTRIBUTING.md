@@ -40,7 +40,7 @@ This repo uses [GitMagic](https://gitmagic.io/) to help ensure that contribution
 
 
 ## Submitting Issues
-*An Issue is a demonstrable problem that is caused by the code in the repository.*
+>An Issue is a demonstrable problem that is caused by the code in the repository.
 
 First, use the [GitHub Issue search](https://github.com/$$githubAuthor/$$githubTitle/issues) to check if the issue has already been reported—then, check if the issue has been fixed. Try to reproduce it using the latest [master branch](https://github.com/$$githubAuthor/$$githubTitle) in the repository. Next, isolate the problem—ideally [create a reduced test case](https://css-tricks.com/reduced-test-cases/) and a live example.
 
@@ -49,7 +49,7 @@ A good Issue report shouldn't leave others needing to chase you up for more info
 ## Pull and Feature Requests
 
 ### Submitting Pull Requests
-*A Pull Request is a collection of changes submitted with the intention of being incorporated into the project.*
+>A Pull Request is a collection of changes submitted with the intention of being incorporated into the project.
 
 Good Pull Requests, patches, improvements, new features, etc. are a fantastic help. They should remain focused in scope and avoid containing unrelated commits.
 
@@ -61,7 +61,7 @@ Please adhere to the coding conventions used throughout a project (indentation, 
 
 
 ### Submitting Feature Requests
-*A Feature Request is a new component or an enhancement to existing functionality.*
+>Feature Request is a new component or an enhancement to existing functionality.
 
 Feature Requests are welcome. It's up to you to make a strong case to convince the project team of the merits of this feature. Remember that your request will be prioritized accordingly and not all requests can always be implemented in a timely fashion.
 

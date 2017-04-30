@@ -1,6 +1,6 @@
 # ⚠ THIS REPO IS STILL ACTIVELY BEING WORKED ON. DO NOT USE IN A PRODUCTION ENVIRONMENT ⚠
 
-# $$projectFullTitle
+# [$$projectFullTitle](http://$$projectURL.com)
 
 $$projectFullDescription
 
