@@ -19,6 +19,9 @@ end_of_line = lf
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-# JavaScript defaults
-[*.js]
+# JavaScript and JSON defaults
+[*.{jsjson}]
 indent_size = 2
+
+[*.{md,markdown}]
+trim_trailing_whitespace = false
