@@ -69,7 +69,8 @@
     "family.scss": "^1.0.8",
     "jquery": "^3.1.0",
     "mappy-breakpoints": "^0.2.3",
-    "normalize.css": "^4.2.0"
+    "normalize.css": "^4.2.0",
+    "sass-component-template": "0.0.2"
   },
   "scripts": {
     "help": "gulp help",
