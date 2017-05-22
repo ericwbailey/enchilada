@@ -188,6 +188,10 @@ module.exports = {
         accessiblehtml: {
             source: VENDOR_DIR + '/accessible-html-content-patterns/docs/index.html',
             dest: SOURCE_DIR
+        },
+        sasscomponenttemplate: {
+            source: VENDOR_DIR + '/sass-component-template/_type.name.scss',
+            dest: SOURCE_DIR + '/components/c-component'
         }
     }
 };

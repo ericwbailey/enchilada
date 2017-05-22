@@ -21,9 +21,20 @@ gulp.task('vendor-accessiblehtml', help.vendor.jquery, function() {
 });
 
 
+// Sass Component Template
+gulp.task('vendor-sasscomponenttemplate', help.vendor.jquery, function() {
+    return gulp.src(paths.vendor.sasscomponenttemplate.source)
+        .pipe(rename({
+            basename: '_c-component',
+        }))
+        .pipe(gulp.dest(paths.vendor.sasscomponenttemplate.dest));
+});
+
+
 // Parent
 gulp.task('vendor', help.vendor.parent, function() {
     runSequence(
-        'vendor-accessiblehtml'
+        'vendor-accessiblehtml',
+        'vendor-sasscomponenttemplate'
     );
 });

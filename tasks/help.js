@@ -82,6 +82,7 @@ module.exports = {
     },
     vendor: {
         parent: '[Parent Task] Copies vendor code from `node_modules/`.',
-        jquery: '[Child Task] Copies jQuery to `source/vendor/jquery/`.'
+        accessiblehtml: '[Child Task] Copies accessible-html-content-patterns to `source/`.',
+        sasscomponenttemplate: '[Child Task] Copies sass-component-template to `source/components/c-component/`.'
     }
 };
