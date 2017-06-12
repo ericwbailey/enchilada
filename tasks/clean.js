@@ -120,21 +120,12 @@ gulp.task('clean-documentation-styles', false, function(cb) {
 });
 
 
-// Document
-gulp.task('clean-screenshots', false, function(cb) {
-    del(paths.clean.screenshots).then(function() {
-        cb();
-    });
-});
-
-
 // Parent
 gulp.task('clean', help.clean.parent, function() {
     runSequence(
         'clean-build',
         'clean-test',
         'clean-deploy',
-        'clean-documentation',
-        'clean-screenshots'
+        'clean-documentation'
     );
 });

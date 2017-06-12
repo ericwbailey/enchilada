@@ -39,7 +39,6 @@ module.exports = {
             root: DOCUMENTATION_DIR + '/**',
             styles: DOCUMENTATION_DIR + '/styles/**',
         },
-        screenshots: './screenshots/',
         test: {
             root: TEST_DIR + '/**',
             images: TEST_DIR + '/**/*' + IMG_FILES,
@@ -136,10 +135,6 @@ module.exports = {
             source: BUILD_DIR + '/sitemap.xml',
             dest: DEPLOY_DIR
         }
-    },
-    screenshots: {
-        source: DEPLOY_DIR + '/*.html',
-        dest: './screenshots/'
     },
     scripts: {
         vendor: {

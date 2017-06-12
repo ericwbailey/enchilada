@@ -58,7 +58,6 @@ module.exports = {
         test: '[Child Task] Generates a sitemap for `.test/.',
         deploy: '[Child Task] Generates a sitemap for `.deploy/.'
     },
-    screenshots: '[Parent Task] Generates PNG screenshots of every page at different breakpoints.',
     scripts: {
         parent: '[Parent Task] Processes and copies scripts to `.build/`, `.test/`, and `docs/`.',
         build: '[Child Task] Collects JavaScript files and combine into one main file.',
