@@ -23,7 +23,7 @@
     "email": "$$projectAuthorEmail"
   },
   "browserslist": {
-    "last 3 versions",
+    "last 3 versions"
     ">1%"
   },
   "dependencies": {
@@ -32,7 +32,7 @@
     "jquery": "^3.1.0",
     "mappy-breakpoints": "^0.2.3",
     "normalize.css": "^4.2.0",
-    "sass-component-template": "0.0.2"
+    "styled-component-template": "0.0.3"
   },
   "devDependencies": {
     "browser-sync": "^2.12.3",
@@ -53,7 +53,6 @@
     "gulp-htmlhint": "^0.3.1",
     "gulp-imagemin": "^3.0.3",
     "gulp-jshint": "^2.0.0",
-    "gulp-local-screenshots": "^2.2.0",
     "gulp-notify": "^2.2.0",
     "gulp-npm-script-sync": "^1.1.0",
     "gulp-plumber": "^1.1.0",
@@ -106,7 +105,6 @@
     "clean-deploy-scripts": "gulp clean-deploy-scripts",
     "clean-deploy-static": "gulp clean-deploy-static",
     "clean-deploy-styles": "gulp clean-deploy-styles",
-    "clean-screenshots": "gulp clean-screenshots",
     "browsersync-build": "gulp browsersync-build",
     "browsersync-test": "gulp browsersync-test"
   }
