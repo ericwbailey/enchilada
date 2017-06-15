@@ -22,12 +22,12 @@ gulp.task('vendor-accessiblehtml', help.vendor.jquery, function() {
 
 
 // Sass Component Template
-gulp.task('vendor-sasscomponenttemplate', help.vendor.jquery, function() {
-    return gulp.src(paths.vendor.sasscomponenttemplate.source)
+gulp.task('vendor-styled-component-template', help.vendor.jquery, function() {
+    return gulp.src(paths.vendor.styledComponentTemplate.source)
         .pipe(rename({
             basename: '_c-component',
         }))
-        .pipe(gulp.dest(paths.vendor.sasscomponenttemplate.dest));
+        .pipe(gulp.dest(paths.vendor.styledComponentTemplate.dest));
 });
 
 
@@ -35,6 +35,6 @@ gulp.task('vendor-sasscomponenttemplate', help.vendor.jquery, function() {
 gulp.task('vendor', help.vendor.parent, function() {
     runSequence(
         'vendor-accessiblehtml',
-        'vendor-sasscomponenttemplate'
+        'vendor-styled-component-template'
     );
 });
