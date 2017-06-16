@@ -32,6 +32,13 @@
 }
 
 
+@mixin buttons-height() {
+    height: ms(2, em);
+
+    line-height: 1;
+}
+
+
 @mixin buttons-width() {
     display: block;
     width: 100%;
@@ -41,13 +48,11 @@
 // Grouped Styles -------------------------------------------------------------
 button,
 input[type="button"] {
+    @include buttons-border();
     @include buttons-color();
     @include button-states();
+    @include buttons-height();
     @include buttons-width();
-
-    height: ms(2, em);
-
-    line-height: 1;
 
     // Primary actions
     &[data-button-priority="primary"] {
@@ -90,7 +95,7 @@ input[type="button"] {
 
 // Individual Styles ----------------------------------------------------------
 button {
-    @include buttons-border();
+
 }
 
 
@@ -101,9 +106,13 @@ input[type="button"] {
 
 // Text buttons
 [role="button"][tabindex="0"] {
+    @include buttons-height();
     @include buttons-width();
     @include content-show-interaction(input);
-    @include typography-align(center);
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
 
     color: c(button, base);
 
