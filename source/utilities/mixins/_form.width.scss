@@ -4,6 +4,14 @@
 // ============================================================================
 
 
+/// Adds consistent width and display for all for all form elements.
+///
+/// @group Forms
+///
+/// @example scss
+///  @include form-width();
+
+
 @mixin form-width() {
     display: block;
     width: 100%;

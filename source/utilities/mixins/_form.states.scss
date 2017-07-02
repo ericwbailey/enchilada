@@ -4,6 +4,16 @@
 // ============================================================================
 
 
+/// A
+///
+/// @group Forms
+///
+/// @parameter {String} $input-or-label - Sets pseudo class behavior.
+///
+/// @example scss
+///  @include form-state(label);
+
+
 @mixin form-state($input-or-label) {
     @if ($input-or-label == "input") {
         &:hover {

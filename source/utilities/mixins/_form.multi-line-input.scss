@@ -4,8 +4,17 @@
 // ============================================================================
 
 
+/// Adds consistent minimum height for multi-line inputs. Be sure that the last
+/// option for for a multiple select element is partially visible.
+///
+/// @group Forms
+///
+/// @example scss
+///  @include form-multi-line-input();
+
+
 @mixin form-multi-line-input() {
-    min-height: ms(7.75, em); // Make sure this value displays a partial option in a a multiple select element
+    min-height: ms(7.75, em);
 }
 
 // Toggles --------------------------------------------------------------------

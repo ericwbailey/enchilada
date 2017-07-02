@@ -4,6 +4,14 @@
 // ============================================================================
 
 
+/// Adds consistent border treatments for all form elements.
+///
+/// @group Forms
+///
+/// @example scss
+///  @include form-width();
+
+
 @mixin form-border() {
     border: border(thinnest) solid c(form, base);
 }

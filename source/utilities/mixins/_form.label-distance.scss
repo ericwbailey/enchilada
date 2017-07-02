@@ -4,6 +4,14 @@
 // ============================================================================
 
 
+/// Adds consistent spacing between form labels and their inputs.
+///
+/// @group Forms
+///
+/// @example scss
+///  @include form-label-distance();
+
+
 @mixin form-label-distance() {
     margin-top: em(6);
 }

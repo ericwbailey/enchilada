@@ -4,6 +4,14 @@
 // ============================================================================
 
 
+/// Adds consistent padding to all form elements.
+///
+/// @group Forms
+///
+/// @example scss
+///  @include form-input-padding();
+
+
 @mixin form-input-padding() {
     padding: ms(0.5, em);
 }

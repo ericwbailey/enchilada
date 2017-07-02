@@ -4,6 +4,14 @@
 // ============================================================================
 
 
+/// Adds consistent color for input placeholders.
+///
+/// @group Forms
+///
+/// @example scss
+///  @include form-placeholder();
+
+
 @mixin form-placeholder() {
     color: transparentize(c(base, type), 0.3);
 }
