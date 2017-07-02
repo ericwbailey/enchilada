@@ -40,13 +40,13 @@
 // Toggles --------------------------------------------------------------------
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-content-show-interaction-link == true {
-    .content-show-interaction {
+    .content-show-interaction-link {
         @include content-show-interaction(link);
     }
 }
 
 @if $toggle-content-show-interaction-input == true {
-    .content-show-interaction {
+    .content-show-interaction-input {
         @include content-show-interaction(input);
     }
 }

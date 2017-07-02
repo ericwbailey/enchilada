@@ -1,0 +1,59 @@
+// ============================================================================
+// Output
+// ============================================================================
+
+
+// http://thenewcode.com/875/Using-the-HTML5-meter-Element
+// https://css-tricks.com/html5-meter-element/
+progress,
+meter {
+    @include form-width();
+
+    background: c(form, busy);
+
+    // Bar
+    &::-webkit-progress-value { background: c(form, active); }
+    &::-webkit-meter-optimum-value { background: c(form, active); }
+    &::-webkit-meter-suboptimum-value { background: c(form, active); }
+    &::-webkit-meter-even-less-good-value { background: c(form, active); }
+
+    &::-moz-meter-bar { background: c(form, active); }
+    &::-moz-meter-optimum { background: c(form, active); }
+    &::-moz-meter-sub-optimum { background: c(form, active); }
+    &::-moz-meter-sub-sub-optimum { background: c(form, active); }
+
+    // Background
+    &::-webkit-progress-bar,
+    &::-webkit-meter-bar {
+        background: c(form, busy);
+    }
+}
+
+// Overrides Firefox's progress bar styling
+*::-moz-progress-bar { background: c(form, active); }
+*::-moz-meter-optimum::-moz-meter-bar { background: c(form, active); }
+*::-moz-meter-sub-optimum::-moz-meter-bar { background: c(form, active); }
+*::-moz-meter-sub-sub-optimum::-moz-meter-bar { background: c(form, active); }
+
+
+progress {
+
+}
+
+
+meter {
+
+}
+
+
+output {
+    @include typography-tracking(slight);
+
+    margin-left: em(2);
+    margin-right: em(2);
+    padding-left: em(4);
+    padding-right: em(4);
+
+    font-family: $font-family-code;
+    line-height: $global-type-line-height;
+}

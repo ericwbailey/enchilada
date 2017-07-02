@@ -1,0 +1,18 @@
+// ============================================================================
+// Textarea
+// ============================================================================
+
+
+textarea {
+    @include form-border();
+    @include form-input-padding();
+    @include form-label-distance();
+    @include form-multi-line-input;
+    @include form-prevent-viewport-zoom();
+    @include form-state(input);
+    @include form-width();
+
+    overflow: auto;
+
+    resize: vertical;
+}

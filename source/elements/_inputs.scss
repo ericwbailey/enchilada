@@ -1,0 +1,270 @@
+// ============================================================================
+// Inputs
+// ============================================================================
+
+
+// [1] Avoid using the not selector to keep specificity low
+
+
+// [1]
+// Not `button`, `checkbox`, `radio`, or `range`
+input[type="color"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="file"],
+input[type="hidden"],
+input[type="image"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="reset"],
+input[type="search"],
+input[type="submit"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+    @include form-border();
+    @include form-state(input);
+}
+
+// [1]
+// Not `button`, `checkbox`, or `radio`
+input[type="color"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="file"],
+input[type="hidden"],
+input[type="image"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="range"],
+input[type="reset"],
+input[type="search"],
+input[type="submit"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+    @include form-width();
+}
+
+// [1]
+// Separation between labe and input
+// Not `button` or `range`
+input[type="checkbox"],
+input[type="color"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="file"],
+input[type="hidden"],
+input[type="image"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="radio"],
+input[type="reset"],
+input[type="search"],
+input[type="submit"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+    @include form-label-distance();
+    @include form-input-padding();
+}
+
+
+input {
+    line-height: 1;
+
+    // Placeholder text
+    &::-webkit-input-placeholder {
+        @include form-placeholder();
+    }
+
+    &::-moz-placeholder {
+        @include form-placeholder();
+    }
+
+    // Input types
+    &[type="color"] {
+        height: em(53); // REVIEW: Double-check these values if adjusting input heights
+
+        background-color: c(base, background);
+
+        // REVIEW: Double-check these values if adjusting input heights
+        &::-webkit-color-swatch-wrapper {
+            @include component-remove-margin-padding();
+
+            border: 0;
+
+            background-color: c(base, background);
+        }
+    }
+
+    &[type="date"] {
+
+    }
+
+    &[type="email"] {
+
+    }
+
+    &[list] {
+
+    }
+
+    &[type="month"] {
+
+    }
+
+    &[type="number"] {
+
+    }
+
+    // REVIEW: Padding and relative positioning
+    &[type="password"] {
+        @include typography-tracking(tightest);
+
+        padding: em(2) ms(0.25, em) em(4) ms(0.25, em);
+        position: relative;
+          top: rem(-5);
+
+        font: small-caption;
+        font-size: 1.75rem;
+    }
+
+    &[type="range"] {
+        margin-top: ms(0.75, em); // REVIEW: Set to three quarters of `form-label-distance()`
+        margin-bottom: ms(0.5, em); // Gives range input a little breathing room
+    }
+
+    &[type="search"] {
+
+    }
+
+    &[type="tel"] {
+
+    }
+
+    &[type="text"] {
+
+    }
+
+    &[type="time"] {
+
+    }
+
+    &[type="url"] {
+
+    }
+
+    &[type="week"] {
+
+    }
+}
+
+
+// Text-based Inputs ----------------------------------------------------------
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+input[type="search"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"] {
+
+}
+
+
+// Non-text-based Inputs ------------------------------------------------------
+input[type="color"],
+input[type="file"],
+input[type="range"] {
+
+}
+
+
+input[type="color"] {
+
+}
+
+
+// http://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/
+input[type="file"] {
+    background-color: c(base, background);
+}
+
+
+input[type="range"] {
+
+}
+
+
+// Validation -----------------------------------------------------------------
+input[aria-invalid="false"] {
+
+}
+
+
+input[aria-invalid="true"] {
+
+}
+
+
+input[autosave] {
+
+}
+
+
+// Disabled input should be immutable. `!important` overrides the `input:not()`
+// selector above
+input[disabled] {
+    border-color: transparentize(c(form, base), 0.5) !important;
+
+    background-color: transparentize(c(base, background), 0.5) !important;
+
+    color: transparentize(c(base, type), 0.5) !important;
+
+    &:hover,
+    &:active,
+    &:focus {
+        border-color: transparentize(c(form, base), 0.5) !important;
+
+        background-color: transparentize(c(base, background), 0.5) !important;
+
+        color: transparentize(c(base, type), 0.5) !important;
+    }
+}
+
+
+input[minlength] {
+
+}
+
+
+input[maxlength] {
+
+}
+
+
+input[readonly] {
+
+}
+
+
+input[required] {
+
+}

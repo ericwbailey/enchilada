@@ -1,0 +1,18 @@
+// ============================================================================
+// Form
+// Label Distance
+// ============================================================================
+
+
+@mixin form-label-distance() {
+    margin-top: em(6);
+}
+
+
+// Toggles --------------------------------------------------------------------
+// Enables functional class toggles. See `_config.scss`
+@if $toggle-form-label-distance == true {
+    .form-label-distance {
+        @include form-label-distance();
+    }
+}

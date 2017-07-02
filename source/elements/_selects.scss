@@ -1,0 +1,43 @@
+// ============================================================================
+// Selects
+// ============================================================================
+
+
+select {
+    @include form-border();
+    @include form-input-padding();
+    @include form-label-distance();
+    @include form-state(input);
+    @include form-width();
+
+    border-radius: 0;
+
+    background-color: c(base, background);
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    &[multiple] {
+        @include form-multi-line-input;
+
+        padding: 0; // Undoes `form-input-padding()` so <option>s extend full-width
+
+        option {
+            padding: ms(0.4, em); // Highlights entire <option> row when selected
+        }
+    }
+}
+
+
+select optgroup {
+    @include content-delobotomize();
+
+    font-weight: $font-weight-bold; // Creates distinction between optgroup and option
+}
+
+
+select option {
+    @include content-delobotomize();
+
+    font-weight: $font-weight-normal; // Creates distinction between optgroup and option
+}

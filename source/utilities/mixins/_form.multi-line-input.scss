@@ -1,0 +1,17 @@
+// ============================================================================
+// Form
+// Multi Line Input
+// ============================================================================
+
+
+@mixin form-multi-line-input() {
+    min-height: ms(7.75, em); // Make sure this value displays a partial option in a a multiple select element
+}
+
+// Toggles --------------------------------------------------------------------
+// Enables functional class toggles. See `_config.scss`
+@if $toggle-form-multi-line-input == true {
+    .form-multi-line-input {
+        @include form-multi-line-input();
+    }
+}

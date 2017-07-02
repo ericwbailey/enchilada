@@ -92,3 +92,21 @@ ol {
         }
     }
 }
+
+
+// Prevent zooming on mobile viewports when tapped ----------------------------
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+input[type="search"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input datalist,
+select {
+    @include form-prevent-viewport-zoom();
+}

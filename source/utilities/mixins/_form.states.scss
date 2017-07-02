@@ -1,0 +1,59 @@
+// ============================================================================
+// Form
+// State
+// ============================================================================
+
+
+@mixin form-state($input-or-label) {
+    @if ($input-or-label == "input") {
+        &:hover {
+            border-color: c(form, hover);
+        }
+
+        &:active {
+            border-color: c(form, active);
+        }
+
+        &:focus {
+            border-color: c(form, focus);
+        }
+    }
+
+    @else if ($input-or-label == "label") {
+        color: c(form, base);
+
+        &:hover {
+            color: c(form, hover);
+        }
+
+        &:active {
+            color: c(form, active);
+        }
+
+        &:focus {
+            color: c(form, focus);
+        }
+    }
+
+    @else {
+        @error "`#{$input-or-label}`"
+        + $meta-invalid-argument
+        + $meta-invalid-argument-select-either
+        + "`input` or `label`";
+    }
+}
+
+
+// Toggles --------------------------------------------------------------------
+// Enables functional class toggles. See `_config.scss`
+@if $toggle-form-state-link == true {
+    .form-state-input {
+        @include form-state(input);
+    }
+}
+
+@if $toggle-form-state-input == true {
+    .form-state-label {
+        @include form-state(label);
+    }
+}

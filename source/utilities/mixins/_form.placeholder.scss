@@ -1,0 +1,18 @@
+// ============================================================================
+// Form
+// Placeholder
+// ============================================================================
+
+
+@mixin form-placeholder() {
+    color: transparentize(c(base, type), 0.3);
+}
+
+
+// Toggles --------------------------------------------------------------------
+// Enables functional class toggles. See `_config.scss`
+@if $toggle-form-placeholder == true {
+    .form-placeholder {
+        @include form-placeholder();
+    }
+}

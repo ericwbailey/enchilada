@@ -1,0 +1,18 @@
+// ============================================================================
+// Form
+// Input Padding
+// ============================================================================
+
+
+@mixin form-input-padding() {
+    padding: ms(0.5, em);
+}
+
+
+// Toggles --------------------------------------------------------------------
+// Enables functional class toggles. See `_config.scss`
+@if $toggle-form-input-padding == true {
+    .form-input-padding {
+        @include form-input-padding();
+    }
+}

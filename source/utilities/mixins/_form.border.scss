@@ -1,0 +1,17 @@
+// ============================================================================
+// Form
+// Border
+// ============================================================================
+
+
+@mixin form-border() {
+    border: border(thinnest) solid c(form, base);
+}
+
+// Toggles --------------------------------------------------------------------
+// Enables functional class toggles. See `_config.scss`
+@if $toggle-form-border == true {
+    .form-border {
+        @include form-border();
+    }
+}

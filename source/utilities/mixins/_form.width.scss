@@ -1,0 +1,19 @@
+// ============================================================================
+// Form
+// Width
+// ============================================================================
+
+
+@mixin form-width() {
+    display: block;
+    width: 100%;
+}
+
+
+// Toggles --------------------------------------------------------------------
+// Enables functional class toggles. See `_config.scss`
+@if $toggle-form-width == true {
+    .form-width {
+        @include form-width();
+    }
+}
