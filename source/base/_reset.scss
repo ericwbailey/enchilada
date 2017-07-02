@@ -107,6 +107,7 @@ input[type="month"],
 input[type="time"],
 input[type="week"],
 input datalist,
-select {
-    @include form-prevent-viewport-zoom();
+select,
+textarea {
+    font-size: 1rem; // Prevents the viewport from zooming in when an input element is tapped
 }
