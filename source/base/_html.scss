@@ -13,7 +13,6 @@
 html {
     @include typography-kerning();
     @include typography-ligatures-common();
-    @include typography-smoothing(light-on-dark);
 
     margin: 0;
     min-height: 100%; // [1]
@@ -32,6 +31,14 @@ html {
 
     &:lang(en-US) {
          @include typography-hyphenation(); // [4]
+    }
+
+    // Media Queries
+    // Only apply to devices that support font smoothing:
+    // https://www.zachleat.com/web/font-smooth/
+    @media screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-resolution: 2dppx) {
+        @include typography-smoothing(light-on-dark);
     }
 }
 
