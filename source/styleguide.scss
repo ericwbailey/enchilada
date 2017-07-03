@@ -1,0 +1,89 @@
+@charset "UTF-8";
+// ============================================================================
+// Styleguide
+// ============================================================================
+
+
+// Variables ------------------------------------------------------------------
+@import
+    "utilities/variables/meta",
+    "utilities/variables/paths",
+    "utilities/variables/symbols",
+    "utilities/variables/font.families",
+    "utilities/variables/font.weights",
+    "utilities/variables/ratios",
+    "utilities/variables/supports";
+
+
+// Config and Toggles ---------------------------------------------------------
+@import
+    "config",
+    "toggles";
+
+
+// Overrides ------------------------------------------------------------------
+.kss-header__hamburger-trigger,
+.kss-section__permalink {
+    box-shadow: none;
+
+    text-shadow: none;
+}
+
+.kss-modifiers__heading,
+.kss-section__item,
+.kss-title, {
+    color: #111111;
+}
+
+.kss-title {
+    margin-left: 10px;
+
+    font-size: 1rem;
+    text-align: left;
+}
+
+.kss-modifiers__heading {
+    font-size: 1rem;
+}
+
+.kss-modifiers__name {
+    color: #9b9b9b;
+
+    &:not(:first-of-type) {
+        margin-top: 2rem;
+    }
+}
+
+.kss-nav__item {
+    margin-left: 0;
+
+    &::before {
+        content: none;
+    }
+}
+
+.kss-section__content {
+    padding-bottom: 0;
+}
+
+.kss-section__item--depth-1 {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.kss-section--depth-1 {
+    background-color: #f5f5f5;
+}
+
+.kss-section__item--depth-2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.kss-section__markup {
+    font-size: 80%;
+}
+
+.kss-nav__item a.kss-state-active {
+    color: #111111;
+}
