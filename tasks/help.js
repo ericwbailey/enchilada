@@ -82,6 +82,6 @@ module.exports = {
     vendor: {
         parent: '[Parent Task] Copies vendor code from `node_modules/`.',
         accessiblehtml: '[Child Task] Copies accessible-html-content-patterns to `source/`.',
-        sasscomponenttemplate: '[Child Task] Copies sass-component-template to `source/components/c-component/`.'
+        styledcomponenttemplate: '[Child Task] Copies Sass styled-component-template to `source/components/c-component/`.'
     }
 };

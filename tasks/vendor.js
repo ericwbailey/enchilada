@@ -11,7 +11,7 @@ var gulp        = require('gulp-help')(require('gulp')), // http://gulpjs.com/
 
 // Tasks ----------------------------------------------------------------------
 // Accessible HTML Conent Patterns
-gulp.task('vendor-accessiblehtml', help.vendor.jquery, function() {
+gulp.task('vendor-accessiblehtml', help.vendor.accessiblehtml, function() {
     return gulp.src(paths.vendor.accessiblehtml.source)
         .pipe(rename({
             basename: 'element-patterns',
@@ -22,7 +22,7 @@ gulp.task('vendor-accessiblehtml', help.vendor.jquery, function() {
 
 
 // Sass Component Template
-gulp.task('vendor-styled-component-template', help.vendor.jquery, function() {
+gulp.task('vendor-styled-component-template', help.vendor.styledcomponenttemplate, function() {
     return gulp.src(paths.vendor.styledComponentTemplate.source)
         .pipe(rename({
             basename: '_c-component',
