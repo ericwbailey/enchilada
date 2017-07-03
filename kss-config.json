@@ -1,0 +1,14 @@
+{
+  "title": "$$projectShortTitle | Styleguide",
+  "builder": "node_modules/michelangelo/kss_styleguide/custom-template/",
+  "destination": "styleguide/",
+  "source": [
+    "source/components/",
+    "source/layout/",
+    "source/objects/"
+  ],
+  "css": [
+    "../.build/main.css",
+    "../.build/styleguide.css"
+  ]
+}
