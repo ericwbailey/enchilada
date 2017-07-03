@@ -6,6 +6,7 @@
 documentation/
 source/element-patterns.hbs
 source/vendor/jquery/jquery.min.js
+styleguide/
 
 
 
