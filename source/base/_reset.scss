@@ -59,7 +59,7 @@ ul {
 
     ol,
     ul {
-        margin-top: ms(1, em);
+
     }
 }
 
@@ -109,5 +109,5 @@ input[type="week"],
 input datalist,
 select,
 textarea {
-    font-size: 1rem; // Prevents the viewport from zooming in when an input element is tapped
+    font-size: 1rem;
 }
