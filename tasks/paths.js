@@ -170,7 +170,10 @@ module.exports = {
         }
     },
     styles: {
-        source: SOURCE_DIR + '/main.scss',
+        source: [
+            SOURCE_DIR + '/main.scss',
+            SOURCE_DIR + '/styleguide.scss',
+        ],
         watch: SOURCE_DIR + '/**/*.scss',
         build: BUILD_DIR,
         test: TEST_DIR,
