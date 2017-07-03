@@ -3,9 +3,8 @@
 // ============================================================================
 
 
-// [1] Ensure the page always fills at least the entire height of the viewport
 body {
-    min-height: 100%; // [1]
+    min-height: 100%; // Ensure the page always fills at least the entire height of the viewport
     overflow-x: hidden;
 
     font-size: 1em;
