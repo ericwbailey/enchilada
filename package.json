@@ -54,7 +54,6 @@
     "gulp-imagemin": "^3.0.3",
     "gulp-jshint": "^2.0.0",
     "gulp-notify": "^2.2.0",
-    "gulp-npm-script-sync": "^1.1.0",
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.2.0",

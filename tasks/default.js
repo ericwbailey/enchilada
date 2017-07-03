@@ -5,8 +5,7 @@
 var gulp        = require('gulp-help')(require('gulp')), // http://gulpjs.com/
     help        = require('./help.js'),
     paths       = require('./paths.js'),
-    runSequence = require('run-sequence'),               // https://www.npmjs.com/package/run-sequence
-    sync        = require('gulp-npm-script-sync');       // https://www.npmjs.com/package/gulp-npm-script-sync
+    runSequence = require('run-sequence');               // https://www.npmjs.com/package/run-sequence
 
 
 // Tasks ----------------------------------------------------------------------
@@ -71,7 +70,3 @@ gulp.task('deploy', help.default.deploy, function() {
         'document'
     );
 });
-
-
-// Turns Gulp tasks into NPM scripts in `package.json`
-sync(gulp);
