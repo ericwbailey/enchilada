@@ -139,32 +139,7 @@
 // Vendor ---------------------------------------------------------------------
 @import
     "../node_modules/family.scss/source/src/family",       // http://lukyvj.github.io/family.scss/
-    "vendor/fault/fault",                                  // https://github.com/jpdevries/fault
     "../node_modules/mappy-breakpoints/mappy-breakpoints"; // https://github.com/zellwk/mappy-breakpoints
-
-
-// Modes ----------------------------------------------------------------------
-// Modes are toggled via `_config.scss` and used to audit different aspects of
-// your styling. Uncomment to enable them, comment to disable them.
-
-// http://diagnosticss.github.io/
-// @import "vendor/diagnosticss/diagnosticss";
-
-// http://pesticide.io/
-// @import "vendor/pesticide/pesticide";
-// @import "vendor/pesticide/pesticide-depth";
-
-// https://lukyvj.github.io/accecss/
-// Availably colorblindness types:
-// `protanopia`, `protanomaly`, `deuteranopia`, `deuteranomaly`,
-// `tritanopia`, `tritanomaly`, `achromatopsia`, `achromatomal
-// @import "vendor/accecss/accecss.scss";
-// @include accecss(
-//     "html body", // Element
-//     false, // CSS Zone
-//     false, // Grayscale
-//     false // Colorblindness type
-// );
 
 
 // Reset ----------------------------------------------------------------------
