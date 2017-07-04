@@ -15,7 +15,8 @@ module.exports = {
     },
     document: {
         parent: '[Parent Task] Generates the output from the different self-documenting systems.',
-        styles: '[Child Task] Generate a Scss styleguide via SassDoc.'
+        sass: '[Child Task] Generate a Sass styleguide via SassDoc.',
+        styles: '[Child Task] Generate a CSS styleguide via KSS.'
     },
     errata: {
         parent: '[Parent Task] Copies all remaining files to `.build/`, `.test/`, and `docs/`.',

@@ -8,6 +8,7 @@ var gulp        = require('gulp-help')(require('gulp')), // http://gulpjs.com/
     changed     = require('gulp-changed'),               // https://www.npmjs.com/package/gulp-changed
     runSequence = require('run-sequence'),               // https://www.npmjs.com/package/run-sequence
     sassdoc     = require('sassdoc'),                    // http://sassdoc.com/
+    kss         = require('kss'),                        // https://www.npmjs.com/package/kss
 
     optionsSassdoc = {
         dest: paths.documentation.sassdoc.dest,
@@ -21,17 +22,33 @@ var gulp        = require('gulp-help')(require('gulp')), // http://gulpjs.com/
 
 
 // Tasks ----------------------------------------------------------------------
-// Styles
-gulp.task('document-styles', help.document.styles, function () {
+// Sass
+gulp.task('document-sass', help.document.sass, function () {
     return gulp.src(paths.documentation.sassdoc.source)
         .pipe(changed(paths.documentation.sassdoc.dest))
         .pipe(sassdoc(optionsSassdoc));
 });
 
 
+// Styles
+gulp.task('document-styles', help.document.styles, function () {
+    return kss({
+        title: "$$projectShortTitle | Styleguide",
+        builder: "node_modules/michelangelo/kss_styleguide/custom-template/",
+        source: "source/",
+        destination: "styleguide/",
+        css: [
+            "../.build/main.css",
+            "../.build/styleguide.css"
+        ]
+    });
+});
+
+
 // Parent
 gulp.task('document', help.document.parent, function() {
     runSequence(
+        'document-sass',
         'document-styles'
     );
 });
