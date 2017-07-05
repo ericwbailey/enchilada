@@ -1,14 +1,11 @@
-// ============================================================================
-// Component
 // Skipnav
-// ============================================================================
+//
+// Skipnav allows screen reader users to easily bypass everything that comes
+// before the page's main content.
+//
+// Style guide: components.skipnav
 
 
-// Component Logic ------------------------------------------------------------
-
-
-
-// Component Styling ----------------------------------------------------------
 .c-skipnav {
         @include content-hide(visually);
 
