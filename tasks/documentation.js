@@ -34,13 +34,10 @@ gulp.task('document-sass', help.document.sass, function () {
 gulp.task('document-styles', help.document.styles, function () {
     return kss({
         title: "$$projectShortTitle | Styleguide",
-        builder: "node_modules/michelangelo/kss_styleguide/custom-template/",
-        source: "source/",
-        destination: "styleguide/",
-        css: [
-            "../.build/main.css",
-            "../.build/styleguide.css"
-        ]
+        builder: paths.documentation.kss.builder,
+        source: paths.documentation.kss.source,
+        destination: paths.documentation.kss.dest,
+        css: paths.documentation.kss.css
     });
 });
 

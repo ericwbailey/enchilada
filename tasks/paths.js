@@ -50,7 +50,16 @@ module.exports = {
     documentation: {
         sassdoc: {
             source: SOURCE_DIR + '/**/*.scss',
-            dest: DOCUMENTATION_DIR + '/styles'
+            dest: DOCUMENTATION_DIR + '/sass'
+        },
+        kss: {
+            builder: VENDOR_DIR + "/michelangelo/kss_styleguide/custom-template/",
+            source: SOURCE_DIR,
+            dest: DOCUMENTATION_DIR + "/styles",
+            css: [
+                "../." + BUILD_DIR + "/main.css",
+                "../." + BUILD_DIR + "/styleguide.css"
+            ]
         }
     },
     errata: {
