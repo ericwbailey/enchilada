@@ -3,7 +3,7 @@
 // ============================================================================
 
 
-/// A list of acceptable, relative CSS units.
+/// A list of acceptable relative CSS units.
 ///
 /// @group general
 ///
@@ -14,9 +14,10 @@
 
 $units:
     %,
+    ch,
     em,
     ex,
-    ch,
+    fr,
     rem,
     vh,
     vw,
