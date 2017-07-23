@@ -1,0 +1,33 @@
+// ============================================================================
+// Typography
+// Responsive
+// ============================================================================
+
+
+/// Interpolates a range of font sizes between a specified minimum and maximum
+/// viewport range.
+///
+/// @group Typography
+///
+/// @parameter {Measurement} $min-font-size     - Sets the minimum font size for the viewport range
+/// @parameter {Measurement} $max-font-size     - Sets the maximum font size for the viewport range
+/// @parameter {Measurement} $min-viewport-size - Sets the minimum viewport measurement
+/// @parameter {Measurement} $max-viewport-size - Sets the maximum viewport measurement
+///
+/// @example scss
+///  @include typography-responsive(1em, 2em, 30em, 60em);
+///
+/// @see {maps}      breakpoints
+/// @see {variables} $global-type-size
+///
+/// @link https://twitter.com/sarah_edo/status/856543697462325248
+
+
+@mixin typography-responsive(
+    $min-font-size,
+    $max-font-size,
+    $min-viewport-size,
+    $max-viewport-size
+) {
+    font-size: calc(#{$min-font-size} + (#{strip-unit($max-font-size)} - #{strip-unit($min-font-size)})*(100vw - (#{$min-viewport-size} - 1px))/(#{strip-unit($max-viewport-size)} - #{strip-unit($min-viewport-size)}));
+}
