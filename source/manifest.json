@@ -1,6 +1,11 @@
 {
+    "lang": "$$projectLanguage",
     "short_name": "$$projectShortTitle",
     "name": "$$projectFullTitle",
+    "dir": "ltr",
+    "display": "standalone",
+    "orientation": "natural",
+    "start_url": "/",
     "theme_color": "$$projectThemeColor",
     "background_color": "$$projectBackgroundColor",
 	"icons": [
