@@ -17,6 +17,10 @@
 
 }
 
+[hidden] {
+    @include content-hide(remove);
+}
+
 
 [spellcheck] {
 
