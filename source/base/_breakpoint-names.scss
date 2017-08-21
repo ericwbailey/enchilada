@@ -1,0 +1,24 @@
+// ============================================================================
+// Breakpoint Names
+// ============================================================================
+
+
+/// Provides a list of breakpoint names in the document for JavaScript to use,
+/// if breakpoint-based JS logic is needed.
+///
+/// @group general
+///
+/// @see {maps} breakpoints
+///
+/// @link https://www.lullabot.com/articles/importing-css-breakpoints-into-javascript Lullabot: Importing CSS Breakpoints Into JavaScript
+
+
+body::before {
+    display: none;
+
+    @each $bp-name, $bp-value in $breakpoints {
+        @include mappy-bp($bp-name) {
+            content: $bp-name;
+        }
+    }
+}
