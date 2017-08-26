@@ -8,6 +8,12 @@
 }
 
 
+[aria-disabled],
+[disabled] {
+    @include content-remove-interaction();
+}
+
+
 [draggable] {
 
 }
@@ -17,11 +23,25 @@
 
 }
 
+
 [hidden] {
     @include content-hide(remove);
 }
 
 
+[readonly] {
+
+}
+
+
 [spellcheck] {
 
+}
+
+
+//Remove outline from non-interactive elements that get focus assigned to them
+[tabindex="-1"] {
+    &:focus {
+        outline: none;
+    }
 }
