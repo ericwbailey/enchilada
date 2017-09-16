@@ -10,6 +10,8 @@
 // https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust
 // [4] Triggers browser hyphenation based off of declared language:
 // http://thenewcode.com/429/Classic-Typography-Effects-Hyphenation
+// [5] Keeps the background color present if the browser bounces at a scrolling
+// boundary
 html {
     @include typography-kerning();
     @include typography-ligatures-common();
@@ -19,7 +21,7 @@ html {
     overflow-y: scroll; // [2]
     padding: 0;
 
-    background-color: c(base, background); // Set on `<html>` to keep the background color present if the browser bounces at a scrolling boundary
+    background-color: c(base, background); // [5] SEE: `_body.scss`
 
     color: c(base, type);
     direction: $global-type-direction;
