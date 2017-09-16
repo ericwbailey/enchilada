@@ -35,6 +35,11 @@ html {
          @include typography-hyphenation(); // [4]
     }
 
+    // Supports
+    @supports #{$supports-hanging-punctuation} {
+        hanging-punctuation: first;
+    }
+
     // Media Queries
     // Only apply to devices that support font smoothing:
     // https://www.zachleat.com/web/font-smooth/
