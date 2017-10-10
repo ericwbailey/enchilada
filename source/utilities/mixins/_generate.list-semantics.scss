@@ -1,0 +1,32 @@
+// ============================================================================
+// Generate
+// List Semantics
+// ============================================================================
+
+
+/// Inserts a zero width space to make a screen reader announce a styled list.
+///
+/// @group Generate
+///
+/// @example scss
+///  @include generate-list-semantics();
+///
+/// @link https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/ VoiceOver and list-style-type: none
+
+
+@mixin generate-list-semantics() {
+    list-style-type: none;
+
+    &:before {
+        content: "\200B"; // Zero width space
+    }
+}
+
+
+// Toggles --------------------------------------------------------------------
+// Enables functional class toggles. See `_config.scss`
+@if $toggle-generate-list-semantics == true {
+    .generate-list-semantics {
+        @include generate-list-semantics();
+    }
+}
