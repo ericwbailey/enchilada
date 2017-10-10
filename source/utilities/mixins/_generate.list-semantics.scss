@@ -17,7 +17,7 @@
 @mixin generate-list-semantics() {
     list-style-type: none;
 
-    &:before {
+    li::before {
         content: "\200B"; // Zero width space
     }
 }
