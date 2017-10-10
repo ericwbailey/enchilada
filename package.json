@@ -22,10 +22,6 @@
     "url": "https://github.com/$$githubAuthor/$$githubTitle/issues",
     "email": "$$projectAuthorEmail"
   },
-  "browserslist": {
-    "last 3 versions"
-    ">1%"
-  },
   "dependencies": {
     "accessible-html-content-patterns": "^0.2.4",
     "family.scss": "^1.0.8",
