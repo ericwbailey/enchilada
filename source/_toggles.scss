@@ -24,7 +24,7 @@ $toggle-component-style-reset: false;
 // Content
 $toggle-content-clearfix-add: false;
 $toggle-content-clearfix-remove: false;
-$toggle-content-hide-visually: true;
+$toggle-content-hide-visually: false;
 $toggle-content-hide-invisible: false;
 $toggle-content-hide-remove: false;
 $toggle-content-no-select: false;
@@ -49,8 +49,15 @@ $toggle-form-state-input: false;
 $toggle-form-width: false;
 
 // Generate
-$toggle-generate-list-semantics: true;
-$toggle-generate-pause: true;
+$toggle-generate-high-contrast-border-all: false;
+$toggle-generate-high-contrast-border-underline: false;
+$toggle-generate-high-contrast-border-overline: false;
+$toggle-generate-high-contrast-border-left: false;
+$toggle-generate-high-contrast-border-right: false;
+$toggle-generate-high-contrast-border-row: false;
+$toggle-generate-high-contrast-border-column: false;
+$toggle-generate-list-semantics: false;
+$toggle-generate-pause: false;
 
 // Typography
 $toggle-typography-align-ltr: false;
@@ -68,7 +75,7 @@ $toggle-typography-hyphenation-remove: false;
 $toggle-typography-kerning: false;
 $toggle-typography-ligatures-common: false;
 $toggle-typography-ligatures-discretionary: false;
-$toggle-typography-measure: true;
+$toggle-typography-measure: false;
 $toggle-typography-numbers-fractions-diagonal: false;
 $toggle-typography-numbers-fractions-stacked: false;
 $toggle-typography-numbers-lining: false;

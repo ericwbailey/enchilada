@@ -1,0 +1,110 @@
+// ============================================================================
+// Generate
+// High Contrast Border
+// ============================================================================
+
+
+/// Generates a transparent border that becomes visible in Windows High
+/// Contrast Mode.
+///
+/// @group Generate
+///
+/// @parameter {String} $type [all] - Specifies where the borders show up. Can be `all`, `underline`, `overline`, `left`, `right`, `row`, or `column`
+/// @parameter {String} $width [border(thinnest)] - Specifies the width of the border.
+///
+/// @example scss
+///  @include generate-high-contrast-border(underline, 1px);
+///
+/// @see {maps} borders
+///
+/// @link http://www.gwhitworth.com/blog/2017/04/how-to-use-ms-high-contrast Greg Whitworth - How to use -ms-high-contrast
+/// @link https://twitter.com/_josephwatkins/status/783729617169444865 Jo Watkins on Twitter: "Adding a transparent border…"
+/// @link https://support.microsoft.com/en-us/help/4026951/windows-turn-high-contrast-mode-on-or-off-in-windows Turn high contrast mode on or off in Windows
+
+
+@mixin generate-high-contrast-border(
+    $type: "all",
+    $width: border(thinnest)
+) {
+    @if (unitless($width)) {
+        @error "`#{$width}`"
+        + $meta-invalid-argument
+        + $meta-invalid-argument-select-multiple
+        + "`all`, `underline`, `overline`, `left`, `right`, `row`, or `column`";
+    }
+
+    @if ($type == "all") {
+        border: $width solid transparent;
+    }
+
+    @else if ($type == "underline") {
+        border-bottom: $width solid transparent;
+    }
+
+    @else if ($type == "overline") {
+        border-top: $width solid transparent;
+    }
+
+    @else if ($type == "left") {
+        border-left: $width solid transparent;
+    }
+
+    @else if ($type == "right") {
+        border-left: $width solid transparent;
+    }
+
+    @else if ($type == "row") {
+        border-top: 1px solid transparent;
+        border-bottom: $width solid transparent;
+    }
+
+    @else if ($type == "column") {
+        border-right: $width solid transparent;
+        border-left: $width solid transparent;
+    }
+}
+
+
+// Toggles --------------------------------------------------------------------
+// Enables functional class toggles. See `_config.scss`
+@if $toggle-generate-high-contrast-border-all == true {
+    .generate-high-contrast-border-all {
+        @include generate-high-contrast-border(all);
+    }
+}
+
+@if $toggle-generate-high-contrast-border-underline == true {
+    .generate-high-contrast-border-underline {
+        @include generate-high-contrast-border(underline);
+    }
+}
+
+@if $toggle-generate-high-contrast-border-overline == true {
+    .generate-high-contrast-border-overline {
+        @include generate-high-contrast-border(overline);
+    }
+}
+
+@if $toggle-generate-high-contrast-border-left == true {
+    .generate-high-contrast-border-left {
+        @include generate-high-contrast-border(left);
+    }
+}
+
+@if $toggle-generate-high-contrast-border-right == true {
+    .generate-high-contrast-border-right {
+        @include generate-high-contrast-border(right);
+    }
+}
+
+@if $toggle-generate-high-contrast-border-row == true {
+    .generate-high-contrast-border-row {
+        @include generate-high-contrast-border(row);
+    }
+}
+
+@if $toggle-generate-high-contrast-border-column == true {
+    .generate-high-contrast-border-column {
+        @include generate-high-contrast-border(column);
+    }
+}
