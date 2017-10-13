@@ -27,10 +27,8 @@
     $width: border(thinnest)
 ) {
     @if (unitless($width)) {
-        @error "`#{$width}`"
-        + $meta-invalid-argument
-        + $meta-invalid-argument-select-multiple
-        + "`all`, `underline`, `overline`, `left`, `right`, `row`, or `column`";
+        @error $meta-invalid-argument-provide
+        + "a unit for `$width`";
     }
 
     @if ($type == "all") {
@@ -55,12 +53,19 @@
 
     @else if ($type == "row") {
         border-top: 1px solid transparent;
-        border-bottom: $width solid transparent;
+        border-bottom: $width solid transparent;``
     }
 
     @else if ($type == "column") {
         border-right: $width solid transparent;
         border-left: $width solid transparent;
+    }
+
+    @else {
+        @error "`#{$type}`"
+        + $meta-invalid-argument
+        + $meta-invalid-argument-select-multiple
+        + "`all`, `underline`, `overline`, `left`, `right`, `row`, or `column`";
     }
 }
 
