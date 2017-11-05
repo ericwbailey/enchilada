@@ -51,6 +51,11 @@
     text-align: left;
 }
 
+.kss-markdown ol,
+.kss-markdown ul {
+    padding-left: 0;
+}
+
 .kss-modifiers__heading {
     font-size: 1rem;
 }
@@ -61,6 +66,11 @@
     &:not(:first-of-type) {
         margin-top: 2rem;
     }
+}
+
+.kss-navigation {
+    border-right: 1px solid #cccccc;
+    box-shadow: none;
 }
 
 .kss-nav__item {
