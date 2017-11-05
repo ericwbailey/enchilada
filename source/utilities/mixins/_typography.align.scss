@@ -1,7 +1,5 @@
-// ============================================================================
-// Typography
+// TYPOGRAPHY
 // Align Type
-// ============================================================================
 
 
 /// Aligns text to the start or end of document, according to the parent node's
@@ -59,7 +57,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-typography-align-ltr == true {
     .typography-align-ltr-start {

@@ -1,7 +1,5 @@
-// ============================================================================
-// Form
+// FORM
 // Border
-// ============================================================================
 
 
 /// Adds consistent border treatments for all form elements.
@@ -16,7 +14,7 @@
     border: border(thinnest) solid c(form, base);
 }
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-form-border == true {
     .form-border {

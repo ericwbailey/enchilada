@@ -1,7 +1,5 @@
-// ============================================================================
-// Typography
+// TYPOGRAPHY
 // Small Caps
-// ============================================================================
 
 
 /// Less distracting than all capitals for longer form text settings. Renders
@@ -34,7 +32,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-typography-small-caps == true {
     .typography-small-caps {

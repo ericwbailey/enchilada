@@ -1,7 +1,5 @@
-// ============================================================================
-// Typography
+// TYPOGRAPHY
 // Hyphenation
-// ============================================================================
 
 
 /// Use `&shy;` to  insert a hyphenation hint.
@@ -18,7 +16,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-typography-hyphenation-add == true {
     .typography-hyphenation-add {

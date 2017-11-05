@@ -1,7 +1,5 @@
-// ============================================================================
-// Typography
+// TYPOGRAPHY
 // Alternate Contextuals
-// ============================================================================
 
 
 /// Text that intends to mimic hand lettering.
@@ -29,7 +27,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-typography-alternates-contextual == true {
     .typography-alternates-contextual {

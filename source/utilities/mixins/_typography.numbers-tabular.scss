@@ -1,7 +1,5 @@
-// ============================================================================
-// Typography
+// TYPOGRAPHY
 // Tabular Numbers
-// ============================================================================
 
 
 /// Good for easily comparing when stacked into columns.
@@ -24,7 +22,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-typography-numbers-tabular == true {
     .typography-numbers-tabular {

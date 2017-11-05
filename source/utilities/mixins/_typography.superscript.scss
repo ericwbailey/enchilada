@@ -1,7 +1,5 @@
-// ============================================================================
-// Typography
+// TYPOGRAPHY
 // Superscript
-// ============================================================================
 
 
 /// Generates superscript glyphs, if present.
@@ -36,7 +34,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-typography-superscript == true {
     .typography-superscript {

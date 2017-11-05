@@ -1,7 +1,5 @@
-// ============================================================================
-// Typography
+// TYPOGRAPHY
 // Diagonal Fractions
-// ============================================================================
 
 
 /// Turns common plaintext number lockups into properly spaced fractions (i.e.
@@ -28,7 +26,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-typography-numbers-fractions-diagonal == true {
     .typography-numbers-fractions-diagonal {

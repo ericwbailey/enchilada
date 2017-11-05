@@ -1,7 +1,5 @@
-// ============================================================================
-// Form
+// FORM
 // Multi Line Input
-// ============================================================================
 
 
 /// Adds consistent minimum height for multi-line inputs. Be sure that the last
@@ -17,7 +15,7 @@
     min-height: ms(7.75, em);
 }
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-form-multi-line-input == true {
     .form-multi-line-input {

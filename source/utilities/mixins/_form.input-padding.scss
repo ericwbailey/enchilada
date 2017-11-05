@@ -1,7 +1,5 @@
-// ============================================================================
-// Form
+// FORM
 // Input Padding
-// ============================================================================
 
 
 /// Adds consistent padding to all form elements.
@@ -17,7 +15,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-form-input-padding == true {
     .form-input-padding {

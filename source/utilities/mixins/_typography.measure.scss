@@ -1,7 +1,5 @@
-// ============================================================================
-// Typography
+// TYPOGRAPHY
 // Measure
-// ============================================================================
 
 
 /// Sets the maximium comfortable width for reading a column of text.
@@ -24,7 +22,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-typography-measure == true {
     .typography-measure {

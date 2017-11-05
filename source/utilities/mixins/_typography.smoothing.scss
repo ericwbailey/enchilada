@@ -1,7 +1,5 @@
-// ============================================================================
-// Typography
+// TYPOGRAPHY
 // Smoothing
-// ============================================================================
 
 
 /// If at all possible, don't alter the subpixel rendering. Currently only works
@@ -49,7 +47,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-typography-smoothing-none == true {
     .typography-smoothing-none {

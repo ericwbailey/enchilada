@@ -1,6 +1,4 @@
-// ============================================================================
-// Colors
-// ============================================================================
+// COLORS
 
 
 /// Basic, component, and subcomponent color names.
@@ -10,10 +8,8 @@
 /// @property {Color} key - Aliases for specific colors
 
 
-
 $colors: (
-
-    // Basics -----------------------------------------------------------------
+    // BASICS
     // http://clrs.cc/
     aqua:    #7fdbff,
     black:   #111111,
@@ -32,22 +28,20 @@ $colors: (
     teal:    #39cccc,
     yellow:  #ffdc00,
 
-    // Styleguide -------------------------------------------------------------
+    // STYLEGUIDE
     styleguide: (
         type-dark: #111111,
         type-light: #9b9b9b,
         background: #f5f5f5
     ),
 
-
-    // Base -------------------------------------------------------------------
+    // BASE
     base: (
         type:       #111111,
         background: #ffffff
     ),
 
-
-    // Links -------------------------------------------------------------------
+    // LINKS
     link: (
         base:    #0074d9,
         hover:   #7fdbff,
@@ -57,16 +51,14 @@ $colors: (
         busy:    #dddddd
     ),
 
-
-    // Headings ---------------------------------------------------------------
+    // HEADINGS
     heading: (
         base: #111111,
         odd:  #9b9b9b,
         even: #4a4a4a
     ),
 
-
-    // Buttons ----------------------------------------------------------------
+    // BUTTONS
     button: (
         type:   #ffffff,
         base:   #0074d9,
@@ -76,8 +68,7 @@ $colors: (
         busy:   #dddddd
     ),
 
-
-    // Forms ------------------------------------------------------------------
+    // FORMS
     form: (
         base:   #0074d9,
         hover:  #7fdbff,
@@ -86,8 +77,7 @@ $colors: (
         busy:   #dddddd
     )
 
-
-    // Component --------------------------------------------------------------
+    // COMPONENT
 //    c-component: (
 //        subcomponent: value,
 //        subcomponent: value

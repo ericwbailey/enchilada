@@ -1,7 +1,5 @@
-// ============================================================================
-// Content
+// CONTENT
 // Show Content
-// ============================================================================
 
 
 /// Reveals hidden content.
@@ -57,7 +55,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-content-show-visually == true {
     .content-show-visually {

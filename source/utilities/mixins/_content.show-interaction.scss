@@ -1,7 +1,5 @@
-// ============================================================================
-// Content
+// CONTENT
 // Show Interaction
-// ============================================================================
 
 
 /// Sets the cursor to reflect the kind of content is applies to. Links should
@@ -38,7 +36,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-content-show-interaction-link == true {
     .content-show-interaction-link {

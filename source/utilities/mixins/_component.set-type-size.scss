@@ -1,7 +1,5 @@
-// ============================================================================
-// Component
+// COMPONENT
 // Component Type Size
-// ============================================================================
 
 
 /// Resets the component's font size to control font size on a component level.
@@ -21,7 +19,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-component-set-type-size == true {
     .component-set-type-size {

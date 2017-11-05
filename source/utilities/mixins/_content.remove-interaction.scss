@@ -1,7 +1,5 @@
-// ============================================================================
-// Content
+// CONTENT
 // Remove Interaction
-// ============================================================================
 
 
 /// Removes cursor interaction
@@ -19,7 +17,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-content-remove-interaction == true {
     .content-remove-interaction {

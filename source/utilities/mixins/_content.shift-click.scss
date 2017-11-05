@@ -1,7 +1,5 @@
-// ============================================================================
-// Content
+// CONTENT
 // Shift Click
-// ============================================================================
 
 
 /// Shift body text links to make them feel more button-like.
@@ -20,7 +18,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-content-shift-click == true {
     .content-shift-click {

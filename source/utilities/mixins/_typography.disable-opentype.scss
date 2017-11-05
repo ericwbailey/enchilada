@@ -1,7 +1,5 @@
-// ============================================================================
-// Typography
+// TYPOGRAPHY
 // Disable OpenType
-// ============================================================================
 
 
 /// Disables all OpenType features.
@@ -21,7 +19,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-typography-disable-opentype == true {
     .typography-disable-opentype {

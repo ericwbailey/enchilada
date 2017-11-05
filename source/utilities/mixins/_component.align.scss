@@ -1,7 +1,5 @@
-// ============================================================================
-// Component
+// COMPONENT
 // Align Content
-// ============================================================================
 
 
 /// Aligns a component to the left, right, or center of the parent node.
@@ -58,7 +56,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-component-align-float-start == true {
     .component-align-float-start {

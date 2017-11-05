@@ -1,7 +1,5 @@
-// ============================================================================
-// Content
+// CONTENT
 // Hide Content
-// ============================================================================
 
 
 /// Hides content from the screen. Can still make visually accessible, retain
@@ -63,7 +61,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-content-hide-visually == true {
     .content-hide-visually {

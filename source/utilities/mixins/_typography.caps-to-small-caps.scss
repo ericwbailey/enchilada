@@ -1,7 +1,5 @@
-// ============================================================================
-// Typography
+// TYPOGRAPHY
 // Caps to Small Caps
-// ============================================================================
 
 
 /// Converts all letters, not just lowercase letters, into Small Caps.
@@ -33,7 +31,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-typography-caps-to-small-caps == true {
     .typography-caps-to-small-caps {

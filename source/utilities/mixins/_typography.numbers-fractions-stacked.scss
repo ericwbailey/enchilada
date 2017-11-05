@@ -1,7 +1,5 @@
-// ============================================================================
-// Typography
+// TYPOGRAPHY
 // Stacked Fractions
-// ============================================================================
 
 
 /// Support for a less-common stacked presentation for fractions.
@@ -25,7 +23,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-typography-numbers-fractions-stacked == true {
     .typography-numbers-fractions-stacked {

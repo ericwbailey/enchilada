@@ -1,7 +1,5 @@
-// ============================================================================
-// Form
+// FORM
 // State
-// ============================================================================
 
 
 /// Controls the presentation of form input behavior.
@@ -54,7 +52,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-form-state-link == true {
     .form-state-input {

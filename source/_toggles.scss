@@ -1,13 +1,12 @@
-// ============================================================================
-// Project Toggles
-// ============================================================================
+// TOGGLES
 
 
 // Set variables to `true` to generate functional classes as needed. Unlike
 // their source @mixins, generated classes will be added to `main.css`
 // regardless of whether or not they're declared in the HTML.
 
-// Component
+
+// COMPONENT
 $toggle-component-align-float-start: false;
 $toggle-component-align-float-end: false;
 $toggle-component-align-float-center: false;
@@ -21,11 +20,10 @@ $toggle-component-responsify: false;
 $toggle-component-set-type-size: false;
 $toggle-component-style-reset: false;
 
-// Content
+// CONTENT
 $toggle-content-clearfix-add: false;
 $toggle-content-clearfix-remove: false;
-$toggle-content-fast-click: false;
-$toggle-content-hide-visually: false;
+$toggle-content-hide-visually: true;
 $toggle-content-hide-invisible: false;
 $toggle-content-hide-remove: false;
 $toggle-content-no-select: false;
@@ -39,7 +37,7 @@ $toggle-content-show-invisible: false;
 $toggle-content-show-removed: false;
 $toggle-content-text-truncate: false;
 
-// Forms
+// FORMS
 $toggle-form-border: false;
 $toggle-form-input-padding: false;
 $toggle-form-label-distance: false;
@@ -49,7 +47,7 @@ $toggle-form-state-link: false;
 $toggle-form-state-input: false;
 $toggle-form-width: false;
 
-// Generate
+// GENERATE
 $toggle-generate-high-contrast-border-all: false;
 $toggle-generate-high-contrast-border-underline: false;
 $toggle-generate-high-contrast-border-overline: false;
@@ -57,10 +55,10 @@ $toggle-generate-high-contrast-border-left: false;
 $toggle-generate-high-contrast-border-right: false;
 $toggle-generate-high-contrast-border-row: false;
 $toggle-generate-high-contrast-border-column: false;
-$toggle-generate-list-semantics: false;
-$toggle-generate-pause: false;
+$toggle-generate-list-semantics: true;
+$toggle-generate-pause: true;
 
-// Typography
+// TYPOGRAPHY
 $toggle-typography-align-ltr: false;
 $toggle-typography-align-rtl: false;
 $toggle-typography-alternates-contextual: false;
@@ -76,7 +74,7 @@ $toggle-typography-hyphenation-remove: false;
 $toggle-typography-kerning: false;
 $toggle-typography-ligatures-common: false;
 $toggle-typography-ligatures-discretionary: false;
-$toggle-typography-measure: false;
+$toggle-typography-measure: true;
 $toggle-typography-numbers-fractions-diagonal: false;
 $toggle-typography-numbers-fractions-stacked: false;
 $toggle-typography-numbers-lining: false;
@@ -126,7 +124,7 @@ $toggle-typography-tracking-loose: false;
 $toggle-typography-tracking-looser: false;
 $toggle-typography-tracking-loosest: false;
 
-// Quotes
+// QUOTES
 $toggle-quotes-french: false;
 $toggle-quotes-german: false;
 $toggle-quotes-italian: false;
@@ -140,7 +138,7 @@ $toggle-quotes-spanish: false;
 $toggle-quotes-turkish: false;
 $toggle-quotes-vietnamese: false;
 
-// Tables
+// TABLES
 $toggle-table-col-width-05: false;
 $toggle-table-col-width-10: false;
 $toggle-table-col-width-12: false;

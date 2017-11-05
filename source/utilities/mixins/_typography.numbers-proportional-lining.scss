@@ -1,7 +1,5 @@
-// ============================================================================
-// Typography
+// TYPOGRAPHY
 // Proportional Lining Numbers
-// ============================================================================
 
 
 /// Tabular numerals are monospaced, so different information can be easily
@@ -33,7 +31,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-typography-numbers-proportional-lining == true {
     .typography-numbers-proportional-lining {

@@ -1,7 +1,5 @@
-// ============================================================================
-// Typography
+// TYPOGRAPHY
 // Ordinals
-// ============================================================================
 
 
 /// Glpyhs that commonly follow a number (ex: 1st, 2nd). Also sometimes used
@@ -28,7 +26,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-typography-ordinals == true {
     .typography-ordinals {

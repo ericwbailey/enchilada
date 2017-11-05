@@ -1,7 +1,5 @@
-// ============================================================================
-// Typography
+// TYPOGRAPHY
 // Proportional Numbers
-// ============================================================================
 
 
 /// Good for when placed in long form, serifed text.
@@ -24,7 +22,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-typography-numbers-proportional == true {
     .typography-numbers-proportional {

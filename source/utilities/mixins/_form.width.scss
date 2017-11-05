@@ -1,7 +1,5 @@
-// ============================================================================
-// Form
+// FORM
 // Width
-// ============================================================================
 
 
 /// Adds consistent width and display for all for all form elements.
@@ -18,7 +16,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-form-width == true {
     .form-width {

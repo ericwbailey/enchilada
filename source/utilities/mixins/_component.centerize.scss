@@ -1,7 +1,5 @@
-// ============================================================================
-// Component
+// COMPONENT
 // Centerize
-// ============================================================================
 
 
 /// Centers a component horizontally and vertically on the viewport.
@@ -26,7 +24,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-component-centerize == true {
     .component-centerize {

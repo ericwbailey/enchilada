@@ -1,7 +1,5 @@
-// ============================================================================
-// Component
+// COMPONENT
 // Remove Margin and Padding
-// ============================================================================
 
 
 /// Removes the margin and padding values on a component.
@@ -21,7 +19,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-component-remove-margin-padding == true {
     .component-remove-margin-padding {

@@ -1,12 +1,10 @@
-// ============================================================================
-// Project Config
-// ============================================================================
+// PROJECT CONFIG
 
 
 // Used to set variables to control overall aspects of the project.
 
 
-// Grid -----------------------------------------------------------------------
+// GRID
 
 /// @group general
 /// @type  Measurement
@@ -17,7 +15,7 @@ $global-grid-gutter: 0.5em !default;
 $global-grid-col-width: 5em !default;
 
 
-// Typography -----------------------------------------------------------------
+// TYPOGRAPHY
 
 /// @group general
 /// @type  String
@@ -53,7 +51,7 @@ $global-type-weight: $font-weight-normal !default;
 $global-type-measure: 75ex !default;
 
 
-// Borders --------------------------------------------------------------------
+// BORDERS
 
 /// @group general
 /// @type  Measurement
@@ -64,7 +62,7 @@ $global-border-color: currentColor !default;
 $global-border-radius: 0.2rem !default;
 
 
-// Shadows --------------------------------------------------------------------
+// SHADOWS
 
 /// @group general
 /// @type  Measurement

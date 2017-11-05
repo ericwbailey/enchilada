@@ -1,7 +1,5 @@
-// ============================================================================
-// Generate
+// GENERATE
 // Pause
-// ============================================================================
 
 
 /// Inserts an invisible period after an element to force a pause from a screen
@@ -24,7 +22,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-generate-pause == true {
     .generate-pause {

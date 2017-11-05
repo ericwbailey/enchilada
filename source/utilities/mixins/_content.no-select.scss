@@ -1,7 +1,5 @@
-// ============================================================================
-// Content
+// CONTENT
 // No Select
-// ============================================================================
 
 
 /// Removes the selection highlight from an element
@@ -19,7 +17,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-content-no-select == true {
     .content-no-select {

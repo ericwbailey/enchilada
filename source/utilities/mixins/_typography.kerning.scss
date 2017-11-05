@@ -1,7 +1,5 @@
-// ============================================================================
-// Typography
+// TYPOGRAPHY
 // Kerning
-// ============================================================================
 
 
 /// Enables kerning pairs, if present.
@@ -23,7 +21,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-typography-kerning == true {
     .typography-kerning {

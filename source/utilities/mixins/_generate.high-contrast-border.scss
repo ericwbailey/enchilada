@@ -1,7 +1,5 @@
-// ============================================================================
-// Generate
+// GENERATE
 // High Contrast Border
-// ============================================================================
 
 
 /// Generates a transparent border that becomes visible in Windows High
@@ -53,7 +51,7 @@
 
     @else if ($type == "row") {
         border-top: 1px solid transparent;
-        border-bottom: $width solid transparent;``
+        border-bottom: $width solid transparent;
     }
 
     @else if ($type == "column") {
@@ -70,7 +68,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-generate-high-contrast-border-all == true {
     .generate-high-contrast-border-all {

@@ -1,7 +1,5 @@
-// ============================================================================
-// Typography
+// TYPOGRAPHY
 // Common Ligatures
-// ============================================================================
 
 
 /// Mitigate spacing issues between specific combinations of letters within a
@@ -30,7 +28,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-typography-ligatures-common == true {
     .typography-ligatures-common {

@@ -1,7 +1,5 @@
-// ============================================================================
-// Typography
+// TYPOGRAPHY
 // Swashes
-// ============================================================================
 
 
 /// Adds additional flare, best applied conservatively. Manually declaring each
@@ -34,7 +32,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-typography-swash-1 == true {
     .typography-swash-1 {

@@ -1,7 +1,5 @@
-// ============================================================================
-// Typography
+// TYPOGRAPHY
 // Lining Numbers
-// ============================================================================
 
 
 /// Sets figures to align with the baseline and cap height.
@@ -22,7 +20,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-typography-numbers-lining == true {
     .typography-numbers-lining {

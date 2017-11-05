@@ -1,7 +1,5 @@
-// ============================================================================
-// Form
+// FORM
 // Label Distance
-// ============================================================================
 
 
 /// Adds consistent spacing between form labels and their inputs.
@@ -17,7 +15,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-form-label-distance == true {
     .form-label-distance {

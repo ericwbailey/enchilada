@@ -1,7 +1,5 @@
-// ============================================================================
-// Typography
+// TYPOGRAPHY
 // Oldstyle Numbers
-// ============================================================================
 
 
 /// Tends to have descenders that sit below the baseline. Typically default.
@@ -22,7 +20,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-typography-numbers-oldstyle == true {
     .typography-numbers-oldstyle {

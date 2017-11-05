@@ -1,7 +1,5 @@
-// ============================================================================
-// Content
+// CONTENT
 // Clearfix
-// ============================================================================
 
 
 /// Add or remove clearfix.
@@ -41,7 +39,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-content-clearfix-add == true {
     .content-clearfix-add {

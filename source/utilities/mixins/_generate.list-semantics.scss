@@ -1,7 +1,5 @@
-// ============================================================================
-// Generate
+// GENERATE
 // List Semantics
-// ============================================================================
 
 
 /// Inserts a zero width space to make a screen reader announce a styled list.
@@ -23,7 +21,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-generate-list-semantics == true {
     .generate-list-semantics {

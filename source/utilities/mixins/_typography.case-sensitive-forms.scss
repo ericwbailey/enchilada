@@ -1,7 +1,5 @@
-// ============================================================================
-// Typography
+// TYPOGRAPHY
 // Case Sensitive Forms
-// ============================================================================
 
 
 /// Alternate glyphs that are specifically designed to work alongside all caps
@@ -24,7 +22,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-typography-case-sensitive-forms == true {
     .typography-case-sensitive-forms {

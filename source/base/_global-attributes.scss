@@ -1,6 +1,4 @@
-// ============================================================================
-// Global Attributes
-// ============================================================================
+// GLOBAL ATTRIBUTES
 
 
 [contenteditable] {
@@ -39,7 +37,7 @@
 }
 
 
-//Remove outline from non-interactive elements that get focus assigned to them
+// Remove outline from non-interactive elements that get focus assigned to them
 [tabindex="-1"] {
     &:focus {
         outline: none;

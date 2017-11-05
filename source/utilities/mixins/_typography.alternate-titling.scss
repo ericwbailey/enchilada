@@ -1,7 +1,5 @@
-// ============================================================================
-// Typography
+// TYPOGRAPHY
 // Alternate Titling
-// ============================================================================
 
 
 /// Alternate characters for display text.
@@ -30,7 +28,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-typography-alternates-titling == true {
     .typography-alternates-titling {

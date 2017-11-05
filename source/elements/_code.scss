@@ -1,9 +1,7 @@
-// ============================================================================
-// Code
-// ============================================================================
+// CODE
 
 
-// Code Logic -----------------------------------------------------------------
+// LOGIC ----------------------------------------------------------------------
 @mixin code-inline-spacing() {
     margin-left: em(2);
     margin-right: em(2);
@@ -12,7 +10,7 @@
 }
 
 
-// Grouped Styles -------------------------------------------------------------
+// GROUPED STYLES -------------------------------------------------------------
 // [1] Ensures hyphenation won't interfere with code
 code,
 kbd,
@@ -32,27 +30,71 @@ var {
 }
 
 
-// Individual Styles ----------------------------------------------------------
+// INDIVIDUAL STYLES ----------------------------------------------------------
+
+
+// Code
+//
+// Code does a thing.
+//
+// Markup:
+// <code>!doctype html</code>
+//
+// Styleguide Elements.Code
 code {
     @include code-inline-spacing();
 }
 
 
+// Keyboard
+//
+// Keyboard does a thing.
+//
+// Markup:
+// <kbd>K</kbd>
+//
+// Styleguide Elements.Keyboard
 kbd {
     @include code-inline-spacing();
 }
 
 
+// Pre
+//
+// Pre does a thing.
+//
+// Markup:
+// <pre>
+//   ~/Documents/enchilada
+// </pre>
+//
+// Styleguide Elements.Pre
 pre {
     line-height: 1.8;
 }
 
 
+// Samp
+//
+// Samp does a thing.
+//
+// Markup:
+// <samp>Style guide build completed successfully!</samp>
+//
+// Styleguide Elements.Samp
 samp {
     @include code-inline-spacing();
 }
 
 
+// Var
+//
+// Var does a thing.
+//
+// Markup:
+// <var>userName</var>
+//
+// Styleguide Elements.Var
 var {
     @include code-inline-spacing();
 }

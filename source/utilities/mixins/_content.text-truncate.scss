@@ -1,7 +1,5 @@
-// ============================================================================
-// Content
+// CONTENT
 // Text Truncate
-// ============================================================================
 
 
 /// Truncates overflowed text with an ellipsis. Requires the element to be set
@@ -23,7 +21,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-content-text-truncate == true {
     .content-text-truncate {

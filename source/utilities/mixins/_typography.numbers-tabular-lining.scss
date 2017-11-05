@@ -1,7 +1,5 @@
-// ============================================================================
-// Typography
+// TYPOGRAPHY
 // Tabular Lining Numbers
-// ============================================================================
 
 
 /// @group Typography
@@ -30,7 +28,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-typography-numbers-tabular-lining == true {
     .typography-numbers-tabular-lining {

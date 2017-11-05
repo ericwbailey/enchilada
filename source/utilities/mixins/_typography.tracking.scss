@@ -1,7 +1,5 @@
-// ============================================================================
-// Font
+// TYPOGRAPHY
 // Tracking
-// ============================================================================
 
 
 /// Use these easing values to provide consistent tracking values.
@@ -36,7 +34,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-typography-tracking-tightest == true {
     .typography-tracking-tightest {

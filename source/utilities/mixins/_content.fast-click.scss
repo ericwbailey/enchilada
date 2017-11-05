@@ -1,7 +1,5 @@
-// ============================================================================
 // Content
 // Fast Click
-// ============================================================================
 
 
 /// Remove touch delay on mobile devices. Use with discretion, will cause
@@ -23,7 +21,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-content-fast-click == true {
     .content-fast-click {

@@ -1,7 +1,5 @@
-// ============================================================================
-// Component
+// COMPONENT
 // Responsify
-// ============================================================================
 
 
 /// Creates a basic full-width responsive component whose aspect ratio scales
@@ -21,7 +19,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-component-responsify == true {
     .component-responsify {

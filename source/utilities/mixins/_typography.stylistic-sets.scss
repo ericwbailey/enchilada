@@ -1,7 +1,5 @@
-// ============================================================================
-// Typography
+// TYPOGRAPHY
 // Stylistic Sets
-// ============================================================================
 
 
 /// Adds additional flare, best applied conservatively. Manually declaring each
@@ -114,7 +112,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-typography-stylistic-set-01 == true {
     .typography-stylistic-set-01 {

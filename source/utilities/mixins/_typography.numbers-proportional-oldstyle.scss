@@ -1,7 +1,5 @@
-// ============================================================================
-// Typography
+// TYPOGRAPHY
 // Proportional Oldstyle Numbers
-// ============================================================================
 
 
 /// Proportional numbers are designed to take up whatever width they need. Old
@@ -32,7 +30,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-typography-numbers-proportional-oldstyle == true {
     .typography-numbers-proportional-oldstyle {

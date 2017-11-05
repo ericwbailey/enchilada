@@ -1,7 +1,5 @@
-// ============================================================================
-// Typography
+// TYPOGRAPHY
 // Direction
-// ============================================================================
 
 
 /// Aligns the type to either the start or the end of the set language
@@ -39,7 +37,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-typography-direction-ltr == true {
     .typography-direction-ltr {

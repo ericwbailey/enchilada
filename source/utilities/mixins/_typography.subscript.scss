@@ -1,7 +1,5 @@
-// ============================================================================
-// Typography
+// TYPOGRAPHY
 // Subscript
-// ============================================================================
 
 
 /// Less distracting than all capitals for longer form text settings. Renders
@@ -39,7 +37,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-typography-subscript == true {
     .typography-subscript {

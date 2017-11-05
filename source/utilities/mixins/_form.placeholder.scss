@@ -1,7 +1,5 @@
-// ============================================================================
-// Form
+// FORM
 // Placeholder
-// ============================================================================
 
 
 /// Adds consistent color for input placeholders.
@@ -17,7 +15,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-form-placeholder == true {
     .form-placeholder {

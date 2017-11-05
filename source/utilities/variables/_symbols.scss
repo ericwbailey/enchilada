@@ -1,6 +1,4 @@
-// ============================================================================
-// Symbols
-// ============================================================================
+// SYMBOLS
 
 
 // Variables for describing commonly-used unicode symbols. Note that some
@@ -12,7 +10,7 @@
 // http://unicode.johnholtripley.co.uk/
 
 
-// Arrows ----------------------------------------------------------------------
+// ARROWS
 $symbol-arrow-thin-left: "\2190";        // ←
 $symbol-arrow-thin-right: "\2192";       // →
 $symbol-arrow-thin-up: "\2191";          // ↑
@@ -34,22 +32,19 @@ $symbol-arrow-point-right: "\25BA";      // ►
 $symbol-arrow-point-up: "\25B2";         // ▲
 $symbol-arrow-point-down: "\25BC";       // ▼
 
-
-// Asterisks ---------------------------------------------------------------------
+// ASTERISKS
 $symbol-asterisk-heavy: "\2731";          // ✱
 $symbol-asterisk-teardrop: "\273B";       // ✻
 $symbol-asterisk-balloon-light: "\2722";  // ✢
 $symbol-asterisk-balloon-medium: "\2723"; // ✣
 $symbol-asterisk-balloon-heavy: "\2724";  // ✤
 
-
-// Bullets --------------------------------------------------------------------
+// BULLETS
 $symbol-bullet-small: "\00B7";  // ·
 $symbol-bullet-medium: "\2022"; // •
 $symbol-bullet-large: "\25CF";  // ●
 
-
-// Currency --------------------------------------------------------------------
+// CURRENCY
 $symbol-currency-cent: "\00A2";    // ¢
 $symbol-currency-dollar: "\0024";  // $
 $symbol-currency-euro: "\20AC";    // €
@@ -57,8 +52,7 @@ $symbol-currency-generic: "\00A4"; // ¤
 $symbol-currency-pound: "\00A3";   // £
 $symbol-currency-yen: "\00A5";     // ¥
 
-
-// Games ----------------------------------------------------------------------
+// GAMES
 // Cards
 $symbol-cards-spade: "\2660";   // ♠
 $symbol-cards-heart: "\2665";   // ♥
@@ -79,16 +73,14 @@ $symbol-chess-white-pawn: "\2659";   // ♙
 $symbol-chess-white-queen: "\2655";  // ♕
 $symbol-chess-white-rook: "\2656";   // ♖
 
-
-// Quotes ---------------------------------------------------------------------
+// QUOTES
 // Also see `elements/_quotes.scss`
 $symbol-quote-single-opening: "\2018"; // ‘
 $symbol-quote-single-closing: "\2019"; // ’
 $symbol-quote-double-opening: "\201C"; // “
 $symbol-quote-double-closing: "\201D"; // ”
 
-
-// Typography and Dingbats ----------------------------------------------------
+// TYPOGRAPHY AND DINGBATS
 $symbol-asterism: "\2042";               // ⁂
 $symbol-caduceus: "\2624";               // ☤
 $symbol-celcius: "\2103";                // ℃
@@ -119,16 +111,14 @@ $symbol-star-four: "\2726";              // ✦
 $symbol-star-full: "\2605";              // ★
 $symbol-star-hollow: "\2606";            // ☆
 
-
-// Dashes ---------------------------------------------------------------------
+// DASHES
 $symbol-dash-en: "\2013";        // –
 $symbol-dash-em: "\2014";        // —
 $symbol-dash-figure: "\2012";    // ‒
 $symbol-dash-swung: "\2053";     // ⁓
 $symbol-dash-quotation: "\2015"; // ―
 
-
-// Fractions ------------------------------------------------------------------
+// FRACTIONS
 $symbol-fraction-one-half: "\00BD";       // ½
 $symbol-fraction-one-quarter: "\00BC";    // ¼
 $symbol-fraction-three-quarters: "\00BE"; // ¾
@@ -148,39 +138,35 @@ $symbol-fraction-three-eighths: "\215C";  // ⅜
 $symbol-fraction-five-eighths: "\215D";   // ⅝
 $symbol-fraction-seven-eighths: "\215E";  // ⅞
 
-
-// Forms ----------------------------------------------------------------------
+// FORMS
 $symbol-form-check-light: "\2713"; // ✓
 $symbol-form-check-heavy: "\2714"; // ✔
 $symbol-form-cross-light: "\2717"; // ✗
 $symbol-form-cross-heavy: "\2718"; // ✘
 
-// Checkboxes
+// CHECKBOXES
 $symbol-form-checkbox-checked: "\2611";   // ☑
 $symbol-form-checkbox-crossed: "\2612";   // ☒
 $symbol-form-checkbox-unchecked: "\2610"; // ☐
 
-// Radios
+// RADIOS
 $symbol-form-radio-checked: "\25C9";   // ◉
 $symbol-form-radio-unchecked: "\25CE"; // ◎
 
-
-// Heart ----------------------------------------------------------------------
+// HEARTS
 $symbol-heart-floral: "\2766";         // ❦
 $symbol-heart-exclamation: "\2762";    // ❢
 $symbol-heart-rotated: "\2765";        // ❥
 $symbol-heart-floral-rotated: "\2767"; // ❧
 
-
-// Intellectual Property ------------------------------------------------------
+// INTELLECTUAL PROPERTY
 $symbol-ip-copyright: "\00A9";            // ©
 $symbol-ip-registered-trademark: "\00AE"; // ®
 $symbol-ip-service-mark: "\2120";         // ℠
 $symbol-ip-trademark: "\2122";            // ™
 $symbol-ip-sound-recording: "\2117";      // ℗
 
-
-// Keyboard -------------------------------------------------------------------
+// KEYBOARD
 $symbol-keyboard-break: "\238A";           // ⎊
 $symbol-keyboard-caps-lock: "\21EA";       // ⇪
 $symbol-keyboard-clear: "\2327";           // ⌧
@@ -211,8 +197,7 @@ $symbol-keyboard-tab-backward: "\21E4";    // ⇤
 $symbol-keyboard-tabforward: "\21E5";      // ⇥
 $symbol-keyboard-undo: "\21B6";            // ↶
 
-
-// Math -----------------------------------------------------------------------
+// MATH
 $symbol-math-addition: "\002B";                 // +
 $symbol-math-approximately-equals: "\2248";     // ≈
 $symbol-math-divide: "\00F7";                   // ÷
@@ -230,16 +215,14 @@ $symbol-math-multiply: "\00D7";                 // ×
 $symbol-math-plus-or-minus: "\00B1";            // ±
 $symbol-math-square-root: "\221A";              // √
 
-
-// Music ----------------------------------------------------------------------
+// MUSIC
 $symbol-music-eighth-note: "\266A";         // ♪
 $symbol-music-quarter-note: "\2669";        // ♩
 $symbol-music-sharp-note: "\266F";          // ♯
 $symbol-music-two-eighths-note: "\266B";    // ♫
 $symbol-music-two-sixteenths-note: "\266C"; // ♬
 
-
-// Shapes ---------------------------------------------------------------------
+// SHAPES
 $symbol-shape-circle-solid: "\25CF";    // ●
 $symbol-shape-circle-hollow: "\25CB";   // ○
 $symbol-shape-diamond-solid: "\25C6";   // ◆

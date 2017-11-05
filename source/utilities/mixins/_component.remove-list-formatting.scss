@@ -1,7 +1,5 @@
-// ============================================================================
-// Component
+// COMPONENT
 // Remove List Formatting
-// ============================================================================
 
 
 /// Undoes custom list styling. See `_reset.scss` and `_lists.scss`
@@ -38,7 +36,7 @@
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 @if $toggle-component-remove-list-formatting == true {
     .component-remove-list-formatting {

@@ -1,9 +1,7 @@
-// ============================================================================
-// Buttons
-// ============================================================================
+// BUTTONS
 
 
-// Button Logic ---------------------------------------------------------------
+// BUTTON LOGIC
 @mixin buttons-border() {
     border: 0;
     border-radius: $global-border-radius;
@@ -45,7 +43,7 @@
 }
 
 
-// Grouped Styles -------------------------------------------------------------
+// GROUPED STYLES
 button,
 input[type="button"] {
     @include buttons-border();
@@ -93,7 +91,7 @@ input[type="button"] {
 }
 
 
-// Individual Styles ----------------------------------------------------------
+// INDIVIDUAL STYLES
 button {
 
 }
@@ -104,7 +102,7 @@ input[type="button"] {
 }
 
 
-// Text buttons
+// TEXT BUTTONS
 [role="button"][tabindex="0"] {
     @include buttons-height();
     @include buttons-width();
