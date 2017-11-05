@@ -1,0 +1,32 @@
+// ============================================================================
+// Content
+// Fast Click
+// ============================================================================
+
+
+/// Remove touch delay on mobile devices. Use with discretion, will cause
+/// performance issues for lower-power devices.
+///
+/// @group Content
+///
+/// @example scss
+///  @include content-fast-click();
+///
+/// @see {mixin} content-show-interaction
+///
+/// @link https://twitter.com/_baxuz/status/919865566785089536 Ivan Čurić on Twitter: "@simevidas @patrick_h_lauke @hzr Adding it in like sanitize.css and bootstrap 4's reset do creates a ton of layers. Not a good idea for mobile devices."
+
+
+@mixin content-fast-click() {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
+
+
+// Toggles --------------------------------------------------------------------
+// Enables functional class toggles. See `_config.scss`
+@if $toggle-content-fast-click == true {
+    .content-fast-click {
+        @include content-fast-click();
+    }
+}
