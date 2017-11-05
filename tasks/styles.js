@@ -44,7 +44,7 @@ gulp.task('test-styles', help.styles.test, function () {
         }))
         .pipe(autoprefix())
         .pipe(cssnano({
-          discardComments: {removeAll: true}
+            discardComments: {removeAll: true}
         }))
         .pipe(gulp.dest(paths.styles.test));
 });
