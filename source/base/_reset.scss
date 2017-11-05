@@ -6,7 +6,16 @@
 
 // ZEROING
 // Zeroes out all HTML elements to allow uniform component-level styling
-* {
+body, article, nav, aside, section, header, footer, main, address,
+h1, h2, h3, h4, h5, h6,
+p, hr, pre, blockquote, ol, ul, li, dl, dt, dd, figure, figcaption, div,
+table, caption, thead, tbody, tfoot, tr, th, td, col, colgroup,
+form, fieldset, legend, label, input, button, select, datalist, optgroup, option, textarea,
+keygen, output, progress, meter,
+details, summary, command, menu,
+del, ins,
+img, iframe, embed, object, param, video, audio, source, canvas, track, map, area,
+a, em, strong, i, b, u, s, small, abbr, q, cite, dfn, sub, sup, time, code, kbd, samp, var, mark, bdi, bdo, ruby, rt, rp, span, br, wbr {
     margin: 0;
     padding: 0;
     vertical-align: baseline;
