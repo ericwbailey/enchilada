@@ -1,9 +1,12 @@
-// ============================================================================
 // Media
-// ============================================================================
+//
+// Interactive audio/visual content.
+//
+// Styleguide Elements.Media
 
 
-// Grouped Styles -------------------------------------------------------------
+// GROUPED STYLES
+
 audio,
 video,
 canvas {
@@ -11,23 +14,57 @@ canvas {
 }
 
 
-video,
-canvas {
+audio,
+video {
 
 }
 
 
-// Individual Styles ----------------------------------------------------------
+// INDIVIDUAL STYLES
+
+// Audio
+//
+// Represents a sound or audio stream.
+//
+// Markup:
+// <audio controls>
+//   <source type="audio/mp3" src="http://www.noiseaddicts.com/samples_1w72b820/4353.mp3" />
+//   <source type="audio/ogg" src="http://www.noiseaddicts.com/samples_1w72b820/4353.ogg" />
+//   <source type="audio/wav" src="http://www.noiseaddicts.com/samples_1w72b820/4353.wav" />
+//   <track label="English" srclang="en" kind="captions" src="http://www.noiseaddicts.com/samples_1w72b820/4353.wav/caption.en.vtt" />
+//   Your browser does not support embedded audio. Please <a rel="external noopener" href="http://browsehappy.com/">consider upgrading your browser</a> or <a download="" href="http://www.noiseaddicts.com/samples_1w72b820/4353.mp3">download a file</a> for offline listening.
+// </audio>
+//
+// Styleguide Elements.Media.Audio
 audio {
     margin-top: ms(2, em);
 }
 
 
+// Canvas
+//
+// An interactive area that can dynamically generate content.
+//
+// Styleguide Elements.Media.Canvas
 canvas {
 
 }
 
 
+// Video
+//
+// Represents a video or movie.
+//
+// Markup:
+// <video controls="" poster="http://placehold.it/854x480?text=Video+Poster">
+//   <source type="video/mp4" src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" />
+//   <source type="video/webm" src="http://clips.vorwaerts-gmbh.de/VfE.webm" />
+//   <source type="video/ogg" src="http://clips.vorwaerts-gmbh.de/VfE.ogv" />
+//   <track label="English" srclang="en" kind="captions" src="https://archive.org/download/WebmVp8Vorbis/caption.en.vtt" />
+//   Your browser does not support embedded video. Please <a rel="external noopener" href="http://browsehappy.com/">consider upgrading your browser</a> or <a download="" href="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4">download a file</a> for offline viewing.
+// </video>
+//
+// Styleguide Elements.Media.Video
 video {
 
 }

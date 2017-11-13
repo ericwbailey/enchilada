@@ -1,17 +1,11 @@
-// ============================================================================
 // Paragraphs
-// ============================================================================
+//
+// Basic content grouping for text.
+//
+// Styleguide Elements.Paragraph
 
 
-p {
-
-}
-
-
-.paragraph-lede {
-    font-size: ms(1.1, em);
-}
-
+// GROUPED STYLES
 
 .paragraph-legal, // Use `<small>` for smaller sections of text. See `_text-level.scss`
 .paragraph-agate {
@@ -19,6 +13,63 @@ p {
 }
 
 
+// INDIVIDUAL STYLES
+
+// Paragraph
+//
+// A basic paragraph.
+//
+// Markup:
+// <p>
+//   A paragraph is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose.
+// </p>
+//
+// Styleguide Elements.Paragraph.1
+p {
+
+}
+
+
+// Lede
+//
+// A paragph containing the main point of the story, typically placed first.
+//
+// Markup:
+// <p class="paragraph-lede">
+//   In writing, especially in journalism, a lead paragraph (sometimes shortened to lead; also spelled lede) is the opening paragraph of an article, essay, book chapter, or other written work that summarizes its main ideas.
+// </p>
+//
+// Styleguide Elements.Paragraph.2
+.paragraph-lede {
+    font-size: ms(1.1, em);
+}
+
+
+// Legal
+//
+// A paragraph typically used for legal language, including terms and services.
+//
+// Markup:
+// <p class="paragraph-legal">
+//   Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+// </p>
+//
+// Styleguide Elements.Paragraph.3
+.paragraph-legal {
+
+}
+
+
+// Agate
+//
+// A paragraph typically used for fine print.
+//
+// Markup:
+// <p class="paragraph-agate">
+//   An agate (US) or ruby (UK) is a unit of typographical measure. It is 5.5 typographical points, or about  1/14th inch (1.81 mm). It can refer to either the height of a line of type or to a font that is 5.5 points. An agate font is commonly used to display statistical data or legal notices in newspapers. It is considered to be the smallest point size that can be printed on newsprint and remain legible.
+// </p>
+//
+// Styleguide Elements.Paragraph.4
 .paragraph-agate {
     @include typography-tracking(slight);
 

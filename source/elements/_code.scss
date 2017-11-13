@@ -1,7 +1,12 @@
-// CODE
+// Code
+//
+// Describes text related to computer input and output.
+//
+// Styleguide Elements.Code
 
 
-// LOGIC ----------------------------------------------------------------------
+// LOGIC
+
 @mixin code-inline-spacing() {
     margin-left: em(2);
     margin-right: em(2);
@@ -10,7 +15,8 @@
 }
 
 
-// GROUPED STYLES -------------------------------------------------------------
+// GROUPED STYLES
+
 // [1] Ensures hyphenation won't interfere with code
 code,
 kbd,
@@ -30,17 +36,16 @@ var {
 }
 
 
-// INDIVIDUAL STYLES ----------------------------------------------------------
-
+// INDIVIDUAL STYLES
 
 // Code
 //
-// Code does a thing.
+// Represents a fragment of computer code.
 //
 // Markup:
 // <code>!doctype html</code>
 //
-// Styleguide Elements.Code
+// Styleguide Elements.Code.Code
 code {
     @include code-inline-spacing();
 }
@@ -48,12 +53,12 @@ code {
 
 // Keyboard
 //
-// Keyboard does a thing.
+// Represents computer input.
 //
 // Markup:
-// <kbd>K</kbd>
+// <kbd>Esc</kbd>
 //
-// Styleguide Elements.Keyboard
+// Styleguide Elements.Code.Keyboard
 kbd {
     @include code-inline-spacing();
 }
@@ -61,14 +66,14 @@ kbd {
 
 // Pre
 //
-// Pre does a thing.
+// Represents a block of preformatted text.
 //
 // Markup:
 // <pre>
 //   ~/Documents/enchilada
 // </pre>
 //
-// Styleguide Elements.Pre
+// Styleguide Elements.Code.Pre
 pre {
     line-height: 1.8;
 }
@@ -76,12 +81,12 @@ pre {
 
 // Samp
 //
-// Samp does a thing.
+// Represents sample output from a computer program.
 //
 // Markup:
 // <samp>Style guide build completed successfully!</samp>
 //
-// Styleguide Elements.Samp
+// Styleguide Elements.Code.Samp
 samp {
     @include code-inline-spacing();
 }
@@ -89,12 +94,12 @@ samp {
 
 // Var
 //
-// Var does a thing.
+// Represents a variable or placeholder.
 //
 // Markup:
 // <var>userName</var>
 //
-// Styleguide Elements.Var
+// Styleguide Elements.Code.Var
 var {
     @include code-inline-spacing();
 }

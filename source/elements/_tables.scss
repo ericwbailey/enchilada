@@ -1,9 +1,7 @@
-// ============================================================================
-// Tables
-// ============================================================================
+// TABLES
 
 
-// Table Logic ----------------------------------------------------------------
+// LOGIC
 // Impose specific column widths on tables, if desired. Always leave one column
 // free, to absorb rounding errors/accidental breakage.
 @mixin table-col-width-05() { width: 5%; }
@@ -33,19 +31,62 @@
 @mixin table-col-width-95() { width: 95%; }
 
 
-// Column alignments
+// COLUMN ALIGNMENT
 @mixin table-col-align-text() { text-align: left; }
 @mixin table-col-align-image() { text-align: center; }
 @mixin table-col-align-number() { text-align: right; }
 
 
-// Row alignments
+// ROW ALIGNMENT
 @mixin table-row-align-top() { vertical-align: top; }
 @mixin table-row-align-middle { vertical-align: middle; }
 @mixin table-row-align-bottom { vertical-align: bottom; }
 
 
-// Table Styling --------------------------------------------------------------
+// Table
+//
+// Represents data with more than one dimension.
+//
+// Markup:
+// <table>
+//   <caption>Academy Awards for Best Picture</caption>
+//   <colgroup>
+//     <col>
+//     <col>
+//   </colgroup>
+//   <thead>
+//     <tr>
+//       <th scope="col">Year</th>
+//       <th scope="col">Film</th>
+//     </tr>
+//   </thead>
+//   <tbody>
+//     <tr>
+//       <td scope="row">1980</td>
+//       <td>Ordinary People</td>
+//     </tr>
+//     <tr>
+//       <td scope="row">1981</td>
+//       <td>Chariots of Fire</td>
+//     </tr>
+//     <tr>
+//       <td scope="row">1982</td>
+//       <td>Gandhi</td>
+//     </tr>
+//     <tr>
+//       <td scope="row">1983</td>
+//       <td>Terms of Endearment</td>
+//     </tr>
+//   </tbody>
+//   <tfoot>
+//     <tr>
+//       <td scope="row">1980-1983</td>
+//       <td scope="row">4 movies</td>
+//     </tr>
+//   </tfoot>
+// </table>
+//
+// Styleguide Elements.Tables
 table {
     width: 100%;
 
@@ -123,10 +164,10 @@ table {
 }
 
 
-// Toggles --------------------------------------------------------------------
+// TOGGLES
 // Enables functional class toggles. See `_config.scss`
 
-// Column widths
+// COLUMN WIDTHS
 @if $toggle-table-col-width-05 == true {
     .table-col-width-05 {
         @include table-col-width-05();
@@ -277,8 +318,7 @@ table {
     }
 }
 
-
-// Column alignments
+// COLUMN ALIGNMENTS
 @if $toggle-table-col-align-text == true {
     .table-col-align-text {
         @include table-col-align-text();
@@ -297,7 +337,7 @@ table {
     }
 }
 
-// Row alignments
+// ROW ALIGNMENT
 @if $toggle-table-row-align-top == true {
     .table-row-align-top {
         @include table-row-align-top();

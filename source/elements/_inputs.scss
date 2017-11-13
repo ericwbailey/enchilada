@@ -1,9 +1,22 @@
-// ============================================================================
-// Inputs
-// ============================================================================
+// INPUTS
 
 
+// GROUPED STYLES
 // [1] Avoid using the not selector to keep specificity low
+
+// Controls all inputs
+input {
+    line-height: 1;
+
+    // Placeholder text
+    &::-webkit-input-placeholder {
+        @include form-placeholder();
+    }
+
+    &::-moz-placeholder {
+        @include form-placeholder();
+    }
+}
 
 
 // [1]
@@ -30,6 +43,7 @@ input[type="week"] {
     @include form-state(input);
 }
 
+
 // [1]
 // Not `button`, `checkbox`, or `radio`
 input[type="color"],
@@ -53,6 +67,7 @@ input[type="url"],
 input[type="week"] {
     @include form-width();
 }
+
 
 // [1]
 // Separation between labe and input
@@ -80,98 +95,7 @@ input[type="week"] {
 }
 
 
-input {
-    line-height: 1;
-
-    // Placeholder text
-    &::-webkit-input-placeholder {
-        @include form-placeholder();
-    }
-
-    &::-moz-placeholder {
-        @include form-placeholder();
-    }
-
-    // Input types
-    &[type="color"] {
-        height: em(53); // REVIEW: Double-check these values if adjusting input heights
-
-        background-color: c(base, background);
-
-        // REVIEW: Double-check these values if adjusting input heights
-        &::-webkit-color-swatch-wrapper {
-            @include component-remove-margin-padding();
-
-            border: 0;
-
-            background-color: c(base, background);
-        }
-    }
-
-    &[type="date"] {
-
-    }
-
-    &[type="email"] {
-
-    }
-
-    &[list] {
-
-    }
-
-    &[type="month"] {
-
-    }
-
-    &[type="number"] {
-
-    }
-
-    // REVIEW: Padding and relative positioning
-    &[type="password"] {
-        @include typography-tracking(tightest);
-
-        padding: em(2) ms(0.25, em) em(4) ms(0.25, em);
-        position: relative;
-          top: rem(-5);
-
-        font: small-caption;
-        font-size: 1.75rem;
-    }
-
-    &[type="range"] {
-        margin-top: ms(0.75, em); // REVIEW: Set to three quarters of `form-label-distance()`
-        margin-bottom: ms(0.5, em); // Gives range input a little breathing room
-    }
-
-    &[type="search"] {
-
-    }
-
-    &[type="tel"] {
-
-    }
-
-    &[type="text"] {
-
-    }
-
-    &[type="time"] {
-
-    }
-
-    &[type="url"] {
-
-    }
-
-    &[type="week"] {
-
-    }
-}
-
-
-// Text-based Inputs ----------------------------------------------------------
+// Text-based inputs
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -187,7 +111,7 @@ input[type="week"] {
 }
 
 
-// Non-text-based Inputs ------------------------------------------------------
+// Non-text-based inputs
 input[type="color"],
 input[type="file"],
 input[type="range"] {
@@ -195,46 +119,79 @@ input[type="range"] {
 }
 
 
-input[type="color"] {
+// STATES AND VALIDATION
 
-}
-
-
-// http://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/
-input[type="file"] {
-    background-color: c(base, background);
-}
-
-
-input[type="range"] {
-
-}
-
-
-// Validation -----------------------------------------------------------------
+// Valid input
+//
+// Represents an input with properly-formatted content.
+//
+// Markup:
+// <label for="phone">
+//   Phone number
+//   <input id="phone" name="phone" type="tel" aria-invalid="false" />
+// </label>
+//
+// Styleguide Elements.Forms.Invalid
 input[aria-invalid="false"] {
 
 }
 
 
+// Invalid input
+//
+// Represents an input with improperly-formatted content.
+//
+// Markup:
+// <label for="phone">
+//   Phone number
+//   <input id="phone" name="phone" type="tel" aria-invalid="true" />
+// </label>
+//
+// Styleguide Elements.Forms.Invalid
 input[aria-invalid="true"] {
 
 }
 
 
+// Autosave
+//
+// Represents an input that saves its content automatically.
+//
+// Markup:
+// <label for="first-name">
+//   First name
+//   <input autosave id="first-name" name="first-name" type="text" />
+// </label>
+//
+// Styleguide Elements.Forms.Autosave
 input[autosave] {
 
 }
 
 
-// Disabled input should be immutable. `!important` overrides the `input:not()`
-// selector above
+// Disabled
+//
+// Represents an input whose content cannot be edited.
+//
+// Markup:
+// <label for="last-name">
+//   Last name
+//   <input disabled id="last-name" name="last-name" type="text" />
+// </label>
+//
+// Styleguide Elements.Forms.Autosave
+
+// Disabled input should be immutable.
 input[disabled] {
+    @include content-remove-interaction();
+
     border-color: transparentize(c(form, base), 0.5) !important;
 
     background-color: transparentize(c(base, background), 0.5) !important;
 
     color: transparentize(c(base, type), 0.5) !important;
+
+    cursor: not-allowed;
 
     &:hover,
     &:active,
@@ -248,21 +205,318 @@ input[disabled] {
 }
 
 
+// Minimum Length
+//
+// Represents an input who requires a minimum number of input characters.
+//
+// Markup:
+// <label for="min-length">
+//   Enter 10 or more characters
+//   <input minlength="10" id="min-length" name="min-length" type="text" />
+// </label>
+//
+// Styleguide Elements.Forms.Minimum-length
 input[minlength] {
 
 }
 
 
+// Maximum Length
+//
+// Represents an input who requires less than a maximum number of input characters.
+//
+// Markup:
+// <label for="max-length">
+//   Enter 11 or less characters
+//   <input maxlength="10" id="max-length" name="max-length" type="text" />
+// </label>
+//
+// Styleguide Elements.Forms.Maximum-length
 input[maxlength] {
 
 }
 
 
+// Readonly
+//
+// Represents an input with a value that can only be read and not edited.
+//
+// Markup:
+// <label for="readonly">
+//   True or false?
+//   <input readonly id="readonly" name="readonly" type="text" value="true" />
+// </label>
+//
+// Styleguide Elements.Forms.Readonly
 input[readonly] {
 
 }
 
 
+// Required
+//
+// Represents an input whose input is required for submission.
+//
+// Markup:
+// <label for="required">
+//   Email
+//   <input id="required" name="required" type="email" />
+// </label>
+//
+// Styleguide Elements.Forms.Required
 input[required] {
+
+}
+
+
+// INDIVIDUAL STYLES
+
+// Color
+//
+// Represents an input that selects a color.
+//
+// Markup:
+// <label for="color">
+//   Color
+//   <input id="color" name="color" type="color" />
+// </label>
+//
+// Styleguide Elements.Forms.Color
+input[type="color"] {
+
+}
+
+
+// Date
+//
+// Represents an input that selects a date.
+//
+// Markup:
+// <label for="date">
+//   Select a date
+//   <input id="date" name="date" type="date" />
+// </label>
+//
+// Styleguide Elements.Forms.Date
+input[type="date"] {
+
+}
+
+
+// Datetime-local
+//
+// Represents an input that selects a date and time, with no time zone specified.
+//
+// Markup:
+// <label for="datetime-local">
+//   Select a date and time
+//   <input id="datetime-local" name="datetime-local" type="datetime-local" />
+// </label>
+//
+// Styleguide Elements.Forms.Datetime-local
+input[type="datetime-local"] {
+
+}
+
+
+// Email
+//
+// Represents an input that enters an email address.
+//
+// Markup:
+// <label for="email">
+//   Email address
+//   <input id="email" name="email" type="email" />
+// </label>
+//
+// Styleguide Elements.Forms.Email
+input[type="email"] {
+
+}
+
+
+// File
+//
+// Represents an input that selects a file.
+//
+// Markup:
+// <label for="file">
+//   File
+//   <input id="file" name="file" type="file" />
+// </label>
+//
+// Styleguide Elements.Forms.File
+
+// http://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/
+input[type="file"] {
+    background-color: c(base, background);
+}
+
+
+// Month
+//
+// Represents an input that selects a month.
+//
+// Markup:
+// <label for="month">
+//   Month
+//   <input id="month" name="month" type="month" />
+// </label>
+//
+// Styleguide Elements.Forms.Month
+input[type="month"] {
+
+}
+
+
+// Number
+//
+// Represents an input that selects a number.
+//
+// Markup:
+// <label for="number">
+//   Enter a number
+//   <input id="number" name="number" type="number" />
+// </label>
+//
+// Styleguide Elements.Forms.Number
+input[type="number"] {
+
+}
+
+
+// Password
+//
+// Represents an input that masks input for secure entry.
+//
+// Markup:
+// <label for="password">
+//   Enter your password
+//   <input id="password" name="password" type="password" />
+// </label>
+//
+// Styleguide Elements.Forms.Password
+
+// REVIEW: Padding and relative positioning
+input[type="password"] {
+    @include typography-tracking(tightest);
+
+    padding: em(2) ms(0.25, em) em(4) ms(0.25, em);
+    position: relative;
+      top: rem(-5);
+
+    font: small-caption;
+    font-size: 1.75rem;
+}
+
+
+// Range
+//
+// Represents an input that selects something in a range of values.
+//
+// Markup:
+// <label for="range">
+//   Range Input
+//   <input id="range" name="range" type="range" />
+// </label>
+//
+// Styleguide Elements.Forms.Range
+input[type="range"] {
+    margin-top: ms(0.75, em); // REVIEW: Set to three quarters of `form-label-distance()`
+    margin-bottom: ms(0.5, em); // Gives range input a little breathing room
+}
+
+
+// Search
+//
+// Represents an input for a search term.
+//
+// Markup:
+// <label for="search">
+//   Search
+//   <input id="search" name="search" type="search" />
+// </label>
+//
+// Styleguide Elements.Forms.Search
+input[type="search"] {
+
+}
+
+
+// Telephone
+//
+// Represents an input for a phone number.
+//
+// Markup:
+// <label for="tel">
+//   Phone number
+//   <input id="tel" name="tel" type="tel" />
+// </label>
+//
+// Styleguide Elements.Forms.Telephone
+input[type="tel"] {
+
+}
+
+
+// Text
+//
+// Represents an input for text.
+//
+// Markup:
+// <label for="text">
+//   Additional instructions
+//   <input id="text" name="text" type="text" />
+// </label>
+//
+// Styleguide Elements.Forms.Text
+input[type="text"] {
+
+}
+
+
+// Time
+//
+// Represents an input for time.
+//
+// Markup:
+// <label for="time">
+//   Set your alarm
+//   <input id="time" name="time" type="time" />
+// </label>
+//
+// Styleguide Elements.Forms.Time
+input[type="time"] {
+
+}
+
+
+// URL
+//
+// Represents an input for an URL.
+//
+// Markup:
+// <label for="url">
+//   Paste your URL here
+//   <input id="url" name="url" type="url" />
+// </label>
+//
+// Styleguide Elements.Forms.Url
+input[type="url"] {
+
+}
+
+// Week
+//
+// Represents an input for a week.
+//
+// Markup:
+// <label for="week">
+//   Select your vacation week
+//   <input id="week" name="week" type="week" />
+// </label>
+//
+// Styleguide Elements.Forms.Week
+input[type="week"] {
 
 }

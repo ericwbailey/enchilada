@@ -1,96 +1,197 @@
-// ============================================================================
 // Headings
-// ============================================================================
+//
+// Visual heading styling. Allows author to use ordered headings to retain an accessible document, but match the needs of the design.
+//
+// Styleguide Elements.Headings
 
 
-// Visual heading styling. Allows author to use ordered headings to retain an
-// accessible document, but match the needs of the design.
+// LOGIC
 
-// Giga
 @mixin heading-giga() {
     font-size: ms(5, em);
 }
 
+@mixin heading-mega() {
+    font-size: ms(4.5, em);
+}
+
+@mixin heading-alpha() {
+    font-size: ms(4, em);
+}
+
+@mixin heading-beta() {
+    font-size: ms(3.5, em);
+}
+
+@mixin heading-gamma() {
+    font-size: ms(3, em);
+}
+
+@mixin heading-delta() {
+    font-size: ms(2.5, em);
+}
+
+@mixin heading-epsilon() {
+    font-size: ms(2, em);
+}
+
+@mixin heading-zeta() {
+    font-size: ms(1.5, em);
+}
+
+@mixin heading-eta() {
+    font-size: ms(1, em);
+}
+
+
+// GROUPED STYLES
+
+.heading-giga,
+.heading-mega,
+.heading-alpha,
+.heading-beta,
+.heading-gamma,
+.heading-delta,
+.heading-epsilon,
+.heading-zeta,
+.heading-eta {
+    font-weight: $font-weight-normal;
+}
+
+
+
+// INDIVIDUAL STYLES
+
+// Giga
+//
+// Heading size 9 of 9.
+//
+// Markup:
+// <h2 class="heading-giga">
+//   Giga heading
+// </h2>
+//
+// Styleguide Elements.Headings.9
 .heading-giga {
     @include heading-giga();
 }
 
 
 // Mega
-@mixin heading-mega() {
-    font-size: ms(4.5, em);
-}
-
+//
+// Heading size 8 of 9.
+//
+// Markup:
+// <h3 class="heading-mega">
+//   Mega heading
+// </h3>
+//
+// Styleguide Elements.Headings.8
 .heading-mega {
     @include heading-mega();
 }
 
 
 // Alpha
-@mixin heading-alpha() {
-    font-size: ms(4, em);
-}
-
+//
+// Heading size 7 of 9.
+//
+// Markup:
+// <h1 class="heading-alpha">
+//   Alpha heading
+// </h1>
+//
+// Styleguide Elements.Headings.7
 .heading-alpha {
     @include heading-alpha();
 }
 
 
 // Beta
-@mixin heading-beta() {
-    font-size: ms(3.5, em);
-}
-
+//
+// Heading size 6 of 9.
+//
+// Markup:
+// <h5 class="heading-beta">
+//   Beta heading
+// </h5>
+//
+// Styleguide Elements.Headings.6
 .heading-beta {
     @include heading-beta();
 }
 
 
 // Gamma
-@mixin heading-gamma() {
-    font-size: ms(3, em);
-}
-
+//
+// Heading size 5 of 9.
+//
+// Markup:
+// <h2 class="heading-gamma">
+//   Gamma heading
+// </h2>
+//
+// Styleguide Elements.Headings.5
 .heading-gamma {
     @include heading-gamma();
 }
 
 
 // Delta
-@mixin heading-delta() {
-    font-size: ms(2.5, em);
-}
-
+//
+// Heading size 4 of 9.
+//
+// Markup:
+// <h2 class="heading-delta">
+//   Delta heading
+// </h2>
+//
+// Styleguide Elements.Headings.4
 .heading-delta {
     @include heading-delta();
 }
 
 
 // Epsilon
-@mixin heading-epsilon() {
-    font-size: ms(2, em);
-}
-
+//
+// Heading size 3 of 9.
+//
+// Markup:
+// <h3 class="heading-epsilon">
+//   Epsilon heading
+// </h3>
+//
+// Styleguide Elements.Headings.3
 .heading-epsilon {
     @include heading-epsilon();
 }
 
 
 // Zeta
-@mixin heading-zeta() {
-    font-size: ms(1.5, em);
-}
-
+//
+// Heading size 2 of 9.
+//
+// Markup:
+// <h4 class="heading-zeta">
+//   Zeta heading
+// </h4>
+//
+// Styleguide Elements.Headings.2
 .heading-zeta {
     @include heading-zeta();
 }
 
 
 // Eta
-@mixin heading-eta() {
-    font-size: ms(1, em);
-}
-
+//
+// Heading size 1 of 9.
+//
+// Markup:
+// <h2 class="heading-eta">
+//   Eta heading
+// </h2>
+//
+// Styleguide Elements.Headings.1
 .heading-eta {
     @include heading-eta();
 }

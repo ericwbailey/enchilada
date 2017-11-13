@@ -1,9 +1,12 @@
-// ============================================================================
 // Text-level
-// ============================================================================
+//
+// Describes individual words and phrases within a larger body of text.
+//
+// Styleguide Elements.Text-level
 
 
-// Grouped Styles -------------------------------------------------------------
+// GROUPED STYLES
+
 b,
 strong {
     font-weight: $font-weight-bold; // REVIEW: Make sure your font supports this weight
@@ -28,7 +31,16 @@ i {
 }
 
 
-// Individual Styles ----------------------------------------------------------
+// INDIVIDUAL STYLES
+
+// Abbreviation
+//
+// Represents an abbreviation or acronym.
+//
+// Markup:
+// <abbr title="National Oceanic and Atmospheric Administration">NOAA</abbr>
+//
+// Styleguide Elements.Text-level.Abbreviation
 abbr {
     @include typography-caps-to-small-caps()
     @include typography-tracking(slight);
@@ -39,23 +51,53 @@ abbr {
 }
 
 
+// B
+//
+// Represents a span of text to be stylistically offset from the normal prose without conveying any extra importance.
+//
+// Markup:
+// <b>Christopher Robin</b>
+//
+// Styleguide Elements.Text-level.B
 b {
 
 }
 
 
-// http://html5doctor.com/element-index/#bdi
+// BDI
+//
+// Represents a span of text that is to be isolated from its surroundings for the purposes of bidirectional text formatting.
+//
+// Markup:
+// <bdi>user89345</bdi>
+//
+// Styleguide Elements.Text-level.BDI
 bdi {
 
 }
 
 
-// http://html5doctor.com/element-index/#bdo
+// BDO
+//
+// Represents explicit text directionality formatting control for its children.
+//
+// Markup:
+// <bdo>你好</bdo>
+//
+// Styleguide Elements.Text-level.BDO
 bdo {
 
 }
 
 
+// Cite
+//
+// Represents the title of a work.
+//
+// Markup:
+// <cite>Twenty Thousand Leagues Under the Sea</cite>
+//
+// Styleguide Elements.Text-level.Cite
 cite {
 
     // Cited cites
@@ -65,31 +107,81 @@ cite {
 }
 
 
+// Del
+//
+// Represents a removal from the document.
+//
+// Markup:
+// My favorite fruit is <del>grapefruit</del> pomegranate.
+//
+// Styleguide Elements.Text-level.Del
 del {
 
 }
 
 
+// Dfn
+//
+// Represents the defining instance of a term.
+//
+// Markup:
+// The <dfn>World Wide Web Consortium</dfn>.
+//
+// Styleguide Elements.Text-level.Dfn
 dfn {
     @include typography-tracking(slight);
 }
 
 
+// Em
+//
+// Represents stress emphasis of its contents.
+//
+// Markup:
+// I need you to help me <em>now</em>.
+//
+// Styleguide Elements.Text-level.Em
 em {
 
 }
 
 
+// I
+//
+// Represents a span of text in an alternate voice or mood.
+//
+// Markup:
+// <i>Apeplopoda</i> is a genus of tiger moths.
+//
+// Styleguide Elements.Text-level.I
 i {
 
 }
 
 
+// Ins
+//
+// Represents an addition to the document.
+//
+// Markup:
+// My favorite color is blue<ins>, but I also like orange</ins>.
+//
+// Styleguide Elements.Text-level.Ins
 ins {
-    border-bottom: border(thinnest) double;
+    border-bottom: 3px double;
+
+    text-decoration: none;
 }
 
 
+// Mark
+//
+// Represents a run of text in one document marked or highlighted because of its relevance in another context.
+//
+// Markup:
+// The character <mark>Mario</mark> has been used in numerous games.
+//
+// Styleguide Elements.Text-level.Mark
 mark {
     padding: em(2);
 
@@ -99,54 +191,142 @@ mark {
 }
 
 
-// http://html5doctor.com/element-index/#ruby
+// Ruby
+//
+// Represents a container for small annotations used for phonetic readings in languages such as Japanese and Chinese.
+//
+// Markup:
+// <ruby>
+//   漢 <rp>(</rp><rt>Kan</rt><rp>)</rp>
+//   字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+// </ruby>
+//
+// Styleguide Elements.Text-level.Ruby
 ruby {
 
 }
 
 
-// http://html5doctor.com/element-index/#rp
+// RP
+//
+// Represents a container for parentheses used to wrap ruby text inside a <code>ruby</code> element.
+//
+// Markup:
+// <ruby>
+//   漢 <rp>(</rp><rt>Kan</rt><rp>)</rp>
+//   字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+// </ruby>
+//
+// Styleguide Elements.Text-level.RP
 rp {
 
 }
 
 
-// http://html5doctor.com/element-index/#rt
+// RT
+//
+// Represents a container for ruby text inside a <code>ruby</code> element.
+//
+// Markup:
+// <ruby>
+//   漢 <rp>(</rp><rt>Kan</rt><rp>)</rp>
+//   字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+// </ruby>
+//
+// Styleguide Elements.Text-level.RT
 rt {
 
 }
 
 
+// S
+//
+// Represents contents that are no longer accurate or no longer relevant.
+//
+// Markup:
+// The Stegosaurus has one brain<s> two brains, one in the head and one in the tail</s>.
+//
+// Styleguide Elements.Text-level.S
 s {
 
 }
 
 
+// Small
+//
+// Represents side comments such as small print.
+//
+// Markup:
+// <small>Copyright &copy; 2017</small>
+//
+// Styleguide Elements.Text-level.Small
 small {
     font-size: ms(0.6, em); // Use `.paragraph-legal` for larger sections of text. See `_paragraphs.scss`
 }
 
 
+// Strong
+//
+// Represents strong importance for its contents.
+//
+// Markup:
+// <strong>Warning:</strong> Contents may be inflammable.
+//
+// Styleguide Elements.Text-level.Strong
 strong {
 
 }
 
 
+// Sub
+//
+// Represents subscripted elements.
+//
+// Markup:
+// H<sub>2</sub>O
+//
+// Styleguide Elements.Text-level.Sub
 sub {
     @include typography-subscript();
 }
 
 
+// Sup
+//
+// Represents superscripted elements.
+//
+// Markup:
+// 3<sup>rd</sup>
+//
+// Styleguide Elements.Text-level.Sup
 sup {
     @include typography-superscript();
 }
 
 
+// Time
+//
+// Represents a precise date and/or time
+//
+// Markup:
+// <time datetime="2017-05-05T08:33Z">
+//   August 5th, 2017 at 8:33 AM
+// </time>
+//
+// Styleguide Elements.Text-level.Time
 time {
     @include typography-numbers-tabular-oldstyle();
 }
 
 
+// U
+//
+// Represents an annotation of something, but not explicitly saying what it is.
+//
+// Markup:
+// There's a <u>bathroom</u> on the right.
+//
+// Styleguide Elements.Text-level.U
 u {
     @include content-underline();
 }

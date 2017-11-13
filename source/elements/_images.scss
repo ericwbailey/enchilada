@@ -1,9 +1,12 @@
-// ============================================================================
 // Images
-// ============================================================================
+//
+// Controls site images.
+//
+// Styleguide Elements.Images
 
 
-// Grouped Styles -------------------------------------------------------------
+// GROUPED STYLES
+
 // [1] Differentiate `alt` text from surrounding copy
 // [2] Removes the whitespace that appears under `img` elements
 img,
@@ -30,12 +33,36 @@ picture {
 }
 
 
-// Individual Styles ----------------------------------------------------------
+// INDIVIDUAL STYLES
+
+// Img
+//
+// Represents an image.
+//
+// Markup:
+// <img
+//   alt="Sample Image"
+//   src="http://placehold.it/800x600?text=Sample+Image" />
+//
+// Styleguide Elements.Images.1
 img {
 
 }
 
 
+// Figure
+//
+// Represents self-contained content, typically illustrations.
+//
+// Markup:
+// <figure>
+//   <img alt="Sample Image" src="http://placehold.it/800x600?text=Sample+Image" />
+//   <figcaption>
+//     Caption for the sample image.
+//   </figcaption>
+// </figure>
+//
+// Styleguide Elements.Images.2
 figure {
 
     img {
@@ -48,6 +75,20 @@ figure {
 }
 
 
+// Picture
+//
+// Represents multiple source images for better performance.
+//
+// Markup:
+// <picture>
+//   <source media="(min-width: 40em)" srcset="http://placehold.it/800x450/7ED321/ffffff/?text=1x+Source+w/Breakpoint+Example 1x,
+//     http://placehold.it/800x600/7ED321/ffffff/?text=2x+Source+w/Breakpoint+Example 2x">
+//   <source srcset="http://placehold.it/500x250/F5A623/ffffff/?text=1x+Source+Example 1x,
+//     http://placehold.it/500x250/F5A623/ffffff/?text=2x+Source+Example 2x">
+//   <img src="http://placehold.it/600x400?text=Img+Fallback" alt="Picture Element" />
+// </picture>
+//
+// Styleguide Elements.Images.3
 picture {
 
 }

@@ -1,8 +1,21 @@
-// ============================================================================
-// Selects
-// ============================================================================
-
-
+// Select
+//
+// Represents a control for selecting amongst a set of options.
+//
+// Markup:
+// <label data-custom-select for="avocado-type">
+//   Avocado type
+//   <select id="avocado-type" name="avocado-type">
+//     <option value="fuerte">Fuerte</option>
+//     <option value="gwen">Gwen</option>
+//     <option value="hass">Hass</option>
+//     <option value="pinkerton">Pinkerton</option>
+//     <option value="reed">Reed</option>
+//     <option value="zutano">Zutano</option>
+//   </select>
+// </label>
+//
+// Styleguide Elements.Forms.Select
 select {
     @include form-border();
     @include form-input-padding();
@@ -13,6 +26,8 @@ select {
     border-radius: 0;
 
     background-color: c(base, background);
+
+    line-height: 1;
 
     -webkit-appearance: none;
     -moz-appearance: none;

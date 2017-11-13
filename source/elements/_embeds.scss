@@ -1,7 +1,12 @@
-// EMBEDS
+// Embeds
+//
+// Content placed on the site from external sources.
+//
+// Styleguide Elements.Embeds
 
 
 // GROUPED STYLES
+
 iframe,
 object {
     @include component-responsify();
@@ -9,11 +14,32 @@ object {
 
 
 // INDIVIDUAL STYLES
+
+// Iframe
+//
+// An embedded website.
+//
+// Markup:
+// <iframe
+//   src="about:blank"
+//   title="about:blank"
+//   name="iframe">
+// </iframe>
+//
+// Styleguide Elements.Embeds.Iframe
 iframe {
 
 }
 
 
+// Object
+//
+// Represents an external resource to be processed by a plugin.
+//
+// Markup:
+// <object></object>
+//
+// Styleguide Elements.Embeds.Object
 object {
 
 }

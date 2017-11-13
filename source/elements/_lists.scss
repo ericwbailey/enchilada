@@ -1,18 +1,11 @@
-// ============================================================================
 // Lists
-// ============================================================================
+//
+// Controls groupings of related things.
+//
+// Styleguide Elements.Lists
 
 
-// Grouped Styles -------------------------------------------------------------
-ul,
-dl,
-ol {
-
-    li {
-
-    }
-}
-
+// GROUPED STYLES
 
 ul,
 ol {
@@ -23,8 +16,21 @@ ol {
 }
 
 
-// Individual Styles ----------------------------------------------------------
-// Better control over unordered lists
+// INDIVIDUAL STYLES
+
+// Unordered List
+//
+// Represents a list of items, where the order of the items is not important.
+//
+// Markup:
+// <ul>
+//   <li>Cats</li>
+//   <li>Dogs</li>
+//   <li>Lizards</li>
+//   <li>Raccoons</li>
+// </ul>
+//
+// Styleguide Elements.Lists.1
 ul {
     li {
         &::before {
@@ -47,13 +53,45 @@ ul {
 }
 
 
+// Definition List
+//
+// Represents a list of defined items.
+//
+// Markup:
+// <dl>
+//   <dt>Extrovert</dt>
+//   <dd>An outgoing, overtly expressive person.</dd>
+//   <dt>Introvert</dt>
+//   <dd>A shy, reticent person.</dd>
+//   <dt>Ambivert</dt>
+//   <dd>A person whose personality has a balance of extrovert and introvert features.</dd>
+// </dl>
+//
+// Styleguide Elements.Lists.2
 dl {
+    dd {
+
+    }
+
     dt {
 
     }
 }
 
 
+// Ordered List
+//
+// Represents a list of items, where the order of the items is important.
+//
+// Markup:
+// <ol>
+//   <li>Tea</li>
+//   <li>Hot water</li>
+//   <li>Milk</li>
+//   <li>Honey</li>
+// </ol>
+//
+// Styleguide Elements.Lists.3
 ol {
     li {
 

@@ -1,6 +1,20 @@
-// ICONS
+// Icons
+//
+// Controls site iconography.
+//
+// Styleguide Elements.Icons
 
 
+// Icon Sprite
+//
+// Contains a stack of all SVG icon data.
+//
+// Markup:
+// <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg">
+//   …
+// </svg>
+//
+// Styleguide Elements.Icons.Icon-sprite
 .icon-sprite {
     height: 0;
     overflow: hidden;
@@ -10,6 +24,16 @@
 }
 
 
+// Icons
+//
+// Controls the baseline styling of SVG icons.
+//
+// Markup:
+// <svg class="icon" height="22" width="22" viewBox="0 0 100 100">
+//   …
+// </svg>
+//
+// Styleguide Elements.Icons.Icon
 [class^="icon-"],
 [class*=" icon-"] {
     display: inline-block;

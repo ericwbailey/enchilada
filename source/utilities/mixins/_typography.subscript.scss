@@ -25,7 +25,6 @@
         font-feature-settings: "subs", "subs";
 
         @supports ((-webkit-font-feature-settings: "subs") or (font-feature-settings: "subs")) {
-            font-size: 1em;
             vertical-align: baseline;
         }
 

@@ -1,19 +1,22 @@
-// BUTTONS
+// Buttons
+//
+// Controls for triggering interactive content.
+//
+// Styleguide Elements.Buttons
 
 
-// BUTTON LOGIC
+// LOGIC
+
 @mixin buttons-border() {
     border: 0;
     border-radius: $global-border-radius;
 }
-
 
 @mixin buttons-color() {
     background-color: c(button, base);
 
     color: c(button, type);
 }
-
 
 @mixin button-states() {
     &:hover {
@@ -29,13 +32,11 @@
     }
 }
 
-
 @mixin buttons-height() {
     height: ms(2, em);
 
     line-height: 1;
 }
-
 
 @mixin buttons-width() {
     display: block;
@@ -44,6 +45,7 @@
 
 
 // GROUPED STYLES
+
 button,
 input[type="button"] {
     @include buttons-border();
@@ -92,17 +94,45 @@ input[type="button"] {
 
 
 // INDIVIDUAL STYLES
+
+// Button
+//
+// Represents a button for triggering interaction.
+//
+// Markup:
+// <button type="button">
+//   Save
+// </button>
+//
+// Styleguide Elements.Buttons.Button
 button {
 
 }
 
 
+// Input Button
+//
+// Represents a button for triggering form submission.
+//
+// Markup:
+// <input type="button" value="Submit" />
+//
+// Styleguide Elements.Buttons.Input-button
 input[type="button"] {
 
 }
 
 
-// TEXT BUTTONS
+// Text Button
+//
+// Represents a button styled to appear as text.
+//
+// Markup:
+// <span role="button" tabindex="0">
+//   Cancel
+// </span>
+//
+// Styleguide Elements.Buttons.Text-button
 [role="button"][tabindex="0"] {
     @include buttons-height();
     @include buttons-width();

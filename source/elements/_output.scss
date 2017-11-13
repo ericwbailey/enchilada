@@ -1,7 +1,11 @@
-// ============================================================================
 // Output
-// ============================================================================
+//
+// Describes progress and quantified position.
+//
+// Styleguide Elements.Output
 
+
+// GROUPED STYLES
 
 // http://thenewcode.com/875/Using-the-HTML5-meter-Element
 // https://css-tricks.com/html5-meter-element/
@@ -36,16 +40,45 @@ meter {
 *::-moz-meter-sub-sub-optimum::-moz-meter-bar { background: c(form, active); }
 
 
+// INDIVIDUAL STYLES
+
+// Progress
+//
+// Represents the completion progress of a task.
+//
+// Markup:
+// <progress max="100" value="65"></progress>
+//
+// Styleguide Elements.Output.Progress
 progress {
 
 }
 
-
+// Meter
+//
+// Represents the measurement of a value within a known range or a fractional value.
+//
+// Markup:
+// <meter min="200" max="500" value="350">
+//   350 degrees
+// </meter>
+//
+// Styleguide Elements.Output.Meter
 meter {
 
 }
 
 
+// Output
+//
+// Represents the measurement of a value within a known range or a fractional value.
+//
+// Markup:
+// <output for="output" name="output">
+//   Output
+// </output>
+//
+// Styleguide Elements.Output.Output
 output {
     @include typography-tracking(slight);
 

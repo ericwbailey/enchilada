@@ -1,8 +1,18 @@
-// ============================================================================
 // Links
-// ============================================================================
+//
+// Controls for navigating to other content.
+//
+// Styleguide Elements.Links
 
 
+// Link
+//
+// Represents a hyperlink to another location.
+//
+// Markup:
+// <a rel="external noopener" href="https://en.wikipedia.org/wiki/Main_Page">Wikipedia</a>
+//
+// Styleguide Elements.Links.1
 a {
     @include content-underline();
 
@@ -64,24 +74,53 @@ a {
 }
 
 
-// Communication --------------------------------------------------------------
 // Email
+//
+// Represents a hyperlink to an email address.
+//
+// Markup:
+// <a href="mailto:name@domain.com">Contact me</a>
+//
+// Styleguide Elements.Links.2
 a[href^="mailto"] {
 
 }
 
-// Phone numbers
+
+// Phone
+//
+// Represents a hyperlink to a phone number.
+//
+// Markup:
+// <a href="tel:867-5309">867-5309</a>
+//
+// Styleguide Elements.Links.3
 a[href^="tel"] {
 
 }
 
+
 // FTP
+//
+// Represents a hyperlink to a file transfer service.
+//
+// Markup:
+// <a href="ftp:ftp.microsoft.com">ftp.microsoft.com</a>
+//
+// Styleguide Elements.Links.4
 a[href^="ftp"] {
 
 }
 
 
-// Archives -------------------------------------------------------------------
+// Archives
+//
+// Represents a hyperlink to a compressed collection of data.
+//
+// Markup:
+// <a download href="downloads/archive.zip">archive.zip</a>
+//
+// Styleguide Elements.Links.5
 a[href$=".7z"],
 a[href$=".cab"],
 a[href$=".gz"],
@@ -93,7 +132,14 @@ a[href$=".zip"] {
 }
 
 
-// Design ---------------------------------------------------------------------
+// Design
+//
+// Represents a hyperlink to a file typically used by a design application.
+//
+// Markup:
+// <a download href="downloads/homepage.sketch">homepage.sketch</a>
+//
+// Styleguide Elements.Links.6
 a[href$=".ai"],
 a[href$=".indd"],
 a[href$=".indt"],
@@ -105,7 +151,14 @@ a[href$=".xcf"] {
 }
 
 
-// Development ----------------------------------------------------------------
+// Development
+//
+// Represents a hyperlink to a file typically used by a development application.
+//
+// Markup:
+// <a download href="downloads/main.css">main.css</a>
+//
+// Styleguide Elements.Links.7
 a[href$=".atom"],
 a[href$=".cgi"],
 a[href$=".coffee"],
@@ -136,7 +189,14 @@ a[href$=".yml"] {
 }
 
 
-// Documents ------------------------------------------------------------------
+// Documents
+//
+// Represents a hyperlink to a file typically used for word processing.
+//
+// Markup:
+// <a download href="downloads/finances.xls">finances.xls</a>
+//
+// Styleguide Elements.Links.8
 a[href$=".doc"],
 a[href$=".docx"],
 a[href$=".key"],
@@ -158,7 +218,14 @@ a[href$=".xlr"] {
 }
 
 
-// Ebooks ---------------------------------------------------------------------
+// E-Books
+//
+// Represents a hyperlink to a file used by E-readers.
+//
+// Markup:
+// <a download href="downloads/books/a-tale-of-two-cities.mobi">A Tale of Two Cities</a>
+//
+// Styleguide Elements.Links.9
 a[href$=".azw"],
 a[href$=".azw3"],
 a[href$=".cbr"],
@@ -169,7 +236,14 @@ a[href$=".mobi"] {
 }
 
 
-// Fonts ----------------------------------------------------------------------
+// Development
+//
+// Represents a hyperlink to a font file.
+//
+// Markup:
+// <a download href="downloads/fonts/TisaOT.otf">TisaOT</a>
+//
+// Styleguide Elements.Links.10
 a[href$=".eot"],
 a[href$=".otf"],
 a[href$=".ttf"],
@@ -179,7 +253,14 @@ a[href$=".woff2"] {
 }
 
 
-// Images ---------------------------------------------------------------------
+// Images
+//
+// Represents a hyperlink to an image.
+//
+// Markup:
+// <a download href="downloads/images/cat.png">Photo of Smokey enjoying the sun</a>
+//
+// Styleguide Elements.Links.11
 a[href$=".bmp"],
 a[href$=".gif"],
 a[href$=".gifv"],
@@ -196,7 +277,14 @@ a[href$=".webp"] {
 }
 
 
-// Movies ---------------------------------------------------------------------
+// Movies
+//
+// Represents a hyperlink to a movie.
+//
+// Markup:
+// <a download href="downloads/movies/sunrise.mov">The sun rising over the mountains</a>
+//
+// Styleguide Elements.Links.12
 a[href$=".avi"],
 a[href$=".flv"],
 a[href$=".mkv"],
@@ -209,7 +297,14 @@ a[href$=".wmv"] {
 }
 
 
-// Music ----------------------------------------------------------------------
+// Music
+//
+// Represents a hyperlink to music.
+//
+// Markup:
+// <a download href="downloads/music/1812.mp3">Tchaikovsky - 1812 Overture (Full with Cannons)</a>
+//
+// Styleguide Elements.Links.13
 a[href$=".aac"],
 a[href$=".aif"],
 a[href$=".aiff"],
@@ -224,7 +319,15 @@ a[href$=".vob"] {
 }
 
 
-// Version Control ------------------------------------------------------------
-a[href$=".git"] {
+// Version Control
+//
+// Represents a hyperlink code version control.
+//
+// Markup:
+// <a rel="external noopener" href="https://github.com/ericwbailey/enchilada.git">enchilada</a>
+//
+// Styleguide Elements.Links.14
+a[href$=".git"],
+a[href$=".svn"] {
 
 }

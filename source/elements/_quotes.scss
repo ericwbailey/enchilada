@@ -1,6 +1,8 @@
-// ============================================================================
 // Quotes
-// ============================================================================
+//
+// Controls content quoting other content.
+//
+// Styleguide Elements.Quotes
 
 
 // Let the `lang` attribute determine the generated quote. Top languages
@@ -14,7 +16,9 @@
 // http://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references
 
 
-// English --------------------------------------------------------------------
+// LANGUAGES
+
+// ENGLISH
 // Quote pairs: “…” ‘…’ “…” ‘…’
 
 // General
@@ -32,7 +36,7 @@
 }
 
 
-// French ---------------------------------------------------------------------
+// FRENCH
 // Quote pairs: «» “” «» “”
 @if $toggle-quotes-french == true {
     :lang(fr) blockquote,
@@ -42,7 +46,7 @@
 }
 
 
-// German -----------------------------------------------------------------
+// GERMAN
 // Quote pairs: „…“ ‚…‘ „…“ ‚…‘
 @if $toggle-quotes-german == true {
 :lang(de) blockquote,
@@ -52,7 +56,7 @@
 }
 
 
-// Italian --------------------------------------------------------------------
+// ITALIAN
 // Quote pairs: «…» “…” «…» “…”
 @if $toggle-quotes-italian == true {
     :lang(it) blockquote,
@@ -62,7 +66,7 @@
 }
 
 
-// Indonesian -----------------------------------------------------------------
+// INDONESIAN
 // Quote pairs: “…” ‘…’ “…” ‘…’
 @if $toggle-quotes-indonesian == true {
     :lang(id) blockquote,
@@ -74,7 +78,7 @@
 }
 
 
-// Japanese -------------------------------------------------------------------
+// JAPANESE
 // Quote pairs: 「…」 『…』 「…」 『…』
 @if $toggle-quotes-japanese == true {
     :lang(ja) blockquote,
@@ -84,7 +88,7 @@
 }
 
 
-// Korean ---------------------------------------------------------------------
+// KOREAN
 // Quote pairs: 「…」 『…』 「…」 『…』
 @if $toggle-quotes-korean == true {
     :lang(ko) blockquote,
@@ -94,7 +98,7 @@
 }
 
 
-// Mandarin Chinese -----------------------------------------------------------
+// MANDARIN CHINESE
 // Quote pairs: 「…」 『…』 「…」 『…』
 @if $toggle-quotes-chinese == true {
     // General
@@ -113,7 +117,7 @@
 }
 
 
-// Portuguese -----------------------------------------------------------------
+// PORTUGUESE
 // Quote pairs: “…” ‘…’ “…” ‘…’
 @if $toggle-quotes-portuguese == true {
     :lang(pt) blockquote,
@@ -123,7 +127,7 @@
 }
 
 
-// Russian --------------------------------------------------------------------
+// RUSSIAN
 // Quote pairs: «…» „…“ «…» „…“
 @if $toggle-quotes-russian == true {
     :lang(ru) blockquote,
@@ -133,7 +137,7 @@
 }
 
 
-// Spanish --------------------------------------------------------------------
+// SPANISH
 // Quote pairs: «…» “…” «…» “…”
 @if $toggle-quotes-spanish == true {
     :lang(es) blockquote,
@@ -143,7 +147,7 @@
 }
 
 
-// Turkish --------------------------------------------------------------------
+// TURKISH
 // Quote pairs: “…” ‘…’ “…” ‘…’
 @if $toggle-quotes-turkish == true {
     :lang(tr) blockquote,
@@ -153,7 +157,7 @@
 }
 
 
-// Vietnamese -----------------------------------------------------------------
+// VIETNAMESE
 // Quote pairs: “…” “…” “…” “…”
 @if $toggle-quotes-vietnamese == true {
     :lang(vi) blockquote,
@@ -162,8 +166,32 @@
     }
 }
 
+// GROUPED STYLES
 
-// Quotation ------------------------------------------------------------------
+// Quoted emphasis
+q em,
+q i,
+cite em,
+cite i,
+
+// Quoted strong
+q strong,
+q b,
+cite strong,
+cite b {
+    font-style: normal;
+    font-weight: $font-weight-normal;
+}
+
+
+// Quotation
+//
+// Represents some phrasing content quoted from another source.
+//
+// Markup:
+// He said, <q>You can't do that on television!</q>.
+//
+// Styleguide Elements.Quotes.Quotation
 q {
     &::before {
         content: open-quote;
@@ -173,6 +201,21 @@ q {
         content: close-quote;
     }
 }
+
+
+// Blockquote
+//
+// Represents a section that is quoted from another source.
+//
+// Markup:
+// <blockquote>
+//   <p>The marvel is not that the bear dances well, but that the bear dances at all.</p>
+//   <footer>
+//     <cite>Russian proverb</cite>
+//   </footer>
+// </blockquote>
+//
+// Styleguide Elements.Quotes.Blockquote
 
 // http://practicaltypography.com/block-quotations.html
 // [1] Re­duce the point size and line spac­ing slightly.
@@ -208,21 +251,4 @@ blockquote {
             content: $symbol-dash-quotation;
         }
     }
-}
-
-
-// Quoted emphasis
-q em,
-q i,
-cite em,
-cite i ,
-
-
-// Quoted strong
-q strong,
-q b,
-cite strong,
-cite b {
-    font-style: normal;
-    font-weight: $font-weight-normal;
 }

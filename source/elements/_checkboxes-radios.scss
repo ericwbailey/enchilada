@@ -1,6 +1,7 @@
 // CHECKBOXES AND RADIOS
 
 
+// GROUPED STYLES
 input[type="checkbox"],
 input[type="radio"] {
     @include form-label-distance();
@@ -13,10 +14,41 @@ input[type="radio"] {
     line-height: 1;
 }
 
+
+// Checkbox
+//
+// Represents a toggleable input.
+//
+// Markup:
+// <label for="checkbox">
+//   <input id="checkbox" name="checkbox" type="checkbox" />
+//   I agree
+// </label>
+//
+// Styleguide Elements.Forms.Checkbox
 input[type="checkbox"] {
 
 }
 
+
+// Radio
+//
+// Represents an option in a range of inputs where one selection is mandatory.
+//
+// Markup:
+// <fieldset>
+//   <legend>Direction</legend>
+//   <label for="up">
+//     <input id="up" name="direction" type="radio" />
+//     Up
+//     </label>
+//   <label for="down">
+//     <input id="down" name="direction" type="radio" />
+//     Down
+//   </label>
+// </fieldset>
+//
+// Styleguide Elements.Forms.Radio
 input[type="radio"] {
 
 }

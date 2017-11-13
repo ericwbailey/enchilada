@@ -1,8 +1,14 @@
-// ============================================================================
 // Textarea
-// ============================================================================
-
-
+//
+// An multiline text entry field.
+//
+// Markup:
+// <label for="textarea">
+//   Textarea
+//   <textarea id="textarea" name="textarea"></textarea>
+// </label>
+//
+// Styleguide Elements.Forms.Textarea
 textarea {
     @include form-border();
     @include form-input-padding();
