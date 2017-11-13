@@ -1,7 +1,7 @@
 // TABLES
 
 
-// LOGIC
+// LOGIC ----------------------------------------------------------------------
 // Impose specific column widths on tables, if desired. Always leave one column
 // free, to absorb rounding errors/accidental breakage.
 @mixin table-col-width-05() { width: 5%; }

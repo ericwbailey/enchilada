@@ -1,7 +1,7 @@
 // CHECKBOXES AND RADIOS
 
 
-// GROUPED STYLES
+// GROUPED STYLES -------------------------------------------------------------
 input[type="checkbox"],
 input[type="radio"] {
     @include form-label-distance();

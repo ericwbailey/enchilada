@@ -5,7 +5,7 @@
 // Styleguide Elements.Buttons
 
 
-// LOGIC
+// LOGIC ----------------------------------------------------------------------
 
 @mixin buttons-border() {
     border: 0;
@@ -44,7 +44,7 @@
 }
 
 
-// GROUPED STYLES
+// GROUPED STYLES -------------------------------------------------------------
 
 button,
 input[type="button"] {
@@ -93,7 +93,7 @@ input[type="button"] {
 }
 
 
-// INDIVIDUAL STYLES
+// INDIVIDUAL STYLES ----------------------------------------------------------
 
 // Button
 //

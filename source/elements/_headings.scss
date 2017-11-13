@@ -5,7 +5,7 @@
 // Styleguide Elements.Headings
 
 
-// LOGIC
+// LOGIC ----------------------------------------------------------------------
 
 @mixin heading-giga() {
     font-size: ms(5, em);
@@ -44,7 +44,7 @@
 }
 
 
-// GROUPED STYLES
+// GROUPED STYLES -------------------------------------------------------------
 
 .heading-giga,
 .heading-mega,
@@ -59,8 +59,7 @@
 }
 
 
-
-// INDIVIDUAL STYLES
+// INDIVIDUAL STYLES ----------------------------------------------------------
 
 // Giga
 //
