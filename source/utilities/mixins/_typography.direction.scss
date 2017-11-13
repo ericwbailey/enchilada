@@ -37,8 +37,8 @@
 }
 
 
-// TOGGLES
-// Enables functional class toggles. See `_config.scss`
+// TOGGLES --------------------------------------------------------------------
+// Enables functional class toggles. See `_toggles.scss`
 @if $toggle-typography-direction-ltr == true {
     .typography-direction-ltr {
         @include typography-direction(ltr);

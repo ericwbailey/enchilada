@@ -26,8 +26,8 @@
 }
 
 
-// TOGGLES
-// Enables functional class toggles. See `_config.scss`
+// TOGGLES --------------------------------------------------------------------
+// Enables functional class toggles. See `_toggles.scss`
 @if $toggle-typography-ordinals == true {
     .typography-ordinals {
         @include typography-ordinals();

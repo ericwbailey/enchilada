@@ -34,8 +34,8 @@
 }
 
 
-// TOGGLES
-// Enables functional class toggles. See `_config.scss`
+// TOGGLES --------------------------------------------------------------------
+// Enables functional class toggles. See `_toggles.scss`
 @if $toggle-typography-tracking-tightest == true {
     .typography-tracking-tightest {
         @include typography-tracking(tightest);

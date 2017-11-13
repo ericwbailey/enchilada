@@ -19,8 +19,8 @@
 }
 
 
-// TOGGLES
-// Enables functional class toggles. See `_config.scss`
+// TOGGLES --------------------------------------------------------------------
+// Enables functional class toggles. See `_toggles.scss`
 @if $toggle-component-remove-margin-padding == true {
     .component-remove-margin-padding {
         @include component-remove-margin-padding();

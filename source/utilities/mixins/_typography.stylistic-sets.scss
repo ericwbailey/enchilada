@@ -112,8 +112,8 @@
 }
 
 
-// TOGGLES
-// Enables functional class toggles. See `_config.scss`
+// TOGGLES --------------------------------------------------------------------
+// Enables functional class toggles. See `_toggles.scss`
 @if $toggle-typography-stylistic-set-01 == true {
     .typography-stylistic-set-01 {
         @include typography-stylistic-set-01();

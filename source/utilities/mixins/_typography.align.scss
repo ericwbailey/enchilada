@@ -57,8 +57,8 @@
 }
 
 
-// TOGGLES
-// Enables functional class toggles. See `_config.scss`
+// TOGGLES --------------------------------------------------------------------
+// Enables functional class toggles. See `_toggles.scss`
 @if $toggle-typography-align-ltr == true {
     .typography-align-ltr-start {
         text-align: left;

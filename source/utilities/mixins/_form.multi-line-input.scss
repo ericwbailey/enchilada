@@ -15,8 +15,9 @@
     min-height: ms(7.75, em);
 }
 
-// TOGGLES
-// Enables functional class toggles. See `_config.scss`
+
+// TOGGLES --------------------------------------------------------------------
+// Enables functional class toggles. See `_toggles.scss`
 @if $toggle-form-multi-line-input == true {
     .form-multi-line-input {
         @include form-multi-line-input();

@@ -22,8 +22,8 @@
 }
 
 
-// TOGGLES
-// Enables functional class toggles. See `_config.scss`
+// TOGGLES --------------------------------------------------------------------
+// Enables functional class toggles. See `_toggles.scss`
 @if $toggle-typography-numbers-proportional == true {
     .typography-numbers-proportional {
         @include typography-numbers-proportional();

@@ -27,8 +27,8 @@
 }
 
 
-// TOGGLES
-// Enables functional class toggles. See `_config.scss`
+// TOGGLES --------------------------------------------------------------------
+// Enables functional class toggles. See `_toggles.scss`
 @if $toggle-typography-alternates-contextual == true {
     .typography-alternates-contextual {
         @include typography-alternates-contextual();

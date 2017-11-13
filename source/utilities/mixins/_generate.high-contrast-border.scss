@@ -68,8 +68,8 @@
 }
 
 
-// TOGGLES
-// Enables functional class toggles. See `_config.scss`
+// TOGGLES --------------------------------------------------------------------
+// Enables functional class toggles. See `_toggles.scss`
 @if $toggle-generate-high-contrast-border-all == true {
     .generate-high-contrast-border-all {
         @include generate-high-contrast-border(all);

@@ -28,8 +28,8 @@
 }
 
 
-// TOGGLES
-// Enables functional class toggles. See `_config.scss`
+// TOGGLES --------------------------------------------------------------------
+// Enables functional class toggles. See `_toggles.scss`
 @if $toggle-typography-numbers-tabular-lining == true {
     .typography-numbers-tabular-lining {
         @include typography-numbers-tabular-lining();

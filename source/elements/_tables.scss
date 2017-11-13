@@ -164,8 +164,8 @@ table {
 }
 
 
-// TOGGLES
-// Enables functional class toggles. See `_config.scss`
+// TOGGLES --------------------------------------------------------------------
+// Enables functional class toggles. See `_toggles.scss`
 
 // COLUMN WIDTHS
 @if $toggle-table-col-width-05 == true {

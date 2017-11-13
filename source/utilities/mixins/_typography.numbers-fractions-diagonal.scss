@@ -26,8 +26,8 @@
 }
 
 
-// TOGGLES
-// Enables functional class toggles. See `_config.scss`
+// TOGGLES --------------------------------------------------------------------
+// Enables functional class toggles. See `_toggles.scss`
 @if $toggle-typography-numbers-fractions-diagonal == true {
     .typography-numbers-fractions-diagonal {
         @include typography-numbers-fractions-diagonal();
