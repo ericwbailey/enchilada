@@ -29,8 +29,12 @@ html {
     line-height: $global-type-line-height;
     text-size-adjust: 100%; // [3]
 
+    -ms-overflow-style: scrollbar;
+
     &:lang(en-US) {
          @include typography-hyphenation(); // [4]
+
+         text-align: left;
     }
 
     // Supports
@@ -44,6 +48,11 @@ html {
     @media screen and (-webkit-min-device-pixel-ratio: 2),
     screen and (min-resolution: 2dppx) {
         @include typography-smoothing(light-on-dark);
+    }
+
+    // https://msdn.microsoft.com/en-us/library/hh869615(v=vs.85).aspx
+    @-ms-viewport {
+        width: device-width;
     }
 }
 
