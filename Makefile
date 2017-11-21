@@ -5,10 +5,13 @@
 #
 
 
-start: replace nvm npm
+start: replace nvm npm build
 	@echo ''
 	@echo 'ℹ️  Project updated and built. More info: https://github.com/ericwbailey/enchilada/wiki'
 	@echo ''
+
+build:
+	gulp
 
 npm:
 	npm install
