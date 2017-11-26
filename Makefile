@@ -6,9 +6,7 @@
 
 
 start: replace nvm npm build
-	@echo ''
-	@echo 'ℹ️  Project updated and built. More info: https://github.com/ericwbailey/enchilada/wiki'
-	@echo ''
+	@printf '\nℹ️  Project updated and built. More info: https://github.com/ericwbailey/enchilada/wiki\n'
 
 build:
 	gulp
