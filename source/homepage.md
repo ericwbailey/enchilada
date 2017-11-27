@@ -1,6 +1,6 @@
 ## About this project
 
-$$projectFullDescription
+projectDescriptionFull
 
 
 ## About this project's styling

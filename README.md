@@ -1,8 +1,8 @@
 # ⚠ THIS REPO IS STILL ACTIVELY BEING WORKED ON. DO NOT USE IN A PRODUCTION ENVIRONMENT ⚠
 
-# [$$projectFullTitle](http://$$projectURL.com)
+# [projectTitleFull](http://projectURL.com)
 
-$$projectFullDescription
+projectDescriptionFull
 
 ## Table of Contents
 
@@ -23,8 +23,8 @@ Provide code examples and explanations of how to get the project.
 
 Let people know how they can dive into the project, include important links to things like issue trackers, IRC, Twitter accounts, etc. if applicable.
 
-Link to [`CONTRIBUTING.md`](https://github.com/$$githubAuthor/$$githubTitle/blob/master/CONTRIBUTING.md), [`AUTHORS`](https://github.com/$$githubAuthor/$$githubTitle/blob/master/AUTHORS), and update the contributors section in [`package.json`](https://github.com/$$githubAuthor/$$githubTitle/blob/master/package.json).
+Link to [`CONTRIBUTING.md`](https://github.com/githubAuthor/githubTitle/blob/master/CONTRIBUTING.md), [`AUTHORS`](https://github.com/githubAuthor/githubTitle/blob/master/AUTHORS), and update the contributors section in [`package.json`](https://github.com/githubAuthor/githubTitle/blob/master/package.json).
 
 ## License
 
-[$$projectLicense](https://raw.githubusercontent.com/$$githubAuthor/$$githubTitle/master/LICENSE).
+[projectLicense](https://raw.githubusercontent.com/githubAuthor/githubTitle/master/LICENSE).

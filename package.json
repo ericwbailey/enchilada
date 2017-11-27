@@ -1,10 +1,10 @@
 {
-  "name": "$$projectFullTitle",
-  "description": "$$projectFullDescription",
-  "homepage": "$$projectURL",
+  "name": "projectTitleFull",
+  "description": "projectDescriptionFull",
+  "homepage": "projectURL",
   "version": "0.0.1",
-  "license": "$$projectLicense",
-  "author": "$$projectAuthorName <$$projectAuthorEmail> ($$projectAuthorURL)",
+  "license": "projectLicense",
+  "author": "projectAuthorName <projectAuthorEmail> (projectAuthorURL)",
   "contributors": [
     "$$projectContributorName <$$projectContributorEmail> ($$projectContributorURL)",
     "$$projectContributorName <$$projectContributorEmail> ($$projectContributorURL)"
@@ -16,11 +16,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/$$githubAuthor/$$githubTitle.git"
+    "url": "git://github.com/githubAuthor/githubTitle.git"
   },
   "bugs": {
-    "url": "https://github.com/$$githubAuthor/$$githubTitle/issues",
-    "email": "$$projectAuthorEmail"
+    "url": "https://github.com/githubAuthor/githubTitle/issues",
+    "email": "projectAuthorEmail"
   },
   "dependencies": {
     "accessible-html-content-patterns": "^0.2.4",

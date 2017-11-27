@@ -33,7 +33,7 @@ gulp.task('document-sass', help.document.sass, function () {
 // Styles
 gulp.task('document-styles', help.document.styles, function () {
     return kss({
-        title: "$$projectShortTitle | Styleguide",
+        title: "projectTitleShort | Styleguide",
         builder: paths.documentation.kss.builder,
         source: paths.documentation.kss.source,
         destination: paths.documentation.kss.dest,
