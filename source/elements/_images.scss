@@ -7,22 +7,41 @@
 
 // GROUPED STYLES -------------------------------------------------------------
 
-// [1] Differentiate `alt` text from surrounding copy
-// [2] Removes the whitespace that appears under `img` elements
 img,
 figure,
 picture {
     @include component-responsify();
-    @include typography-align(center); // [1]
+    @include typography-align(center);
 
-    width: 100%; // [1]
-    vertical-align: middle; // [2]
+    display: block;
+    height: auto;
+    vertical-align: middle; // Removes the whitespace that appears under `img` elements
+    width: 100%;
 
     // Fixed-size, non-fluid images if `height` and/or `width` attributes are
     // declared
     &[height],
     &[width] {
         max-width: none;
+    }
+
+    // Explain when images break:
+    // https://bitsofco.de/styling-broken-images/
+    &::before,
+    &::after {
+        display: block;
+        padding-bottom: ms(0.5, em);
+        padding-top: ms(0.5, em);
+
+        font-size: 70%;
+    }
+
+    &::before {
+        content: "Sorry, the link to this image appears to be broken.";
+    }
+
+    &::after {
+        content: "Help us by reporting it: https://github.com/githubAuthor/githubTitle/issues";
     }
 }
 
@@ -46,7 +65,6 @@ picture {
 //
 // Styleguide Elements.Images.1
 img {
-
 }
 
 
