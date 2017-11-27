@@ -6,7 +6,7 @@
 
 
 start: replace nvm npm build
-	@printf '\nℹ️  Project updated and built. More info: https://github.com/ericwbailey/enchilada/wiki\n'
+	@printf '\nℹ️  Project updated and built.\nMore info: https://github.com/ericwbailey/enchilada/wiki\n'
 
 build:
 	gulp
@@ -19,32 +19,25 @@ nvm:
 
 replace:
 	# Project
-	sed -i -e 's/$$projectFullTitle/*/g' $(find . -type f | grep -vE "Makefile|.git")
-	sed -i -e 's/$$projectShortTitle/*/g' $(find . -type f | grep -vE "Makefile|.git")
-	sed -i -e 's/$$projectAuthorName/*/g' $(find . -type f | grep -vE "Makefile|.git")
-	sed -i -e 's/$$projectAuthorEmail/*/g' $(find . -type f | grep -vE "Makefile|.git")
-	sed -i -e 's/$$projectAuthorURL/*/g' $(find . -type f | grep -vE "Makefile|.git")
-	sed -i -e 's/$$projectFullDescription/*/g' $(find . -type f | grep -vE "Makefile|.git")
-	sed -i -e 's/$$projectFullDescription/*/g' $(find . -type f | grep -vE "Makefile|.git")
-	sed -i -e 's/$$projectShortDescription/*/g' $(find . -type f | grep -vE "Makefile|.git")
-	sed -i -e 's/$$projectURL/*/g' $(find . -type f | grep -vE "Makefile|.git")
-	sed -i -e 's/$$projectLanguage/*/g' $(find . -type f | grep -vE "Makefile|.git")
-	sed -i -e 's/$$projectLicense/*/g' $(find . -type f | grep -vE "Makefile|.git")
-	sed -i -e 's/$$projectThemeColor/*/g' $(find . -type f | grep -vE "Makefile|.git")
-	sed -i -e 's/$$projectBackgroundColor/*/g' $(find . -type f | grep -vE "Makefile|.git")
+	ack -l 'projectTitleFull' | xargs sed -i 's/projectTitleFull/*/g'
+	ack -l 'projectTitleShort' | xargs sed -i 's/projectTitleShort/*/g'
+	ack -l 'projectAuthorName' | xargs sed -i 's/projectAuthorName/*/g'
+	ack -l 'projectAuthorEmail' | xargs sed -i 's/projectAuthorEmail/*/g'
+	ack -l 'projectAuthorURL' | xargs sed -i 's/projectAuthorURL/*/g'
+	ack -l 'projectDescriptionFull' | xargs sed -i 's/projectDescriptionFull/*/g'
+	ack -l 'projectDescriptionShort' | xargs sed -i 's/projectDescriptionShort/*/g'
+	ack -l 'projectURL' | xargs sed -i 's/projectURL/*/g'
+	ack -l 'projectLanguage' | xargs sed -i 's/projectLanguage/*/g'
+	ack -l 'projectLicense' | xargs sed -i 's/projectLicense/*/g'
+	ack -l 'projectColorTheme' | xargs sed -i 's/projectColorTheme/*/g'
+	ack -l 'projectColorBackground' | xargs sed -i 's/projectColorBackground/*/g'
 	# GitHub
-	sed -i -e 's/$$githubTitle/*/g' $(find . -type f | grep -vE "Makefile|.git")
-	sed -i -e 's/$$githubAuthor/*/g' $(find . -type f | grep -vE "Makefile|.git")
-	sed -i -e 's/$$githubAuthor/*/g' $(find . -type f | grep -vE "Makefile|.git")
+	ack -l 'githubTitle' | xargs sed -i 's/githubTitle/*/g'
+	ack -l 'githubAuthor' | xargs sed -i 's/githubAuthor/*/g'
 	# Social Media
-	sed -i -e 's/$$siteTwitter/*/g' $(find . -type f | grep -vE "Makefile|.git")
-	sed -i -e 's/$$authorTwitter/*/g' $(find . -type f | grep -vE "Makefile|.git")
-	# Windows
-	sed -i -e 's/$$jumpListTask/*/g' $(find . -type f | grep -vE "Makefile|.git")
-	sed -i -e 's/$$jumpListPage/*/g' $(find . -type f | grep -vE "Makefile|.git")
-	sed -i -e 's/$$jumpListIcon/*/g' $(find . -type f | grep -vE "Makefile|.git")
-	# Apps
-	sed -i -e 's/$$iosAppID/*/g' $(find . -type f | grep -vE "Makefile|.git")
-	sed -i -e 's/$$chromeAppID/*/g' $(find . -type f | grep -vE "Makefile|.git")
-	# Analytics
-	sed -i -e 's/$$googleAnalyticsID/*/g' $(find . -type f | grep -vE "Makefile|.git")
+	ack -l 'twitterSite' | xargs sed -i 's/twitterSite/*/g'
+	ack -l 'twitterAuthor' | xargs sed -i 's/twitterAuthor/*/g'
+	# IDs
+	ack -l 'idAppChrome' | xargs sed -i 's/idAppChrome/*/g'
+	ack -l 'idAppiOS' | xargs sed -i 's/idAppiOS/*/g'
+	ack -l 'idGoogleAnalytics' | xargs sed -i 's/idGoogleAnalytics/*/g'
