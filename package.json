@@ -69,7 +69,8 @@
     "require-dir": "^0.3.0",
     "run-sequence": "^1.2.2",
     "sassdoc": "^2.1.20",
-    "sassdoc-theme-flippant": "^0.1.0"
+    "sassdoc-theme-flippant": "^0.1.0",
+    "umbrellajs": "^2.9.0"
   },
   "scripts": {
     "help": "gulp help",

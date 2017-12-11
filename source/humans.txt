@@ -25,7 +25,11 @@ projectURL
 	- CSS3
 	- etc.
 - Components
-	- jQuery
-	- etc.
+	- accessible-html-content-patterns
+	- family.scss
+	- mappy-breakpoints
+	- normalize.css
+	- styled-component-template
+    - Umbrella JS
 - Software
 	- Software used for the development

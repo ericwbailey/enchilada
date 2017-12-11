@@ -147,7 +147,7 @@ module.exports = {
     },
     scripts: {
         vendor: {
-            jquery: VENDOR_DIR + '/jquery/dist/jquery.min.js'
+            umbrella: VENDOR_DIR + '/umbrellajs/umbrella.min.js'
         },
         source: SOURCE_DIR + '/**/*.js',
         watch: SOURCE_DIR + '/**/*.js',
