@@ -15,8 +15,10 @@ picture {
 
     display: block;
     height: auto;
+    max-width: 100%;
     vertical-align: middle; // Removes the whitespace that appears under `img` elements
-    width: 100%;
+
+    border: 0;
 
     // Fixed-size, non-fluid images if `height` and/or `width` attributes are
     // declared

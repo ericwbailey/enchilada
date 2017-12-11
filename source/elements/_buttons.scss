@@ -54,6 +54,13 @@ input[type="button"] {
     @include buttons-height();
     @include buttons-width();
 
+    &::-moz-focus-inner,
+    &::-moz-focus-inner {
+        padding: 0;
+
+        border: 0;
+    }
+
     // Primary actions
     &[data-button-priority="primary"] {
 

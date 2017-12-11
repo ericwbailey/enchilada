@@ -30,6 +30,8 @@ html {
     text-size-adjust: 100%; // [3]
 
     -ms-overflow-style: scrollbar;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
 
     &:lang(en-US) {
          @include typography-hyphenation(); // [4]
@@ -81,4 +83,11 @@ html {
 *::before,
 *::after {
     box-sizing: border-box;
+}
+
+
+// MICROSOFT VIEWPORT
+// Treat desktops and mobile devices the same way
+@-ms-viewport {
+    width: device-width;
 }

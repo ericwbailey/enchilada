@@ -274,7 +274,7 @@ small {
 //
 // Styleguide Elements.Text-level.Strong
 strong {
-
+    font-weight: bold; // Undoes Firefox's `bolder` declaration
 }
 
 

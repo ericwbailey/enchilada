@@ -47,7 +47,8 @@ audio {
 //
 // Styleguide Elements.Media.Canvas
 canvas {
-
+    touch-action: double-tap-zoom;
+    -ms-touch-action: double-tap-zoom;
 }
 
 
