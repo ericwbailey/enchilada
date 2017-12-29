@@ -183,15 +183,11 @@ input[autosave] {
 
 // Disabled input should be immutable.
 input[disabled] {
-    @include content-remove-interaction();
-
     border-color: transparentize(c(form, base), 0.5) !important;
 
     background-color: transparentize(c(base, background), 0.5) !important;
 
     color: transparentize(c(base, type), 0.5) !important;
-
-    cursor: not-allowed;
 
     &:hover,
     &:active,

@@ -44,12 +44,6 @@ table {
 }
 
 
-[aria-busy="true"],
-[disabled] {
-    cursor: not-allowed;
-}
-
-
 // Selects all content in a read-only input field
 input:not([type="button"]):not([type="checkbox"]):not([type="radio"]),
 textarea {

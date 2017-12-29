@@ -9,6 +9,8 @@
 [aria-disabled],
 [disabled] {
     @include content-remove-interaction();
+
+    cursor: not-allowed;
 }
 
 
