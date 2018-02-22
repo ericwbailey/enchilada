@@ -1,0 +1,29 @@
+# Define individuals or teams that are responsible for code
+# the repository. Code owners are automatically requested
+# for review when someone opens a pull request that
+# modifies code that they own.
+# https://help.github.com/articles/about-codeowners/
+
+
+# Default owners for everything in the repo. Unless a later
+# match takes precedence, these people will be flagged for
+# review when someone opens a Pull Request.
+* @githubAuthor
+
+
+# Order is important; the last matching pattern takes the most
+# precedence and the relevant person will be flagged for review.
+
+# Flags edits to a specific file type.
+# *.js @js-owner
+
+# Flags edits to any file in any directoy with the specified name.
+# apps/ @apps-owner
+
+# Flag edits to any file in a specific directory and any of
+# its subdirectories.
+# /build/logs/ @logs-owner
+
+# Flags edits to any file in the specific directoy from the
+# root of the repo.
+# /docs/ @doctocat
