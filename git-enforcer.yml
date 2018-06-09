@@ -1,0 +1,9 @@
+git-enforcer:
+  labels:
+    add_label_on_failure:
+      color: "FFA500"
+      name: "Issue Failure"
+    validate_label_population:
+      message: "Please add labels to this Issue: https://github.com/githubAuthor/githubTitle/labels"
+    validate_assignee_population:
+      message: "Please add at least one Asignee to this Issue. If you are unsure of who to assign, select the project owner."
