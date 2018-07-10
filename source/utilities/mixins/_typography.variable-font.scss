@@ -1,0 +1,26 @@
+// TYPOGRAPHY
+// Variable Font
+
+
+/// Helps fill in hairlines where strokes overlap.
+///
+/// @group Typography
+///
+/// @example scss
+///  @include typography-variable-font();
+///
+/// @link https://twitter.com/ThunderNixon/status/1011886721678692352 Stephen Nixon on Twitter: "I stumbled on one-weird-trick to make variable fonts render *much* better on the web!"
+
+
+@mixin typography-variable-font() {
+    text-shadow: 0 0 0 currentColor;
+}
+
+
+// TOGGLES --------------------------------------------------------------------
+// Enables functional class toggles. See `_toggles.scss`
+@if $toggle-typography-variable-font == true {
+    .typography-variable-font {
+        @include typography-variable-font();
+    }
+}
