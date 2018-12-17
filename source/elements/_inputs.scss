@@ -378,6 +378,9 @@ input[type="month"] {
 // Styleguide Elements.Forms.Number
 input[type="number"] {
 
+    &::-webkit-inner-spin-button {
+        opacity: 1; // Always display spin controls: https://twitter.com/LeaVerou/status/1072994977876197377
+    }
 }
 
 
