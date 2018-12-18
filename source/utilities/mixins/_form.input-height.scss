@@ -1,0 +1,60 @@
+// FORM
+// Input Height
+
+
+/// Helps set a consistent height for all input types.s
+///
+/// @group Forms
+///
+/// @parameter {String} $input-type [padded] - Specifies the height declaration type. Can be `padded`, `height`, or `multiline`
+///
+/// @example scss
+///  @include form-input-height(padded);
+///
+/// @see {mixin} form-label-distance
+/// @see {mixin} form-width
+
+
+@mixin form-input-height($input-type: padded) {
+    @if ($input-type == "padded") {
+        padding: ms(0, $unit: em) ms(1, $unit: em);
+    }
+
+    @else if ($input-type == "height") {
+        min-height: ms(4, $unit: em);
+    }
+
+    @else if ($input-type == "multi-line") {
+        min-height: ms(7, $unit: em);
+        padding-right: ms(1, $unit: em);
+        padding-left: ms(1, $unit: em);
+    }
+
+    @else {
+        @error "`#{$how}`"
+        + $meta-invalid-argument
+        + $meta-invalid-argument-select-multiple
+        + "`padded`, `height`, or `multi-line`";
+    }
+}
+
+
+// TOGGLES --------------------------------------------------------------------
+// Enables functional class toggles. See `_toggles.scss`
+@if $toggle-form-input-height-padded == true {
+    .form-input-height-padded {
+        @include form-input-height(padded);
+    }
+}
+
+@if $toggle-form-input-height-height == true {
+    .form-input-height-height {
+        @include form-input-height(height);
+    }
+}
+
+@if $toggle-form-input-height-multi-line == true {
+    .form-input-height-multi-line {
+        @include form-input-height(multi-line);
+    }
+}
