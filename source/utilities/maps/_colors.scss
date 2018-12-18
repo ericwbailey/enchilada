@@ -70,11 +70,12 @@ $colors: (
 
     // FORMS
     form: (
-        base:   #0074d9,
-        hover:  #7fdbff,
-        focus:  #ff851b,
-        active: #ff4136,
-        busy:   #dddddd
+        base:        #0074d9,
+        hover:       #7fdbff,
+        focus:       #ff851b,
+        active:      #ff4136,
+        placeholder: #aaaaaa,
+        busy:        #dddddd
     )
 
     // COMPONENT

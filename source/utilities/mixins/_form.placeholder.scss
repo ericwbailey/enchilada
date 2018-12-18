@@ -11,7 +11,7 @@
 
 
 @mixin form-placeholder() {
-    color: transparentize(c(base, type), 0.3);
+    color: c(form, placeholder);
 }
 
 
