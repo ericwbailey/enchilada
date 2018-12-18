@@ -6,11 +6,11 @@
 input[type="checkbox"],
 input[type="radio"] {
     @include form-label-distance();
-    @include form-input-padding();
 
-    margin-right: ms(0.3, em);
+    margin-top: ms(0, $unit: em);
+    margin-right: 0.25em;
     position: relative;
-      top: em(-2.5);
+      top: -0.19em;
 
     line-height: 1;
 }

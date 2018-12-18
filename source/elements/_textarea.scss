@@ -11,13 +11,14 @@
 // Styleguide Elements.Forms.Textarea
 textarea {
     @include form-border();
-    @include form-input-padding();
+    @include form-input-height(multi-line);
     @include form-label-distance();
-    @include form-multi-line-input;
     @include form-state(input);
     @include form-width();
 
     overflow: auto;
+    padding-top: ms(0, $unit: em);
+    padding-bottom: ms(0, $unit: em);
 
     resize: vertical;
 }

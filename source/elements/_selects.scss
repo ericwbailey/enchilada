@@ -18,7 +18,7 @@
 // Styleguide Elements.Forms.Select
 select {
     @include form-border();
-    @include form-input-padding();
+    @include form-input-height(padded);
     @include form-label-distance();
     @include form-state(input);
     @include form-width();
@@ -27,18 +27,18 @@ select {
 
     background-color: c(base, background);
 
-    line-height: 1;
+    line-height: 1.2;
 
     -webkit-appearance: none;
     -moz-appearance: none;
 
     &[multiple] {
-        @include form-multi-line-input;
+        @include form-input-height(multi-line);
 
         padding: 0; // Undoes `form-input-padding()` so <option>s extend full-width
 
         option {
-            padding: ms(0.4, em); // Highlights entire <option> row when selected
+            padding: 0.5em; // Highlights entire <option> row when selected
         }
     }
 }

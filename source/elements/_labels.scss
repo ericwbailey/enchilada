@@ -24,7 +24,7 @@ label {
             margin-top: em(-32);
             margin-right: em(10);
 
-            font-size: ms(1, em);
+            font-size: ms(0, $unit: em);
         }
     }
 }

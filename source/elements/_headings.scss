@@ -8,39 +8,39 @@
 // LOGIC ----------------------------------------------------------------------
 
 @mixin heading-giga() {
-    font-size: ms(5, em);
+    font-size: ms(7, $unit: em);
 }
 
 @mixin heading-mega() {
-    font-size: ms(4.5, em);
+    font-size: ms(6, $unit: em);
 }
 
 @mixin heading-alpha() {
-    font-size: ms(4, em);
+    font-size: ms(5, $unit: em);
 }
 
 @mixin heading-beta() {
-    font-size: ms(3.5, em);
+    font-size: ms(4, $unit: em);
 }
 
 @mixin heading-gamma() {
-    font-size: ms(3, em);
+    font-size: ms(3, $unit: em);
 }
 
 @mixin heading-delta() {
-    font-size: ms(2.5, em);
+    font-size: ms(2, $unit: em);
 }
 
 @mixin heading-epsilon() {
-    font-size: ms(2, em);
+    font-size: ms(1, $unit: em);
 }
 
 @mixin heading-zeta() {
-    font-size: ms(1.5, em);
+    font-size: ms(1, $unit: em);
 }
 
 @mixin heading-eta() {
-    font-size: ms(1, em);
+    font-size: ms(0, $unit: em);
 }
 
 

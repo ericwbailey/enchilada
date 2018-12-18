@@ -33,7 +33,7 @@
 }
 
 @mixin buttons-height() {
-    height: ms(2, em);
+    @include form-input-height(padded);
 
     line-height: 1;
 }
@@ -54,7 +54,6 @@ input[type="button"] {
     @include buttons-height();
     @include buttons-width();
 
-    &::-moz-focus-inner,
     &::-moz-focus-inner {
         padding: 0;
 

@@ -93,7 +93,7 @@ table {
     caption {
         @include typography-align(start);
 
-        margin-bottom: ms(1, em);
+        margin-bottom: ms(0, $unit: em);
     }
 
     // Styles all table rows
@@ -107,7 +107,7 @@ table {
     td {
         @include table-col-align-text();
 
-        padding: ms(0.25, em);
+        padding: 0.5em;
 
         &[colspan] {
             @include typography-align(center);

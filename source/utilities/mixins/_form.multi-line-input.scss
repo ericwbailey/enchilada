@@ -12,7 +12,7 @@
 
 
 @mixin form-multi-line-input() {
-    min-height: ms(7.75, em);
+    min-height: ms(7, $unit: em);
 }
 
 
