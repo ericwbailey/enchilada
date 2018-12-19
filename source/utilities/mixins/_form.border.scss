@@ -11,7 +11,7 @@
 
 
 @mixin form-border() {
-    border: border(thinner) solid c(form, base);
+    border: border(thinnest) solid c(form, base);
 }
 
 
