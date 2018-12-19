@@ -26,19 +26,26 @@ select {
     border-radius: 0;
 
     background-color: c(base, background);
+    background-image: url('data:image/svg+xml;utf8,<svg width="18" height="10" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M8.022 9.328c.779.9 2.046.893 2.819 0l6.663-7.7C18.282.73 17.973 0 16.81 0H2.051C.892 0 .588.736 1.36 1.628l6.663 7.7z" fill-rule="evenodd"/></svg>');
+    background-position: right ms(0) center;
+    background-repeat: no-repeat;
+    background-size: 1em auto;
 
-    line-height: 1.2;
+    line-height: 1.2; // Keeps descenders from being clipped
 
     -webkit-appearance: none;
     -moz-appearance: none;
+    appearance: none;
 
     &[multiple] {
         @include form-input-height(multi-line);
 
-        padding: 0; // Undoes `form-input-padding()` so <option>s extend full-width
+        padding: 0; // Undoes `form-input-padding()` so `<option>`s extend full-width
+
+        background: none;
 
         option {
-            padding: 0.5em; // Highlights entire <option> row when selected
+            padding: 0.5em; // Highlights entire `<option>` row when selected
         }
     }
 }
