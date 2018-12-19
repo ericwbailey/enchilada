@@ -17,8 +17,8 @@ textarea {
     @include form-width();
 
     overflow: auto;
-    padding-top: ms(0, $unit: em);
-    padding-bottom: ms(0, $unit: em);
+    padding-top: ms(0);
+    padding-bottom: ms(0);
 
     resize: vertical;
 }

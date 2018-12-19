@@ -32,8 +32,8 @@ picture {
     &::before,
     &::after {
         display: block;
-        padding-bottom: ms(0, $unit: em);
-        padding-top: ms(0, $unit: em);
+        padding-bottom: ms(0);
+        padding-top: ms(0);
 
         font-size: 70%;
     }

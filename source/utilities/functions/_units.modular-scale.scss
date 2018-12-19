@@ -10,7 +10,7 @@
 /// @parameter {Number}      $increment                     - Sets the factor for the modular scale to be multiplied by
 /// @parameter {Measurement} $base-size [$global-type-size] - Specifies base font size
 /// @parameter {Number}      $ratio [$global-type-ratio]    - Specifies modular scale ratio to be multiplied by
-/// @parameter {Measurement} $unit [rem]                    - Specifies the unit
+/// @parameter {Measurement} $unit [em]                    - Specifies the unit
 ///
 /// @example scss
 ///  margin-top: ms(2);
@@ -26,7 +26,7 @@
     $increment,
     $base-size: $global-type-size,
     $ratio: $global-type-ratio,
-    $unit: rem
+    $unit: em
 ) {
     @for $i from 1 through $increment {
 

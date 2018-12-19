@@ -7,7 +7,7 @@ input[type="checkbox"],
 input[type="radio"] {
     @include form-label-distance();
 
-    margin-top: ms(0, $unit: em);
+    margin-top: ms(0);
     margin-right: 0.25em;
     position: relative;
       top: -0.19em;

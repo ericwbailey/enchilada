@@ -17,17 +17,17 @@
 
 @mixin form-input-height($input-type: padded) {
     @if ($input-type == "padded") {
-        padding: ms(0, $unit: em) ms(1, $unit: em);
+        padding: ms(0) ms(1);
     }
 
     @else if ($input-type == "height") {
-        min-height: ms(4, $unit: em);
+        min-height: ms(4);
     }
 
     @else if ($input-type == "multi-line") {
-        min-height: ms(7, $unit: em);
-        padding-right: ms(1, $unit: em);
-        padding-left: ms(1, $unit: em);
+        min-height: ms(7);
+        padding-right: ms(1);
+        padding-left: ms(1);
     }
 
     @else {

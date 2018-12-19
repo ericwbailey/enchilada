@@ -93,7 +93,7 @@ table {
     caption {
         @include typography-align(start);
 
-        margin-bottom: ms(0, $unit: em);
+        margin-bottom: ms(0);
     }
 
     // Styles all table rows

@@ -348,7 +348,7 @@ input[type="file"] {
     background-color: c(base, background);
 
     &::-webkit-file-upload-button {
-        margin-top: ms(0, $unit: em);
+        margin-top: ms(0);
     }
 }
 
