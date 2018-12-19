@@ -37,6 +37,10 @@ select {
     -moz-appearance: none;
     appearance: none;
 
+    &::-ms-expand {
+        display: none; // https://stackoverflow.com/questions/20163079/remove-select-arrow-on-ie/20163273#20163273
+    }
+
     &[multiple] {
         @include form-input-height(multi-line);
 
