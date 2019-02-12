@@ -6,6 +6,7 @@
 body {
     min-height: 100%; // Ensure the page always fills at least the entire height of the viewport
     overflow-x: hidden;
+    overscroll-behavior: contain; // https://webplatform.news/issues/2019-02-11#you-can-prevent-scroll-chaining-with-css-overscroll-behavior-contain
 
     background-color: c(base, background); // [1] SEE: `_html.scss`
 
