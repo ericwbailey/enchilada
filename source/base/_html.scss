@@ -4,11 +4,12 @@
 // [1] Ensure the page always fills at least the entire height of the viewport
 // [2] Force scrollbars to always be visible to prevent awkward jumps when
 // navigating between pages
-// [3] Overrides smartphone text resizing algorithms:
+// [3] Ensures text stays legible if the user has selected an atypical OS theme
+// [4] Overrides smartphone text resizing algorithms:
 // https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust
-// [4] Triggers browser hyphenation based off of declared language:
+// [5] Triggers browser hyphenation based off of declared language:
 // http://thenewcode.com/429/Classic-Typography-Effects-Hyphenation
-// [5] Keeps the background color present if the browser bounces at a scrolling
+// [6] Keeps the background color present if the browser bounces at a scrolling
 // boundary
 html {
     @include typography-kerning();
@@ -19,22 +20,22 @@ html {
     overflow-y: scroll; // [2]
     padding: 0;
 
-    background-color: c(base, background); // [5] SEE: `_body.scss`
+    background-color: c(base, background); // [6] SEE: `_body.scss`
 
-    color: c(base, type);
+    color: c(base, type); // [3]
     direction: $global-type-direction;
     font-family: $font-family-primary-preload; // See Type Loading section below
     font-size: $global-type-size;
     font-weight: $global-type-weight;
     line-height: $global-type-line-height;
-    text-size-adjust: 100%; // [3]
+    text-size-adjust: 100%; // [4]
 
     -ms-overflow-style: scrollbar;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 
     &:lang(en-US) {
-         @include typography-hyphenation(); // [4]
+         @include typography-hyphenation(); // [5]
 
          text-align: left;
     }
