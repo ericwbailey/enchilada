@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "baseUrl": "source/"
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
