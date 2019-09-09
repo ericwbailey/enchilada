@@ -67,6 +67,9 @@ picture {
 //
 // Styleguide Elements.Images.1
 img {
+  @media (inverted-colors: inverted) {
+    filter: invert(100%);
+  }
 }
 
 
