@@ -67,9 +67,27 @@ picture {
 //
 // Styleguide Elements.Images.1
 img {
+  max-width: 100%;
+
   @media (inverted-colors: inverted) {
     filter: invert(100%);
   }
+}
+
+// https://www.zachleat.com/web/fluid-images/
+img[width] {
+  width: auto; // Defer to max-width
+}
+
+img[width][height] {
+  height: auto; // Preserve aspect ratio
+}
+
+// Scale SVG without boundaries
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+  max-width: none;
 }
 
 
