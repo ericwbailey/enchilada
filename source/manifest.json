@@ -1,13 +1,14 @@
 {
-    "lang": "projectLanguage",
-    "short_name": "projectTitleShort",
-    "name": "projectTitleFull",
-    "dir": "ltr",
-    "display": "standalone",
-    "orientation": "natural",
-    "start_url": "/",
-    "theme_color": "projectColorTheme",
-    "background_color": "projectColorBackground",
+  "name": "projectTitleFull",
+  "short_name": "projectTitleShort",
+  "description": "projectDescriptionShort",
+  "lang": "projectLanguage",
+  "dir": "ltr",
+  "display": "standalone",
+  "orientation": "natural",
+  "start_url": "/",
+  "theme_color": "projectColorTheme",
+  "background_color": "projectColorBackground",
 	"icons": [
 		{
 			"src": "static/favicons/android/android-chrome-36x36.png",
