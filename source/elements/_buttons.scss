@@ -54,6 +54,8 @@ input[type="button"] {
     @include buttons-height();
     @include buttons-width();
 
+    color: inherit;
+
     &::-moz-focus-inner {
         padding: 0;
 
