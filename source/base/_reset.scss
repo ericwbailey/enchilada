@@ -53,6 +53,14 @@ textarea {
 }
 
 
+// Ensures the increment/decrement arrows always display
+// https://davidwalsh.name/always-show-arrows-for-number-input
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+
 // Prevent zooming on mobile viewports when tapped
 input[type="text"],
 input[type="email"],
