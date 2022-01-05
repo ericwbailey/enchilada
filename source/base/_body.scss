@@ -14,6 +14,7 @@ body {
     background-color: c(base, background); // [1] SEE: `_html.scss`
 
     font-size: 1em;
+    text-rendering: optimizeSpeed;
 
     @supports (-webkit-touch-callout: none) {
         height: -webkit-fill-available; // [2]
