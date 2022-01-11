@@ -6,10 +6,11 @@
 // [2] Fixes the iOS 100vh bug:
 // https://twitter.com/berndartmueller/status/1303667984783769607
 body {
-    min-height: 100%; // Ensure the page always fills at least the entire height of the viewport
-    height: 100vh; // [2]
+    min-height: 100vh; // Ensure the page always fills at least the entire height of the viewport
+    height: 100%;
     overflow-x: hidden;
     overscroll-behavior: contain; // https://webplatform.news/issues/2019-02-11#you-can-prevent-scroll-chaining-with-css-overscroll-behavior-contain
+    position: relative;
 
     background-color: c(base, background); // [1] SEE: `_html.scss`
 
