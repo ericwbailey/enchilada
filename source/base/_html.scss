@@ -16,7 +16,6 @@ html {
     @include typography-ligatures-common();
 
     margin: 0;
-    min-height: 100%; // [1]
     overflow-y: scroll; // [2]
     padding: 0;
 
@@ -74,16 +73,6 @@ html {
     &-active {
         font-family: $global-type-family;
     }
-}
-
-
-// BORDER-BOX
-// Applies `border-box` to all HTML elements:
-// https://github.com/AllThingsSmitty/css-protips#inherit-box-sizing
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
 }
 
 
