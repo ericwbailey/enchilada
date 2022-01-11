@@ -4,5 +4,10 @@
 // Declare your initial CSS custom properties here
 // https://philipwalton.com/articles/why-im-excited-about-native-css-variables/
 :root {
+    box-sizing: border-box;
     font-size: 100%;
+    min-height: 100%;
+    position: relative;
+    text-size-adjust: none;
+    -webkit-text-size-adjust: none;
 }
