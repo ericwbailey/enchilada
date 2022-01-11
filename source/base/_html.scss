@@ -29,10 +29,6 @@ html {
     line-height: $global-type-line-height;
     text-size-adjust: 100%; // [4]
 
-    -ms-overflow-style: scrollbar;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-
     &:lang(en-US) {
          @include typography-hyphenation(); // [5]
 
